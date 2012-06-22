@@ -436,6 +436,17 @@ If an id is given, the new NodeSprite will be mapped from that id in the current
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#ignoreCmds" data-isabs="false">
+      <a id="ignoreCmds:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">ignoreCmds</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A flag that causes the treeBuilder to ignore most commands.</p>
     </li><li visbl="pub" name="java.lang.Thread#interrupt" data-isabs="false">
       <a id="interrupt():Unit"></a>
       <h4 class="signature">
@@ -557,6 +568,17 @@ If an id is given, the new NodeSprite will be mapped from that id in the current
       <p class="shortcomment cmt">Clears the TreeBuilder and creates a new tree containing only a root node.</p><div class="fullcomment"><div class="comment cmt"><p>Clears the TreeBuilder and creates a new tree containing only a root node.
 A scope table is added to the stack with only &quot;root&quot; in it which maps to the root node.</p></div><dl class="paramcmts block"><dt class="param">rootLabel</dt><dd class="cmt"><p>The label for the root node of the new tree. This node will automatically be a comment node.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#nodeCount" data-isabs="false">
+      <a id="nodeCount:Int"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">nodeCount</span>
+        
+        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A count of the nodes currently in the tree.</p>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
@@ -606,6 +628,30 @@ curScope is set to the scopeStack's new top.
 curScope is set to this new scope table.
 The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current subroot.
 </p></div></div>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#remLastChild" data-isabs="false">
+      <a id="remLastChild(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">remLastChild</span>
+        
+        <span class="params">(<span name="parentID">parentID: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Removes the last child of a NodeSprite</p><div class="fullcomment"><div class="comment cmt"><p>Removes the last child of a NodeSprite</p></div><dl class="paramcmts block"><dt class="param">parentID</dt><dd class="cmt"><p>The id key for the parent node we are removing the last child from.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#restoreNodeCount" data-isabs="false">
+      <a id="restoreNodeCount(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">restoreNodeCount</span>
+        
+        <span class="params">(<span name="flag">flag: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the current node count to the top value of savedNodeCount.</p><div class="fullcomment"><div class="comment cmt"><p>Sets the current node count to the top value of savedNodeCount. This is useful for restoring the correct node count for the tree when a subtree is removed.
+</p></div></div>
     </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#root" data-isabs="false">
       <a id="root:NodeSprite"></a>
       <h4 class="signature">
@@ -628,6 +674,28 @@ The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current sub
       </span>
       </h4>
       <p class="shortcomment cmt">Starts a new thread in which the TreeBuilder will run in.</p><div class="fullcomment"><div class="comment cmt"><p>Starts a new thread in which the TreeBuilder will run in.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.TreeBuilder" class="extype" href="">TreeBuilder</a> → Thread → Runnable</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#saveNodeCount" data-isabs="false">
+      <a id="saveNodeCount:Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">saveNodeCount</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Saves the current node count.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#savedNodeCount" data-isabs="false">
+      <a id="savedNodeCount:ArrayStack[Int]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">savedNodeCount</span>
+        
+        <span class="result">: <span name="scala.collection.mutable.ArrayStack" class="extype">ArrayStack</span>[<span name="scala.Int" class="extype">Int</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Used by saveNodeCount and restoreNodeCount allow removal of subtrees while maintaining the correct nodeCount for this tree.</p>
     </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#scopeStack" data-isabs="false">
       <a id="scopeStack:ArrayStack[HashMap[String, NodeSprite]]"></a>
       <h4 class="signature">
@@ -772,6 +840,17 @@ The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current sub
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Thread → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#toggleIgnore" data-isabs="false">
+      <a id="toggleIgnore(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toggleIgnore</span>
+        
+        <span class="params">(<span name="flag">flag: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Toggles the ignoreCmds flag</p>
     </li><li visbl="pub" name="ornl.elision.gui.TreeBuilder#treeMaxDepth" data-isabs="false">
       <a id="treeMaxDepth:Int"></a>
       <h4 class="signature">
