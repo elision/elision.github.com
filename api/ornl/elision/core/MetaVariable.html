@@ -30,15 +30,10 @@
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Define a metavariable.</p><h4> Purpose </h4><p>A metavariable is just like an ordinary variable, with the exception that
 any metavariables in an atom make that atom a meta atom, and meta atoms
-block evaluation in an apply.</p><p>For example, consider </p><pre>
-is_bindable($x)
-</pre><p>.  This will immediately
-evaluate to <code>true</code> since </p><pre>
-$x
-</pre><p> is bindable.  If we wanted to use this
-as a guard for a variable, however, this won't work.  Instead we write</p><pre>
-is_bindable($$x)
-</pre><p> using the metavariable, and evaluation is
+block evaluation in an apply.</p><p>For example, consider <code>is_bindable(</code><code>$</code><code>x)</code>.  This will immediately
+evaluate to <code>true</code> since <code>$</code><code>x</code> is bindable.  If we wanted to use this
+as a guard for a variable, however, this won't work.  Instead we write
+<code>is_bindable($</code><code>$</code><code>x)</code> using the metavariable, and evaluation is
 deferred until the atom is rewritten.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
@@ -510,7 +505,7 @@ be able to &quot;round trip,&quot; that is, <a name="ornl.elision.parse.AtomPars
 be able to parse it and return an atom equal to this one.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.MetaVariable#toString" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -520,7 +515,9 @@ be able to parse it and return an atom equal to this one.
         <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.MetaVariable" class="extype" href="">MetaVariable</a> → <a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a> → AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Make a string that can be used to re-generate this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Make a string that can be used to re-generate this atom.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#tryMatch" data-isabs="false">
       <a id="tryMatch(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">

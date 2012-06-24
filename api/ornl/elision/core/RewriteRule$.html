@@ -316,17 +316,18 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RewriteRule#unapply" data-isabs="false">
-      <a id="unapply(RewriteRule):Some[(BasicAtom, BasicAtom, Seq[BasicAtom], Set[String])]"></a>
+      <a id="unapply(RewriteRule):Some[(BasicAtom, BasicAtom, Seq[BasicAtom], Set[String], Boolean)]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">unapply</span>
         
-        <span class="params">(<span name="rule">rule: <a name="ornl.elision.core.RewriteRule" class="extype" href="RewriteRule.html">RewriteRule</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>], Set[String])]</span>
+        <span class="params">(<span name="rule">rule: <a name="ornl.elision.core.RewriteRule" class="extype" href="RewriteRule.html">RewriteRule</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>], Set[String], <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Break a rewrite rule into its parts.</p><div class="fullcomment"><div class="comment cmt"><p>Break a rewrite rule into its parts.  The synthetic flag is not returned.
-</p></div><dl class="paramcmts block"><dt class="param">rule</dt><dd class="cmt"><p>The rewrite rule.</p></dd><dt>returns</dt><dd class="cmt"><p>The pattern, rewrite, guards, and rulesets.
+</p></div><dl class="paramcmts block"><dt class="param">rule</dt><dd class="cmt"><p>The rewrite rule.</p></dd><dt>returns</dt><dd class="cmt"><p>The pattern, rewrite, guards, rulesets, and whether the rule is
+         synthetic.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>

@@ -36,13 +36,13 @@ valid symbol.  So the following are valid variables:
 variable is bound, and must evaluate to <code>true</code> to allow the binding to take
 place.</p><p>In fact, the variable &quot;guard&quot; is more.  The guard is specified as an atom
 in curly braces after the variable name and before any type information.
-For proposed binding of variable $x to value v, with guard g, we do the
-following.</p><p>- If g is a ornl.elision.core.Rewritable, then g.a is computed and
-  if the flag is true, $x is bound to the resulting atom.
-- If g is a <a name="ornl.elision.core.Applicable" class="extype" href="Applicable.html">Applicable</a>, then g.a is computed and
-  $x is bound the result.
-- Otherwise g is assumed to be a predicate, and is rewritten with the
-  potential bindings.  If the result is true, then $x is bound to v.</p><p>In all other cases the binding attempt is rejected.</p><h4> Type </h4><p>Every variable must have a type, and the type can be <code>ANY</code>.</p><h4> Equality and Matching </h4><p>Variables are equal iff their name, type, guard, and labels are all equal.</p><p>Variables can be bound, so that gets checked during matching.  A variable
+For proposed binding of variable <code>$</code><code>x</code> to value <code>v</code>, with guard <code>g</code>, we do the
+following.</p><p>- If <code>g</code> is a ornl.elision.core.Rewritable, then <code>g.a</code> is computed and
+  if the flag is true, <code>$</code><code>x</code> is bound to the resulting atom.
+- If <code>g</code> is a <a name="ornl.elision.core.Applicable" class="extype" href="Applicable.html">Applicable</a>, then <code>g.a</code> is computed and
+  <code>$</code><code>x</code> is bound the result.
+- Otherwise <code>g</code> is assumed to be a predicate, and is rewritten with the
+  potential bindings.  If the result is true, then <code>$</code><code>x</code> is bound to <code>v</code>.</p><p>In all other cases the binding attempt is rejected.</p><h4> Type </h4><p>Every variable must have a type, and the type can be <code>ANY</code>.</p><h4> Equality and Matching </h4><p>Variables are equal iff their name, type, guard, and labels are all equal.</p><p>Variables can be bound, so that gets checked during matching.  A variable
 pattern matches a subject iff it is already bound to that subject, or if it
 is unbound and the types match.  Guards are not matched; this would be
 problematic, as the guards are used to determine whether a match succeeds!
@@ -553,7 +553,7 @@ be able to &quot;round trip,&quot; that is, <a name="ornl.elision.parse.AtomPars
 be able to parse it and return an atom equal to this one.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="">Variable</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Variable#toString" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -563,7 +563,9 @@ be able to parse it and return an atom equal to this one.
         <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="">Variable</a> → AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Make a string that can be used to re-generate this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Make a string that can be used to re-generate this atom.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#tryMatch" data-isabs="false">
       <a id="tryMatch(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">

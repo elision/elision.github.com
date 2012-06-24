@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.CaseOperator</title>
+          <title>ornl.elision.core.MapPair</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -14,22 +14,21 @@
         </head>
         <body class="value">
       <div id="definition">
-        <a title="Go to companion" href="CaseOperator.html"><img src="../../../lib/object_to_class_big.png" /></a>
+        <a title="Go to companion" href="MapPair.html"><img src="../../../lib/object_to_class_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1><a title="Go to companion" href="CaseOperator.html">CaseOperator</a></h1>
+        <h1><a title="Go to companion" href="MapPair.html">MapPair</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">object</span>
       <span class="symbol"> 
-        <span class="name">CaseOperator</span>
+        <span class="name">MapPair</span>
         
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Construction and matching of macros (case operators).
-</p></div><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -47,7 +46,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.core.CaseOperator" class="in"><span>CaseOperator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.core.MapPair" class="in"><span>MapPair</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -118,33 +117,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.CaseOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean):CaseOperator"></a>
+    </li><li visbl="pub" name="ornl.elision.core.MapPair#apply" data-isabs="false">
+      <a id="apply(BasicAtom,BasicAtom):MapPair"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">apply</span>
         
-        <span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="cases">cases: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a name="ornl.elision.core.CaseOperator" class="extype" href="CaseOperator.html">CaseOperator</a></span>
+        <span class="params">(<span name="left">left: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="right">right: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.MapPair" class="extype" href="MapPair.html">MapPair</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Make a case operator from the components.</p><div class="fullcomment"><div class="comment cmt"><p>Make a case operator from the components.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The operator type (may be <code>ANY</code>).</p></dd><dt class="param">cases</dt><dd class="cmt"><p>The cases, as a sequence of atoms.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">detail</dt><dd class="cmt"><p>Optional detailed help for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
-											meta-terms.  This is not advisable, and you should
-											probably leave this with the default value of false.</p></dd><dt>returns</dt><dd class="cmt"><p>The new case operator.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.CaseOperator#apply" data-isabs="false">
-      <a id="apply(SpecialFormHolder):CaseOperator"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">apply</span>
-        
-        <span class="params">(<span name="sfh">sfh: <a name="ornl.elision.core.SpecialFormHolder" class="extype" href="SpecialFormHolder.html">SpecialFormHolder</a></span>)</span><span class="result">: <a name="ornl.elision.core.CaseOperator" class="extype" href="CaseOperator.html">CaseOperator</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Make a case operator from the given special form data.</p><div class="fullcomment"><div class="comment cmt"><p>Make a case operator from the given special form data.
-</p></div><dl class="paramcmts block"><dt class="param">sfh</dt><dd class="cmt"><p>The special form data.</p></dd><dt>returns</dt><dd class="cmt"><p>The case operator.
+      <p class="shortcomment cmt">Make a new instance.</p><div class="fullcomment"><div class="comment cmt"><p>Make a new instance.
+</p></div><dl class="paramcmts block"><dt class="param">left</dt><dd class="cmt"><p>The left atom.</p></dd><dt class="param">right</dt><dd class="cmt"><p>The right atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The new map pair.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -295,18 +279,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.CaseOperator#unapply" data-isabs="false">
-      <a id="unapply(CaseOperator):Some[(String, BasicAtom, AtomSeq, String, String)]"></a>
+    </li><li visbl="pub" name="ornl.elision.core.MapPair#unapply" data-isabs="false">
+      <a id="unapply(MapPair):Some[(BasicAtom, BasicAtom)]"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">unapply</span>
         
-        <span class="params">(<span name="co">co: <a name="ornl.elision.core.CaseOperator" class="extype" href="CaseOperator.html">CaseOperator</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(String, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a>, String, String)]</span>
+        <span class="params">(<span name="pair">pair: <a name="ornl.elision.core.MapPair" class="extype" href="MapPair.html">MapPair</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>)]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Extract the parts of a case operator.</p><div class="fullcomment"><div class="comment cmt"><p>Extract the parts of a case operator.
-</p></div><dl class="paramcmts block"><dt class="param">co</dt><dd class="cmt"><p>The case operator.</p></dd><dt>returns</dt><dd class="cmt"><p>A triple of the name, type, and cases.
+      <p class="shortcomment cmt">Extract the parts of a map pair.</p><div class="fullcomment"><div class="comment cmt"><p>Extract the parts of a map pair.
+</p></div><dl class="paramcmts block"><dt class="param">pair</dt><dd class="cmt"><p>The map pair.</p></dd><dt>returns</dt><dd class="cmt"><p>The left and right parts.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
