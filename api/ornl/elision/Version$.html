@@ -39,9 +39,11 @@ the jar file).  It has the following format.</p><pre>
     major = &quot;major version number&quot;
     minor = &quot;minor version number&quot;
     build = &quot;build date / time identifier&quot;/&gt;
+  &lt;main name=&quot;command name&quot; class=&quot;fully.qualified.class.name&quot;
+    description=&quot;human-readable description&quot;/&gt;
 &lt;/configuration&gt;
 </pre><h4> Use </h4><p>This object loads its data at construction time.  This is typically when
-you first reference a field.</p><p>The <code>loaded</code> field reveals if the file was successfully loaded.  If not, the
+you first reference a field in this object.</p><p>The <code>loaded</code> field reveals if the file was successfully loaded.  If not, the
 other fields contain default (and useless) information.  Missing fields
 result in a value of the empty string for that field.  Extra fields not
 specified above are ignored, but may be used in the future.</p><p>Both the configuration and its DTD (<code>elision_configuration.dtd</code>) are
@@ -84,7 +86,43 @@ expected to be found in the root of the class path.</p><h4> DTD </h4><p>The foll
 
         
 
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.Version#CEntry" data-isabs="false">
+      <a id="CEntry:()"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">CEntry</span>
         
+        <span class="result"> = (HasMain, String, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A type for an entry in the command catalog.</p>
+    </li><li visbl="pub" name="ornl.elision.Version#HasMain" data-isabs="false">
+      <a id="HasMain:HasMain"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">HasMain</span>
+        
+        <span class="result"> = java.lang.Class[_ &lt;: AnyRef{def main(args: String*): Unit}]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A type for classes that have a main method.</p>
+    </li><li visbl="pub" name="ornl.elision.Version.MainException" data-isabs="false">
+      <a id="MainException:MainException"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="Version$$MainException.html"><span class="name">MainException</span></a>
+        
+        <span class="result"> extends ElisionException</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An error occurred processing a main.</p>
+    </li></ol>
+            </div>
         
         
 
@@ -217,6 +255,21 @@ expected to be found in the root of the class path.</p><h4> DTD </h4><p>The foll
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.Version#get" data-isabs="false">
+      <a id="get(String):()"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">get</span>
+        
+        <span class="params">(<span name="command">command: String</span>)</span><span class="result">: ()</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get a main class based on the command, or an unambiguous prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Get a main class based on the command, or an unambiguous prefix.  The
+exception is the empty string.  If we are passed the empty string, then
+return the default command.
+</p></div><dl class="paramcmts block"><dt class="param">command</dt><dd class="cmt"><p>The command prefix.  It is not case-sensitive.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested class and command description, as a pair.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -239,6 +292,30 @@ expected to be found in the root of the class path.</p><h4> DTD </h4><p>The foll
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.Version#help" data-isabs="false">
+      <a id="help(Appendable,Int):Appendable"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">help</span>
+        
+        <span class="params">(<span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">80</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a help string with the given width.</p>
+    </li><li visbl="pub" name="ornl.elision.Version#invoke" data-isabs="false">
+      <a id="invoke(String,Array[String]):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">invoke</span>
+        
+        <span class="params">(<span name="command">command: String</span>, <span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Invoke the given command, passing the provided command line arguments.</p><div class="fullcomment"><div class="comment cmt"><p>Invoke the given command, passing the provided command line arguments.
+</p></div><dl class="paramcmts block"><dt class="param">command</dt><dd class="cmt"><p>The requested command prefix.  It is not case sensitive.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
