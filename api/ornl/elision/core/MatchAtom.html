@@ -31,12 +31,8 @@
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Encapsulate a simple atom to perform basic matching.</p><h4> Purpose </h4><p>This atom holds a single pattern <i>P</i>.  When applied to another atom <i>A</i>,
 it tries to match <i>A</i> against pattern <i>P</i>.  If the match fails, then
 <code>NONE</code> is returned.  The first match that satisfies the guards (if any) is
-returned.</p><h4> Rules </h4><p>This is almost a rewrite rule.  Consider the following rule.</p><pre>
-{ rule $x:INTEGER -&gt; 0 #if equal($$x,5) }
-</pre><p>We can <i>almost</i> write this as follows, provided we are very careful with
-metavariables.</p><pre>
-$$x.(({match $$x:INTEGER #if equal($$x,5)}.$$x).0)
-</pre><p>The reason the above two are not the same is that in the second case
+returned.</p><h4> Rules </h4><p>This is almost a rewrite rule.  Consider the following rule.</p><p><code>{ rule </code><code>$</code><code>x:INTEGER -&gt; 0 #if equal(</code><code>$</code><code>$</code><code>x,5) }</code></p><p>We can <i>almost</i> write this as follows, provided we are very careful with
+metavariables.</p><p><code>\</code><code>$</code><code>$</code><code>x.(({match </code><code>$</code><code>$</code><code>x:INTEGER #if equal(</code><code>$</code><code>$</code><code>x,5)}.</code><code>$</code><code>$</code><code>x).0)</code></p><p>The reason the above two are not the same is that in the second case
 we might get <code>NONE</code> as the result from the match and this will not
 get &quot;digested&quot; by the applicative dot.
 </p></div><div class="toggleContainer block">
