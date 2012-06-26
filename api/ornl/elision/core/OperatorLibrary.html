@@ -304,20 +304,20 @@ Otherwise None is returned.
 </p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>Appendable to get output.</p></dd><dt class="param">opref</dt><dd class="cmt"><p>The operator reference.</p></dd><dt class="param">width</dt><dd class="cmt"><p>The maximum width allowed.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary#help" data-isabs="false">
-      <a id="help(Appendable,Int):Appendable"></a>
+      <a id="help(Appendable,Int,String):Appendable"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">help</span>
         
-        <span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+        <span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span></span>, <span name="apropos">apropos: String = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a list of known operators, a short prototype, and their short
 description.</p><div class="fullcomment"><div class="comment cmt"><p>Get a list of known operators, a short prototype, and their short
 description.  Operators whose name starts with an underscore are
 skipped.
-</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The destination of the text.</p></dd><dt class="param">width</dt><dd class="cmt"><p>Width of the field.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The destination of the text.</p></dd><dt class="param">width</dt><dd class="cmt"><p>Width of the field.</p></dd><dt class="param">apropos</dt><dd class="cmt"><p>Only return operators whose description contains this string.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
