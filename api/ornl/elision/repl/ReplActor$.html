@@ -235,17 +235,6 @@ It will discard any other input in its mailbox.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.repl.ReplActor#console" data-isabs="false">
-      <a id="console:Console"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">console</span>
-        
-        <span class="result">: <a name="ornl.elision.core.Console" class="extype" href="../core/Console.html">Console</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">A reference to Elision's Console.</p>
     </li><li visbl="pub" name="scala.actors.Combinators#continue" data-isabs="false">
       <a id="continue():Unit"></a>
       <h4 class="signature">
@@ -557,6 +546,17 @@ It will discard any other input in its mailbox.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.repl.ReplActor#peer" data-isabs="false">
+      <a id="peer:ERepl"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">peer</span>
+        
+        <span class="result">: <a name="ornl.elision.repl.ERepl" class="extype" href="ERepl.html">ERepl</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A reference to Elision's REPL.</p>
     </li><li visbl="pub" name="scala.actors.Actor#react" data-isabs="false">
       <a id="react(PartialFunction[Any, Unit]):Nothing"></a>
       <h4 class="signature">
@@ -796,7 +796,7 @@ It will discard any other input in its mailbox.
         <span class="params">(<span name="doStuff">doStuff: () ⇒ <span name="scala.Unit" class="extype">Unit</span> = <span class="symbol">null</span></span>, <span name="msg">msg: String = <span class="symbol">null</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">forces the current thread to wait for the GUI to finish doing something.</p>
+      <p class="shortcomment cmt">forces the calling thread to wait for the GUI to finish doing something.</p>
     </li><li visbl="pub" name="ornl.elision.repl.ReplActor#waitingForGuiInput" data-isabs="false">
       <a id="waitingForGuiInput:Boolean"></a>
       <h4 class="signature">

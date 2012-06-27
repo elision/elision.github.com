@@ -254,7 +254,7 @@
         <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Flag for temporarily disabling the TreeBuilder.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -653,7 +653,7 @@
         <span class="result">: <a name="ornl.elision.gui.TreeBuilder" class="extype" href="TreeBuilder.html">TreeBuilder</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">A reference to the GUI's TreeBuilder.</p>
     </li><li visbl="pub" name="scala.actors.Actor#unlink" data-isabs="false">
       <a id="unlink(AbstractActor):Unit"></a>
       <h4 class="signature">
@@ -665,6 +665,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.GUIActor#verbose" data-isabs="false">
+      <a id="verbose:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">verbose</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Flag for telling waitOnREPL to display messages about what it's waiting on.</p>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -707,6 +718,28 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.GUIActor#waitOnREPL" data-isabs="false">
+      <a id="waitOnREPL(() ⇒ Unit,String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">waitOnREPL</span>
+        
+        <span class="params">(<span name="doStuff">doStuff: () ⇒ <span name="scala.Unit" class="extype">Unit</span> = <span class="symbol">null</span></span>, <span name="msg">msg: String = <span class="symbol">null</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">forces the calling thread to wait for the REPL to finish doing something.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.GUIActor#waitingForReplInput" data-isabs="false">
+      <a id="waitingForReplInput:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">waitingForReplInput</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A flag used by the GUI to determine if this actor is awaiting some sort of response from the REPL.</p><div class="fullcomment"><div class="comment cmt"><p>A flag used by the GUI to determine if this actor is awaiting some sort of response from the REPL. Be careful with this.</p></div></div>
     </li></ol>
             </div>
 
