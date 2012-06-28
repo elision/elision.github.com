@@ -248,20 +248,22 @@ nothing.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="prt" name="ornl.elision.parse.Processor#banner" data-isabs="false">
-      <a id="banner():Unit"></a>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#banner" data-isabs="false">
+      <a id="banner(Boolean):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">banner</span>
         
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">(<span name="history">history: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Display the banner, version, and build information on the current
 console using the <code>emitln</code> method of the console.</p><div class="fullcomment"><div class="comment cmt"><p>Display the banner, version, and build information on the current
-console using the <code>emitln</code> method of the console.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></dd></dl></div>
+console using the <code>emitln</code> method of the console.  This will also
+record session information in the history file, if enabled.
+</p></div><dl class="paramcmts block"><dt class="param">history</dt><dd class="cmt"><p>If true (default), log the start of the session.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.repl.ERepl#bootstrap" data-isabs="false">
       <a id="bootstrap(Int):Boolean"></a>
       <h4 class="signature">
