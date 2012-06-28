@@ -262,6 +262,36 @@ nothing.
 console using the <code>emitln</code> method of the console.</p><div class="fullcomment"><div class="comment cmt"><p>Display the banner, version, and build information on the current
 console using the <code>emitln</code> method of the console.
 </p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.repl.ERepl#bootstrap" data-isabs="false">
+      <a id="bootstrap(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">bootstrap</span>
+        
+        <span class="params">(<span name="quiet">quiet: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform bootstrapping.</p><div class="fullcomment"><div class="comment cmt"><p>Perform bootstrapping.  This loads the file specified by <code>bootstrapFile</code>
+and then tries to load the user's <code>.elisionrc</code> file (or another file,
+depending on environment variables).
+</p></div><dl class="paramcmts block"><dt class="param">quiet</dt><dd class="cmt"><p>Quiet level when loading files.  This is 1 by default.</p></dd><dt>returns</dt><dd class="cmt"><p>True on success, and false when a failure is reported.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="ERepl.html">ERepl</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.repl.ERepl#bootstrapFile" data-isabs="false">
+      <a id="bootstrapFile:String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">bootstrapFile</span>
+        
+        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The file to load during bootstrapping.</p><div class="fullcomment"><div class="comment cmt"><p>The file to load during bootstrapping.  This is the file loaded first
+by <code>bootstrap</code> and must define everything needed by subsequent files
+(most notably the operator and rule declaration operators, any I/O
+operators, and any operators for including other files).
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="ERepl.html">ERepl</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
