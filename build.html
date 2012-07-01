@@ -19,9 +19,313 @@
   <body>
     <H1>Elision Build Output</H1>
 <pre>
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/ElisionException.scala:50: error: ElisionException is already defined as class ElisionException
+   [scalac] class ElisionException(val msg: String) extends Exception(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/ElisionException.scala:55: error: ElisionException is already defined as object ElisionException
+   [scalac] object ElisionException {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/Help.scala:42: error: Help is already defined as object Help
+   [scalac] object Help extends App {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/Help.scala:49: error: About is already defined as object About
+   [scalac] object About extends App {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/Main.scala:35: error: Main is already defined as object Main
+   [scalac] object Main extends App {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/Version.scala:89: error: Version is already defined as object Version
+   [scalac] object Version {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:46: error: IllegalPropertiesSpecification is already defined as class IllegalPropertiesSpecification
+   [scalac] class IllegalPropertiesSpecification(msg: String)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:97: error: AlgProp is already defined as class AlgProp
+   [scalac] class AlgProp(
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:616: error: NoProps is already defined as case class NoProps
+   [scalac] case object NoProps extends AlgProp()
+   [scalac]             ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:619: error: Associative is already defined as case class Associative
+   [scalac] case class Associative(atom: BasicAtom) extends AlgProp(associative = Some(atom))
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:622: error: Commutative is already defined as case class Commutative
+   [scalac] case class Commutative(atom: BasicAtom) extends AlgProp(commutative = Some(atom))
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:625: error: Idempotent is already defined as case class Idempotent
+   [scalac] case class Idempotent(atom: BasicAtom) extends AlgProp(idempotent = Some(atom))
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:632: error: Absorber is already defined as case class Absorber
+   [scalac] case class Absorber(atom: BasicAtom) extends AlgProp(absorber = Some(atom))
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AlgProp.scala:639: error: Identity is already defined as case class Identity
+   [scalac] case class Identity(atom: BasicAtom) extends AlgProp(identity = Some(atom))
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Apply.scala:60: error: Apply is already defined as class Apply
+   [scalac] abstract class Apply(val op: BasicAtom, val arg: BasicAtom) extends BasicAtom {
+   [scalac]                ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Apply.scala:152: error: Apply is already defined as object Apply
+   [scalac] object Apply {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Apply.scala:262: error: OpApply is already defined as case class OpApply
+   [scalac] case class OpApply protected[core] (override val op: OperatorRef,
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Apply.scala:309: error: SimpleApply is already defined as case class SimpleApply
+   [scalac] case class SimpleApply protected[core] (override val op: BasicAtom,
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AtomSeq.scala:46: error: EmptySeq is already defined as object EmptySeq
+   [scalac] object EmptySeq extends AtomSeq(AlgProp(), IndexedSeq())
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AtomSeq.scala:68: error: AtomSeq is already defined as class AtomSeq
+   [scalac] class AtomSeq(val props: AlgProp, xatoms: IndexedSeq[BasicAtom])
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AtomSeq.scala:262: error: AtomSeq is already defined as object AtomSeq
+   [scalac] object AtomSeq {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/AtomSeq.scala:354: error: Args is already defined as object Args
+   [scalac] object Args {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BasicAtom.scala:45: error: Mutable is already defined as trait Mutable
+   [scalac] trait Mutable
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BasicAtom.scala:53: error: Fickle is already defined as trait Fickle
+   [scalac] trait Fickle
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BasicAtom.scala:59: error: Rewriter is already defined as trait Rewriter
+   [scalac] trait Rewriter {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BasicAtom.scala:85: error: Applicable is already defined as trait Applicable
+   [scalac] trait Applicable {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BasicAtom.scala:179: error: BasicAtom is already defined as class BasicAtom
+   [scalac] abstract class BasicAtom {
+   [scalac]                ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BasicAtom.scala:495: error: BasicAtom is already defined as object BasicAtom
+   [scalac] object BasicAtom {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Bindings.scala:65: error: Bindings is already defined as class Bindings
+   [scalac] class Bindings(val self: HashMap[String, BasicAtom])
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Bindings.scala:134: error: Bindings is already defined as object Bindings
+   [scalac] object Bindings {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/BindingsAtom.scala:70: error: BindingsAtom is already defined as case class BindingsAtom
+   [scalac] case class BindingsAtom(mybinds: Bindings) extends BasicAtom with Applicable {
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Console.scala:39: error: PrintConsole is already defined as object PrintConsole
+   [scalac] object PrintConsole extends Console {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Console.scala:50: error: Console is already defined as trait Console
+   [scalac] trait Console {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Context.scala:57: error: Context is already defined as class Context
+   [scalac] class Context extends Fickle with Mutable {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Executor.scala:39: error: CacheException is already defined as class CacheException
+   [scalac] class CacheException(msg: String) extends ElisionException(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Executor.scala:44: error: PropertyManager is already defined as trait PropertyManager
+   [scalac] trait PropertyManager {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Executor.scala:209: error: HasHistory is already defined as trait HasHistory
+   [scalac] trait HasHistory {  
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Executor.scala:251: error: TraceableParse is already defined as trait TraceableParse
+   [scalac] trait TraceableParse {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Executor.scala:280: error: Timeable is already defined as trait Timeable
+   [scalac] trait Timeable {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Executor.scala:368: error: Executor is already defined as trait Executor
+   [scalac] trait Executor extends PropertyManager {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Lambda.scala:83: error: LambdaVariableMismatchException is already defined as class LambdaVariableMismatchException
+   [scalac] class LambdaVariableMismatchException(msg: String)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Lambda.scala:89: error: LambdaUnboundedRecursionException is already defined as class LambdaUnboundedRecursionException
+   [scalac] class LambdaUnboundedRecursionException(msg: String)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Lambda.scala:130: error: Lambda is already defined as class Lambda
+   [scalac] class Lambda private (val lvar: Variable, val body: BasicAtom, isFixed: Boolean)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Lambda.scala:257: error: Lambda is already defined as object Lambda
+   [scalac] object Lambda {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:97: error: Literal is already defined as class Literal
+   [scalac] abstract class Literal[TYPE](typ: BasicAtom)(implicit mTYPE: Manifest[TYPE])
+   [scalac]                ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:145: error: Literal is already defined as object Literal
+   [scalac] object Literal {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:208: error: IntegerLiteral is already defined as case class IntegerLiteral
+   [scalac] case class IntegerLiteral(typ: BasicAtom, value: BigInt)
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:249: error: StringLiteral is already defined as case class StringLiteral
+   [scalac] case class StringLiteral(typ: BasicAtom, value: String)
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:285: error: SymbolLiteral is already defined as case class SymbolLiteral
+   [scalac] case class SymbolLiteral(typ: BasicAtom, value: Symbol)
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:325: error: BooleanLiteral is already defined as case class BooleanLiteral
+   [scalac] case class BooleanLiteral(typ: BasicAtom, value: Boolean)
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:364: error: IEEE754 is already defined as case class IEEE754
+   [scalac] case class IEEE754(width: Int, significand: Int) {
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:419: error: IEEE754Quadruple is already defined as object IEEE754Quadruple
+   [scalac] object IEEE754Quadruple extends IEEE754(128, 112)
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:421: error: IEEE754Double is already defined as object IEEE754Double
+   [scalac] object IEEE754Double extends IEEE754(64, 52)
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:423: error: IEEE754Single is already defined as object IEEE754Single
+   [scalac] object IEEE754Single extends IEEE754(32, 23)
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:425: error: IEEE754Half is already defined as object IEEE754Half
+   [scalac] object IEEE754Half extends IEEE754(16, 10)
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Literal.scala:435: error: FloatLiteral is already defined as case class FloatLiteral
+   [scalac] case class FloatLiteral(typ: BasicAtom, significand: BigInt, exponent: Int,
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MapPair.scala:39: error: MapPair is already defined as object MapPair
+   [scalac] object MapPair {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MapPair.scala:74: error: MapPair is already defined as class MapPair
+   [scalac] class MapPair(val left: BasicAtom, val right: BasicAtom) extends BasicAtom
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MatchAtom.scala:62: error: MatchAtom is already defined as class MatchAtom
+   [scalac] class MatchAtom(sfh: SpecialFormHolder,
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MatchAtom.scala:120: error: MatchAtom is already defined as object MatchAtom
+   [scalac] object MatchAtom {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MatchIterator.scala:51: error: MatchIterator is already defined as class MatchIterator
+   [scalac] abstract class MatchIterator extends Iterator[Bindings] {
+   [scalac]                ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MatchIterator.scala:217: error: MatchIterator is already defined as object MatchIterator
+   [scalac] object MatchIterator {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/MatchIterator.scala:276: error: SubMatchIterator is already defined as class SubMatchIterator
+   [scalac] private class SubMatchIterator(val localMatch: (Bindings) => Outcome,
+   [scalac]               ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:49: error: ArgumentListException is already defined as class ArgumentListException
+   [scalac] class ArgumentListException(msg: String) extends ElisionException(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:56: error: NativeHandlerException is already defined as class NativeHandlerException
+   [scalac] class NativeHandlerException(msg: String) extends ElisionException(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:64: error: HandHolder is already defined as class HandHolder
+   [scalac] class HandHolder(
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:75: error: ApplyData is already defined as class ApplyData
+   [scalac] class ApplyData(val op: SymbolicOperator, val args: AtomSeq,
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:90: error: ApplyData is already defined as object ApplyData
+   [scalac] object ApplyData {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:115: error: Operator is already defined as class Operator
+   [scalac] abstract class Operator(
+   [scalac]                ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:193: error: OperatorRef is already defined as class OperatorRef
+   [scalac] class OperatorRef(val operator: Operator) extends BasicAtom with Applicable {
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:251: error: OperatorRef is already defined as object OperatorRef
+   [scalac] object OperatorRef {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:273: error: CaseOperator is already defined as object CaseOperator
+   [scalac] object CaseOperator {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:354: error: CaseOperator is already defined as class CaseOperator
+   [scalac] class CaseOperator private (sfh: SpecialFormHolder,
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:420: error: ApplyInfo is already defined as class ApplyInfo
+   [scalac] class ApplyInfo(val op: SymbolicOperator, val args: AtomSeq, val binds: Bindings)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:425: error: TypedSymbolicOperator is already defined as object TypedSymbolicOperator
+   [scalac] object TypedSymbolicOperator {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:573: error: TypedSymbolicOperator is already defined as class TypedSymbolicOperator
+   [scalac] class TypedSymbolicOperator private (sfh: SpecialFormHolder,
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:588: error: SymbolicOperator is already defined as object SymbolicOperator
+   [scalac] object SymbolicOperator {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Operator.scala:676: error: SymbolicOperator is already defined as class SymbolicOperator
+   [scalac] protected class SymbolicOperator protected (sfh: SpecialFormHolder,
+   [scalac]                 ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/OperatorLibrary.scala:46: error: OperatorRedefinitionException is already defined as class OperatorRedefinitionException
+   [scalac] class OperatorRedefinitionException(msg: String) extends ElisionException(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/OperatorLibrary.scala:53: error: OperatorDefinitionException is already defined as class OperatorDefinitionException
+   [scalac] class OperatorDefinitionException(msg: String) extends ElisionException(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/OperatorLibrary.scala:60: error: UndefinedOperatorException is already defined as class UndefinedOperatorException
+   [scalac] class UndefinedOperatorException(msg: String) extends ElisionException(msg)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/OperatorLibrary.scala:75: error: OperatorLibrary is already defined as class OperatorLibrary
+   [scalac] class OperatorLibrary(
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Outcome.scala:42: error: Outcome is already defined as class Outcome
+   [scalac] sealed abstract class Outcome
+   [scalac]                       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Outcome.scala:47: error: Outcome is already defined as object Outcome
+   [scalac] object Outcome {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Outcome.scala:66: error: Match is already defined as case class Match
+   [scalac] case class Match(binds: Bindings) extends Outcome
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Outcome.scala:74: error: Many is already defined as case class Many
+   [scalac] case class Many(matches: MatchIterator) extends Outcome
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/Outcome.scala:83: error: Fail is already defined as case class Fail
+   [scalac] case class Fail(reason: () => String, index: Int) extends Outcome {
+   [scalac]            ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RewriteRule.scala:55: error: RulesetStrategy is already defined as class RulesetStrategy
+   [scalac] class RulesetStrategy private (sfh: SpecialFormHolder,
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RewriteRule.scala:129: error: RulesetStrategy is already defined as object RulesetStrategy
+   [scalac] object RulesetStrategy {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RewriteRule.scala:175: error: MapStrategy is already defined as class MapStrategy
+   [scalac] class MapStrategy(sfh: SpecialFormHolder, val lhs: BasicAtom,
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RewriteRule.scala:286: error: MapStrategy is already defined as object MapStrategy
+   [scalac] object MapStrategy {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RewriteRule.scala:321: error: RewriteRule is already defined as object RewriteRule
+   [scalac] object RewriteRule {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RewriteRule.scala:429: error: RewriteRule is already defined as class RewriteRule
+   [scalac] class RewriteRule private (
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:71: error: NamedRootType is already defined as class NamedRootType
+   [scalac] class NamedRootType protected (val name: String)
+   [scalac]       ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:116: error: NamedRootType is already defined as object NamedRootType
+   [scalac] object NamedRootType {
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:176: error: STRING is already defined as object STRING
+   [scalac] object STRING extends NamedRootType("STRING")
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:178: error: SYMBOL is already defined as object SYMBOL
+   [scalac] object SYMBOL extends NamedRootType("SYMBOL")
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:180: error: INTEGER is already defined as object INTEGER
+   [scalac] object INTEGER extends NamedRootType("INTEGER")
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:182: error: FLOAT is already defined as object FLOAT
+   [scalac] object FLOAT extends NamedRootType("FLOAT")
+   [scalac]        ^
+   [scalac] /home/sprowell/workspace/Elision/src/ornl/elision/core/RootType.scala:184: error: BOOLEAN is already defined as object BOOLEAN
+   [scalac] object BOOLEAN extends NamedRootType("BOOLEAN")
+   [scalac]        ^
+   [scalac] 179 errors found
 
-BUILD SUCCESSFUL
-Total time: 2 minutes 18 seconds
+BUILD FAILED
+/home/sprowell/build.xml:112: The following error occurred while executing this line:
+/home/sprowell/workspace/Elision/build.xml:174: Compile failed with 179 errors; see the compiler error output for details.
+
+Total time: 12 seconds
 </pre>
   </body>
 </html>
