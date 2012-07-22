@@ -243,6 +243,17 @@ console using the <code>emitln</code> method of the console.  This will also
 record session information in the history file, if enabled.
 </p></div><dl class="paramcmts block"><dt class="param">history</dt><dd class="cmt"><p>If true (default), log the start of the session.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#checkpoints" data-isabs="false">
+      <a id="checkpoints:ArrayBuffer[(Date, Context)]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">checkpoints</span>
+        
+        <span class="result">: <span name="scala.collection.mutable.ArrayBuffer" class="extype">ArrayBuffer</span>[(<span name="java.util.Date" class="extype">Date</span>, <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a>)]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The list of context checkpoints</p>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -271,7 +282,7 @@ record session information in the history file, if enabled.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#context" data-isabs="false">
       <a id="context:Context"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">var</span>
       <span class="symbol"> 
         <span class="name">context</span>
         
@@ -308,6 +319,17 @@ unrecoverable error.
       <p class="shortcomment cmt">Declare a property.</p><div class="fullcomment"><div class="comment cmt"><p>Declare a property.
 </p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The property name.</p></dd><dt class="param">description</dt><dd class="cmt"><p>Human-readable description of the property.</p></dd><dt class="param">default</dt><dd class="cmt"><p>The default value of the property.</p></dd><dt>returns</dt><dd class="cmt"><p>The default value.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#displayCheckPts" data-isabs="false">
+      <a id="displayCheckPts:Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">displayCheckPts</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Displays the list of saved checkpoints.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -547,6 +569,30 @@ is correctly typed.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#loadCheckPt" data-isabs="false">
+      <a id="loadCheckPt(Int):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">loadCheckPt</span>
+        
+        <span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Loads a context checkpoint.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#loadCoredump" data-isabs="false">
+      <a id="loadCoredump(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">loadCoredump</span>
+        
+        <span class="params">(<span name="corePath">corePath: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reloads a core dump created with fail().</p><div class="fullcomment"><div class="comment cmt"><p>Reloads a core dump created with fail().
+</p></div><dl class="paramcmts block"><dt class="param">corePath</dt><dd class="cmt"><p>The path to the core dump file.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -678,6 +724,17 @@ handlers.
 is provided; use one of the <code>getLastTime</code> methods to get elapsed time
 data.  This is not intended for multithreaded use.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="">Processor</a> → <a name="ornl.elision.core.Timeable" class="extype" href="../core/Timeable.html">Timeable</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#saveCheckPt" data-isabs="false">
+      <a id="saveCheckPt:Int"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">saveCheckPt</span>
+        
+        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Saves a context checkpoint.</p>
     </li><li visbl="pub" name="ornl.elision.core.PropertyManager#setProperty" data-isabs="false">
       <a id="setProperty[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">

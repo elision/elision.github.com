@@ -76,7 +76,7 @@
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="scala.actors.ReplyReactor#!" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.repl.ReplActor#!" data-isabs="false">
       <a id="!(Any):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -86,7 +86,7 @@
         <span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReplyReactor → Reactor → OutputChannel</dd></dl></div>
+      <p class="shortcomment cmt">Overriden ! method checks global allowMessages flag before processing a message.</p><div class="fullcomment"><div class="comment cmt"><p>Overriden ! method checks global allowMessages flag before processing a message.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ReplActor" class="extype" href="">ReplActor</a> → ReplyReactor → Reactor → OutputChannel</dd></dl></div>
     </li><li visbl="pub" name="scala.actors.ActorCanReply#!!" data-isabs="false">
       <a id="!!(Any):Future[Any]"></a>
       <h4 class="signature">
@@ -323,6 +323,17 @@ It will discard any other input in its mailbox.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.repl.ReplActor#exitFlag" data-isabs="false">
+      <a id="exitFlag:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">exitFlag</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">a flag used for forcing the ReplActor to accept a message for exiting.</p>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">

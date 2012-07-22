@@ -24,14 +24,14 @@
       <span class="symbol"> 
         <span class="name">ConsolePanel</span>
         
-        <span class="result"> extends <span name="scala.swing.ScrollPane" class="extype">ScrollPane</span></span>
+        <span class="result"> extends <span name="scala.swing.BoxPanel" class="extype">BoxPanel</span></span>
       </span>
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This panel displays the Elision REPL in a scrollable EditorPane.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.swing.ScrollPane" class="extype">ScrollPane</span>, <span name="scala.swing.Container" class="extype">Container</span>, <span name="scala.swing.Component" class="extype">Component</span>, <span name="scala.swing.UIElement" class="extype">UIElement</span>, <span name="scala.swing.LazyPublisher" class="extype">LazyPublisher</span>, <span name="scala.swing.Publisher" class="extype">Publisher</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, <span name="scala.Proxy" class="extype">Proxy</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="scala.swing.BoxPanel" class="extype">BoxPanel</span>, <span name="scala.swing.SequentialContainer.Wrapper" class="extype">Wrapper</span>, <span name="scala.swing.SequentialContainer" class="extype">SequentialContainer</span>, <span name="scala.swing.Panel" class="extype">Panel</span>, <span name="scala.swing.Container.Wrapper" class="extype">Wrapper</span>, <span name="scala.swing.Container" class="extype">Container</span>, <span name="scala.swing.Component" class="extype">Component</span>, <span name="scala.swing.UIElement" class="extype">UIElement</span>, <span name="scala.swing.LazyPublisher" class="extype">LazyPublisher</span>, <span name="scala.swing.Publisher" class="extype">Publisher</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, <span name="scala.Proxy" class="extype">Proxy</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -47,7 +47,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.gui.ConsolePanel" class="in"><span>ConsolePanel</span></li><li name="scala.swing.ScrollPane" class="in"><span>ScrollPane</span></li><li name="scala.swing.Container" class="in"><span>Container</span></li><li name="scala.swing.Component" class="in"><span>Component</span></li><li name="scala.swing.UIElement" class="in"><span>UIElement</span></li><li name="scala.swing.LazyPublisher" class="in"><span>LazyPublisher</span></li><li name="scala.swing.Publisher" class="in"><span>Publisher</span></li><li name="scala.swing.Reactor" class="in"><span>Reactor</span></li><li name="scala.Proxy" class="in"><span>Proxy</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.gui.ConsolePanel" class="in"><span>ConsolePanel</span></li><li name="scala.swing.BoxPanel" class="in"><span>BoxPanel</span></li><li name="scala.swing.SequentialContainer.Wrapper" class="in"><span>Wrapper</span></li><li name="scala.swing.SequentialContainer" class="in"><span>SequentialContainer</span></li><li name="scala.swing.Panel" class="in"><span>Panel</span></li><li name="scala.swing.Container.Wrapper" class="in"><span>Wrapper</span></li><li name="scala.swing.Container" class="in"><span>Container</span></li><li name="scala.swing.Component" class="in"><span>Component</span></li><li name="scala.swing.UIElement" class="in"><span>UIElement</span></li><li name="scala.swing.LazyPublisher" class="in"><span>LazyPublisher</span></li><li name="scala.swing.Publisher" class="in"><span>Publisher</span></li><li name="scala.swing.Reactor" class="in"><span>Reactor</span></li><li name="scala.Proxy" class="in"><span>Proxy</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -132,6 +132,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Container.Wrapper#_contents" data-isabs="false">
+      <a id="_contents:Content"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">_contents</span>
+        
+        <span class="result">: <span name="scala.swing.Container.Wrapper.Content" class="extype">Content</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Wrapper</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -198,6 +209,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.ConsolePanel#changeMode" data-isabs="false">
+      <a id="changeMode(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">changeMode</span>
+        
+        <span class="params">(<span name="mode">mode: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Changes which REPL the ConsolePanel is running and provides a thread for it.</p>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -212,39 +234,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#columnHeaderView" data-isabs="false">
-      <a id="columnHeaderView:Option[Component]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">columnHeaderView</span>
-        
-        <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#columnHeaderView_=" data-isabs="false">
-      <a id="columnHeaderView_=(Option[Component]):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">columnHeaderView_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.Option" class="extype">Option</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#columnHeaderView_=" data-isabs="false">
-      <a id="columnHeaderView_=(Component):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">columnHeaderView_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.swing.Component" class="extype">Component</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.ConsolePanel#console" data-isabs="false">
       <a id="console:EditorPane"></a>
       <h4 class="signature">
@@ -256,28 +245,17 @@
       </span>
       </h4>
       <p class="shortcomment cmt">The EditorPane containing the REPL</p>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#contents" data-isabs="false">
-      <a id="contents:Seq[Component]"></a>
+    </li><li visbl="pub" name="scala.swing.SequentialContainer.Wrapper#contents" data-isabs="false">
+      <a id="contents:Buffer[Component]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
+      <span class="kind">val</span>
       <span class="symbol"> 
         <span class="name">contents</span>
         
-        <span class="result">: Seq[<span name="scala.swing.Component" class="extype">Component</span>]</span>
+        <span class="result">: <span name="scala.collection.mutable.Buffer" class="extype">Buffer</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane → Container</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#contents_=" data-isabs="false">
-      <a id="contents_=(Component):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">contents_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.swing.Component" class="extype">Component</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Wrapper → Wrapper → SequentialContainer → Container</dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#cursor" data-isabs="false">
       <a id="cursor:Cursor"></a>
       <h4 class="signature">
@@ -479,39 +457,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Proxy → AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#horizontalScrollBar" data-isabs="false">
-      <a id="horizontalScrollBar:ScrollBar"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">horizontalScrollBar</span>
-        
-        <span class="result">: <span name="scala.swing.ScrollBar" class="extype">ScrollBar</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#horizontalScrollBarPolicy" data-isabs="false">
-      <a id="horizontalScrollBarPolicy:Value"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">horizontalScrollBarPolicy</span>
-        
-        <span class="result">: <span name="scala.swing.ScrollPane.BarPolicy.Value" class="extype">Value</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#horizontalScrollBarPolicy_=" data-isabs="false">
-      <a id="horizontalScrollBarPolicy_=(Value):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">horizontalScrollBarPolicy_=</span>
-        
-        <span class="params">(<span name="p">p: <span name="scala.swing.ScrollPane.BarPolicy.Value" class="extype">Value</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#ignoreRepaint" data-isabs="false">
       <a id="ignoreRepaint:Boolean"></a>
       <h4 class="signature">
@@ -787,7 +732,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.Component#paint" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.gui.ConsolePanel#paint" data-isabs="false">
       <a id="paint(Graphics2D):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -797,7 +742,7 @@
         <span class="params">(<span name="g">g: Graphics2D</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.ConsolePanel" class="extype" href="">ConsolePanel</a> → Component</dd></dl></div>
     </li><li visbl="prt" name="scala.swing.Component#paintBorder" data-isabs="false">
       <a id="paintBorder(Graphics2D):Unit"></a>
       <h4 class="signature">
@@ -831,17 +776,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Component</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#peer" data-isabs="false">
-      <a id="peer:JScrollPane"></a>
+    </li><li visbl="pub" name="scala.swing.BoxPanel#peer" data-isabs="false">
+      <a id="peer:JPanel with SuperMixin"></a>
       <h4 class="signature">
       <span class="kind">lazy val</span>
       <span class="symbol"> 
         <span class="name">peer</span>
         
-        <span class="result">: <span name="javax.swing.JScrollPane" class="extype">JScrollPane</span></span>
+        <span class="result">: <span name="javax.swing.JPanel" class="extype">JPanel</span> with <span name="scala.swing.Component.SuperMixin" class="extype">SuperMixin</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane → Component → UIElement</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BoxPanel → Panel → Wrapper → Component → UIElement</dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#preferredSize" data-isabs="false">
       <a id="preferredSize:Dimension"></a>
       <h4 class="signature">
@@ -919,17 +864,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.ConsolePanel#repl" data-isabs="false">
-      <a id="repl:ElisionREPLThread"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.ConsolePanel#replThread" data-isabs="false">
+      <a id="replThread:Thread"></a>
       <h4 class="signature">
       <span class="kind">var</span>
       <span class="symbol"> 
-        <span class="name">repl</span>
+        <span class="name">replThread</span>
         
-        <span class="result">: <a name="ornl.elision.gui.ElisionREPLThread" class="extype" href="ElisionREPLThread.html">ElisionREPLThread</a></span>
+        <span class="result">: <span name="java.lang.Thread" class="extype">Thread</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The REPL thread instance</p>
+      <p class="shortcomment cmt">The thread for the currently running REPL.</p>
     </li><li visbl="pub" name="scala.swing.Component#requestFocus" data-isabs="false">
       <a id="requestFocus():Unit"></a>
       <h4 class="signature">
@@ -963,39 +908,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#rowHeaderView" data-isabs="false">
-      <a id="rowHeaderView:Option[Component]"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.ConsolePanel#scrollingConsolePanel" data-isabs="false">
+      <a id="scrollingConsolePanel:ScrollPane"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
+      <span class="kind">val</span>
       <span class="symbol"> 
-        <span class="name">rowHeaderView</span>
+        <span class="name">scrollingConsolePanel</span>
         
-        <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>
+        <span class="result">: <span name="scala.swing.ScrollPane" class="extype">ScrollPane</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#rowHeaderView_=" data-isabs="false">
-      <a id="rowHeaderView_=(Option[Component]):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rowHeaderView_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.Option" class="extype">Option</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#rowHeaderView_=" data-isabs="false">
-      <a id="rowHeaderView_=(Component):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rowHeaderView_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.swing.Component" class="extype">Component</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
+      <p class="shortcomment cmt">The ScrollPane containing the console.</p>
     </li><li visbl="pub" name="scala.swing.UIElement#self" data-isabs="false">
       <a id="self:Component"></a>
       <h4 class="signature">
@@ -1128,72 +1051,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LazyPublisher → Publisher</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#verticalScrollBar" data-isabs="false">
-      <a id="verticalScrollBar:ScrollBar"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">verticalScrollBar</span>
-        
-        <span class="result">: <span name="scala.swing.ScrollBar" class="extype">ScrollBar</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#verticalScrollBarPolicy" data-isabs="false">
-      <a id="verticalScrollBarPolicy:Value"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">verticalScrollBarPolicy</span>
-        
-        <span class="result">: <span name="scala.swing.ScrollPane.BarPolicy.Value" class="extype">Value</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#verticalScrollBarPolicy_=" data-isabs="false">
-      <a id="verticalScrollBarPolicy_=(Value):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">verticalScrollBarPolicy_=</span>
-        
-        <span class="params">(<span name="p">p: <span name="scala.swing.ScrollPane.BarPolicy.Value" class="extype">Value</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#viewportView" data-isabs="false">
-      <a id="viewportView:Option[Component]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">viewportView</span>
-        
-        <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#viewportView_=" data-isabs="false">
-      <a id="viewportView_=(Option[Component]):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">viewportView_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.Option" class="extype">Option</span>[<span name="scala.swing.Component" class="extype">Component</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
-    </li><li visbl="pub" name="scala.swing.ScrollPane#viewportView_=" data-isabs="false">
-      <a id="viewportView_=(Component):Unit"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">viewportView_=</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.swing.Component" class="extype">Component</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ScrollPane</dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#visible" data-isabs="false">
       <a id="visible:Boolean"></a>
       <h4 class="signature">
@@ -1338,8 +1195,16 @@
     </li></ol>
             </div>
 
-        <div name="scala.swing.ScrollPane" class="parent">
-              <h3>Inherited from <span name="scala.swing.ScrollPane" class="extype">ScrollPane</span></h3>
+        <div name="scala.swing.BoxPanel" class="parent">
+              <h3>Inherited from <span name="scala.swing.BoxPanel" class="extype">BoxPanel</span></h3>
+            </div><div name="scala.swing.SequentialContainer.Wrapper" class="parent">
+              <h3>Inherited from <span name="scala.swing.SequentialContainer.Wrapper" class="extype">Wrapper</span></h3>
+            </div><div name="scala.swing.SequentialContainer" class="parent">
+              <h3>Inherited from <span name="scala.swing.SequentialContainer" class="extype">SequentialContainer</span></h3>
+            </div><div name="scala.swing.Panel" class="parent">
+              <h3>Inherited from <span name="scala.swing.Panel" class="extype">Panel</span></h3>
+            </div><div name="scala.swing.Container.Wrapper" class="parent">
+              <h3>Inherited from <span name="scala.swing.Container.Wrapper" class="extype">Wrapper</span></h3>
             </div><div name="scala.swing.Container" class="parent">
               <h3>Inherited from <span name="scala.swing.Container" class="extype">Container</span></h3>
             </div><div name="scala.swing.Component" class="parent">

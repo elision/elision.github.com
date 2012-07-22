@@ -140,6 +140,17 @@
       </span>
       </h4>
       <p class="shortcomment cmt">The universal background color for the GUI's panels</p>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#changeMode" data-isabs="false">
+      <a id="changeMode(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">changeMode</span>
+        
+        <span class="params">(<span name="mmode">mmode: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Changes the mode that the GUI is currently running in.</p>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -175,7 +186,7 @@
         <span class="result">: <a name="ornl.elision.gui.ConsolePanel" class="extype" href="ConsolePanel.html">ConsolePanel</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The panel housing the onboard Elision REPL</p>
+      <p class="shortcomment cmt">The panel housing the onboard console</p>
     </li><li visbl="pub" name="scala.swing.Reactor#deafTo" data-isabs="false">
       <a id="deafTo(Publisher*):Unit"></a>
       <h4 class="signature">
@@ -187,6 +198,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#defaultTitle" data-isabs="false">
+      <a id="defaultTitle:String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">defaultTitle</span>
+        
+        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -223,6 +245,17 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#frame" data-isabs="false">
+      <a id="frame:MainFrame"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">frame</span>
+        
+        <span class="result">: <span name="scala.swing.MainFrame" class="extype">MainFrame</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The window's Frame object</p>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -244,7 +277,7 @@
         <span class="result">: <a name="ornl.elision.gui.GuiMenuBar" class="extype" href="GuiMenuBar.html">GuiMenuBar</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The menu bar</p>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -289,6 +322,20 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SwingApplication</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#mode" data-isabs="false">
+      <a id="mode:String"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">mode</span>
+        
+        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This string controls what mode Eva is currently running in.</p><div class="fullcomment"><div class="comment cmt"><p>This string controls what mode Eva is currently running in.
+Currently supported modes are:
+Elision
+</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -322,17 +369,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#propsPanel" data-isabs="false">
-      <a id="propsPanel:PropertiesPanel"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">propsPanel</span>
-        
-        <span class="result">: <a name="ornl.elision.gui.PropertiesPanel" class="extype" href="PropertiesPanel.html">PropertiesPanel</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The panel housing the atom properties display</p>
     </li><li visbl="pub" name="scala.swing.SwingApplication#quit" data-isabs="false">
       <a id="quit():Unit"></a>
       <h4 class="signature">
@@ -388,6 +424,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SwingApplication</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#sidePanel" data-isabs="false">
+      <a id="sidePanel:SidePanel"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">sidePanel</span>
+        
+        <span class="result">: <a name="ornl.elision.gui.SidePanel" class="extype" href="SidePanel.html">SidePanel</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The tabbed panel housing information about the visualization properties.</p>
     </li><li visbl="pub" name="scala.swing.SimpleSwingApplication#startup" data-isabs="false">
       <a id="startup(Array[String]):Unit"></a>
       <h4 class="signature">
@@ -431,18 +478,18 @@
         <span class="result">: <span name="scala.swing.MainFrame" class="extype">MainFrame</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The window's Frame object</p><div class="fullcomment"><div class="comment cmt"><p>The window's Frame object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.mainGUI" class="extype" href="">mainGUI</a> → SimpleSwingApplication</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#treeVisPanel" data-isabs="false">
-      <a id="treeVisPanel:TreeVisPanel"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.mainGUI" class="extype" href="">mainGUI</a> → SimpleSwingApplication</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#visPanel" data-isabs="false">
+      <a id="visPanel:GamePanel"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">var</span>
       <span class="symbol"> 
-        <span class="name">treeVisPanel</span>
+        <span class="name">visPanel</span>
         
-        <span class="result">: <a name="ornl.elision.gui.TreeVisPanel" class="extype" href="TreeVisPanel.html">TreeVisPanel</a></span>
+        <span class="result">: <span name="sage2D.GamePanel" class="extype">GamePanel</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The panel housing the rewrite tree visualization</p>
+      <p class="shortcomment cmt">The panel housing Eva's current visualization.</p>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">

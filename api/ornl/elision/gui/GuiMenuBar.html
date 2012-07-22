@@ -70,54 +70,7 @@
     </li></ol>
             </div>
 
-        <div class="types members" id="types">
-              <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.GuiMenuBar.DepthDialog" data-isabs="false">
-      <a id="DepthDialog:DepthDialog"></a>
-      <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="GuiMenuBar$DepthDialog.html"><span class="name">DepthDialog</span></a>
         
-        <span class="result"> extends Dialog</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The dialog window for the &quot;View &gt; Set Decompression Depth&quot; menu item</p>
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar.MaxDepthDialog" data-isabs="false">
-      <a id="MaxDepthDialog:MaxDepthDialog"></a>
-      <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="GuiMenuBar$MaxDepthDialog.html"><span class="name">MaxDepthDialog</span></a>
-        
-        <span class="result"> extends Dialog</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The dialog window for the &quot;View &gt; Set Maximum Tree Depth&quot; menu item</p>
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar.MaxLinesDialog" data-isabs="false">
-      <a id="MaxLinesDialog:MaxLinesDialog"></a>
-      <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="GuiMenuBar$MaxLinesDialog.html"><span class="name">MaxLinesDialog</span></a>
-        
-        <span class="result"> extends Dialog</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The dialog window for the &quot;View &gt; Set REPL Maximum Lines&quot; menu item</p>
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar.NodeLimitDialog" data-isabs="false">
-      <a id="NodeLimitDialog:NodeLimitDialog"></a>
-      <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="GuiMenuBar$NodeLimitDialog.html"><span class="name">NodeLimitDialog</span></a>
-        
-        <span class="result"> extends Dialog</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The dialog window for the &quot;View &gt; Set Node Limit&quot; menu item</p>
-    </li></ol>
-            </div>
         
         
 
@@ -266,6 +219,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#changeMode" data-isabs="false">
+      <a id="changeMode(String):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">changeMode</span>
+        
+        <span class="params">(<span name="mode">mode: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Changes the menu bar for the GUI according to the new mode.</p>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -324,28 +288,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#disableNodeColoringItem" data-isabs="false">
-      <a id="disableNodeColoringItem:CheckMenuItem"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">disableNodeColoringItem</span>
-        
-        <span class="result">: <span name="scala.swing.CheckMenuItem" class="extype">CheckMenuItem</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#disableTreeItem" data-isabs="false">
-      <a id="disableTreeItem:CheckMenuItem"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">disableTreeItem</span>
-        
-        <span class="result">: <span name="scala.swing.CheckMenuItem" class="extype">CheckMenuItem</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.swing.UIElement#displayable" data-isabs="false">
       <a id="displayable:Boolean"></a>
       <h4 class="signature">
@@ -357,6 +299,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#elisionModeItem" data-isabs="false">
+      <a id="elisionModeItem:MenuItem"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">elisionModeItem</span>
+        
+        <span class="result">: <span name="scala.swing.MenuItem" class="extype">MenuItem</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.swing.Component#enabled" data-isabs="false">
       <a id="enabled:Boolean"></a>
       <h4 class="signature">
@@ -723,6 +676,17 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#modeMenu" data-isabs="false">
+      <a id="modeMenu:Menu"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">modeMenu</span>
+        
+        <span class="result">: <span name="scala.swing.Menu" class="extype">Menu</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.swing.Component#name" data-isabs="false">
       <a id="name:String"></a>
       <h4 class="signature">
@@ -1031,50 +995,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement → Proxy</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#setDepthItem" data-isabs="false">
-      <a id="setDepthItem:MenuItem"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">setDepthItem</span>
-        
-        <span class="result">: <span name="scala.swing.MenuItem" class="extype">MenuItem</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#setMaxDepthItem" data-isabs="false">
-      <a id="setMaxDepthItem:MenuItem"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">setMaxDepthItem</span>
-        
-        <span class="result">: <span name="scala.swing.MenuItem" class="extype">MenuItem</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#setMaxLinesItem" data-isabs="false">
-      <a id="setMaxLinesItem:MenuItem"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">setMaxLinesItem</span>
-        
-        <span class="result">: <span name="scala.swing.MenuItem" class="extype">MenuItem</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#setNodeLimitItem" data-isabs="false">
-      <a id="setNodeLimitItem:MenuItem"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">setNodeLimitItem</span>
-        
-        <span class="result">: <span name="scala.swing.MenuItem" class="extype">MenuItem</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.swing.UIElement#showing" data-isabs="false">
       <a id="showing:Boolean"></a>
       <h4 class="signature">
@@ -1249,6 +1169,17 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.GuiMenuBar#welcomeModeItem" data-isabs="false">
+      <a id="welcomeModeItem:MenuItem"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">welcomeModeItem</span>
+        
+        <span class="result">: <span name="scala.swing.MenuItem" class="extype">MenuItem</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.swing.Component#xLayoutAlignment" data-isabs="false">
       <a id="xLayoutAlignment:Double"></a>
       <h4 class="signature">
