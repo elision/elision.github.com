@@ -544,6 +544,17 @@ If an id is given, the new NodeSprite will be mapped from that id in the current
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#loadFromFile" data-isabs="false">
+      <a id="loadFromFile(File):TreeSprite"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">loadFromFile</span>
+        
+        <span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>)</span><span class="result">: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Loads a TreeSprite from a treexml file.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -673,7 +684,7 @@ The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current sub
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Starts a new thread in which the TreeBuilder will run in.</p><div class="fullcomment"><div class="comment cmt"><p>Starts a new thread in which the TreeBuilder will run in.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeBuilder" class="extype" href="">TreeBuilder</a> → Thread → Runnable</dd></dl></div>
+      <p class="shortcomment cmt">Starts a new thread in which the TreeBuilder's actor will run.</p><div class="fullcomment"><div class="comment cmt"><p>Starts a new thread in which the TreeBuilder's actor will run.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeBuilder" class="extype" href="">TreeBuilder</a> → Thread → Runnable</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#saveNodeCount" data-isabs="false">
       <a id="saveNodeCount:Unit"></a>
       <h4 class="signature">
@@ -685,6 +696,17 @@ The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current sub
       </span>
       </h4>
       <p class="shortcomment cmt">Saves the current node count.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#saveToFile" data-isabs="false">
+      <a id="saveToFile(TreeSprite,String):Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">saveToFile</span>
+        
+        <span class="params">(<span name="treeSprite">treeSprite: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>, <span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Saves a TreeSprite to a file.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#savedNodeCount" data-isabs="false">
       <a id="savedNodeCount:ArrayStack[Int]"></a>
       <h4 class="signature">
