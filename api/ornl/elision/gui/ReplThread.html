@@ -2,35 +2,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.gui.trees.TreeVisThread</title>
+          <title>ornl.elision.gui.ReplThread</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
+      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
         <body class="type">
       <div id="definition">
-        <img src="../../../../lib/class_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.trees" class="extype" href="package.html">trees</a></p>
-        <h1>TreeVisThread</h1>
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="package.html">gui</a></p>
+        <h1>ReplThread</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">class</span>
       <span class="symbol"> 
-        <span class="name">TreeVisThread</span>
+        <span class="name">ReplThread</span>
         
         <span class="result"> extends <span name="java.lang.Thread" class="extype">Thread</span></span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A swing worker thread to run the Tree Visualization interaction logic and rendering in so that the EDT doesn't get tied up during large tree renderings.</p></div><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A thread to run a REPL in. It's really just a wrapper for a normal Thread that also provides a cleanup method for safely quitting the thread.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="java.lang.Thread" class="extype">Thread</span>, <span name="java.lang.Runnable" class="extype">Runnable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="ornl.elision.gui.elision.EliReplThread" class="extype" href="elision/EliReplThread.html">EliReplThread</a></div>
         </div></div>
         
 
@@ -46,7 +49,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.gui.trees.TreeVisThread" class="in"><span>TreeVisThread</span></li><li name="java.lang.Thread" class="in"><span>Thread</span></li><li name="java.lang.Runnable" class="in"><span>Runnable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.gui.ReplThread" class="in"><span>ReplThread</span></li><li name="java.lang.Thread" class="in"><span>Thread</span></li><li name="java.lang.Runnable" class="in"><span>Runnable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -56,14 +59,14 @@
 
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#this" data-isabs="false">
-      <a id="this:TreeVisThread"></a>
+              <ol><li visbl="pub" name="ornl.elision.gui.ReplThread#this" data-isabs="false">
+      <a id="this:ReplThread"></a>
       <h4 class="signature">
       <span class="kind">new</span>
       <span class="symbol"> 
-        <span class="name">TreeVisThread</span>
+        <span class="name">ReplThread</span>
         
-        <span class="params">(<span name="treeVis">treeVis: <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="TreeVisPanel.html">TreeVisPanel</a></span>, <span name="gt">gt: <span name="sage2D.GameTimer" class="extype">GameTimer</span></span>)</span>
+        <span class="params">()</span>
       </span>
       </h4>
       
@@ -72,10 +75,24 @@
 
         
         
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.gui.ReplThread#clean" data-isabs="true">
+      <a id="clean:Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">clean</span>
         
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members" id="values">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -131,17 +148,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#_continue" data-isabs="false">
-      <a id="_continue:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">_continue</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -174,7 +180,7 @@
         <span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>Thread → AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>Thread → AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -200,17 +206,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#exitFlag" data-isabs="false">
-      <a id="exitFlag:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">exitFlag</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -221,7 +216,7 @@
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -324,17 +319,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Thread</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#gt" data-isabs="false">
-      <a id="gt:GameTimer"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">gt</span>
-        
-        <span class="result">: <span name="sage2D.GameTimer" class="extype">GameTimer</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -476,18 +460,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#render" data-isabs="false">
-      <a id="render:Image"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">render</span>
-        
-        <span class="result">: <span name="java.awt.Image" class="extype">Image</span></span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#run" data-isabs="false">
+    </li><li visbl="pub" name="java.lang.Thread#run" data-isabs="false">
       <a id="run():Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -497,7 +470,7 @@
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisThread" class="extype" href="">TreeVisThread</a> → Thread → Runnable</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Thread → Runnable</dd></dl></div>
     </li><li visbl="pub" name="java.lang.Thread#setContextClassLoader" data-isabs="false">
       <a id="setContextClassLoader(ClassLoader):Unit"></a>
       <h4 class="signature">
@@ -586,17 +559,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Thread → AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#treeVis" data-isabs="false">
-      <a id="treeVis:TreeVisPanel"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">treeVis</span>
-        
-        <span class="result">: <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="TreeVisPanel.html">TreeVisPanel</a></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
