@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.gui.trees.TreeVisPanel</title>
+          <title>ornl.elision.gui.elision.EliTreeVisPanel</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
@@ -14,28 +14,23 @@
         </head>
         <body class="type">
       <div id="definition">
-        <a title="Go to companion" href="TreeVisPanel$.html"><img src="../../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.trees" class="extype" href="package.html">trees</a></p>
-        <h1><a title="Go to companion" href="TreeVisPanel$.html">TreeVisPanel</a></h1>
+        <img src="../../../../lib/class_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.elision" class="extype" href="package.html">elision</a></p>
+        <h1>EliTreeVisPanel</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">class</span>
       <span class="symbol"> 
-        <span class="name">TreeVisPanel</span>
+        <span class="name">EliTreeVisPanel</span>
         
-        <span class="result"> extends <span name="sage2D.GamePanel" class="extype">GamePanel</span> with <span name="sage2D.HasCamera" class="extype">HasCamera</span></span>
+        <span class="result"> extends <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This panel shall display a tree structure showing the rewriting hierarchy
-of the last atom string passed to the REPL as input.
-</p></div><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>An extension of TreeVisPanel that handles some Elision-specific functions.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="sage2D.HasCamera" class="extype">HasCamera</span>, <span name="sage2D.GamePanel" class="extype">GamePanel</span>, <span name="java.awt.event.ActionListener" class="extype">ActionListener</span>, <span name="java.util.EventListener" class="extype">EventListener</span>, <span name="scala.swing.FlowPanel" class="extype">FlowPanel</span>, <span name="scala.swing.SequentialContainer.Wrapper" class="extype">Wrapper</span>, <span name="scala.swing.SequentialContainer" class="extype">SequentialContainer</span>, <span name="scala.swing.Panel" class="extype">Panel</span>, <span name="scala.swing.Container.Wrapper" class="extype">Wrapper</span>, <span name="scala.swing.Container" class="extype">Container</span>, <span name="scala.swing.Component" class="extype">Component</span>, <span name="scala.swing.UIElement" class="extype">UIElement</span>, <span name="scala.swing.LazyPublisher" class="extype">LazyPublisher</span>, <span name="scala.swing.Publisher" class="extype">Publisher</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, <span name="scala.Proxy" class="extype">Proxy</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="ornl.elision.gui.elision.EliTreeVisPanel" class="extype" href="../elision/EliTreeVisPanel.html">EliTreeVisPanel</a></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a>, <span name="sage2D.HasCamera" class="extype">HasCamera</span>, <span name="sage2D.GamePanel" class="extype">GamePanel</span>, <span name="java.awt.event.ActionListener" class="extype">ActionListener</span>, <span name="java.util.EventListener" class="extype">EventListener</span>, <span name="scala.swing.FlowPanel" class="extype">FlowPanel</span>, <span name="scala.swing.SequentialContainer.Wrapper" class="extype">Wrapper</span>, <span name="scala.swing.SequentialContainer" class="extype">SequentialContainer</span>, <span name="scala.swing.Panel" class="extype">Panel</span>, <span name="scala.swing.Container.Wrapper" class="extype">Wrapper</span>, <span name="scala.swing.Container" class="extype">Container</span>, <span name="scala.swing.Component" class="extype">Component</span>, <span name="scala.swing.UIElement" class="extype">UIElement</span>, <span name="scala.swing.LazyPublisher" class="extype">LazyPublisher</span>, <span name="scala.swing.Publisher" class="extype">Publisher</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, <span name="scala.Proxy" class="extype">Proxy</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -51,7 +46,7 @@ of the last atom string passed to the REPL as input.
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.gui.trees.TreeVisPanel" class="in"><span>TreeVisPanel</span></li><li name="sage2D.HasCamera" class="in"><span>HasCamera</span></li><li name="sage2D.GamePanel" class="in"><span>GamePanel</span></li><li name="java.awt.event.ActionListener" class="in"><span>ActionListener</span></li><li name="java.util.EventListener" class="in"><span>EventListener</span></li><li name="scala.swing.FlowPanel" class="in"><span>FlowPanel</span></li><li name="scala.swing.SequentialContainer.Wrapper" class="in"><span>Wrapper</span></li><li name="scala.swing.SequentialContainer" class="in"><span>SequentialContainer</span></li><li name="scala.swing.Panel" class="in"><span>Panel</span></li><li name="scala.swing.Container.Wrapper" class="in"><span>Wrapper</span></li><li name="scala.swing.Container" class="in"><span>Container</span></li><li name="scala.swing.Component" class="in"><span>Component</span></li><li name="scala.swing.UIElement" class="in"><span>UIElement</span></li><li name="scala.swing.LazyPublisher" class="in"><span>LazyPublisher</span></li><li name="scala.swing.Publisher" class="in"><span>Publisher</span></li><li name="scala.swing.Reactor" class="in"><span>Reactor</span></li><li name="scala.Proxy" class="in"><span>Proxy</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.gui.elision.EliTreeVisPanel" class="in"><span>EliTreeVisPanel</span></li><li name="ornl.elision.gui.trees.TreeVisPanel" class="in"><span>TreeVisPanel</span></li><li name="sage2D.HasCamera" class="in"><span>HasCamera</span></li><li name="sage2D.GamePanel" class="in"><span>GamePanel</span></li><li name="java.awt.event.ActionListener" class="in"><span>ActionListener</span></li><li name="java.util.EventListener" class="in"><span>EventListener</span></li><li name="scala.swing.FlowPanel" class="in"><span>FlowPanel</span></li><li name="scala.swing.SequentialContainer.Wrapper" class="in"><span>Wrapper</span></li><li name="scala.swing.SequentialContainer" class="in"><span>SequentialContainer</span></li><li name="scala.swing.Panel" class="in"><span>Panel</span></li><li name="scala.swing.Container.Wrapper" class="in"><span>Wrapper</span></li><li name="scala.swing.Container" class="in"><span>Container</span></li><li name="scala.swing.Component" class="in"><span>Component</span></li><li name="scala.swing.UIElement" class="in"><span>UIElement</span></li><li name="scala.swing.LazyPublisher" class="in"><span>LazyPublisher</span></li><li name="scala.swing.Publisher" class="in"><span>Publisher</span></li><li name="scala.swing.Reactor" class="in"><span>Reactor</span></li><li name="scala.Proxy" class="in"><span>Proxy</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -61,12 +56,12 @@ of the last atom string passed to the REPL as input.
 
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#this" data-isabs="false">
-      <a id="this:TreeVisPanel"></a>
+              <ol><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel#this" data-isabs="false">
+      <a id="this:EliTreeVisPanel"></a>
       <h4 class="signature">
       <span class="kind">new</span>
       <span class="symbol"> 
-        <span class="name">TreeVisPanel</span>
+        <span class="name">EliTreeVisPanel</span>
         
         <span class="params">()</span>
       </span>
@@ -159,7 +154,7 @@ of the last atom string passed to the REPL as input.
       </h4>
       <p class="shortcomment cmt">Overridden GamePanel event handler for the timer object.</p><div class="fullcomment"><div class="comment cmt"><p>Overridden GamePanel event handler for the timer object.
 It runs an iteration through the timerLoop method if it isn't currently loading something, and it tells the panel to repaint.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="">TreeVisPanel</a> → GamePanel → ActionListener</dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → GamePanel → ActionListener</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -236,7 +231,7 @@ It runs an iteration through the timerLoop method if it isn't currently loading 
         <span class="result">: <span name="sage2D.Camera" class="extype">Camera</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The panel's camera for panning around and zooming in the visualization</p><div class="fullcomment"><div class="comment cmt"><p>The panel's camera for panning around and zooming in the visualization</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="">TreeVisPanel</a> → HasCamera</dd></dl></div>
+      <p class="shortcomment cmt">The panel's camera for panning around and zooming in the visualization</p><div class="fullcomment"><div class="comment cmt"><p>The panel's camera for panning around and zooming in the visualization</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → HasCamera</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#clean" data-isabs="false">
       <a id="clean:Unit"></a>
       <h4 class="signature">
@@ -249,7 +244,7 @@ It runs an iteration through the timerLoop method if it isn't currently loading 
       </h4>
       <p class="shortcomment cmt">Cleans up the TreeVis panel when we're done with it.</p><div class="fullcomment"><div class="comment cmt"><p>Cleans up the TreeVis panel when we're done with it.
 Most importantly, it causes its worker thread to exit after its current iteration.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="">TreeVisPanel</a> → GamePanel</dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → GamePanel</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -585,7 +580,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
         <span class="result">: <span name="sage2D.input.KeyboardInput" class="extype">KeyboardInput</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The keyboard input interface for the panel</p>
+      <p class="shortcomment cmt">The keyboard input interface for the panel</p><div class="fullcomment"><div class="comment cmt"><p>The keyboard input interface for the panel</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="scala.swing.Reactor#listenTo" data-isabs="false">
       <a id="listenTo(Publisher*):Unit"></a>
       <h4 class="signature">
@@ -619,7 +614,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
       </span>
       </h4>
       <p class="shortcomment cmt">A paint method for displaying a loading animation while the application is loading something (such as a new TreeSprite).</p><div class="fullcomment"><div class="comment cmt"><p>A paint method for displaying a loading animation while the application is loading something (such as a new TreeSprite).</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>The graphics context of the component this is being painted to. In this case, it's the TreeVisPanel's context.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="">TreeVisPanel</a> → GamePanel</dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → GamePanel</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#loadingThingAngle" data-isabs="false">
       <a id="loadingThingAngle:Int"></a>
       <h4 class="signature">
@@ -630,7 +625,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
         <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A variable used only by the loading screen animation.</p><div class="fullcomment"><div class="comment cmt"><p>A variable used only by the loading screen animation. It's not important.</p></div></div>
+      <p class="shortcomment cmt">A variable used only by the loading screen animation.</p><div class="fullcomment"><div class="comment cmt"><p>A variable used only by the loading screen animation. It's not important.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#locale" data-isabs="false">
       <a id="locale:Locale"></a>
       <h4 class="signature">
@@ -664,7 +659,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#mainPaint" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel#mainPaint" data-isabs="false">
       <a id="mainPaint(Graphics2D):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -675,7 +670,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
       </span>
       </h4>
       <p class="shortcomment cmt">The method invoked for painting the tree visualization.</p><div class="fullcomment"><div class="comment cmt"><p>The method invoked for painting the tree visualization.</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>The graphics context of the component this is being painted to. In this case, it's the TreeVisPanel's context.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="">TreeVisPanel</a> → GamePanel</dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.elision.EliTreeVisPanel" class="extype" href="">EliTreeVisPanel</a> → <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → GamePanel</dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#maximumSize" data-isabs="false">
       <a id="maximumSize:Dimension"></a>
       <h4 class="signature">
@@ -730,7 +725,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
         <span class="result">: <span name="sage2D.input.MouseInput" class="extype">MouseInput</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The mouse input interface for the panel</p>
+      <p class="shortcomment cmt">The mouse input interface for the panel</p><div class="fullcomment"><div class="comment cmt"><p>The mouse input interface for the panel</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#mouseWorldPosition" data-isabs="false">
       <a id="mouseWorldPosition:Point2D"></a>
       <h4 class="signature">
@@ -741,7 +736,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
         <span class="result">: <span name="java.awt.geom.Point2D" class="extype">Point2D</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Keeps track of the mouse's position in world coordinates</p>
+      <p class="shortcomment cmt">Keeps track of the mouse's position in world coordinates</p><div class="fullcomment"><div class="comment cmt"><p>Keeps track of the mouse's position in world coordinates</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="scala.swing.Component#name" data-isabs="false">
       <a id="name:String"></a>
       <h4 class="signature">
@@ -947,10 +942,10 @@ Most importantly, it causes its worker thread to exit after its current iteratio
       <span class="symbol"> 
         <span class="name">renderThread</span>
         
-        <span class="result">: <a name="ornl.elision.gui.trees.TreeVisThread" class="extype" href="TreeVisThread.html">TreeVisThread</a></span>
+        <span class="result">: <a name="ornl.elision.gui.trees.TreeVisThread" class="extype" href="../trees/TreeVisThread.html">TreeVisThread</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A SwingWorker thread used for concurrently rendering the panel's image.</p>
+      <p class="shortcomment cmt">A SwingWorker thread used for concurrently rendering the panel's image.</p><div class="fullcomment"><div class="comment cmt"><p>A SwingWorker thread used for concurrently rendering the panel's image.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#renderedImage" data-isabs="false">
       <a id="renderedImage:Image"></a>
       <h4 class="signature">
@@ -961,7 +956,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
         <span class="result">: <span name="java.awt.Image" class="extype">Image</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The Image containing the latest rendering of the visualization tree.</p>
+      <p class="shortcomment cmt">The Image containing the latest rendering of the visualization tree.</p><div class="fullcomment"><div class="comment cmt"><p>The Image containing the latest rendering of the visualization tree.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="scala.swing.UIElement#repaint" data-isabs="false">
       <a id="repaint(Rectangle):Unit"></a>
       <h4 class="signature">
@@ -1028,14 +1023,14 @@ Most importantly, it causes its worker thread to exit after its current iteratio
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#selectNode" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel#selectNode" data-isabs="false">
       <a id="selectNode(NodeSprite):Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">selectNode</span>
         
-        <span class="params">(<span name="clickedNode">clickedNode: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="params">(<span name="clickedNode">clickedNode: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="../trees/NodeSprite.html">NodeSprite</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Selects a node in the current tree visualization,
@@ -1043,7 +1038,18 @@ does some fancy camera work to make sure that that node stays in the same place 
 after the graph is re-expanded, and displays that node's information in the atom properties panel.</p><div class="fullcomment"><div class="comment cmt"><p>Selects a node in the current tree visualization,
 does some fancy camera work to make sure that that node stays in the same place onscreen
 after the graph is re-expanded, and displays that node's information in the atom properties panel.</p></div><dl class="paramcmts block"><dt class="param">clickedNode</dt><dd class="cmt"><p>The node being selected in our tree.
-</p></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.elision.EliTreeVisPanel" class="extype" href="">EliTreeVisPanel</a> → <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel#selectingRuleLHS" data-isabs="false">
+      <a id="selectingRuleLHS:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">selectingRuleLHS</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.swing.UIElement#self" data-isabs="false">
       <a id="self:Component"></a>
       <h4 class="signature">
@@ -1134,7 +1140,7 @@ after the graph is re-expanded, and displays that node's information in the atom
       <p class="shortcomment cmt">test painting function.</p><div class="fullcomment"><div class="comment cmt"><p>test painting function.
 This draws a grid of red lines centered at the origin spaced 30 pixels apart.
 It is no longer invoked anywhere. It was used during early development of the GUI to test the SAGE 2D library.</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>The graphics context of the component this is being painted to. In this case, it's the TreeVisPanel's context.
-</p></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="sage2D.GamePanel#timer" data-isabs="false">
       <a id="timer:GameTimer"></a>
       <h4 class="signature">
@@ -1157,7 +1163,7 @@ It is no longer invoked anywhere. It was used during early development of the GU
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>GamePanel</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#timerLoop" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel#timerLoop" data-isabs="false">
       <a id="timerLoop:Unit"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -1169,7 +1175,7 @@ It is no longer invoked anywhere. It was used during early development of the GU
       </h4>
       <p class="shortcomment cmt">Performs one iteration through the visualization panel's logic.</p><div class="fullcomment"><div class="comment cmt"><p>Performs one iteration through the visualization panel's logic.
 It's mostly just processing mouse input for controlling the camera and selecting nodes.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="">TreeVisPanel</a> → GamePanel</dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.elision.EliTreeVisPanel" class="extype" href="">EliTreeVisPanel</a> → <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → GamePanel</dd></dl></div>
     </li><li visbl="pub" name="scala.swing.Component#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -1221,10 +1227,10 @@ It's mostly just processing mouse input for controlling the camera and selecting
       <span class="symbol"> 
         <span class="name">treeSprite</span>
         
-        <span class="result">: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>
+        <span class="result">: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="../trees/TreeSprite.html">TreeSprite</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The sprite representing the visualization of the rewrite tree</p>
+      <p class="shortcomment cmt">The sprite representing the visualization of the rewrite tree</p><div class="fullcomment"><div class="comment cmt"><p>The sprite representing the visualization of the rewrite tree</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="scala.swing.LazyPublisher#unsubscribe" data-isabs="false">
       <a id="unsubscribe(Reaction):Unit"></a>
       <h4 class="signature">
@@ -1372,13 +1378,13 @@ It's mostly just processing mouse input for controlling the camera and selecting
         <div class="values members" id="values">
               <h3>Deprecated Value Members</h3>
               <ol><li visbl="pub" name="scala.swing.Component#Mouse" data-isabs="false">
-      <a id="Mouse:TreeVisPanel.this.mouse.type"></a>
+      <a id="Mouse:EliTreeVisPanel.this.mouse.type"></a>
       <h4 class="signature">
       <span class="kind">lazy val</span>
       <span class="symbol"> 
         <span class="name deprecated">Mouse</span>
         
-        <span class="result">: TreeVisPanel.this.mouse.type</span>
+        <span class="result">: EliTreeVisPanel.this.mouse.type</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd><dt>Annotations</dt><dd>
@@ -1402,7 +1408,9 @@ It's mostly just processing mouse input for controlling the camera and selecting
     </li></ol>
             </div>
 
-        <div name="sage2D.HasCamera" class="parent">
+        <div name="ornl.elision.gui.trees.TreeVisPanel" class="parent">
+              <h3>Inherited from <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></h3>
+            </div><div name="sage2D.HasCamera" class="parent">
               <h3>Inherited from <span name="sage2D.HasCamera" class="extype">HasCamera</span></h3>
             </div><div name="sage2D.GamePanel" class="parent">
               <h3>Inherited from <span name="sage2D.GamePanel" class="extype">GamePanel</span></h3>
