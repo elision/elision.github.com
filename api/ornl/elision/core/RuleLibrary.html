@@ -221,7 +221,11 @@ rewriting.
         <span class="result">: <a name="ornl.elision.core.RuleLibrary" class="extype" href="">RuleLibrary</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates a clone of this RuleLibrary.</p>
+      <p class="shortcomment cmt">Create a shallow clone of this rule library.</p><div class="fullcomment"><div class="comment cmt"><p>Create a shallow clone of this rule library.  This returns a new rule
+library instance; since the content of the library is immutable, this
+new instance is technically independent of the original.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The clone.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#declareRuleset" data-isabs="false">
       <a id="declareRuleset(String):Boolean"></a>
       <h4 class="signature">
@@ -417,9 +421,9 @@ of the currently active rulesets.
         <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: Set[String]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Rewrite the given atom, repeatedly applying the rules of the active
-rulesets.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite the given atom, repeatedly applying the rules of the active
-rulesets.  This is limited by the rewrite limit.
+      <p class="shortcomment cmt">Rewrite the given atom, repeatedly applying the rules of the specified
+rulesets.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite the given atom, repeatedly applying the rules of the specified
+rulesets.  This is limited by the rewrite limit.</p><p>Perform rewriting of an atom given a collection of rulesets.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets to use, or <code>Set.empty</code> to use all enabled.</p></dd><dt>returns</dt><dd class="cmt"><p>The rewritten atom, and true iff any rules were successfully
          applied.
 </p></dd></dl></div>
