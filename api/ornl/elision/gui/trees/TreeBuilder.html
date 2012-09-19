@@ -257,13 +257,13 @@ If an id is given, the new NodeSprite will be mapped from that id in the current
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#curScope" data-isabs="false">
-      <a id="curScope:HashMap[String, NodeSprite]"></a>
+      <a id="curScope:OpenHashMap[String, NodeSprite]"></a>
       <h4 class="signature">
       <span class="kind">var</span>
       <span class="symbol"> 
         <span class="name">curScope</span>
         
-        <span class="result">: <span name="scala.collection.mutable.HashMap" class="extype">HashMap</span>[String, <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a>]</span>
+        <span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">The current id-&gt;NodeSprite table being used by Elision's current method scope for referencing local NodeSprites.</p>
@@ -719,13 +719,13 @@ The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current sub
       </h4>
       <p class="shortcomment cmt">Used by saveNodeCount and restoreNodeCount allow removal of subtrees while maintaining the correct nodeCount for this tree.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#scopeStack" data-isabs="false">
-      <a id="scopeStack:ArrayStack[HashMap[String, NodeSprite]]"></a>
+      <a id="scopeStack:ArrayStack[OpenHashMap[String, NodeSprite]]"></a>
       <h4 class="signature">
       <span class="kind">val</span>
       <span class="symbol"> 
         <span class="name">scopeStack</span>
         
-        <span class="result">: <span name="scala.collection.mutable.ArrayStack" class="extype">ArrayStack</span>[<span name="scala.collection.mutable.HashMap" class="extype">HashMap</span>[String, <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a>]]</span>
+        <span class="result">: <span name="scala.collection.mutable.ArrayStack" class="extype">ArrayStack</span>[<span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Maintains a stack of id-&gt;NodeSprite tables used to obtain the local NodeSprite variables for a particular method scope during Elision's process.</p>
