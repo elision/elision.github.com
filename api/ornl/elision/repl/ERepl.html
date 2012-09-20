@@ -37,7 +37,7 @@ method.  The REPL provides for command line editing, a persistent history,
 and special operations.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a>, <a name="ornl.elision.core.HasHistory" class="extype" href="../core/HasHistory.html">HasHistory</a>, <a name="ornl.elision.core.Timeable" class="extype" href="../core/Timeable.html">Timeable</a>, <a name="ornl.elision.core.TraceableParse" class="extype" href="../core/TraceableParse.html">TraceableParse</a>, <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a>, <a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a>, <a name="ornl.elision.core.HasHistory" class="extype" href="../core/HasHistory.html">HasHistory</a>, <a name="ornl.elision.core.Timeable" class="extype" href="../core/Timeable.html">Timeable</a>, <a name="ornl.elision.core.ToggleableParser" class="extype" href="../core/ToggleableParser.html">ToggleableParser</a>, <a name="ornl.elision.core.TraceableParse" class="extype" href="../core/TraceableParse.html">TraceableParse</a>, <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a>, <a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
         
 
@@ -53,7 +53,7 @@ and special operations.
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.repl.ERepl" class="in"><span>ERepl</span></li><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.core.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.core.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.core.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.core.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.repl.ERepl" class="in"><span>ERepl</span></li><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.core.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.core.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.core.ToggleableParser" class="in"><span>ToggleableParser</span></li><li name="ornl.elision.core.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.core.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -949,6 +949,32 @@ documentation for <code>fetchAs</code> before you use the cache!
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#toggle" data-isabs="false">
+      <a id="toggle:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toggle</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Determine which parser to use
+</p><div class="fullcomment"><div class="comment cmt"><p>Determine which parser to use
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.core.ToggleableParser" class="extype" href="../core/ToggleableParser.html">ToggleableParser</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#toggle_=" data-isabs="false">
+      <a id="toggle_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toggle_=</span>
+        
+        <span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify whether to trace the parser.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to trace the parser.
+</p></div><dl class="paramcmts block"><dt class="param">enable</dt><dd class="cmt"><p>If true, trace the parser.  If false, do not.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.core.ToggleableParser" class="extype" href="../core/ToggleableParser.html">ToggleableParser</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#trace" data-isabs="false">
       <a id="trace:Boolean"></a>
       <h4 class="signature">
@@ -1038,6 +1064,8 @@ documentation for <code>fetchAs</code> before you use the cache!
               <h3>Inherited from <a name="ornl.elision.core.HasHistory" class="extype" href="../core/HasHistory.html">HasHistory</a></h3>
             </div><div name="ornl.elision.core.Timeable" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.Timeable" class="extype" href="../core/Timeable.html">Timeable</a></h3>
+            </div><div name="ornl.elision.core.ToggleableParser" class="parent">
+              <h3>Inherited from <a name="ornl.elision.core.ToggleableParser" class="extype" href="../core/ToggleableParser.html">ToggleableParser</a></h3>
             </div><div name="ornl.elision.core.TraceableParse" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.TraceableParse" class="extype" href="../core/TraceableParse.html">TraceableParse</a></h3>
             </div><div name="ornl.elision.core.Executor" class="parent">
