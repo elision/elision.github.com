@@ -29,8 +29,27 @@
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Match unbindable atoms in a sequence of patterns to the unbindable atoms
-in a sequence of subjects.  This match is done commutatively.</p><p>To determine which atoms are left after this matcher completes, a specialized
-version of Bindings is returned.
+in a sequence of subjects.  This match is done commutatively.</p><h4> Purpose </h4><p>When performing commutative matching it is best to fail as rapidly as
+possible.  The best place to look for a failure is in an &quot;unbindable&quot; atom
+that appears in the patterns.  An unbindable atom is an atom whose
+<code>isBindable</code> method returns false; it cannot be bound.  Examples are
+constants (which are actually eliminated elsewhere, and should not need to
+be handled here) and operator applications.</p><p>This forces the matching system to attempt to match structurally first, and
+then try various potential bindings second, leading to much faster matching.
+It also requires that the atoms matched by this method be removed before
+further matching continue.</p><p>To determine which atoms are left after this matcher completes, a specialized
+version of Bindings is returned.</p><h4> Example </h4><p>Consider the patterns <code>$x,$y,foo(4,$y),$z</code> and the subject lists:
+- <code>foo(4,yar),9,21,yar</code> (which matches)
+- <code>foo(4,yar),9,21,har</code> (which does not)</p><p>It could take a long time to determine that the second item does not match
+the pattern, since the system will exhaustively try all orderings and
+groupings before giving up.  The unbindable matcher will first scan the
+patterns for unbindables, seeing <code>foo(4,$y)</code>.  It then tries to match this
+against each of the subjects in the list.  For the first example above
+it immediately matches against <code>foo(4,yar)</code> with the binding <code>$y -&gt; yar</code>.
+This results in an almost immediate match.  In the second case no match
+is possible, and the unbindable matcher immediately fails and stops any
+further attempts.</p><p>Note also that this example shows the benefit for commutative, but not
+associative, matching.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a name="ornl.elision.core.MatchIterator" class="extype" href="../MatchIterator.html">MatchIterator</a>, <span name="scala.collection.Iterator" class="extype">Iterator</span>[<a name="ornl.elision.core.Bindings" class="extype" href="../Bindings.html">Bindings</a>], <span name="scala.collection.TraversableOnce" class="extype">TraversableOnce</span>[<a name="ornl.elision.core.Bindings" class="extype" href="../Bindings.html">Bindings</a>], <span name="scala.collection.GenTraversableOnce" class="extype">GenTraversableOnce</span>[<a name="ornl.elision.core.Bindings" class="extype" href="../Bindings.html">Bindings</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>

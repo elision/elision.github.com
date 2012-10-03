@@ -28,12 +28,19 @@
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Iterate over all associative groupings of items.</p><p>The number of patterns must be less than the number of subjects, or an
-exception is thrown on construction.</p><p>If an operator is provided, it is applied to subgroupings, but not to the
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Iterate over all associative groupings of items.</p><h4> Caveats </h4><p>The number of patterns must be less than the number of subjects, or an
+exception is thrown on construction.  Note that if there are more patterns
+than subjects, no match is possible.  If there are equal numbers of patterns
+and subjects, use the ornl.elision.core.SequenceMatcher instead.</p><p>Additionally the number of patterns must be at least two.  If the number of
+patterns is less than two, there is no need to perform any grouping.</p><h4> Operators </h4><p>If an operator is provided, it is applied to subgroupings, but not to the
 top-level group (so that the correct number of atoms is returned for
-sequence matching).</p><p>This iterator requires that the number of patterns be strictly less than
-the number of subjects, and further that the number of patterns be at least
-two.
+sequence matching).</p><p>For example, suppose we have three patterns and the subjects
+<code>%(a,b,c,d,e)</code>.  One permissible grouping is <code>%(a,b),%(c,d),e</code>,
+which contains the two subgroups <code>%(a,b)</code> and <code>%(c,d)</code>.  If no
+operator is provided, these three groups are returned as-is.  If the
+operator <code>f</code> is provided, then instead the three atoms
+<code>f(a,b),f(c,d),e</code> are returned.</p><p>This is used when matching the argument list of an operator application, and
+allows <code>add(x,y,z)</code> to become <code>add.%(add(x,y),x)</code>, for instance.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="scala.collection.Iterator" class="extype">Iterator</span>[<a name="ornl.elision.core.package.OmitSeq" class="extype" href="../package$$OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>]], <span name="scala.collection.TraversableOnce" class="extype">TraversableOnce</span>[<a name="ornl.elision.core.package.OmitSeq" class="extype" href="../package$$OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>]], <span name="scala.collection.GenTraversableOnce" class="extype">GenTraversableOnce</span>[<a name="ornl.elision.core.package.OmitSeq" class="extype" href="../package$$OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>]], AnyRef, <span name="scala.Any" class="extype">Any</span></div>

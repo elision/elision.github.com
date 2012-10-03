@@ -155,8 +155,11 @@
       </h4>
       <p class="shortcomment cmt">Given two lists of atoms, identify and remove any constants from the two
 lists, returning the resulting lists.</p><div class="fullcomment"><div class="comment cmt"><p>Given two lists of atoms, identify and remove any constants from the two
-lists, returning the resulting lists.
-</p></div><dl class="paramcmts block"><dt class="param">plist</dt><dd class="cmt"><p>The pattern list.</p></dd><dt class="param">slist</dt><dd class="cmt"><p>The subject list.
+lists, returning the resulting lists.</p><p>The atoms in the two lists are assumed to be unordered.  That is, this
+method is only suitable for use when performing commutative matching
+(whether or not associative).
+</p></div><dl class="paramcmts block"><dt class="param">plist</dt><dd class="cmt"><p>The pattern list.</p></dd><dt class="param">slist</dt><dd class="cmt"><p>The subject list.</p></dd><dt>returns</dt><dd class="cmt"><p>A triple that contains the new patterns, new subjects, and an
+         optional failure instance in the event matching does not succeed.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>

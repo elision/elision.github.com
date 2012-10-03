@@ -41,14 +41,19 @@ the jar file).  It has the following format.</p><pre>
     build = &quot;build date / time identifier&quot;/&gt;
   &lt;main name=&quot;command name&quot; class=&quot;fully.qualified.class.name&quot;
     description=&quot;human-readable description&quot;/&gt;
+  &lt;option name=&quot;option name&quot; class=&quot;fully.qualified.class.name&quot;
+    description=&quot;human-readable description&quot; value=&quot;value&quot;/&gt;
 &lt;/configuration&gt;
 </pre><h4> Use </h4><p>This object loads its data at construction time.  This is typically when
 you first reference a field in this object.</p><p>The <code>loaded</code> field reveals if the file was successfully loaded.  If not, the
 other fields contain default (and useless) information.  Missing fields
 result in a value of the empty string for that field.  Extra fields not
-specified above are ignored, but may be used in the future.</p><p>Both the configuration and its DTD (<code>elision_configuration.dtd</code>) are
-expected to be found in the root of the class path.</p><h4> DTD </h4><p>The following is the DTD for the configuration file.</p><pre>
-&lt;!ELEMENT configuration (version,ANY*)&gt;
+specified above are ignored, but may be used in the future.  That is, the
+absence of a tag is not license to use that tag; keep custom tags in a
+separate, declared XML namespace, please.</p><p>Both the configuration and its DTD (<code>elision_configuration.dtd</code>) are
+expected to be found in the root of the class path.</p><p>It is permissible for significant functionality to depend on the ability to
+read this file.</p><h4> DTD </h4><p>The following is the DTD for the configuration file.</p><pre>
+&lt;!ELEMENT configuration (version,(main|option)*,ANY*)&gt;
 &lt;!ATTLIST configuration name CDATA #REQUIRED&gt;
 &lt;!ATTLIST configuration maintainer CDATA #REQUIRED&gt;
 &lt;!ATTLIST configuration web CDATA #REQUIRED&gt;
@@ -58,6 +63,16 @@ expected to be found in the root of the class path.</p><h4> DTD </h4><p>The foll
 &lt;!ATTLIST version build CDATA #REQUIRED&gt;
 &lt;!ATTLIST version trivial CDATA &quot;0&quot;&gt;
 &lt;!ATTLIST version status (alpha|beta|rc|final) &quot;alpha&quot;&gt;
+&lt;!ELEMENT main (ANY*)&gt;
+&lt;!ATTLIST main name CDATA #REQUIRED&gt;
+&lt;!ATTLIST main class CDATA #REQUIRED&gt;
+&lt;!ATTLIST main description CDATA #REQUIRED&gt;
+&lt;!ATTLIST main gui (true|false) #REQUIRED&gt;
+&lt;!ELEMENT option (ANY*)&gt;
+&lt;!ATTLIST option name CDATA #REQUIRED&gt;
+&lt;!ATTLIST option class CDATA #REQUIRED&gt;
+&lt;!ATTLIST option description CDATA #REQUIRED&gt;
+&lt;!ATTLIST option value CDATA #REQUIRED&gt;
 </pre></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -121,6 +136,17 @@ expected to be found in the root of the class path.</p><h4> DTD </h4><p>The foll
       </span>
       </h4>
       <p class="comment cmt">An error occurred processing a main.</p>
+    </li><li visbl="pub" name="ornl.elision.Version#OEntry" data-isabs="false">
+      <a id="OEntry:()"></a>
+      <h4 class="signature">
+      <span class="kind">type</span>
+      <span class="symbol"> 
+        <span class="name">OEntry</span>
+        
+        <span class="result"> = (Class[_], String, String)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A type for an entry in the options catalog.</p>
     </li></ol>
             </div>
         
