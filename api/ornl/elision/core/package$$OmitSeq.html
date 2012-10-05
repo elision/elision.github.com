@@ -1004,6 +1004,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq#insert" data-isabs="false">
+      <a id="insert(Int,IndexedSeq[A]):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">insert</span>
+        
+        <span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>, <span name="items">items: IndexedSeq[A]</span>)</span><span class="result">: IndexedSeq[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Insert a sequence into the list starting at the given (zero-based) index.</p><div class="fullcomment"><div class="comment cmt"><p>Insert a sequence into the list starting at the given (zero-based) index.
+This is done &quot;in place&quot; so it should be fast.  As inserts mount, lookup
+time can suffer, as with omits.
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>The zero-based index of the first inserted element.</p></dd><dt class="param">items</dt><dd class="cmt"><p>The items to insert.  If this is empty, nothing is done.</p></dd><dt>returns</dt><dd class="cmt"><p>The new list.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.collection.SeqLike#intersect" data-isabs="false">
       <a id="intersect[B&gt;:A](Seq[B]):IndexedSeq[A]"></a>
       <h4 class="signature">
@@ -1365,6 +1380,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq#omit" data-isabs="false">
+      <a id="omit(Int):IndexedSeq[A]"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">omit</span>
+        
+        <span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: IndexedSeq[A]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Omit a single element from this list, returning a new list.</p><div class="fullcomment"><div class="comment cmt"><p>Omit a single element from this list, returning a new list.  This is
+done &quot;in place&quot; so it should be fast.  As omits mount, lookup time
+can suffer, approaching linear time.
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>The zero-based index to omit.</p></dd><dt>returns</dt><dd class="cmt"><p>The new list.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.PartialFunction#orElse" data-isabs="false">
       <a id="orElse[A1&lt;:Int, B1&gt;:A](PartialFunction[A1, B1]):PartialFunction[A1, B1]"></a>
       <h4 class="signature">
