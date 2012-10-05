@@ -204,31 +204,14 @@ are specified.
     </li><li visbl="pub" name="ornl.elision.core.AlgProp#constantPool" data-isabs="false">
       <a id="constantPool:Some[Map[Int, Int]]"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">lazy val</span>
       <span class="symbol"> 
         <span class="name">constantPool</span>
         
         <span class="result">: <span name="scala.Some" class="extype">Some</span>[Map[<span name="scala.Int" class="extype">Int</span>, <span name="scala.Int" class="extype">Int</span>]]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A mapping from known constant descendants to their child index.</p><div class="fullcomment"><div class="comment cmt"><p>A mapping from known constant descendants to their child index.</p><p>This works as follows.  For constants, and for atoms that do not have any
-atom children, the constant pool is empty.  In fact, to conserve space the
-constant pool can be omitted by setting it to <code>None</code>.</p><p>For nodes that have atom children each child should be queried to determine
-if it is a constant.  If so, get its hash code, merge it with the atom's
-own top level code (the name of an operator or some other relevant item),
-and store it in the pool.</p><p>If a child is not a constant, get its constant pool and iterate over it,
-adding the atom's own top level code to each hash code, and putting the
-result in the pool.</p><p>See the function <code>buildConstantPool</code> in the companion object for help with
-all this.  That function should be sufficient for nearly all atoms.</p><p>Suppose you have a complicated case, such as two distinguished children
-alice and bob, and then a litter of others.  Your constructor might be</p><pre>
-class Klaus(alice: BasicAtom, bob: BasicAtom, litter: BasicAtom*)
-</pre><p>Computing the constant pool for this using the <code>buildConstantPool</code> works
-like this.</p><pre>
-val constantPool =
-    Some(BasicAtom.buildConstantPool(&quot;Klaus&quot;.hashCode,
-        (pattern +: rewrite +: guards):_*))
-</pre><p>Everything else should be significantly easier!
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="AlgProp.html">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="AlgProp.html">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.AlgProp#deBruijnIndex" data-isabs="false">
       <a id="deBruijnIndex:Int"></a>
       <h4 class="signature">
