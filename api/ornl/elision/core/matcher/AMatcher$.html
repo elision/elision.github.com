@@ -29,7 +29,7 @@
       </h4>
       
           <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Match two sequences, where the elements of the second sequence can be
-grouped.
+grouped, but not re-ordered.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -278,7 +278,10 @@ grouped.
         <span class="params">(<span name="plist">plist: <a name="ornl.elision.core.AtomSeq" class="extype" href="../AtomSeq.html">AtomSeq</a></span>, <span name="slist">slist: <a name="ornl.elision.core.AtomSeq" class="extype" href="../AtomSeq.html">AtomSeq</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="../Bindings.html">Bindings</a></span>, <span name="op">op: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.core.OperatorRef" class="extype" href="../OperatorRef.html">OperatorRef</a>]</span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="../Outcome.html">Outcome</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Attempt to match two lists.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to match two lists.  The second list can be re-grouped.
+      <p class="shortcomment cmt">Attempt to match two lists.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to match two lists.  The second list can be re-grouped, but every
+group must be non-empty.  This restriction is easy to overcome, but
+provides better performance and results in more obvious (and expected)
+matching in many cases.
 </p></div><dl class="paramcmts block"><dt class="param">plist</dt><dd class="cmt"><p>The pattern list.</p></dd><dt class="param">slist</dt><dd class="cmt"><p>The subject list.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Bindings that must be honored in any match.</p></dd><dt class="param">op</dt><dd class="cmt"><p>An optional operator to apply to sublists.</p></dd><dt>returns</dt><dd class="cmt"><p>The match outcome.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">

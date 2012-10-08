@@ -181,6 +181,21 @@ should not use this method.*  You want <code>send</code>, <code>sendln</code>, <
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>True if output should continue; false if the user wants to
          terminate the output.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Console#doPause" data-isabs="false">
+      <a id="doPause():Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">doPause</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform whatever &quot;pause&quot; is configured for this console, and return
+whether the user elected to continue.</p><div class="fullcomment"><div class="comment cmt"><p>Perform whatever &quot;pause&quot; is configured for this console, and return
+whether the user elected to continue.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>True if the user wants to continue; false if not.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Console#emit" data-isabs="false">
       <a id="emit(String):Unit"></a>
       <h4 class="signature">
@@ -346,6 +361,21 @@ exceeds this, then the pager is invoked.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Console#line" data-isabs="false">
+      <a id="line(String):String"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">line</span>
+        
+        <span class="params">(<span name="ch">ch: String = <span class="symbol">&quot;-&quot;</span></span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get a &quot;line&quot; string based on the current width.</p><div class="fullcomment"><div class="comment cmt"><p>Get a &quot;line&quot; string based on the current width.
+</p></div><dl class="paramcmts block"><dt class="param">ch</dt><dd class="cmt"><p>A string to repeat to make up the line.  By default this
+           is <code>-</code>.  As many full instances of this string will be
+           concatenated as the line allows.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested line.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">

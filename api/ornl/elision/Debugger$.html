@@ -2,34 +2,53 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.BasicAtom</title>
+          <title>ornl.elision.Debugger</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
+      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
     
         </head>
         <body class="value">
       <div id="definition">
-        <a title="Go to companion" href="BasicAtom.html"><img src="../../../lib/object_to_class_big.png" /></a>
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1><a title="Go to companion" href="BasicAtom.html">BasicAtom</a></h1>
+        <img src="../../lib/object_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="package.html">elision</a></p>
+        <h1>Debugger</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">object</span>
       <span class="symbol"> 
-        <span class="name">BasicAtom</span>
+        <span class="name">Debugger</span>
         
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Mutable controls affecting all atoms and matching go here.</p><p>In addition you can find the helper method <code>buildConstantPool</code> to
-compute the constant pool for an atom.
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This is a class for managing and printing debug output during execution
+in a manner that &quot;agrees&quot; with Elision.</p><p>Note: This class uses [ornl.elision.core.Console] to do its work.  Please
+do not attempt to use this class to debug <code>Console</code>!</p><p>To use this class set up your debugging modes via <code>setDebugModes</code>, and
+then use <code>debug</code> to print debugging messages.  The first argument is passed
+by name, so you can use this to avoid construction costs by deferring method
+invocation.</p><pre>
+import ornl.elision.Debugger._
+import ornl.elision.Debugger.Mode._
+
+enableDebugModes(&quot;simple&quot;, ON)
+enableDebugModes(&quot;timer&quot;, ON|TICK)
+enableDebugModes(&quot;start&quot;, ON|START)
+enableDebugModes(&quot;stop&quot;, ON|STOP)
+
+debug(&quot;Debug point reached.&quot;, &quot;simple&quot;, 4)
+...
+debug(&quot;Starting timer.&quot;, &quot;start&quot;)
+...
+debug(&quot;Reporting elapsed time.&quot;, &quot;stop&quot;)
+</pre><p>There are several things you can do; see [ornl.elision.Debugger.Mode] for
+the various debug modes you can enable.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -48,7 +67,7 @@ compute the constant pool for an atom.
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.Debugger" class="in"><span>Debugger</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -119,6 +138,17 @@ compute the constant pool for an atom.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.Debugger.Mode" data-isabs="false">
+      <a id="Mode:Mode"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Debugger$$Mode$.html"><span class="name">Mode</span></a>
+        
+        <span class="result"> extends Enumeration</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This enumeration provides the different modes for debug reporting.</p>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -140,10 +170,57 @@ compute the constant pool for an atom.
         <span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.Debugger#debug" data-isabs="false">
+      <a id="debug(⇒ String,String,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">debug</span>
+        
+        <span class="params">(<span name="message">message: ⇒ String</span>, <span name="tag">tag: String = <span class="symbol">&quot;&quot;</span></span>, <span name="id">id: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a debugging tag based on the enabled modes.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a debugging tag based on the enabled modes.
+</p></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>A closure to generate the message to write.</p></dd><dt class="param">id</dt><dd class="cmt"><p>An optional id number.  This is printed if positive.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.Debugger#disableDebugModes" data-isabs="false">
+      <a id="disableDebugModes(String,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">disableDebugModes</span>
+        
+        <span class="params">(<span name="tag">tag: String</span>, <span name="modes">modes: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Disable the specified debugging mode(s).</p><div class="fullcomment"><div class="comment cmt"><p>Disable the specified debugging mode(s).  No other modes are modified.
+This does not automatically disable the tag.
+</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag whose options are to be set.</p></dd><dt class="param">modes</dt><dd class="cmt"><p>The modes, which should be an inclusive OR of the
+             constants defined in [ornl.elision.Debugger.Mode].  The
+             constants are automatically converted to integers to make
+             this possible.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.Debugger#enableDebugModes" data-isabs="false">
+      <a id="enableDebugModes(String,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">enableDebugModes</span>
+        
+        <span class="params">(<span name="tag">tag: String</span>, <span name="modes">modes: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Enable the specified debugging mode(s).</p><div class="fullcomment"><div class="comment cmt"><p>Enable the specified debugging mode(s).  No other modes are modified.
+This does not automatically enable the tag.
+</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag whose options are to be set.</p></dd><dt class="param">modes</dt><dd class="cmt"><p>The modes, which should be an inclusive OR of the
+             constants defined in [ornl.elision.Debugger.Mode].  The
+             constants are automatically converted to integers to make
+             this possible.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -176,7 +253,7 @@ compute the constant pool for an atom.
         <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -246,17 +323,18 @@ compute the constant pool for an atom.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#printTypeInfo" data-isabs="false">
-      <a id="printTypeInfo:Boolean"></a>
+    </li><li visbl="pub" name="ornl.elision.Debugger#setDebugModes" data-isabs="false">
+      <a id="setDebugModes(String,Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">var</span>
+      <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">printTypeInfo</span>
+        <span class="name">setDebugModes</span>
         
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="params">(<span name="tag">tag: String</span>, <span name="mode">mode: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Whether or not to provide type information in toParseString().</p>
+      <p class="shortcomment cmt">Set the debugging level for the given tag.</p><div class="fullcomment"><div class="comment cmt"><p>Set the debugging level for the given tag.
+</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag whose options are to be set.</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -279,62 +357,6 @@ compute the constant pool for an atom.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceMatching" data-isabs="false">
-      <a id="traceMatching:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">traceMatching</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Enable (if true) or disable (if false) match tracing.</p>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceRules" data-isabs="false">
-      <a id="traceRules:Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">traceRules</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Whether or not to print out information about rule applications.</p>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceTerse" data-isabs="false">
-      <a id="traceTerse:(Any) ⇒ Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">traceTerse</span>
-        
-        <span class="result">: (<span name="scala.Any" class="extype">Any</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Specify terse tracing for certain objects during matching.</p><div class="fullcomment"><div class="comment cmt"><p>Specify terse tracing for certain objects during matching.</p><p>This is a closure that selects the objects to trace.  The closure must
-take an object (it will be the <code>this</code> object at runtime) and return a
-Boolean indicating whether matching should be traced for that object.
-This will only occur, of course, if <code>traceMatching</code> is set to true.  By
-default this value is set to <code>(obj: Any) =&gt; true)</code>, which traces
-everything.</p><p>Note that full tracing takes precedence over terse tracing.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceVerbose" data-isabs="false">
-      <a id="traceVerbose:(Any) ⇒ Boolean"></a>
-      <h4 class="signature">
-      <span class="kind">var</span>
-      <span class="symbol"> 
-        <span class="name">traceVerbose</span>
-        
-        <span class="result">: (<span name="scala.Any" class="extype">Any</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Specify verbose tracing for certain objects during matching.</p><div class="fullcomment"><div class="comment cmt"><p>Specify verbose tracing for certain objects during matching.</p><p>This is a closure that selects the objects to trace.  The closure must
-take an object (it will be the <code>this</code> object at runtime) and return a
-Boolean indicating whether matching should be traced for that object.
-This will only occur, of course, if <code>traceMatching</code> is set to true.  By
-default this value is set to <code>(obj: Any) =&gt; false)</code>, which traces
-nothing.</p><p>Note that full tracing takes precedence over terse tracing.
-</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
