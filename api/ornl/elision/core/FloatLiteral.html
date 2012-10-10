@@ -432,6 +432,20 @@ of type matching strategies may be done.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.FloatLiteral#numberString" data-isabs="false">
+      <a id="numberString:String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">numberString</span>
+        
+        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This is a string representing the number.</p><div class="fullcomment"><div class="comment cmt"><p>This is a string representing the number.  It should be parseable by
+the Elision parser as a floating point number.  No type information
+is included in the string.
+</p></div></div>
     </li><li visbl="pub" name="ornl.elision.core.FloatLiteral#productArity" data-isabs="false">
       <a id="productArity:Int"></a>
       <h4 class="signature">
@@ -586,7 +600,21 @@ significand are removed, and the exponent correspondingly adjusted.
       <p class="shortcomment cmt">Get this in the specified IEEE 754 representation.</p><div class="fullcomment"><div class="comment cmt"><p>Get this in the specified IEEE 754 representation.
 </p></div><dl class="paramcmts block"><dt class="param">plaf</dt><dd class="cmt"><p>The floating point representation to use.
 </p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.FloatLiteral#toParseString" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
+      <a id="toParseString(Appendable):Appendable"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toParseString</span>
+        
+        <span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The string is immediately
+written (&quot;streamed&quot;) to the given appendable.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable to get the string.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
       <a id="toParseString:String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
@@ -600,7 +628,7 @@ significand are removed, and the exponent correspondingly adjusted.
 be able to &quot;round trip,&quot; that is, <a name="ornl.elision.parse.AtomParser" class="extype" href="../parse/AtomParser.html">AtomParser</a> must
 be able to parse it and return an atom equal to this one.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.FloatLiteral" class="extype" href="">FloatLiteral</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
