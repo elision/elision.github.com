@@ -161,6 +161,20 @@ rewriting.
       </span>
       </h4>
       <p class="shortcomment cmt">The active rulesets, by names.</p>
+    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#_allowLiteralRules" data-isabs="false">
+      <a id="_allowLiteralRules:Boolean"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">_allowLiteralRules</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Should rules that rewrite literals be permitted.</p><div class="fullcomment"><div class="comment cmt"><p>Should rules that rewrite literals be permitted.  If true, it is possible
+to create rules that rewrite one literal to another.  In general this is
+a bad idea.
+</p></div></div>
     </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#add" data-isabs="false">
       <a id="add(RewriteRule):RuleLibrary"></a>
       <h4 class="signature">
@@ -434,7 +448,7 @@ of the currently active rulesets.
       </h4>
       <p class="shortcomment cmt">Rewrite the given atom, repeatedly applying the rules of the specified
 rulesets.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite the given atom, repeatedly applying the rules of the specified
-rulesets.  This is limited by the rewrite limit.</p><p>Perform rewriting of an atom given a collection of rulesets.
+rulesets.  This is limited by the rewrite limit.</p><p>Perform rewriting of an atom given a collection of rulesets.</p><p>This method uses the memoization cache, if enabled.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets to use, or <code>Set.empty</code> to use all enabled.</p></dd><dt>returns</dt><dd class="cmt"><p>The rewritten atom, and true iff any rules were successfully
          applied.
 </p></dd></dl></div>
@@ -450,23 +464,8 @@ rulesets.  This is limited by the rewrite limit.</p><p>Perform rewriting of an a
       </h4>
       <p class="shortcomment cmt">Rewrite the given atom, repeatedly applying the rules of the active
 rulesets.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite the given atom, repeatedly applying the rules of the active
-rulesets.  This is limited by the rewrite limit.
+rulesets.  This is limited by the rewrite limit.</p><p>This method uses the memoization cache, if enabled.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt>returns</dt><dd class="cmt"><p>The rewritten atom, and true iff any rules were successfully
-         applied.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#rewriteChildren" data-isabs="false">
-      <a id="rewriteChildren(BasicAtom,Set[String]):(BasicAtom, Boolean)"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rewriteChildren</span>
-        
-        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: Set[String]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Recursively rewrite the atom and its children.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively rewrite the atom and its children.  This method understands
-atom collections and operators.
-</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets to use, or <code>Set.empty</code> to use all enabled.</p></dd><dt>returns</dt><dd class="cmt"><p>The rewritten atom, and true iff any rules were successfully
          applied.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#rewriteOnce" data-isabs="false">
@@ -480,21 +479,7 @@ atom collections and operators.
       </span>
       </h4>
       <p class="shortcomment cmt">Rewrite the provided atom once, if possible.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite the provided atom once, if possible.  Children may be rewritten,
-depending on whether descent is enabled.
-</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets to use, or <code>Set.empty</code> to use all enabled.</p></dd><dt>returns</dt><dd class="cmt"><p>The rewritten atom, and true iff any rules were successfully
-         applied.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#rewriteTop" data-isabs="false">
-      <a id="rewriteTop(BasicAtom,Set[String]):(BasicAtom, Boolean)"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rewriteTop</span>
-        
-        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: Set[String]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Rewrite the atom at the top level, once.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite the atom at the top level, once.
+depending on whether descent is enabled.</p><p>Do not memoize this method.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets to use, or <code>Set.empty</code> to use all enabled.</p></dd><dt>returns</dt><dd class="cmt"><p>The rewritten atom, and true iff any rules were successfully
          applied.
 </p></dd></dl></div>
