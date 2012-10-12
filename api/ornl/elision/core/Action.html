@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.TypedSymbolicOperator</title>
+          <title>ornl.elision.core.Action</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -12,26 +12,28 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <a title="Go to companion" href="TypedSymbolicOperator.html"><img src="../../../lib/object_to_class_big.png" /></a>
+        <img src="../../../lib/class_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1><a title="Go to companion" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></h1>
+        <h1>Action</h1>
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">object</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
-        <span class="name">TypedSymbolicOperator</span>
+        <span class="name">Action</span>
         
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Construction and matching of typed symbolic operators.
-</p></div><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="ornl.elision.core.AddRule" class="extype" href="AddRule.html">AddRule</a>, <a name="ornl.elision.core.DeclareRS" class="extype" href="DeclareRS.html">DeclareRS</a>, <a name="ornl.elision.core.DisableRS" class="extype" href="DisableRS.html">DisableRS</a>, <a name="ornl.elision.core.EnableRS" class="extype" href="EnableRS.html">EnableRS</a>, <a name="ornl.elision.core.NopAction" class="extype" href="NopAction.html">NopAction</a></div>
         </div></div>
         
 
@@ -47,7 +49,7 @@
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.core.TypedSymbolicOperator" class="in"><span>TypedSymbolicOperator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.core.Action" class="in"><span>Action</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -55,7 +57,21 @@
             </div>
         </div>
 
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.core.Action#this" data-isabs="false">
+      <a id="this:Action"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol"> 
+        <span class="name">Action</span>
         
+        <span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
         
@@ -118,49 +134,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean):TypedSymbolicOperator"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">apply</span>
-        
-        <span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="ddetail">ddetail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Make a typed symbolic operator from the provided parts.</p><div class="fullcomment"><div class="comment cmt"><p>Make a typed symbolic operator from the provided parts.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt class="param">params</dt><dd class="cmt"><p>The operator parameters.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
-											meta-terms.  This is not advisable, and you should
-											probably leave this with the default value of false.</p></dd><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean,String,Option[(ApplyData) ⇒ BasicAtom]):TypedSymbolicOperator"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">apply</span>
-        
-        <span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="handlerB64">handlerB64: String</span>, <span name="nativeOp">nativeOp: <span name="scala.Option" class="extype">Option</span>[(<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result">: <a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Make a typed symbolic operator with native handler, this is only
-meant to be used for importing exported scala code.</p><div class="fullcomment"><div class="comment cmt"><p>Make a typed symbolic operator with native handler, this is only
-meant to be used for importing exported scala code.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#apply" data-isabs="false">
-      <a id="apply(SpecialFormHolder):TypedSymbolicOperator"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">apply</span>
-        
-        <span class="params">(<span name="sfh">sfh: <a name="ornl.elision.core.SpecialFormHolder" class="extype" href="SpecialFormHolder.html">SpecialFormHolder</a></span>)</span><span class="result">: <a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Make a typed symbolic operator from the provided special form data.</p><div class="fullcomment"><div class="comment cmt"><p>Make a typed symbolic operator from the provided special form data.
-</p></div><dl class="paramcmts block"><dt class="param">sfh</dt><dd class="cmt"><p>The parsed special form data.</p></dd><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -310,19 +283,6 @@ meant to be used for importing exported scala code.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#unapply" data-isabs="false">
-      <a id="unapply(TypedSymbolicOperator):Some[(String, BasicAtom, AtomSeq, String, String, Boolean, String)]"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">unapply</span>
-        
-        <span class="params">(<span name="so">so: <a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(String, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a>, String, String, <span name="scala.Boolean" class="extype">Boolean</span>, String)]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Extract the parts of a typed symbolic operator.</p><div class="fullcomment"><div class="comment cmt"><p>Extract the parts of a typed symbolic operator.
-</p></div><dl class="paramcmts block"><dt class="param">so</dt><dd class="cmt"><p>The operator.</p></dd><dt>returns</dt><dd class="cmt"><p>The triple of name, computed type, and parameters.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">

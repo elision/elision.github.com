@@ -61,6 +61,28 @@
       </span>
       </h4>
       <p class="comment cmt">An absorber.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Action" data-isabs="true">
+      <a id="Action:Action"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="Action.html"><span class="name">Action</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AddRule" data-isabs="false">
+      <a id="AddRule:AddRule"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="AddRule.html"><span class="name">AddRule</span></a>
+        
+        <span class="params">(<span name="rule">rule: RewriteRule</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core.AlgProp" data-isabs="false">
       <a id="AlgProp:AlgProp"></a>
       <h4 class="signature">
@@ -274,6 +296,39 @@ as the result of a successful match.</p>
       </h4>
       <p class="comment cmt">A context provides access to operator libraries and rules, along with
 the global set of bindings in force at any time.</p>
+    </li><li visbl="pub" name="ornl.elision.core.DeclareRS" data-isabs="false">
+      <a id="DeclareRS:DeclareRS"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="DeclareRS.html"><span class="name">DeclareRS</span></a>
+        
+        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.DisableRS" data-isabs="false">
+      <a id="DisableRS:DisableRS"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="DisableRS.html"><span class="name">DisableRS</span></a>
+        
+        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.EnableRS" data-isabs="false">
+      <a id="EnableRS:EnableRS"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="EnableRS.html"><span class="name">EnableRS</span></a>
+        
+        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core.Executor" data-isabs="true">
       <a id="Executor:Executor"></a>
       <h4 class="signature">
@@ -588,6 +643,17 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to use an undeclared ruleset.</p>
+    </li><li visbl="pub" name="ornl.elision.core.NopAction" data-isabs="false">
+      <a id="NopAction:NopAction"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="NopAction.html"><span class="name">NopAction</span></a>
+        
+        <span class="params">()</span><span class="result"> extends Action with Product with Serializable</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq" data-isabs="true">
       <a id="OmitSeq:OmitSeq[A]"></a>
       <h4 class="signature">
