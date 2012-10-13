@@ -47,7 +47,29 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.ElisionException" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.AbstractSwitch" data-isabs="true">
+      <a id="AbstractSwitch:AbstractSwitch"></a>
+      <h4 class="signature">
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="AbstractSwitch.html"><span class="name">AbstractSwitch</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Unifying class for all switches.</p>
+    </li><li visbl="pub" name="ornl.elision.ArgSwitch" data-isabs="false">
+      <a id="ArgSwitch:ArgSwitch"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="ArgSwitch.html"><span class="name">ArgSwitch</span></a>
+        
+        <span class="params">(<span name="long">long: Option[String]</span>, <span name="short">short: Option[Char]</span>, <span name="description">description: String</span>, <span name="argument">argument: String</span>, <span name="closure">closure: (String) ⇒ Option[String]</span>)</span><span class="result"> extends AbstractSwitch with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Represent a switch that takes an argument.</p>
+    </li><li visbl="pub" name="ornl.elision.ElisionException" data-isabs="false">
       <a id="ElisionException:ElisionException"></a>
       <h4 class="signature">
       <span class="kind">class</span>
@@ -58,6 +80,17 @@
       </span>
       </h4>
       <p class="comment cmt">Root class for exceptions occurring within Elision.</p>
+    </li><li visbl="pub" name="ornl.elision.Switch" data-isabs="false">
+      <a id="Switch:Switch"></a>
+      <h4 class="signature">
+      <span class="kind">case class</span>
+      <span class="symbol"> 
+        <a href="Switch.html"><span class="name">Switch</span></a>
+        
+        <span class="params">(<span name="long">long: Option[String]</span>, <span name="short">short: Option[Char]</span>, <span name="description">description: String</span>, <span name="closure">closure: () ⇒ Option[String]</span>)</span><span class="result"> extends AbstractSwitch with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide an implementation of a command line switch.</p>
     </li></ol>
             </div>
         
@@ -75,7 +108,7 @@
         <span class="result"> extends App</span>
       </span>
       </h4>
-      <p class="comment cmt">Simple about text.</p>
+      <p class="comment cmt">Print some simple &quot;about&quot; text.</p>
     </li><li visbl="pub" name="ornl.elision.Debugger" data-isabs="false">
       <a id="Debugger:Debugger"></a>
       <h4 class="signature">
@@ -120,7 +153,8 @@ in a manner that &quot;agrees&quot; with Elision.</p>
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      
+      <p class="comment cmt">Provide reusable text for any About commands/dialogues in Elision or
+its associated GUIs and applications.</p>
     </li><li visbl="pub" name="ornl.elision.Main" data-isabs="false">
       <a id="Main:Main"></a>
       <h4 class="signature">
@@ -143,6 +177,28 @@ in a manner that &quot;agrees&quot; with Elision.</p>
       </span>
       </h4>
       
+    </li><li visbl="pub" name="ornl.elision.SwitchUsage" data-isabs="false">
+      <a id="SwitchUsage:SwitchUsage"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="SwitchUsage$.html"><span class="name">SwitchUsage</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide usage help.</p>
+    </li><li visbl="pub" name="ornl.elision.Switches" data-isabs="false">
+      <a id="Switches:Switches"></a>
+      <h4 class="signature">
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Switches$.html"><span class="name">Switches</span></a>
+        
+        <span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide methods to work with the command line arguments.</p>
     </li><li visbl="pub" name="ornl.elision.Version" data-isabs="false">
       <a id="Version:Version"></a>
       <h4 class="signature">

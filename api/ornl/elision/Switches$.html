@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.HelpText</title>
+          <title>ornl.elision.Switches</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
@@ -16,20 +16,19 @@
       <div id="definition">
         <img src="../../lib/object_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="package.html">elision</a></p>
-        <h1>HelpText</h1>
+        <h1>Switches</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="kind">object</span>
       <span class="symbol"> 
-        <span class="name">HelpText</span>
+        <span class="name">Switches</span>
         
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide reusable text for any About commands/dialogues in Elision or
-its associated GUIs and applications.
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide methods to work with the command line arguments.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -48,7 +47,7 @@ its associated GUIs and applications.
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.HelpText" class="in"><span>HelpText</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.Switches" class="in"><span>Switches</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -119,17 +118,39 @@ its associated GUIs and applications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.HelpText#about" data-isabs="false">
-      <a id="about:String"></a>
+    </li><li visbl="pub" name="ornl.elision.Switches#apply" data-isabs="false">
+      <a id="apply(Array[String],Seq[AbstractSwitch],(String) ⇒ (Option[String], Boolean)):(List[String], Option[String], Int)"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
+      <span class="kind">def</span>
       <span class="symbol"> 
-        <span class="name">about</span>
+        <span class="name">apply</span>
         
-        <span class="result">: String</span>
+        <span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>, <span name="switches">switches: Seq[<a name="ornl.elision.AbstractSwitch" class="extype" href="AbstractSwitch.html">AbstractSwitch</a>]</span>, <span name="handler">handler: (String) ⇒ (<span name="scala.Option" class="extype">Option</span>[String], <span name="scala.Boolean" class="extype">Boolean</span>) = <span class="symbol"><span class="name"><a href="../../scala/package.html">(str) =&gt; (None, true)</a></span></span></span>)</span><span class="result">: (List[String], <span name="scala.Option" class="extype">Option</span>[String], <span name="scala.Int" class="extype">Int</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The about text.</p>
+      <p class="shortcomment cmt">Process the command line arguments, extract any switches and process them,
+and then return the resulting structure.</p><div class="fullcomment"><div class="comment cmt"><p>Process the command line arguments, extract any switches and process them,
+and then return the resulting structure.</p><p>Invoke this with the argument array and the defined switches.  Optionally
+an argument handler can be provided.  The return value contains an optional
+string that, if not <code>None</code>, specifies an error that stopped processing.
+The index of the argument where processing stopped is also returned.
+If the optional string is <code>None</code>, then no error was detected (and the
+integer value is undefined).  In all cases the list of arguments that have
+been fully processed and remain is returned.</p><p>Each command line argument is considered, and checked against the known
+switches.  There are three patterns for a likely switch.  If a switch is
+found, then the list of defined switches is checked and, if present, the
+closure for the switch is invoked at that time.  Otherwise an error is
+generated and processing stops.  Recognized switches are discarded.  The
+switch handler may return <code>None</code> to indicate success, or it may return
+an error message to stop processing with an error.</p><p>If the command line argument does not appear to be a switch, then it is
+passed to the argument handler.  The handler may return either <code>None</code> or
+an error string, and a Boolean flag.  An error string stops processing.
+The flag indicates whether to preserve (<code>true</code>) the argument in the list
+returned, or to discard (<code>false</code>) the argument.</p><p>The default argument handler always returns <code>(None, true)</code>.
+</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.</p></dd><dt class="param">switches</dt><dd class="cmt"><p>Known command line switches.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>A handler to invoke whenever an argument is found.</p></dd><dt>returns</dt><dd class="cmt"><p>A tuple with the remaining arguments, an optional string that
+         describes an error condition, and an integer that is the position
+         of the argument causing the error (if any).
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">

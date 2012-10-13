@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.HelpText</title>
+          <title>ornl.elision.AbstractSwitch</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../lib/template.css" />
@@ -12,27 +12,29 @@
       <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <img src="../../lib/object_big.png" />
+        <img src="../../lib/class_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="package.html">elision</a></p>
-        <h1>HelpText</h1>
+        <h1>AbstractSwitch</h1>
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">object</span>
+      <span class="kind">class</span>
       <span class="symbol"> 
-        <span class="name">HelpText</span>
+        <span class="name">AbstractSwitch</span>
         
         <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide reusable text for any About commands/dialogues in Elision or
-its associated GUIs and applications.
-</p></div><div class="toggleContainer block">
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Unifying class for all switches.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>sealed abstract </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="ornl.elision.ArgSwitch" class="extype" href="ArgSwitch.html">ArgSwitch</a>, <a name="ornl.elision.Switch" class="extype" href="Switch.html">Switch</a></div>
         </div></div>
         
 
@@ -48,7 +50,7 @@ its associated GUIs and applications.
                 <span class="filtertype">Inherited</span>
                 <ol><li class="hideall out"><span>Hide All</span></li>
                 <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.HelpText" class="in"><span>HelpText</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.AbstractSwitch" class="in"><span>AbstractSwitch</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
               </div>
           <div id="visbl">
               <span class="filtertype">Visibility</span>
@@ -56,14 +58,43 @@ its associated GUIs and applications.
             </div>
         </div>
 
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.AbstractSwitch#this" data-isabs="false">
+      <a id="this:AbstractSwitch"></a>
+      <h4 class="signature">
+      <span class="kind">new</span>
+      <span class="symbol"> 
+        <span class="name">AbstractSwitch</span>
         
+        <span class="params">(<span name="long">long: <span name="scala.Option" class="extype">Option</span>[String]</span>, <span name="short">short: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Char" class="extype">Char</span>]</span>, <span name="description">description: String</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">long</dt><dd class="cmt"><p>Long version of the switch.</p></dd><dt class="param">short</dt><dd class="cmt"><p>Short version of the switch.</p></dd><dt class="param">description</dt><dd class="cmt"><p>Human-readable description of the switch.
+</p></dd></dl></div>
+    </li></ol>
+            </div>
 
         
         
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.AbstractSwitch#name" data-isabs="true">
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">name</span>
         
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Printable version of the switch.</p><div class="fullcomment"><div class="comment cmt"><p>Printable version of the switch.  Does not include description.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members" id="values">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -119,17 +150,6 @@ its associated GUIs and applications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.HelpText#about" data-isabs="false">
-      <a id="about:String"></a>
-      <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">about</span>
-        
-        <span class="result">: String</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The about text.</p>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -155,6 +175,17 @@ its associated GUIs and applications.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.AbstractSwitch#description" data-isabs="false">
+      <a id="description:String"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">description</span>
+        
+        <span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Human-readable description of the switch.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -224,6 +255,17 @@ its associated GUIs and applications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.AbstractSwitch#long" data-isabs="false">
+      <a id="long:Option[String]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">long</span>
+        
+        <span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Long version of the switch.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -257,6 +299,17 @@ its associated GUIs and applications.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.AbstractSwitch#short" data-isabs="false">
+      <a id="short:Option[Char]"></a>
+      <h4 class="signature">
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">short</span>
+        
+        <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Char" class="extype">Char</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Short version of the switch.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
