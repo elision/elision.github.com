@@ -29,10 +29,25 @@
  [scaladoc] /home/sprowell/workspace/Elision/src/ornl/elision/core/matcher/UnbindableMatcher.scala:83: warning: Variable x undefined in comment for class UnbindableMatcher
  [scaladoc] class UnbindableMatcher(patterns: OmitSeq[BasicAtom],
  [scaladoc]       ^
- [scaladoc] two warnings found
-
-BUILD SUCCESSFUL
-Total time: 2 minutes 8 seconds
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9a674bd274, pid=11005, tid=140301084960512
+#
+# JRE version: 6.0_24-b24
+# Java VM: OpenJDK 64-Bit Server VM (20.0-b12 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea6 1.11.4
+# Distribution: Ubuntu 12.04 LTS, package 6b24-1.11.4-1ubuntu0.12.04.1
+# Problematic frame:
+# V  [libjvm.so+0x5df274]  MarkSweep::follow_stack()+0x34
+#
+# An error report file with more information is saved as:
+# /home/sprowell/hs_err_pid11005.log
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-6/
+#
 </pre>
   </body>
 </html>
