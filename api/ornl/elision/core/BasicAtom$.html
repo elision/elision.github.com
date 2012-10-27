@@ -130,6 +130,21 @@ compute the constant pool for an atom.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#buildSpouse" data-isabs="false">
+      <a id="buildSpouse:(BasicAtom) ⇒ T forSome { type T &lt;: AnyRef }"></a>
+      <h4 class="signature">
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">buildSpouse</span>
+        
+        <span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>) ⇒ T forSome { type T &lt;: AnyRef }</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Every basic atom may have a &quot;spouse&quot; that is a different object.</p><div class="fullcomment"><div class="comment cmt"><p>Every basic atom may have a &quot;spouse&quot; that is a different object.
+This field specifies a closure to create the spouse object.  The
+basic atom constructor calls this closure, passing the basic atom
+itself, and caching the returned object.
+</p></div></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">

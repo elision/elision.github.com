@@ -121,19 +121,23 @@ context contents have been declared.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.ElisionGenerator#apply" data-isabs="false">
-      <a id="apply(BasicAtom,Appendable):Appendable"></a>
+      <a id="apply(BasicAtom,Appendable,Int):Appendable"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">apply</span>
         
-        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span> = <span class="symbol"><span class="name"><a href="../../../java/lang/package.html">new StringBuffer()</a></span></span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span> = <span class="symbol"><span class="name"><a href="../../../java/lang/package.html">new StringBuffer()</a></span></span></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Generate the Scala code required to create a literal.</p><div class="fullcomment"><div class="comment cmt"><p>Generate the Scala code required to create a literal.  Certain well-known
 root types are handled directly and simply.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">buf</dt><dd class="cmt"><p>The buffer to get the result.  If not provided, one is
-               created.</p></dd><dt>returns</dt><dd class="cmt"><p>The result.
+               created.</p></dd><dt class="param">limit</dt><dd class="cmt"><p>The nesting limit of this atom.  If the limit is zero, then
+               an ellipsis is printed instead of the atom.  Otherwise
+               the limit is decreased for each parenthesized and bracketed
+               pair, until zero is reached.  If the limit is negative,
+               then there is effectively no limit.</p></dd><dt>returns</dt><dd class="cmt"><p>The result.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -196,45 +200,6 @@ root types are handled directly and simply.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.ElisionGenerator#gen" data-isabs="false">
-      <a id="gen(SpecialForm,Appendable):Appendable"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">gen</span>
-        
-        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a></span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Generate the Scala code required to create a special form.</p><div class="fullcomment"><div class="comment cmt"><p>Generate the Scala code required to create a special form.  Certain
-special forms get specialized processing.
-</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">buf</dt><dd class="cmt"><p>The buffer to get the result.</p></dd><dt>returns</dt><dd class="cmt"><p>The result.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.ElisionGenerator#gen" data-isabs="false">
-      <a id="gen(AlgProp,Appendable):Appendable"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">gen</span>
-        
-        <span class="params">(<span name="prop">prop: <a name="ornl.elision.core.AlgProp" class="extype" href="AlgProp.html">AlgProp</a></span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Generate the Scala code required to create an <code>AlgProp</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Generate the Scala code required to create an <code>AlgProp</code>.  Certain
-well-known properties are handled directly and simply.
-</p></div><dl class="paramcmts block"><dt class="param">buf</dt><dd class="cmt"><p>The buffer to get the result.</p></dd><dt>returns</dt><dd class="cmt"><p>The result.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.ElisionGenerator#gen" data-isabs="false">
-      <a id="gen(ornl.elision.core.Literal[_],Appendable):Appendable"></a>
-      <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">gen</span>
-        
-        <span class="params">(<span name="atom">atom: ornl.elision.core.Literal[_]</span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">

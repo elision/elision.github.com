@@ -440,6 +440,18 @@ is expected that overriding types will handle rewriting those, as well.
 </p></div><dl class="paramcmts block"><dt class="param">binds</dt><dd class="cmt"><p>The bindings.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of rewriting this atom, and whether or not anything
 					changed.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#spouse" data-isabs="false">
+      <a id="spouse:AnyRef"></a>
+      <h4 class="signature">
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">spouse</span>
+        
+        <span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Construct and cache the spouse of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Construct and cache the spouse of this object.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -463,18 +475,35 @@ is expected that overriding types will handle rewriting those, as well.
       </h4>
       <p class="shortcomment cmt">The type for the atom.</p><div class="fullcomment"><div class="comment cmt"><p>The type for the atom.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
-      <a id="toParseString(Appendable):Appendable"></a>
+      <a id="toParseString(Int):String"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">toParseString</span>
         
-        <span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+        <span class="params">(<span name="limit">limit: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.
+</p></div><dl class="paramcmts block"><dt class="param">limit</dt><dd class="cmt"><p>A limit on the depth of the returned string.  By default this
+             is negative one, for no limit.  Note that if the limit is
+             set, and is exceeded, the string will not be parseable.</p></dd><dt>returns</dt><dd class="cmt"><p>The string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
+      <a id="toParseString(Appendable,Int):Appendable"></a>
+      <h4 class="signature">
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toParseString</span>
+        
+        <span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The string is immediately
 written (&quot;streamed&quot;) to the given appendable.
-</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable to get the string.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable to get the string.</p></dd><dt class="param">limit</dt><dd class="cmt"><p>A limit on the depth of the returned string.  By default this
+             is negative one, for no limit.  Note that if the limit is
+             set, and is exceeded, the string will not be parseable.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
       <a id="toParseString:String"></a>

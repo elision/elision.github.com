@@ -119,13 +119,13 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Fail#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,BasicAtom,Option[Fail],Int):Fail"></a>
+      <a id="apply(⇒ String,BasicAtom,BasicAtom,Option[Fail],Int):Fail"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">apply</span>
         
-        <span class="params">(<span name="reason">reason: String</span>, <span name="pattern">pattern: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="prior">prior: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="index">index: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">0</span></span>)</span><span class="result">: <a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a></span>
+        <span class="params">(<span name="reason">reason: ⇒ String</span>, <span name="pattern">pattern: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="prior">prior: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>, <span name="index">index: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">0</span></span>)</span><span class="result">: <a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Construct a new Fail using the given reason string, showing the pattern
@@ -137,13 +137,13 @@ not constructed unless it is needed.
 								failures.  This value is optional.</p></dd><dt class="param">index</dt><dd class="cmt"><p>An index.  This is useful when we are matching a sequence.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Fail#apply" data-isabs="false">
-      <a id="apply(String):Fail"></a>
+      <a id="apply(⇒ String):Fail"></a>
       <h4 class="signature">
       <span class="kind">def</span>
       <span class="symbol"> 
         <span class="name">apply</span>
         
-        <span class="params">(<span name="reason">reason: String</span>)</span><span class="result">: <a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a></span>
+        <span class="params">(<span name="reason">reason: ⇒ String</span>)</span><span class="result">: <a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Construct a new Fail using a simple string instead of a closure.</p><div class="fullcomment"><div class="comment cmt"><p>Construct a new Fail using a simple string instead of a closure.
