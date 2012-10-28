@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="type">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
         <img src="../../../lib/trait_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
@@ -20,15 +20,16 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <span class="name">Console</span>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Console</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide communication with a console.  By default this uses the standard
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide communication with a console.  By default this uses the standard
 output.  To modify this, override the <code>write</code> method.</p><p>The console supports &quot;quiet&quot; levels.  These work with the methods to
 determine what will be written to the console.
 </p></div><div class="toggleContainer block">
@@ -38,42 +39,43 @@ determine what will be written to the console.
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="ornl.elision.core.PrintConsole" class="extype" href="PrintConsole$.html">PrintConsole</a></div>
         </div></div>
-        
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+            </div>
+        <div id="ancestors">
+              <span class="filtertype">Inherited</span>
+              <ol><li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Console" class="in"><span>Console</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+            </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          <div id="order">
-                <span class="filtertype">Ordering</span>
-                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
-              </div>
-          <div id="ancestors">
-                <span class="filtertype">Inherited</span>
-                <ol><li class="hideall out"><span>Hide All</span></li>
-                <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.core.Console" class="in"><span>Console</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-              </div>
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
         
-        
+
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
               <ol><li visbl="prt" name="ornl.elision.core.Console#write" data-isabs="true">
       <a id="write(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">write</span>
-        
-        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send the given text to the appropriate destination.</p><div class="fullcomment"><div class="comment cmt"><p>Send the given text to the appropriate destination.  This is the method
@@ -81,7 +83,7 @@ that controls where output goes, and which must be implemented.  *You
 should not use this method.*  You want <code>send</code>, <code>sendln</code>, <code>warn</code> or
 <code>error</code>, instead.
 </p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to send.
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected abstract </dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li></ol>
             </div>
 
@@ -90,77 +92,84 @@ should not use this method.*  You want <code>send</code>, <code>sendln</code>, <
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
       <a id="##():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">##</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">asInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">clone</span>
-        
-        <span class="params">()</span><span class="result">: AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -170,11 +179,12 @@ should not use this method.*  You want <code>send</code>, <code>sendln</code>, <
     </li><li visbl="pub" name="ornl.elision.core.Console#defaultPause" data-isabs="false">
       <a id="defaultPause():Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">defaultPause</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultPause</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The default pause operation.</p><div class="fullcomment"><div class="comment cmt"><p>The default pause operation.  Wait for a user-entered character.
@@ -184,11 +194,12 @@ should not use this method.*  You want <code>send</code>, <code>sendln</code>, <
     </li><li visbl="pub" name="ornl.elision.core.Console#doPause" data-isabs="false">
       <a id="doPause():Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">doPause</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doPause</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Perform whatever &quot;pause&quot; is configured for this console, and return
@@ -199,11 +210,12 @@ whether the user elected to continue.
     </li><li visbl="pub" name="ornl.elision.core.Console#emit" data-isabs="false">
       <a id="emit(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">emit</span>
-        
-        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emit</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Write a message.</p><div class="fullcomment"><div class="comment cmt"><p>Write a message.  The message is only written if the quiet level is
@@ -213,11 +225,12 @@ zero.
     </li><li visbl="pub" name="ornl.elision.core.Console#emitf" data-isabs="false">
       <a id="emitf(String,Any*):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">emitf</span>
-        
-        <span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Write a message.</p><div class="fullcomment"><div class="comment cmt"><p>Write a message.  The message is only written if the quiet level is
@@ -227,11 +240,12 @@ zero.
     </li><li visbl="pub" name="ornl.elision.core.Console#emitln" data-isabs="false">
       <a id="emitln(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">emitln</span>
-        
-        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitln</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Write a message.</p><div class="fullcomment"><div class="comment cmt"><p>Write a message.  The message is only written if the quiet level is
@@ -241,33 +255,36 @@ zero.
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">eq</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">equals</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Console#error" data-isabs="false">
       <a id="error(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">error</span>
-        
-        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
@@ -277,11 +294,12 @@ the quiet level is two or lower.  Suppressed errors are still counted.
     </li><li visbl="pub" name="ornl.elision.core.Console#errorf" data-isabs="false">
       <a id="errorf(String,Any*):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">errorf</span>
-        
-        <span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errorf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
@@ -292,22 +310,24 @@ the message.  Suppressed errors are still counted.
     </li><li visbl="pub" name="ornl.elision.core.Console#errors" data-isabs="false">
       <a id="errors:Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">errors</span>
-        
-        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errors</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the error count.</p>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">finalize</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -317,33 +337,36 @@ the message.  Suppressed errors are still counted.
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">getClass</span>
-        
-        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">hashCode</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Console#height_=" data-isabs="false">
       <a id="height_=(Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">height_=</span>
-        
-        <span class="params">(<span name="size">size: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: height_$eq">height_=</span><span class="params">(<span name="size">size: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Specify the length of a page of text.</p><div class="fullcomment"><div class="comment cmt"><p>Specify the length of a page of text.  If output (sent at one time)
@@ -353,22 +376,24 @@ exceeds this, then the pager is invoked.
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">isInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Console#line" data-isabs="false">
       <a id="line(String):String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">line</span>
-        
-        <span class="params">(<span name="ch">ch: String = <span class="symbol">&quot;-&quot;</span></span>)</span><span class="result">: String</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">line</span><span class="params">(<span name="ch">ch: String = <span class="symbol">&quot;-&quot;</span></span>)</span><span class="result">: String</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a &quot;line&quot; string based on the current width.</p><div class="fullcomment"><div class="comment cmt"><p>Get a &quot;line&quot; string based on the current width.
@@ -379,44 +404,48 @@ exceeds this, then the pager is invoked.
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ne</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notify</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notifyAll</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Console#panic" data-isabs="false">
       <a id="panic(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">panic</span>
-        
-        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">panic</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send output no matter what the quiet level.</p><div class="fullcomment"><div class="comment cmt"><p>Send output no matter what the quiet level.  Please do not abuse this.
@@ -425,11 +454,12 @@ exceeds this, then the pager is invoked.
     </li><li visbl="pub" name="ornl.elision.core.Console#panicf" data-isabs="false">
       <a id="panicf(String,Any*):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">panicf</span>
-        
-        <span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">panicf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send output no matter what the quiet level.</p><div class="fullcomment"><div class="comment cmt"><p>Send output no matter what the quiet level.  Please do not abuse this.
@@ -438,11 +468,12 @@ exceeds this, then the pager is invoked.
     </li><li visbl="pub" name="ornl.elision.core.Console#panicln" data-isabs="false">
       <a id="panicln(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">panicln</span>
-        
-        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">panicln</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send output no matter what the quiet level.</p><div class="fullcomment"><div class="comment cmt"><p>Send output no matter what the quiet level.  Please do not abuse this.
@@ -451,11 +482,12 @@ exceeds this, then the pager is invoked.
     </li><li visbl="pub" name="ornl.elision.core.Console#pause_=" data-isabs="false">
       <a id="pause_=(() ⇒ Boolean):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">pause_=</span>
-        
-        <span class="params">(<span name="pager">pager: () ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: pause_$eq">pause_=</span><span class="params">(<span name="pager">pager: () ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Specify a closure to invoke when a screen has filled.</p><div class="fullcomment"><div class="comment cmt"><p>Specify a closure to invoke when a screen has filled.  By default this is
@@ -466,22 +498,24 @@ value that is true to continue, and false if output should be terminated.
     </li><li visbl="pub" name="ornl.elision.core.Console#quiet" data-isabs="false">
       <a id="quiet:Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">quiet</span>
-        
-        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">quiet</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">See if quiet is enabled.</p>
     </li><li visbl="pub" name="ornl.elision.core.Console#quiet_=" data-isabs="false">
       <a id="quiet_=(Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">quiet_=</span>
-        
-        <span class="params">(<span name="level">level: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: quiet_$eq">quiet_=</span><span class="params">(<span name="level">level: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Specify whether to be quiet.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to be quiet.  How quiet it determined by levels.
@@ -494,22 +528,24 @@ value that is true to continue, and false if output should be terminated.
     </li><li visbl="pub" name="ornl.elision.core.Console#reset" data-isabs="false">
       <a id="reset:Console"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">reset</span>
-        
-        <span class="result">: <a name="ornl.elision.core.Console" class="extype" href="">Console</a></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reset</span><span class="result">: <a name="ornl.elision.core.Console" class="extype" href="">Console</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Reset the error and warnings counts to zero.</p>
     </li><li visbl="pub" name="ornl.elision.core.Console#send" data-isabs="false">
       <a id="send(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">send</span>
-        
-        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send explicitly requested output.</p><div class="fullcomment"><div class="comment cmt"><p>Send explicitly requested output.  This is only done if the quiet
@@ -519,11 +555,12 @@ level is three or lower.
     </li><li visbl="pub" name="ornl.elision.core.Console#sendf" data-isabs="false">
       <a id="sendf(String,Any*):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">sendf</span>
-        
-        <span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send explicitly requested output, followed by a newline.</p><div class="fullcomment"><div class="comment cmt"><p>Send explicitly requested output, followed by a newline.  This is
@@ -534,11 +571,12 @@ written after the message.
     </li><li visbl="pub" name="ornl.elision.core.Console#sendln" data-isabs="false">
       <a id="sendln(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">sendln</span>
-        
-        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendln</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Send explicitly requested output, followed by a newline.</p><div class="fullcomment"><div class="comment cmt"><p>Send explicitly requested output, followed by a newline.  This is
@@ -548,75 +586,81 @@ only done if the quiet level is three or lower.
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">synchronized</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">toString</span>
-        
-        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Console#warn" data-isabs="false">
       <a id="warn(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">warn</span>
-        
-        <span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
@@ -627,11 +671,12 @@ counted.
     </li><li visbl="pub" name="ornl.elision.core.Console#warnf" data-isabs="false">
       <a id="warnf(String,Any*):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">warnf</span>
-        
-        <span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warnf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
@@ -642,22 +687,24 @@ the message.  Suppressed warnings are still counted.
     </li><li visbl="pub" name="ornl.elision.core.Console#warnings" data-isabs="false">
       <a id="warnings:Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">warnings</span>
-        
-        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warnings</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the warning count.</p>
     </li><li visbl="pub" name="ornl.elision.core.Console#width_=" data-isabs="false">
       <a id="width_=(Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">width_=</span>
-        
-        <span class="params">(<span name="size">size: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: width_$eq">width_=</span><span class="params">(<span name="size">size: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Set the number of columns of output until wrapping is assumed.</p>
@@ -665,16 +712,22 @@ the message.  Suppressed warnings are still counted.
             </div>
 
         
+        </div>
 
+        <div id="inheritedMembers">
         <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
             </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

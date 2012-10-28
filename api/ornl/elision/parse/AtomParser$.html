@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
         <a title="Go to companion" href="AtomParser.html"><img src="../../../lib/object_to_class_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.parse" class="extype" href="package.html">parse</a></p>
@@ -20,42 +20,43 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <span class="name">AtomParser</span>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AtomParser</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide abstract syntax tree nodes used during parsing, along with any
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide abstract syntax tree nodes used during parsing, along with any
 supporting functions.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
-        
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+            </div>
+        <div id="ancestors">
+              <span class="filtertype">Inherited</span>
+              <ol><li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.parse.AtomParser" class="in"><span>AtomParser</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+            </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          <div id="order">
-                <span class="filtertype">Ordering</span>
-                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
-              </div>
-          <div id="ancestors">
-                <span class="filtertype">Inherited</span>
-                <ol><li class="hideall out"><span>Hide All</span></li>
-                <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.parse.AtomParser" class="in"><span>AtomParser</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-              </div>
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
         <div class="types members" id="types">
@@ -63,22 +64,24 @@ supporting functions.
               <ol><li visbl="pub" name="ornl.elision.parse.AtomParser.AbsorberNode" data-isabs="false">
       <a id="AbsorberNode:AbsorberNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AbsorberNode.html"><span class="name">AbsorberNode</span></a>
-        
-        <span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AbsorberNode.html"><span class="name">AbsorberNode</span></a><span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Absorber property.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AlgPropNode" data-isabs="false">
       <a id="AlgPropNode:AlgPropNode"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AlgPropNode.html"><span class="name">AlgPropNode</span></a>
-        
-        <span class="result"> extends AstNode</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AlgPropNode.html"><span class="name">AlgPropNode</span></a><span class="result"> extends AstNode</span>
       </span>
       </h4>
       <p class="comment cmt">A data structure holding operator properties as they are discovered during
@@ -86,154 +89,168 @@ the parse.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.ApplicationNode" data-isabs="false">
       <a id="ApplicationNode:ApplicationNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$ApplicationNode.html"><span class="name">ApplicationNode</span></a>
-        
-        <span class="params">(<span name="context">context: Context</span>, <span name="op">op: AstNode</span>, <span name="arg">arg: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$ApplicationNode.html"><span class="name">ApplicationNode</span></a><span class="params">(<span name="context">context: Context</span>, <span name="op">op: AstNode</span>, <span name="arg">arg: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing the application of an operator to an argument.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AssociativeNode" data-isabs="false">
       <a id="AssociativeNode:AssociativeNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AssociativeNode.html"><span class="name">AssociativeNode</span></a>
-        
-        <span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AssociativeNode.html"><span class="name">AssociativeNode</span></a><span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Associative property.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AstNode" data-isabs="true">
       <a id="AstNode:AstNode"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AstNode.html"><span class="name">AstNode</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AstNode.html"><span class="name">AstNode</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node resulting from parsing an atom.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AtomSeqNode" data-isabs="false">
       <a id="AtomSeqNode:AtomSeqNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AtomSeqNode.html"><span class="name">AtomSeqNode</span></a>
-        
-        <span class="params">(<span name="props">props: AlgPropNode</span>, <span name="list">list: List[AstNode]</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AtomSeqNode.html"><span class="name">AtomSeqNode</span></a><span class="params">(<span name="props">props: AlgPropNode</span>, <span name="list">list: List[AstNode]</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node holding a simple list of atoms.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.BindingsNode" data-isabs="false">
       <a id="BindingsNode:BindingsNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$BindingsNode.html"><span class="name">BindingsNode</span></a>
-        
-        <span class="params">(<span name="map">map: List[(NakedSymbolNode, AstNode)]</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$BindingsNode.html"><span class="name">BindingsNode</span></a><span class="params">(<span name="map">map: List[(NakedSymbolNode, AstNode)]</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Represent a bindings atom.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.CommutativeNode" data-isabs="false">
       <a id="CommutativeNode:CommutativeNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$CommutativeNode.html"><span class="name">CommutativeNode</span></a>
-        
-        <span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$CommutativeNode.html"><span class="name">CommutativeNode</span></a><span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Commutative property.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.Failure" data-isabs="false">
       <a id="Failure:Failure"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$Failure.html"><span class="name">Failure</span></a>
-        
-        <span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$Failure.html"><span class="name">Failure</span></a><span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The parse failed.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.FloatNode" data-isabs="false">
       <a id="FloatNode:FloatNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$FloatNode.html"><span class="name">FloatNode</span></a>
-        
-        <span class="params">(<span name="sign">sign: Boolean</span>, <span name="integer">integer: String</span>, <span name="fraction">fraction: String</span>, <span name="radix">radix: Int</span>, <span name="exp">exp: SignedIntegerNode</span>, <span name="typ">typ: AstNode</span>)</span><span class="result"> extends NumberNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$FloatNode.html"><span class="name">FloatNode</span></a><span class="params">(<span name="sign">sign: Boolean</span>, <span name="integer">integer: String</span>, <span name="fraction">fraction: String</span>, <span name="radix">radix: Int</span>, <span name="exp">exp: SignedIntegerNode</span>, <span name="typ">typ: AstNode</span>)</span><span class="result"> extends NumberNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node holding a floating point value.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.IdempotentNode" data-isabs="false">
       <a id="IdempotentNode:IdempotentNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$IdempotentNode.html"><span class="name">IdempotentNode</span></a>
-        
-        <span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$IdempotentNode.html"><span class="name">IdempotentNode</span></a><span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Idempotent property.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.IdentityNode" data-isabs="false">
       <a id="IdentityNode:IdentityNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$IdentityNode.html"><span class="name">IdentityNode</span></a>
-        
-        <span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$IdentityNode.html"><span class="name">IdentityNode</span></a><span class="params">(<span name="atom">atom: AstNode</span>)</span><span class="result"> extends PropertyNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Identity property.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.LambdaNode" data-isabs="false">
       <a id="LambdaNode:LambdaNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$LambdaNode.html"><span class="name">LambdaNode</span></a>
-        
-        <span class="params">(<span name="lvar">lvar: VariableNode</span>, <span name="body">body: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$LambdaNode.html"><span class="name">LambdaNode</span></a><span class="params">(<span name="lvar">lvar: VariableNode</span>, <span name="body">body: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a lambda.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode" data-isabs="false">
       <a id="MapPairNode:MapPairNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$MapPairNode.html"><span class="name">MapPairNode</span></a>
-        
-        <span class="params">(<span name="left">left: AstNode</span>, <span name="right">right: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$MapPairNode.html"><span class="name">MapPairNode</span></a><span class="params">(<span name="left">left: AstNode</span>, <span name="right">right: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Represent a map pair atom.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode" data-isabs="false">
       <a id="MetaVariableNode:MetaVariableNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$MetaVariableNode.html"><span class="name">MetaVariableNode</span></a>
-        
-        <span class="params">(<span name="vx">vx: VariableNode</span>)</span><span class="result"> extends VariableNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$MetaVariableNode.html"><span class="name">MetaVariableNode</span></a><span class="params">(<span name="vx">vx: VariableNode</span>)</span><span class="result"> extends VariableNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a metavariable reference.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.NakedSymbolNode" data-isabs="false">
       <a id="NakedSymbolNode:NakedSymbolNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$NakedSymbolNode.html"><span class="name">NakedSymbolNode</span></a>
-        
-        <span class="params">(<span name="str">str: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$NakedSymbolNode.html"><span class="name">NakedSymbolNode</span></a><span class="params">(<span name="str">str: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a &quot;naked&quot; symbol: a symbol whose type is the type
@@ -241,171 +258,186 @@ the parse.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.NumberNode" data-isabs="true">
       <a id="NumberNode:NumberNode"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$NumberNode.html"><span class="name">NumberNode</span></a>
-        
-        <span class="result"> extends AstNode</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$NumberNode.html"><span class="name">NumberNode</span></a><span class="result"> extends AstNode</span>
       </span>
       </h4>
       <p class="comment cmt">Root of all numeric abstract syntax tree nodes.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.OperatorNode" data-isabs="false">
       <a id="OperatorNode:OperatorNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$OperatorNode.html"><span class="name">OperatorNode</span></a>
-        
-        <span class="params">(<span name="str">str: String</span>, <span name="lib">lib: OperatorLibrary</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$OperatorNode.html"><span class="name">OperatorNode</span></a><span class="params">(<span name="str">str: String</span>, <span name="lib">lib: OperatorLibrary</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a &quot;naked&quot; operator.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.Presult" data-isabs="true">
       <a id="Presult:Presult"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$Presult.html"><span class="name">Presult</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$Presult.html"><span class="name">Presult</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">A parse result.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.PropertyNode" data-isabs="true">
       <a id="PropertyNode:PropertyNode"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$PropertyNode.html"><span class="name">PropertyNode</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$PropertyNode.html"><span class="name">PropertyNode</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">A property node.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.RulesetNode" data-isabs="false">
       <a id="RulesetNode:RulesetNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$RulesetNode.html"><span class="name">RulesetNode</span></a>
-        
-        <span class="params">(<span name="str">str: String</span>, <span name="lib">lib: RuleLibrary</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$RulesetNode.html"><span class="name">RulesetNode</span></a><span class="params">(<span name="str">str: String</span>, <span name="lib">lib: RuleLibrary</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a ruleset reference.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SignedIntegerNode" data-isabs="false">
       <a id="SignedIntegerNode:SignedIntegerNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$SignedIntegerNode.html"><span class="name">SignedIntegerNode</span></a>
-        
-        <span class="params">(<span name="sign">sign: Boolean</span>, <span name="digits">digits: String</span>, <span name="radix">radix: Int</span>, <span name="typ">typ: AstNode</span>)</span><span class="result"> extends NumberNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$SignedIntegerNode.html"><span class="name">SignedIntegerNode</span></a><span class="params">(<span name="sign">sign: Boolean</span>, <span name="digits">digits: String</span>, <span name="radix">radix: Int</span>, <span name="typ">typ: AstNode</span>)</span><span class="result"> extends NumberNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node holding a signed integer.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SimpleTypeNode" data-isabs="false">
       <a id="SimpleTypeNode:SimpleTypeNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$SimpleTypeNode.html"><span class="name">SimpleTypeNode</span></a>
-        
-        <span class="params">(<span name="TYPE">TYPE: NamedRootType</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$SimpleTypeNode.html"><span class="name">SimpleTypeNode</span></a><span class="params">(<span name="TYPE">TYPE: NamedRootType</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a simple type, which must be a root type.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SpecialFormNode" data-isabs="false">
       <a id="SpecialFormNode:SpecialFormNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$SpecialFormNode.html"><span class="name">SpecialFormNode</span></a>
-        
-        <span class="params">(<span name="tag">tag: AstNode</span>, <span name="content">content: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$SpecialFormNode.html"><span class="name">SpecialFormNode</span></a><span class="params">(<span name="tag">tag: AstNode</span>, <span name="content">content: AstNode</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a general special form.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.StringLiteralNode" data-isabs="false">
       <a id="StringLiteralNode:StringLiteralNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$StringLiteralNode.html"><span class="name">StringLiteralNode</span></a>
-        
-        <span class="params">(<span name="typ">typ: AstNode</span>, <span name="str">str: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$StringLiteralNode.html"><span class="name">StringLiteralNode</span></a><span class="params">(<span name="typ">typ: AstNode</span>, <span name="str">str: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a string literal.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.Success" data-isabs="false">
       <a id="Success:Success"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$Success.html"><span class="name">Success</span></a>
-        
-        <span class="params">(<span name="nodes">nodes: List[AstNode]</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$Success.html"><span class="name">Success</span></a><span class="params">(<span name="nodes">nodes: List[AstNode]</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The parse was successful.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SymbolLiteralNode" data-isabs="false">
       <a id="SymbolLiteralNode:SymbolLiteralNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$SymbolLiteralNode.html"><span class="name">SymbolLiteralNode</span></a>
-        
-        <span class="params">(<span name="typ">typ: Option[AstNode]</span>, <span name="sym">sym: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$SymbolLiteralNode.html"><span class="name">SymbolLiteralNode</span></a><span class="params">(<span name="typ">typ: Option[AstNode]</span>, <span name="sym">sym: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a symbol literal.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SymbolNode" data-isabs="false">
       <a id="SymbolNode:SymbolNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$SymbolNode.html"><span class="name">SymbolNode</span></a>
-        
-        <span class="params">(<span name="typ">typ: AstNode</span>, <span name="name">name: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$SymbolNode.html"><span class="name">SymbolNode</span></a><span class="params">(<span name="typ">typ: AstNode</span>, <span name="name">name: String</span>)</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a symbol.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.TypeUniverseNode" data-isabs="false">
       <a id="TypeUniverseNode:TypeUniverseNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$TypeUniverseNode.html"><span class="name">TypeUniverseNode</span></a>
-        
-        <span class="params">()</span><span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$TypeUniverseNode.html"><span class="name">TypeUniverseNode</span></a><span class="params">()</span><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing the unique type universe.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" data-isabs="false">
       <a id="UnsignedIntegerNode:UnsignedIntegerNode"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$UnsignedIntegerNode.html"><span class="name">UnsignedIntegerNode</span></a>
-        
-        <span class="params">(<span name="digits">digits: String</span>, <span name="radix">radix: Int</span>, <span name="typ">typ: AstNode</span>)</span><span class="result"> extends NumberNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$UnsignedIntegerNode.html"><span class="name">UnsignedIntegerNode</span></a><span class="params">(<span name="digits">digits: String</span>, <span name="radix">radix: Int</span>, <span name="typ">typ: AstNode</span>)</span><span class="result"> extends NumberNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node holding an unsigned integer.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode" data-isabs="false">
       <a id="VariableNode:VariableNode"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$VariableNode.html"><span class="name">VariableNode</span></a>
-        
-        <span class="result"> extends AstNode</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$VariableNode.html"><span class="name">VariableNode</span></a><span class="result"> extends AstNode</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing a variable reference.</p>
     </li></ol>
             </div>
-        
+
         
 
         <div class="values members" id="values">
@@ -413,174 +445,189 @@ the parse.</p>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
       <a id="##():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">##</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AlgPropNode" data-isabs="false">
       <a id="AlgPropNode:AlgPropNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AlgPropNode$.html"><span class="name">AlgPropNode</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AlgPropNode$.html"><span class="name">AlgPropNode</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Represent an algebraic properties specification.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AnyNode" data-isabs="false">
       <a id="AnyNode:AnyNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$AnyNode$.html"><span class="name">AnyNode</span></a>
-        
-        <span class="result"> extends AstNode</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$AnyNode$.html"><span class="name">AnyNode</span></a><span class="result"> extends AstNode</span>
       </span>
       </h4>
       <p class="comment cmt">A node representing ANY.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.FalseNode" data-isabs="false">
       <a id="FalseNode:FalseNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$FalseNode$.html"><span class="name">FalseNode</span></a>
-        
-        <span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$FalseNode$.html"><span class="name">FalseNode</span></a><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A false node for fast access.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.NumberNode" data-isabs="false">
       <a id="NumberNode:NumberNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$NumberNode$.html"><span class="name">NumberNode</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$NumberNode$.html"><span class="name">NumberNode</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node holding a numeric value.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SignedIntegerNode" data-isabs="false">
       <a id="SignedIntegerNode:SignedIntegerNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$SignedIntegerNode$.html"><span class="name">SignedIntegerNode</span></a>
-        
-        <span class="result"> extends Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$SignedIntegerNode$.html"><span class="name">SignedIntegerNode</span></a><span class="result"> extends Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide other methods to construct a signed integer.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.TrueNode" data-isabs="false">
       <a id="TrueNode:TrueNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$TrueNode$.html"><span class="name">TrueNode</span></a>
-        
-        <span class="result"> extends AstNode with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$TrueNode$.html"><span class="name">TrueNode</span></a><span class="result"> extends AstNode with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A true node for fast access.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode" data-isabs="false">
       <a id="VariableNode:VariableNode"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomParser$$VariableNode$.html"><span class="name">VariableNode</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomParser$$VariableNode$.html"><span class="name">VariableNode</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified creation of variable nodes.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#append" data-isabs="false">
       <a id="append(StringBuilder,String):StringBuilder"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">append</span>
-        
-        <span class="params">(<span name="front">front: StringBuilder</span>, <span name="last">last: String</span>)</span><span class="result">: <span name="scala.collection.mutable.StringBuilder" class="extype">StringBuilder</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">append</span><span class="params">(<span name="front">front: StringBuilder</span>, <span name="last">last: String</span>)</span><span class="result">: <span name="scala.collection.mutable.StringBuilder" class="extype">StringBuilder</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Accumulate a character into a string.</p><div class="fullcomment"><div class="comment cmt"><p>Accumulate a character into a string.  The character may actually be an
 escape sequence that will be interpreted here.</p><p>See <code>toEString</code> for the reverse conversion.</p><p>The following escapes are interpreted.</p><pre>
-\&quot;  -&gt; double quotation mark
-\`  -&gt; backtick
-\\  -&gt; backslash
-\n  -&gt; newline
-\t  -&gt; tab
-\r  -&gt; carriage return
-</pre></div><dl class="paramcmts block"><dt class="param">front</dt><dd class="cmt"><p>The string to get the new character appended at the end.</p></dd><dt class="param">last</dt><dd class="cmt"><p>The new character, possibly an escape to interpret.</p></dd><dt>returns</dt><dd class="cmt"><p>The new string.
+\<span class="lit">"  -> double quotation mark
+\`  -> backtick
+\\  -> backslash
+\n  -> newline
+\t  -> tab
+\r  -> carriage return
+</span></pre></div><dl class="paramcmts block"><dt class="param">front</dt><dd class="cmt"><p>The string to get the new character appended at the end.</p></dd><dt class="param">last</dt><dd class="cmt"><p>The new character, possibly an escape to interpret.</p></dd><dt>returns</dt><dd class="cmt"><p>The new string.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">asInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">clone</span>
-        
-        <span class="params">()</span><span class="result">: AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -590,11 +637,12 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#construct" data-isabs="false">
       <a id="construct(List[String]):String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">construct</span>
-        
-        <span class="params">(<span name="chars">chars: List[String]</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">construct</span><span class="params">(<span name="chars">chars: List[String]</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Given a list of strings, each of which represents a single character
@@ -605,33 +653,36 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">eq</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">equals</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">finalize</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -641,130 +692,141 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">getClass</span>
-        
-        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">hashCode</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">isInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ne</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notify</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notifyAll</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">synchronized</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">toString</span>
-        
-        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -772,16 +834,22 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
             </div>
 
         
+        </div>
 
+        <div id="inheritedMembers">
         <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
             </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

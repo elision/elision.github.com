@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="value">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a></p>
@@ -20,32 +20,33 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">core</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The core classes and definitions that make up the Elision runtime.</p><h4> Design Goals </h4><ul><li>Every atom that can be programmatically created can be written using
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The core classes and definitions that make up the Elision runtime.</p><h4> Design Goals </h4><ul><li>Every atom that can be programmatically created can be written using
    the toParseString, and the result can be parsed by AtomParser.</li><li>Every atom that can be programmatically created has a toString method
    that generates valid Scala code to reproduce the atom.</li><li>Avoid global data and singletons.</li><li>Simple API.
 </li></ul></div></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
         
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
         <div class="types members" id="types">
@@ -53,55 +54,60 @@
               <ol><li visbl="pub" name="ornl.elision.core.Absorber" data-isabs="false">
       <a id="Absorber:Absorber"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Absorber.html"><span class="name">Absorber</span></a>
-        
-        <span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Absorber.html"><span class="name">Absorber</span></a><span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An absorber.</p>
     </li><li visbl="pub" name="ornl.elision.core.Action" data-isabs="true">
       <a id="Action:Action"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Action.html"><span class="name">Action</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Action.html"><span class="name">Action</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
+      
     </li><li visbl="pub" name="ornl.elision.core.AddRule" data-isabs="false">
       <a id="AddRule:AddRule"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AddRule.html"><span class="name">AddRule</span></a>
-        
-        <span class="params">(<span name="rule">rule: RewriteRule</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AddRule.html"><span class="name">AddRule</span></a><span class="params">(<span name="rule">rule: RewriteRule</span>)</span><span class="result"> extends Action with Product with Serializable</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.AlgProp" data-isabs="false">
       <a id="AlgProp:AlgProp"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AlgProp.html"><span class="name">AlgProp</span></a>
-        
-        <span class="result"> extends BasicAtom with Applicable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AlgProp.html"><span class="name">AlgProp</span></a><span class="result"> extends BasicAtom with Applicable</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate the algebraic properties ascribed to some object.</p>
     </li><li visbl="pub" name="ornl.elision.core.Applicable" data-isabs="true">
       <a id="Applicable:Applicable"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Applicable.html"><span class="name">Applicable</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Applicable.html"><span class="name">Applicable</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">An <i>applicable</i> is an atom that can be applied to some other atom to
@@ -109,33 +115,36 @@ generate a potentially new atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.Apply" data-isabs="true">
       <a id="Apply:Apply"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Apply.html"><span class="name">Apply</span></a>
-        
-        <span class="result"> extends BasicAtom</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Apply.html"><span class="name">Apply</span></a><span class="result"> extends BasicAtom</span>
       </span>
       </h4>
       <p class="comment cmt">The common root for all application atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.ApplyData" data-isabs="false">
       <a id="ApplyData:ApplyData"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="ApplyData.html"><span class="name">ApplyData</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ApplyData.html"><span class="name">ApplyData</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Data block and special functions provided to a native handler.</p>
     </li><li visbl="pub" name="ornl.elision.core.ApplyInfo" data-isabs="false">
       <a id="ApplyInfo:ApplyInfo"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="ApplyInfo.html"><span class="name">ApplyInfo</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ApplyInfo.html"><span class="name">ApplyInfo</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Package information about the application of an operator to an argument
@@ -143,66 +152,72 @@ list.</p>
     </li><li visbl="pub" name="ornl.elision.core.ArgumentListException" data-isabs="false">
       <a id="ArgumentListException:ArgumentListException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="ArgumentListException.html"><span class="name">ArgumentListException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ArgumentListException.html"><span class="name">ArgumentListException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">An incorrect argument list was supplied to an operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.Associative" data-isabs="false">
       <a id="Associative:Associative"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Associative.html"><span class="name">Associative</span></a>
-        
-        <span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Associative.html"><span class="name">Associative</span></a><span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The associative property.</p>
     </li><li visbl="pub" name="ornl.elision.core.AtomSeq" data-isabs="false">
       <a id="AtomSeq:AtomSeq"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AtomSeq.html"><span class="name">AtomSeq</span></a>
-        
-        <span class="result"> extends BasicAtom with IndexedSeq[BasicAtom]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomSeq.html"><span class="name">AtomSeq</span></a><span class="result"> extends BasicAtom with IndexedSeq[BasicAtom]</span>
       </span>
       </h4>
       <p class="comment cmt">An atom sequence is just that: a sequence of atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom" data-isabs="true">
       <a id="BasicAtom:BasicAtom"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="BasicAtom.html"><span class="name">BasicAtom</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BasicAtom.html"><span class="name">BasicAtom</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">The root of all atoms manipulated by the rewriter.</p>
     </li><li visbl="pub" name="ornl.elision.core.BindablePatternException" data-isabs="false">
       <a id="BindablePatternException:BindablePatternException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="BindablePatternException.html"><span class="name">BindablePatternException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BindablePatternException.html"><span class="name">BindablePatternException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to add a rule whose pattern is bindable (i.</p>
     </li><li visbl="pub" name="ornl.elision.core.Bindings" data-isabs="false">
       <a id="Bindings:Bindings"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Bindings.html"><span class="name">Bindings</span></a>
-        
-        <span class="result"> extends HashMap[String, BasicAtom] with Mutable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Bindings.html"><span class="name">Bindings</span></a><span class="result"> extends HashMap[String, BasicAtom] with Mutable</span>
       </span>
       </h4>
       <p class="comment cmt">Bindings are used to store variable / value maps used during matching, and
@@ -210,88 +225,96 @@ as the result of a successful match.</p>
     </li><li visbl="pub" name="ornl.elision.core.BindingsAtom" data-isabs="false">
       <a id="BindingsAtom:BindingsAtom"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="BindingsAtom.html"><span class="name">BindingsAtom</span></a>
-        
-        <span class="params">(<span name="mybinds">mybinds: Bindings</span>)</span><span class="result"> extends BasicAtom with Applicable with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BindingsAtom.html"><span class="name">BindingsAtom</span></a><span class="params">(<span name="mybinds">mybinds: Bindings</span>)</span><span class="result"> extends BasicAtom with Applicable with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a set of bindings as an atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.BindingsHolder" data-isabs="false">
       <a id="BindingsHolder:BindingsHolder"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="BindingsHolder.html"><span class="name">BindingsHolder</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BindingsHolder.html"><span class="name">BindingsHolder</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Hold data from a special form where the content is a bindings atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.BooleanLiteral" data-isabs="false">
       <a id="BooleanLiteral:BooleanLiteral"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="BooleanLiteral.html"><span class="name">BooleanLiteral</span></a>
-        
-        <span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: Boolean</span>)</span><span class="result"> extends Literal[Boolean] with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BooleanLiteral.html"><span class="name">BooleanLiteral</span></a><span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: Boolean</span>)</span><span class="result"> extends Literal[Boolean] with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide a Boolean literal.</p>
     </li><li visbl="pub" name="ornl.elision.core.CacheException" data-isabs="false">
       <a id="CacheException:CacheException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="CacheException.html"><span class="name">CacheException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CacheException.html"><span class="name">CacheException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">The cache contains the wrong type of item for the requested key.</p>
     </li><li visbl="pub" name="ornl.elision.core.CaseOperator" data-isabs="false">
       <a id="CaseOperator:CaseOperator"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="CaseOperator.html"><span class="name">CaseOperator</span></a>
-        
-        <span class="result"> extends Operator</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CaseOperator.html"><span class="name">CaseOperator</span></a><span class="result"> extends Operator</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a case operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.Commutative" data-isabs="false">
       <a id="Commutative:Commutative"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Commutative.html"><span class="name">Commutative</span></a>
-        
-        <span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Commutative.html"><span class="name">Commutative</span></a><span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The commutative property</p>
     </li><li visbl="pub" name="ornl.elision.core.Console" data-isabs="true">
       <a id="Console:Console"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Console.html"><span class="name">Console</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Console.html"><span class="name">Console</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide communication with a console.</p>
     </li><li visbl="pub" name="ornl.elision.core.Context" data-isabs="false">
       <a id="Context:Context"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Context.html"><span class="name">Context</span></a>
-        
-        <span class="result"> extends Fickle with Mutable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Context.html"><span class="name">Context</span></a><span class="result"> extends Fickle with Mutable</span>
       </span>
       </h4>
       <p class="comment cmt">A context provides access to operator libraries and rules, along with
@@ -299,66 +322,72 @@ the global set of bindings in force at any time.</p>
     </li><li visbl="pub" name="ornl.elision.core.DeclareRS" data-isabs="false">
       <a id="DeclareRS:DeclareRS"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="DeclareRS.html"><span class="name">DeclareRS</span></a>
-        
-        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeclareRS.html"><span class="name">DeclareRS</span></a><span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.DisableRS" data-isabs="false">
       <a id="DisableRS:DisableRS"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="DisableRS.html"><span class="name">DisableRS</span></a>
-        
-        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DisableRS.html"><span class="name">DisableRS</span></a><span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.EnableRS" data-isabs="false">
       <a id="EnableRS:EnableRS"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="EnableRS.html"><span class="name">EnableRS</span></a>
-        
-        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EnableRS.html"><span class="name">EnableRS</span></a><span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.Executor" data-isabs="true">
       <a id="Executor:Executor"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Executor.html"><span class="name">Executor</span></a>
-        
-        <span class="result"> extends PropertyManager</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends PropertyManager</span>
       </span>
       </h4>
       <p class="comment cmt">An executor is a class that can convert a string into a sequence of atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.Fail" data-isabs="false">
       <a id="Fail:Fail"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Fail.html"><span class="name">Fail</span></a>
-        
-        <span class="params">(<span name="reason">reason: () ⇒ String</span>, <span name="index">index: Int</span>)</span><span class="result"> extends Outcome with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Fail.html"><span class="name">Fail</span></a><span class="params">(<span name="reason">reason: () ⇒ String</span>, <span name="index">index: Int</span>)</span><span class="result"> extends Outcome with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An attempted match failed for the specified reason.</p>
     </li><li visbl="pub" name="ornl.elision.core.Fickle" data-isabs="true">
       <a id="Fickle:Fickle"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Fickle.html"><span class="name">Fickle</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Fickle.html"><span class="name">Fickle</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">This marker trait is used to frighten developers and strike fear into
@@ -366,22 +395,24 @@ anyone trying to get some work done.</p>
     </li><li visbl="pub" name="ornl.elision.core.FloatLiteral" data-isabs="false">
       <a id="FloatLiteral:FloatLiteral"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="FloatLiteral.html"><span class="name">FloatLiteral</span></a>
-        
-        <span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="significand">significand: BigInt</span>, <span name="exponent">exponent: Int</span>, <span name="radix">radix: Int</span>)</span><span class="result"> extends Literal[(BigInt, Int, Int)] with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FloatLiteral.html"><span class="name">FloatLiteral</span></a><span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="significand">significand: BigInt</span>, <span name="exponent">exponent: Int</span>, <span name="radix">radix: Int</span>)</span><span class="result"> extends Literal[(BigInt, Int, Int)] with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide a floating-point literal value.</p>
     </li><li visbl="pub" name="ornl.elision.core.HandHolder" data-isabs="false">
       <a id="HandHolder:HandHolder"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="HandHolder.html"><span class="name">HandHolder</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HandHolder.html"><span class="name">HandHolder</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">A little class to use to pass data back and forth from the subordinate
@@ -389,22 +420,24 @@ interpreter.</p>
     </li><li visbl="pub" name="ornl.elision.core.HasHistory" data-isabs="true">
       <a id="HasHistory:HasHistory"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="HasHistory.html"><span class="name">HasHistory</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HasHistory.html"><span class="name">HasHistory</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate that it a history is maintained.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754" data-isabs="false">
       <a id="IEEE754:IEEE754"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="IEEE754.html"><span class="name">IEEE754</span></a>
-        
-        <span class="params">(<span name="width">width: Int</span>, <span name="significand">significand: Int</span>)</span><span class="result"> extends Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="IEEE754.html"><span class="name">IEEE754</span></a><span class="params">(<span name="width">width: Int</span>, <span name="significand">significand: Int</span>)</span><span class="result"> extends Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide data and methods for representing values from the IEEE 754 floating
@@ -412,110 +445,120 @@ point standard.</p>
     </li><li visbl="pub" name="ornl.elision.core.Idempotent" data-isabs="false">
       <a id="Idempotent:Idempotent"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Idempotent.html"><span class="name">Idempotent</span></a>
-        
-        <span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Idempotent.html"><span class="name">Idempotent</span></a><span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The idempotent property.</p>
     </li><li visbl="pub" name="ornl.elision.core.Identity" data-isabs="false">
       <a id="Identity:Identity"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Identity.html"><span class="name">Identity</span></a>
-        
-        <span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Identity.html"><span class="name">Identity</span></a><span class="params">(<span name="atom">atom: BasicAtom</span>)</span><span class="result"> extends AlgProp with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An identity.</p>
     </li><li visbl="pub" name="ornl.elision.core.IdentityRuleException" data-isabs="false">
       <a id="IdentityRuleException:IdentityRuleException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="IdentityRuleException.html"><span class="name">IdentityRuleException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IdentityRuleException.html"><span class="name">IdentityRuleException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to add an identity rule.</p>
     </li><li visbl="pub" name="ornl.elision.core.IllegalPropertiesSpecification" data-isabs="false">
       <a id="IllegalPropertiesSpecification:IllegalPropertiesSpecification"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="IllegalPropertiesSpecification.html"><span class="name">IllegalPropertiesSpecification</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IllegalPropertiesSpecification.html"><span class="name">IllegalPropertiesSpecification</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate a properties specification is illegal.</p>
     </li><li visbl="pub" name="ornl.elision.core.IntegerLiteral" data-isabs="false">
       <a id="IntegerLiteral:IntegerLiteral"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="IntegerLiteral.html"><span class="name">IntegerLiteral</span></a>
-        
-        <span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: BigInt</span>)</span><span class="result"> extends Literal[BigInt] with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="IntegerLiteral.html"><span class="name">IntegerLiteral</span></a><span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: BigInt</span>)</span><span class="result"> extends Literal[BigInt] with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide an integer literal.</p>
     </li><li visbl="pub" name="ornl.elision.core.Lambda" data-isabs="false">
       <a id="Lambda:Lambda"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Lambda.html"><span class="name">Lambda</span></a>
-        
-        <span class="result"> extends BasicAtom with Applicable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Lambda.html"><span class="name">Lambda</span></a><span class="result"> extends BasicAtom with Applicable</span>
       </span>
       </h4>
       <p class="comment cmt">A lambda creates an operator that binds a single variable in a term.</p>
     </li><li visbl="pub" name="ornl.elision.core.LambdaUnboundedRecursionException" data-isabs="false">
       <a id="LambdaUnboundedRecursionException:LambdaUnboundedRecursionException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="LambdaUnboundedRecursionException.html"><span class="name">LambdaUnboundedRecursionException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LambdaUnboundedRecursionException.html"><span class="name">LambdaUnboundedRecursionException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">A lambda application results in unbounded recursion.</p>
     </li><li visbl="pub" name="ornl.elision.core.LambdaVariableMismatchException" data-isabs="false">
       <a id="LambdaVariableMismatchException:LambdaVariableMismatchException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="LambdaVariableMismatchException.html"><span class="name">LambdaVariableMismatchException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LambdaVariableMismatchException.html"><span class="name">LambdaVariableMismatchException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">A lambda variable does not match the body.</p>
     </li><li visbl="pub" name="ornl.elision.core.Literal" data-isabs="true">
       <a id="Literal:Literal[TYPE]"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Literal.html"><span class="name">Literal</span></a>
-        <span class="tparams">[<span name="TYPE">TYPE</span>]</span>
-        <span class="result"> extends BasicAtom</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Literal.html"><span class="name">Literal</span></a><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="result"> extends BasicAtom</span>
       </span>
       </h4>
       <p class="comment cmt">Represent a literal.</p>
     </li><li visbl="pub" name="ornl.elision.core.LiteralPatternException" data-isabs="false">
       <a id="LiteralPatternException:LiteralPatternException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="LiteralPatternException.html"><span class="name">LiteralPatternException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LiteralPatternException.html"><span class="name">LiteralPatternException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to add a rule whose pattern is a literal, when such
@@ -523,22 +566,24 @@ are not allowed.</p>
     </li><li visbl="pub" name="ornl.elision.core.Many" data-isabs="false">
       <a id="Many:Many"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Many.html"><span class="name">Many</span></a>
-        
-        <span class="params">(<span name="matches">matches: MatchIterator</span>)</span><span class="result"> extends Outcome with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Many.html"><span class="name">Many</span></a><span class="params">(<span name="matches">matches: MatchIterator</span>)</span><span class="result"> extends Outcome with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An attempted match succeeded.</p>
     </li><li visbl="pub" name="ornl.elision.core.MapPair" data-isabs="false">
       <a id="MapPair:MapPair"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="MapPair.html"><span class="name">MapPair</span></a>
-        
-        <span class="result"> extends BasicAtom with Rewriter</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MapPair.html"><span class="name">MapPair</span></a><span class="result"> extends BasicAtom with Rewriter</span>
       </span>
       </h4>
       <p class="comment cmt">Provide an ordered pair that also serves as a very simple kind of rewrite
@@ -546,66 +591,72 @@ rule.</p>
     </li><li visbl="pub" name="ornl.elision.core.MapStrategy" data-isabs="false">
       <a id="MapStrategy:MapStrategy"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="MapStrategy.html"><span class="name">MapStrategy</span></a>
-        
-        <span class="result"> extends SpecialForm with Rewriter</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MapStrategy.html"><span class="name">MapStrategy</span></a><span class="result"> extends SpecialForm with Rewriter</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.Match" data-isabs="false">
       <a id="Match:Match"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Match.html"><span class="name">Match</span></a>
-        
-        <span class="params">(<span name="binds">binds: Bindings</span>)</span><span class="result"> extends Outcome with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Match.html"><span class="name">Match</span></a><span class="params">(<span name="binds">binds: Bindings</span>)</span><span class="result"> extends Outcome with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An attempted match succeeded with the resulting bindings.</p>
     </li><li visbl="pub" name="ornl.elision.core.MatchAtom" data-isabs="false">
       <a id="MatchAtom:MatchAtom"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="MatchAtom.html"><span class="name">MatchAtom</span></a>
-        
-        <span class="result"> extends SpecialForm with Applicable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MatchAtom.html"><span class="name">MatchAtom</span></a><span class="result"> extends SpecialForm with Applicable</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a simple atom to perform basic matching.</p>
     </li><li visbl="pub" name="ornl.elision.core.MatchIterator" data-isabs="true">
       <a id="MatchIterator:MatchIterator"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="MatchIterator.html"><span class="name">MatchIterator</span></a>
-        
-        <span class="result"> extends Iterator[Bindings]</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MatchIterator.html"><span class="name">MatchIterator</span></a><span class="result"> extends Iterator[Bindings]</span>
       </span>
       </h4>
       <p class="comment cmt">Provide an iterator over multiple matches.</p>
     </li><li visbl="pub" name="ornl.elision.core.MetaVariable" data-isabs="false">
       <a id="MetaVariable:MetaVariable"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="MetaVariable.html"><span class="name">MetaVariable</span></a>
-        
-        <span class="result"> extends Variable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MetaVariable.html"><span class="name">MetaVariable</span></a><span class="result"> extends Variable</span>
       </span>
       </h4>
       <p class="comment cmt">Define a metavariable.</p>
     </li><li visbl="pub" name="ornl.elision.core.Mutable" data-isabs="true">
       <a id="Mutable:Mutable"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Mutable.html"><span class="name">Mutable</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Mutable.html"><span class="name">Mutable</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">This marker trait is used to frighten developers and strike fear into
@@ -613,165 +664,180 @@ anyone trying to parallelize something in the library.</p>
     </li><li visbl="pub" name="ornl.elision.core.NamedRootType" data-isabs="false">
       <a id="NamedRootType:NamedRootType"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NamedRootType.html"><span class="name">NamedRootType</span></a>
-        
-        <span class="result"> extends SymbolLiteral</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NamedRootType.html"><span class="name">NamedRootType</span></a><span class="result"> extends SymbolLiteral</span>
       </span>
       </h4>
       <p class="comment cmt">Provide a very simple implementation of <code>RootType</code>.</p>
     </li><li visbl="pub" name="ornl.elision.core.NativeHandlerException" data-isabs="false">
       <a id="NativeHandlerException:NativeHandlerException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NativeHandlerException.html"><span class="name">NativeHandlerException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NativeHandlerException.html"><span class="name">NativeHandlerException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">The native handler could not be parsed.</p>
     </li><li visbl="pub" name="ornl.elision.core.NoSuchRulesetException" data-isabs="false">
       <a id="NoSuchRulesetException:NoSuchRulesetException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NoSuchRulesetException.html"><span class="name">NoSuchRulesetException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NoSuchRulesetException.html"><span class="name">NoSuchRulesetException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to use an undeclared ruleset.</p>
     </li><li visbl="pub" name="ornl.elision.core.NopAction" data-isabs="false">
       <a id="NopAction:NopAction"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="NopAction.html"><span class="name">NopAction</span></a>
-        
-        <span class="params">()</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="NopAction.html"><span class="name">NopAction</span></a><span class="params">()</span><span class="result"> extends Action with Product with Serializable</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq" data-isabs="true">
       <a id="OmitSeq:OmitSeq[A]"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="package$$OmitSeq.html"><span class="name">OmitSeq</span></a>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="result"> extends IndexedSeq[A]</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$OmitSeq.html"><span class="name">OmitSeq</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends IndexedSeq[A]</span>
       </span>
       </h4>
       <p class="comment cmt">The omit sequence class.</p>
     </li><li visbl="pub" name="ornl.elision.core.OpApply" data-isabs="false">
       <a id="OpApply:OpApply"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="OpApply.html"><span class="name">OpApply</span></a>
-        
-        <span class="params">(<span name="op">op: OperatorRef</span>, <span name="arg">arg: AtomSeq</span>, <span name="pabinds">pabinds: Bindings</span>)</span><span class="result"> extends Apply with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="OpApply.html"><span class="name">OpApply</span></a><span class="params">(<span name="op">op: OperatorRef</span>, <span name="arg">arg: AtomSeq</span>, <span name="pabinds">pabinds: Bindings</span>)</span><span class="result"> extends Apply with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">An <i>operator apply</i>.</p>
     </li><li visbl="pub" name="ornl.elision.core.Operator" data-isabs="true">
       <a id="Operator:Operator"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Operator.html"><span class="name">Operator</span></a>
-        
-        <span class="result"> extends SpecialForm with Applicable</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Operator.html"><span class="name">Operator</span></a><span class="result"> extends SpecialForm with Applicable</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate an operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.OperatorDefinitionException" data-isabs="false">
       <a id="OperatorDefinitionException:OperatorDefinitionException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorDefinitionException.html"><span class="name">OperatorDefinitionException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorDefinitionException.html"><span class="name">OperatorDefinitionException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to improperly define an operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary" data-isabs="false">
       <a id="OperatorLibrary:OperatorLibrary"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorLibrary.html"><span class="name">OperatorLibrary</span></a>
-        
-        <span class="result"> extends Fickle with Mutable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorLibrary.html"><span class="name">OperatorLibrary</span></a><span class="result"> extends Fickle with Mutable</span>
       </span>
       </h4>
       <p class="comment cmt">An operator library holds information about the known operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.OperatorRedefinitionException" data-isabs="false">
       <a id="OperatorRedefinitionException:OperatorRedefinitionException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorRedefinitionException.html"><span class="name">OperatorRedefinitionException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorRedefinitionException.html"><span class="name">OperatorRedefinitionException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to re-define an already-known operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.OperatorRef" data-isabs="false">
       <a id="OperatorRef:OperatorRef"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorRef.html"><span class="name">OperatorRef</span></a>
-        
-        <span class="result"> extends BasicAtom with Applicable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorRef.html"><span class="name">OperatorRef</span></a><span class="result"> extends BasicAtom with Applicable</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a reference to an operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.Outcome" data-isabs="true">
       <a id="Outcome:Outcome"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Outcome.html"><span class="name">Outcome</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Outcome.html"><span class="name">Outcome</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">An outcome reports the result of attempting a match.</p>
     </li><li visbl="pub" name="ornl.elision.core.PropertyManager" data-isabs="true">
       <a id="PropertyManager:PropertyManager"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="PropertyManager.html"><span class="name">PropertyManager</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PropertyManager.html"><span class="name">PropertyManager</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Manage a collection of properties.</p>
     </li><li visbl="pub" name="ornl.elision.core.RewriteRule" data-isabs="false">
       <a id="RewriteRule:RewriteRule"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="RewriteRule.html"><span class="name">RewriteRule</span></a>
-        
-        <span class="result"> extends SpecialForm with Rewriter</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RewriteRule.html"><span class="name">RewriteRule</span></a><span class="result"> extends SpecialForm with Rewriter</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a rewrite rule.</p>
     </li><li visbl="pub" name="ornl.elision.core.Rewriter" data-isabs="true">
       <a id="Rewriter:Rewriter"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Rewriter.html"><span class="name">Rewriter</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Rewriter.html"><span class="name">Rewriter</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">A <i>rewriter</i> is an atom that can be applied to some other atom to generate
@@ -779,121 +845,132 @@ a potentially new atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.RuleLibrary" data-isabs="false">
       <a id="RuleLibrary:RuleLibrary"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="RuleLibrary.html"><span class="name">RuleLibrary</span></a>
-        
-        <span class="result"> extends Fickle with Mutable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RuleLibrary.html"><span class="name">RuleLibrary</span></a><span class="result"> extends Fickle with Mutable</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a rule library.</p>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef" data-isabs="true">
       <a id="RulesetRef:RulesetRef"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="RulesetRef.html"><span class="name">RulesetRef</span></a>
-        
-        <span class="result"> extends BasicAtom with Rewriter</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RulesetRef.html"><span class="name">RulesetRef</span></a><span class="result"> extends BasicAtom with Rewriter</span>
       </span>
       </h4>
       <p class="comment cmt">A ruleset reference.</p>
     </li><li visbl="pub" name="ornl.elision.core.RulesetStrategy" data-isabs="false">
       <a id="RulesetStrategy:RulesetStrategy"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="RulesetStrategy.html"><span class="name">RulesetStrategy</span></a>
-        
-        <span class="result"> extends SpecialForm with Rewriter</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RulesetStrategy.html"><span class="name">RulesetStrategy</span></a><span class="result"> extends SpecialForm with Rewriter</span>
       </span>
       </h4>
       <p class="comment cmt">The ruleset strategy.</p>
     </li><li visbl="pub" name="ornl.elision.core.SimpleApply" data-isabs="false">
       <a id="SimpleApply:SimpleApply"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="SimpleApply.html"><span class="name">SimpleApply</span></a>
-        
-        <span class="params">(<span name="op">op: BasicAtom</span>, <span name="arg">arg: BasicAtom</span>)</span><span class="result"> extends Apply with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleApply.html"><span class="name">SimpleApply</span></a><span class="params">(<span name="op">op: BasicAtom</span>, <span name="arg">arg: BasicAtom</span>)</span><span class="result"> extends Apply with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">A <i>simple apply</i>.</p>
     </li><li visbl="pub" name="ornl.elision.core.SpecialForm" data-isabs="false">
       <a id="SpecialForm:SpecialForm"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="SpecialForm.html"><span class="name">SpecialForm</span></a>
-        
-        <span class="result"> extends BasicAtom</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecialForm.html"><span class="name">SpecialForm</span></a><span class="result"> extends BasicAtom</span>
       </span>
       </h4>
       <p class="comment cmt">This is the generalized &quot;special form&quot; of atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.SpecialFormException" data-isabs="false">
       <a id="SpecialFormException:SpecialFormException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="SpecialFormException.html"><span class="name">SpecialFormException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecialFormException.html"><span class="name">SpecialFormException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">Construction of a special form failed for the specified reason.</p>
     </li><li visbl="pub" name="ornl.elision.core.SpecialFormHolder" data-isabs="false">
       <a id="SpecialFormHolder:SpecialFormHolder"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="SpecialFormHolder.html"><span class="name">SpecialFormHolder</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecialFormHolder.html"><span class="name">SpecialFormHolder</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Hold the data from parsing (or constructing) a special form.</p>
     </li><li visbl="pub" name="ornl.elision.core.StringLiteral" data-isabs="false">
       <a id="StringLiteral:StringLiteral"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="StringLiteral.html"><span class="name">StringLiteral</span></a>
-        
-        <span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: String</span>)</span><span class="result"> extends Literal[String] with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="StringLiteral.html"><span class="name">StringLiteral</span></a><span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: String</span>)</span><span class="result"> extends Literal[String] with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide a string literal.</p>
     </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral" data-isabs="false">
       <a id="SymbolLiteral:SymbolLiteral"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="SymbolLiteral.html"><span class="name">SymbolLiteral</span></a>
-        
-        <span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: Symbol</span>)</span><span class="result"> extends Literal[Symbol] with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="SymbolLiteral.html"><span class="name">SymbolLiteral</span></a><span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="value">value: Symbol</span>)</span><span class="result"> extends Literal[Symbol] with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Provide a symbol literal.</p>
     </li><li visbl="prt" name="ornl.elision.core.SymbolicOperator" data-isabs="false">
       <a id="SymbolicOperator:SymbolicOperator"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="SymbolicOperator.html"><span class="name">SymbolicOperator</span></a>
-        
-        <span class="result"> extends Operator</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SymbolicOperator.html"><span class="name">SymbolicOperator</span></a><span class="result"> extends Operator</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a symbolic operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.Timeable" data-isabs="true">
       <a id="Timeable:Timeable"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Timeable.html"><span class="name">Timeable</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Timeable.html"><span class="name">Timeable</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Specify that it is possible to enable and disable printing the execution
@@ -901,11 +978,12 @@ time of each atom that is parsed.</p>
     </li><li visbl="pub" name="ornl.elision.core.ToggleableParser" data-isabs="true">
       <a id="ToggleableParser:ToggleableParser"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="ToggleableParser.html"><span class="name">ToggleableParser</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ToggleableParser.html"><span class="name">ToggleableParser</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Indicates if it is possible to toggle the parser used
@@ -913,11 +991,12 @@ time of each atom that is parsed.</p>
     </li><li visbl="pub" name="ornl.elision.core.TraceableParse" data-isabs="true">
       <a id="TraceableParse:TraceableParse"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="TraceableParse.html"><span class="name">TraceableParse</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TraceableParse.html"><span class="name">TraceableParse</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Indicate that it is possible to enable and disable tracing of parsing at
@@ -925,39 +1004,42 @@ runtime.</p>
     </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator" data-isabs="false">
       <a id="TypedSymbolicOperator:TypedSymbolicOperator"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="TypedSymbolicOperator.html"><span class="name">TypedSymbolicOperator</span></a>
-        
-        <span class="result"> extends SymbolicOperator</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypedSymbolicOperator.html"><span class="name">TypedSymbolicOperator</span></a><span class="result"> extends SymbolicOperator</span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a typed symbolic operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.UndefinedOperatorException" data-isabs="false">
       <a id="UndefinedOperatorException:UndefinedOperatorException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="UndefinedOperatorException.html"><span class="name">UndefinedOperatorException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UndefinedOperatorException.html"><span class="name">UndefinedOperatorException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
       <p class="comment cmt">A requested operator was not found, and could not be created.</p>
     </li><li visbl="pub" name="ornl.elision.core.Variable" data-isabs="false">
       <a id="Variable:Variable"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Variable.html"><span class="name">Variable</span></a>
-        
-        <span class="result"> extends BasicAtom</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Variable.html"><span class="name">Variable</span></a><span class="result"> extends BasicAtom</span>
       </span>
       </h4>
       <p class="comment cmt">Represent a variable.</p>
     </li></ol>
             </div>
-        
+
         
 
         <div class="values members" id="values">
@@ -965,374 +1047,408 @@ runtime.</p>
               <ol><li visbl="pub" name="ornl.elision.core.ANY" data-isabs="false">
       <a id="ANY:ANY"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="ANY$.html"><span class="name">ANY</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ANY$.html"><span class="name">ANY</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The unusual type ANY that matches anything (even NONE).</p>
     </li><li visbl="pub" name="ornl.elision.core.AlgProp" data-isabs="false">
       <a id="AlgProp:AlgProp"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AlgProp$.html"><span class="name">AlgProp</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AlgProp$.html"><span class="name">AlgProp</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified creation and matching for algebraic properties objects.</p>
     </li><li visbl="pub" name="ornl.elision.core.Apply" data-isabs="false">
       <a id="Apply:Apply"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Apply$.html"><span class="name">Apply</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Apply$.html"><span class="name">Apply</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide construction and extraction for an <code>Apply</code>.</p>
     </li><li visbl="pub" name="ornl.elision.core.ApplyData" data-isabs="false">
       <a id="ApplyData:ApplyData"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="ApplyData$.html"><span class="name">ApplyData</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ApplyData$.html"><span class="name">ApplyData</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Additional constants and support methods for native handlers.</p>
     </li><li visbl="pub" name="ornl.elision.core.Args" data-isabs="false">
       <a id="Args:Args"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Args$.html"><span class="name">Args</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Args$.html"><span class="name">Args</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Improve matching of atom sequences as lists of atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.AtomSeq" data-isabs="false">
       <a id="AtomSeq:AtomSeq"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="AtomSeq$.html"><span class="name">AtomSeq</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AtomSeq$.html"><span class="name">AtomSeq</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified construction and matching for atom sequences.</p>
     </li><li visbl="pub" name="ornl.elision.core.BINDING" data-isabs="false">
       <a id="BINDING:BINDING"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="BINDING$.html"><span class="name">BINDING</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BINDING$.html"><span class="name">BINDING</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">A type for all bindings.</p>
     </li><li visbl="pub" name="ornl.elision.core.BOOLEAN" data-isabs="false">
       <a id="BOOLEAN:BOOLEAN"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="BOOLEAN$.html"><span class="name">BOOLEAN</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BOOLEAN$.html"><span class="name">BOOLEAN</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The BOOLEAN type.</p>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom" data-isabs="false">
       <a id="BasicAtom:BasicAtom"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="BasicAtom$.html"><span class="name">BasicAtom</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BasicAtom$.html"><span class="name">BasicAtom</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Mutable controls affecting all atoms and matching go here.</p>
     </li><li visbl="pub" name="ornl.elision.core.Bindings" data-isabs="false">
       <a id="Bindings:Bindings"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Bindings$.html"><span class="name">Bindings</span></a>
-        
-        <span class="result"> extends Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Bindings$.html"><span class="name">Bindings</span></a><span class="result"> extends Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified construction of bindings.</p>
     </li><li visbl="pub" name="ornl.elision.core.BindingsAtom" data-isabs="false">
       <a id="BindingsAtom:BindingsAtom"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="BindingsAtom$.html"><span class="name">BindingsAtom</span></a>
-        
-        <span class="result"> extends Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BindingsAtom$.html"><span class="name">BindingsAtom</span></a><span class="result"> extends Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified construction of bindings atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.CaseOperator" data-isabs="false">
       <a id="CaseOperator:CaseOperator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="CaseOperator$.html"><span class="name">CaseOperator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CaseOperator$.html"><span class="name">CaseOperator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Construction and matching of macros (case operators).</p>
     </li><li visbl="pub" name="ornl.elision.core.package#D" data-isabs="false">
       <a id="D[A&lt;:Seq[BasicAtom]](A):A"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">D</span>
-        <span class="tparams">[<span name="A">A &lt;: Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>]</span>
-        <span class="params">(<span name="seq">seq: A</span>)</span><span class="result">: A</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">D</span><span class="tparams">[<span name="A">A &lt;: Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>]</span><span class="params">(<span name="seq">seq: A</span>)</span><span class="result">: A</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#D" data-isabs="false">
       <a id="D(BasicAtom):BasicAtom"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">D</span>
-        
-        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">D</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.ElisionGenerator" data-isabs="false">
       <a id="ElisionGenerator:ElisionGenerator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="ElisionGenerator$.html"><span class="name">ElisionGenerator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ElisionGenerator$.html"><span class="name">ElisionGenerator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Generate the Elision code to create an atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.EmptySeq" data-isabs="false">
       <a id="EmptySeq:EmptySeq"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="EmptySeq$.html"><span class="name">EmptySeq</span></a>
-        
-        <span class="result"> extends AtomSeq</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EmptySeq$.html"><span class="name">EmptySeq</span></a><span class="result"> extends AtomSeq</span>
       </span>
       </h4>
       <p class="comment cmt">Fast access to an untyped empty sequence.</p>
     </li><li visbl="pub" name="ornl.elision.core.FLOAT" data-isabs="false">
       <a id="FLOAT:FLOAT"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="FLOAT$.html"><span class="name">FLOAT</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FLOAT$.html"><span class="name">FLOAT</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The FLOAT type.</p>
     </li><li visbl="pub" name="ornl.elision.core.Fail" data-isabs="false">
       <a id="Fail:Fail"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Fail$.html"><span class="name">Fail</span></a>
-        
-        <span class="result"> extends Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Fail$.html"><span class="name">Fail</span></a><span class="result"> extends Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Define additional methods for Fail.</p>
     </li><li visbl="pub" name="ornl.elision.core.FloatLiteral" data-isabs="false">
       <a id="FloatLiteral:FloatLiteral"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="FloatLiteral$.html"><span class="name">FloatLiteral</span></a>
-        
-        <span class="result"> extends Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FloatLiteral$.html"><span class="name">FloatLiteral</span></a><span class="result"> extends Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">Companion object specifying the default IEEE 754 platform to use.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754Double" data-isabs="false">
       <a id="IEEE754Double:IEEE754Double"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="IEEE754Double$.html"><span class="name">IEEE754Double</span></a>
-        
-        <span class="result"> extends IEEE754</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IEEE754Double$.html"><span class="name">IEEE754Double</span></a><span class="result"> extends IEEE754</span>
       </span>
       </h4>
       <p class="comment cmt">IEEE 754 64-bit float.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754Half" data-isabs="false">
       <a id="IEEE754Half:IEEE754Half"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="IEEE754Half$.html"><span class="name">IEEE754Half</span></a>
-        
-        <span class="result"> extends IEEE754</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IEEE754Half$.html"><span class="name">IEEE754Half</span></a><span class="result"> extends IEEE754</span>
       </span>
       </h4>
       <p class="comment cmt">IEEE 754 16-bit float.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754Quadruple" data-isabs="false">
       <a id="IEEE754Quadruple:IEEE754Quadruple"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="IEEE754Quadruple$.html"><span class="name">IEEE754Quadruple</span></a>
-        
-        <span class="result"> extends IEEE754</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IEEE754Quadruple$.html"><span class="name">IEEE754Quadruple</span></a><span class="result"> extends IEEE754</span>
       </span>
       </h4>
       <p class="comment cmt">IEEE 754 128-bit float.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754Single" data-isabs="false">
       <a id="IEEE754Single:IEEE754Single"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="IEEE754Single$.html"><span class="name">IEEE754Single</span></a>
-        
-        <span class="result"> extends IEEE754</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IEEE754Single$.html"><span class="name">IEEE754Single</span></a><span class="result"> extends IEEE754</span>
       </span>
       </h4>
       <p class="comment cmt">IEEE 754 32-bit float.</p>
     </li><li visbl="pub" name="ornl.elision.core.INTEGER" data-isabs="false">
       <a id="INTEGER:INTEGER"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="INTEGER$.html"><span class="name">INTEGER</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="INTEGER$.html"><span class="name">INTEGER</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The INTEGER type.</p>
     </li><li visbl="pub" name="ornl.elision.core.Lambda" data-isabs="false">
       <a id="Lambda:Lambda"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Lambda$.html"><span class="name">Lambda</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Lambda$.html"><span class="name">Lambda</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Companion object with convenient methods to create lambdas.</p>
     </li><li visbl="pub" name="ornl.elision.core.Literal" data-isabs="false">
       <a id="Literal:Literal"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Literal$.html"><span class="name">Literal</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Literal$.html"><span class="name">Literal</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide more convenient ways to construct and extract literals.</p>
     </li><li visbl="pub" name="ornl.elision.core.MapPair" data-isabs="false">
       <a id="MapPair:MapPair"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="MapPair$.html"><span class="name">MapPair</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MapPair$.html"><span class="name">MapPair</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.MapStrategy" data-isabs="false">
       <a id="MapStrategy:MapStrategy"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="MapStrategy$.html"><span class="name">MapStrategy</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MapStrategy$.html"><span class="name">MapStrategy</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.MatchAtom" data-isabs="false">
       <a id="MatchAtom:MatchAtom"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="MatchAtom$.html"><span class="name">MatchAtom</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MatchAtom$.html"><span class="name">MatchAtom</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide construction and matching.</p>
     </li><li visbl="pub" name="ornl.elision.core.MatchIterator" data-isabs="false">
       <a id="MatchIterator:MatchIterator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="MatchIterator$.html"><span class="name">MatchIterator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MatchIterator$.html"><span class="name">MatchIterator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Construct match iterators.</p>
     </li><li visbl="pub" name="ornl.elision.core.Memo" data-isabs="false">
       <a id="Memo:Memo"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Memo$.html"><span class="name">Memo</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Memo$.html"><span class="name">Memo</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide an online and offline memoization system for rewriting.</p>
     </li><li visbl="pub" name="ornl.elision.core.MetaVariable" data-isabs="false">
       <a id="MetaVariable:MetaVariable"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="MetaVariable$.html"><span class="name">MetaVariable</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MetaVariable$.html"><span class="name">MetaVariable</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Companion object to make and match metavariables.</p>
     </li><li visbl="pub" name="ornl.elision.core.NONE" data-isabs="false">
       <a id="NONE:NONE"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="NONE$.html"><span class="name">NONE</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NONE$.html"><span class="name">NONE</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The unusual type NONE that matches just itself and ANY.</p>
     </li><li visbl="pub" name="ornl.elision.core.NamedRootType" data-isabs="false">
       <a id="NamedRootType:NamedRootType"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="NamedRootType$.html"><span class="name">NamedRootType</span></a>
-        
-        <span class="result"> extends Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NamedRootType$.html"><span class="name">NamedRootType</span></a><span class="result"> extends Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The companion object maintains a registry of the named root types that have
@@ -1340,33 +1456,36 @@ been created.</p>
     </li><li visbl="pub" name="ornl.elision.core.NoProps" data-isabs="false">
       <a id="NoProps:NoProps"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="NoProps$.html"><span class="name">NoProps</span></a>
-        
-        <span class="result"> extends AlgProp with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoProps$.html"><span class="name">NoProps</span></a><span class="result"> extends AlgProp with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">No properties.</p>
     </li><li visbl="pub" name="ornl.elision.core.OPREF" data-isabs="false">
       <a id="OPREF:OPREF"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="OPREF$.html"><span class="name">OPREF</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="OPREF$.html"><span class="name">OPREF</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">A type for all operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq" data-isabs="false">
       <a id="OmitSeq:OmitSeq"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="package$$OmitSeq$.html"><span class="name">OmitSeq</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="package$$OmitSeq$.html"><span class="name">OmitSeq</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide convenient construction of an omit sequence and automatic
@@ -1374,242 +1493,264 @@ been created.</p>
     </li><li visbl="pub" name="ornl.elision.core.Operator" data-isabs="false">
       <a id="Operator:Operator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Operator$.html"><span class="name">Operator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Operator$.html"><span class="name">Operator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide construction and matching for operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.OperatorRef" data-isabs="false">
       <a id="OperatorRef:OperatorRef"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="OperatorRef$.html"><span class="name">OperatorRef</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorRef$.html"><span class="name">OperatorRef</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Make and match operator references.</p>
     </li><li visbl="pub" name="ornl.elision.core.Outcome" data-isabs="false">
       <a id="Outcome:Outcome"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Outcome$.html"><span class="name">Outcome</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Outcome$.html"><span class="name">Outcome</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified construction of outcomes.</p>
     </li><li visbl="pub" name="ornl.elision.core.PrintConsole" data-isabs="false">
       <a id="PrintConsole:PrintConsole"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="PrintConsole$.html"><span class="name">PrintConsole</span></a>
-        
-        <span class="result"> extends Console</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PrintConsole$.html"><span class="name">PrintConsole</span></a><span class="result"> extends Console</span>
       </span>
       </h4>
       <p class="comment cmt">A simple console that uses <code>print</code> to write to the standard output.</p>
     </li><li visbl="pub" name="ornl.elision.core.RSREF" data-isabs="false">
       <a id="RSREF:RSREF"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="RSREF$.html"><span class="name">RSREF</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RSREF$.html"><span class="name">RSREF</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">A type for all rulesets.</p>
     </li><li visbl="pub" name="ornl.elision.core.RULETYPE" data-isabs="false">
       <a id="RULETYPE:RULETYPE"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="RULETYPE$.html"><span class="name">RULETYPE</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RULETYPE$.html"><span class="name">RULETYPE</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">A type for all rules.</p>
     </li><li visbl="pub" name="ornl.elision.core.RewriteRule" data-isabs="false">
       <a id="RewriteRule:RewriteRule"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="RewriteRule$.html"><span class="name">RewriteRule</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RewriteRule$.html"><span class="name">RewriteRule</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Easier construction and pattern matching of rewrite rules.</p>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef" data-isabs="false">
       <a id="RulesetRef:RulesetRef"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="RulesetRef$.html"><span class="name">RulesetRef</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RulesetRef$.html"><span class="name">RulesetRef</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Creation and matching of ruleset references.</p>
     </li><li visbl="pub" name="ornl.elision.core.RulesetStrategy" data-isabs="false">
       <a id="RulesetStrategy:RulesetStrategy"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="RulesetStrategy$.html"><span class="name">RulesetStrategy</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RulesetStrategy$.html"><span class="name">RulesetStrategy</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Make and match ruleset strategy objects.</p>
     </li><li visbl="pub" name="ornl.elision.core.STRATEGY" data-isabs="false">
       <a id="STRATEGY:STRATEGY"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="STRATEGY$.html"><span class="name">STRATEGY</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="STRATEGY$.html"><span class="name">STRATEGY</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">A type for all strategies.</p>
     </li><li visbl="pub" name="ornl.elision.core.STRING" data-isabs="false">
       <a id="STRING:STRING"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="STRING$.html"><span class="name">STRING</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="STRING$.html"><span class="name">STRING</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The STRING type.</p>
     </li><li visbl="pub" name="ornl.elision.core.SYMBOL" data-isabs="false">
       <a id="SYMBOL:SYMBOL"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="SYMBOL$.html"><span class="name">SYMBOL</span></a>
-        
-        <span class="result"> extends NamedRootType</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SYMBOL$.html"><span class="name">SYMBOL</span></a><span class="result"> extends NamedRootType</span>
       </span>
       </h4>
       <p class="comment cmt">The SYMBOL type.</p>
     </li><li visbl="pub" name="ornl.elision.core.ScalaGenerator" data-isabs="false">
       <a id="ScalaGenerator:ScalaGenerator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="ScalaGenerator$.html"><span class="name">ScalaGenerator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalaGenerator$.html"><span class="name">ScalaGenerator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Generate the Scala code to create an atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.SequenceMatcher" data-isabs="false">
       <a id="SequenceMatcher:SequenceMatcher"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="SequenceMatcher$.html"><span class="name">SequenceMatcher</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SequenceMatcher$.html"><span class="name">SequenceMatcher</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences of atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.SpecialForm" data-isabs="false">
       <a id="SpecialForm:SpecialForm"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="SpecialForm$.html"><span class="name">SpecialForm</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecialForm$.html"><span class="name">SpecialForm</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Construction and matching of special forms.</p>
     </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator" data-isabs="false">
       <a id="SymbolicOperator:SymbolicOperator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="SymbolicOperator$.html"><span class="name">SymbolicOperator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SymbolicOperator$.html"><span class="name">SymbolicOperator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Construction and matching of symbolic operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.TypeUniverse" data-isabs="false">
       <a id="TypeUniverse:TypeUniverse"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="TypeUniverse$.html"><span class="name">TypeUniverse</span></a>
-        
-        <span class="result"> extends SymbolLiteral</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeUniverse$.html"><span class="name">TypeUniverse</span></a><span class="result"> extends SymbolLiteral</span>
       </span>
       </h4>
       <p class="comment cmt">Define the unique type universe.</p>
     </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator" data-isabs="false">
       <a id="TypedSymbolicOperator:TypedSymbolicOperator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="TypedSymbolicOperator$.html"><span class="name">TypedSymbolicOperator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TypedSymbolicOperator$.html"><span class="name">TypedSymbolicOperator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Construction and matching of typed symbolic operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.Variable" data-isabs="false">
       <a id="Variable:Variable"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="Variable$.html"><span class="name">Variable</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Variable$.html"><span class="name">Variable</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Simplified creation and matching of variables.</p>
     </li><li visbl="pub" name="ornl.elision.core.package#^TYPE" data-isabs="false">
       <a id="^TYPE:ornl.elision.core.TypeUniverse.type"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">^TYPE</span>
-        
-        <span class="result">: ornl.elision.core.TypeUniverse.type</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $upTYPE">^TYPE</span><span class="result">: ornl.elision.core.TypeUniverse.type</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Provide a fancy name for the type universe.</p><div class="fullcomment"><div class="comment cmt"><p>Provide a fancy name for the type universe.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#boolToLiteral" data-isabs="false">
       <a id="boolToLiteral(Boolean):BooleanLiteral"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">boolToLiteral</span>
-        
-        <span class="params">(<span name="bool">bool: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="ornl.elision.core.BooleanLiteral" class="extype" href="BooleanLiteral.html">BooleanLiteral</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boolToLiteral</span><span class="params">(<span name="bool">bool: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="ornl.elision.core.BooleanLiteral" class="extype" href="BooleanLiteral.html">BooleanLiteral</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert a Scala Boolean to a Boolean literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Scala Boolean to a Boolean literal.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert a Scala Boolean to a Boolean literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Scala Boolean to a Boolean literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#giveMkParseString" data-isabs="false">
       <a id="giveMkParseString[A&lt;:BasicAtom](Seq[A]):AnyRef { def mkParseString(pre: String,mid: String,post: String): String }"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">giveMkParseString</span>
-        <span class="tparams">[<span name="A">A &lt;: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>]</span>
-        <span class="params">(<span name="seq">seq: Seq[A]</span>)</span><span class="result">: AnyRef { def mkParseString(pre: String,mid: String,post: String): String }</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">giveMkParseString</span><span class="tparams">[<span name="A">A &lt;: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>]</span><span class="params">(<span name="seq">seq: Seq[A]</span>)</span><span class="result">: AnyRef { def mkParseString(pre: String,mid: String,post: String): String }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Magically add a <code>mkParseString</code>, roughly equivalent to <code>mkString</code>, to
@@ -1617,24 +1758,25 @@ every sequence of objects that extend <a name="ornl.elision.core.BasicAtom" clas
 every sequence of objects that extend <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>.
 Try that with Java!
 </p></div><dl class="paramcmts block"><dt class="param">seq</dt><dd class="cmt"><p>The sequence to get the new method.
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#hashify" data-isabs="false">
       <a id="hashify(Int,Any):Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">hashify</span>
-        
-        <span class="params">(<span name="hash">hash: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashify</span><span class="params">(<span name="hash">hash: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Provide a convenient method to compute a hash code from many different
 objects.</p><div class="fullcomment"><div class="comment cmt"><p>Provide a convenient method to compute a hash code from many different
 objects.  This is intended to be suitable for a few basic cases.</p><p>If you want to create a hash code for two objects alice and bob, try this.</p><pre>
-0 hashify alice hashify bob
+<span class="num">0</span> hashify alice hashify bob
 </pre><p>If you want to create a hash code for a sequence of objects in stuff, try
 this.</p><pre>
-stuff.foldLeft(0)(_ hashify _)
+stuff.foldLeft(<span class="num">0</span>)(_ hashify _)
 </pre><p>If you want to combine your hash code with your children's hash codes,
 try this.</p><pre>
 children.hashify(hashCode)(_ hashfiy _)
@@ -1643,91 +1785,99 @@ children.hashify(hashCode)(_ hashfiy _)
     </li><li visbl="pub" name="ornl.elision.core.package#intToLiteral" data-isabs="false">
       <a id="intToLiteral(BigInt):IntegerLiteral"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">intToLiteral</span>
-        
-        <span class="params">(<span name="value">value: BigInt</span>)</span><span class="result">: <a name="ornl.elision.core.IntegerLiteral" class="extype" href="IntegerLiteral.html">IntegerLiteral</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intToLiteral</span><span class="params">(<span name="value">value: BigInt</span>)</span><span class="result">: <a name="ornl.elision.core.IntegerLiteral" class="extype" href="IntegerLiteral.html">IntegerLiteral</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert an integer to an integer literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert an integer to an integer literal.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert an integer to an integer literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert an integer to an integer literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#intToLiteral" data-isabs="false">
       <a id="intToLiteral(Int):IntegerLiteral"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">intToLiteral</span>
-        
-        <span class="params">(<span name="value">value: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <a name="ornl.elision.core.IntegerLiteral" class="extype" href="IntegerLiteral.html">IntegerLiteral</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intToLiteral</span><span class="params">(<span name="value">value: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <a name="ornl.elision.core.IntegerLiteral" class="extype" href="IntegerLiteral.html">IntegerLiteral</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert an integer to an integer literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert an integer to an integer literal.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert an integer to an integer literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert an integer to an integer literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#knownExecutor" data-isabs="false">
       <a id="knownExecutor:Executor"></a>
       <h4 class="signature">
-      <span class="kind">implicit var</span>
-      <span class="symbol"> 
-        <span class="name">knownExecutor</span>
-        
-        <span class="result">: <a name="ornl.elision.core.Executor" class="extype" href="Executor.html">Executor</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">knownExecutor</span><span class="result">: <a name="ornl.elision.core.Executor" class="extype" href="Executor.html">Executor</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Maintain an executor to use.</p><div class="fullcomment"><div class="comment cmt"><p>Maintain an executor to use.  The provided default executor always
 throws an exception when invoked from a native handler, so you must
 replace this with something rational as soon as reasonable.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#literalToBool" data-isabs="false">
       <a id="literalToBool(BooleanLiteral):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">literalToBool</span>
-        
-        <span class="params">(<span name="value">value: <a name="ornl.elision.core.BooleanLiteral" class="extype" href="BooleanLiteral.html">BooleanLiteral</a></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">literalToBool</span><span class="params">(<span name="value">value: <a name="ornl.elision.core.BooleanLiteral" class="extype" href="BooleanLiteral.html">BooleanLiteral</a></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert a Boolean literal to a Scala Boolean.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Boolean literal to a Scala Boolean.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert a Boolean literal to a Scala Boolean.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Boolean literal to a Scala Boolean.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#literalToInt" data-isabs="false">
       <a id="literalToInt(IntegerLiteral):BigInt"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">literalToInt</span>
-        
-        <span class="params">(<span name="value">value: <a name="ornl.elision.core.IntegerLiteral" class="extype" href="IntegerLiteral.html">IntegerLiteral</a></span>)</span><span class="result">: BigInt</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">literalToInt</span><span class="params">(<span name="value">value: <a name="ornl.elision.core.IntegerLiteral" class="extype" href="IntegerLiteral.html">IntegerLiteral</a></span>)</span><span class="result">: BigInt</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert an integer literal to an integer.</p><div class="fullcomment"><div class="comment cmt"><p>Convert an integer literal to an integer.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert an integer literal to an integer.</p><div class="fullcomment"><div class="comment cmt"><p>Convert an integer literal to an integer.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#literalToStr" data-isabs="false">
       <a id="literalToStr(StringLiteral):String"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">literalToStr</span>
-        
-        <span class="params">(<span name="value">value: <a name="ornl.elision.core.StringLiteral" class="extype" href="StringLiteral.html">StringLiteral</a></span>)</span><span class="result">: String</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">literalToStr</span><span class="params">(<span name="value">value: <a name="ornl.elision.core.StringLiteral" class="extype" href="StringLiteral.html">StringLiteral</a></span>)</span><span class="result">: String</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert a string literal to a string.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a string literal to a string.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert a string literal to a string.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a string literal to a string.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.matcher" data-isabs="false">
       <a id="matcher:matcher"></a>
       <h4 class="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <a href="matcher/package.html"><span class="name">matcher</span></a>
-        
-        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.package#parse" data-isabs="false">
       <a id="parse(String,Context,Boolean,Boolean):Any"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">parse</span>
-        
-        <span class="params">(<span name="str">str: String</span>, <span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="Context.html">Context</a></span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="toggle">toggle: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parse</span><span class="params">(<span name="str">str: String</span>, <span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="Context.html">Context</a></span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="toggle">toggle: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Attempt to parse the given string and return an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to parse the given string and return an atom.
@@ -1736,53 +1886,57 @@ replace this with something rational as soon as reasonable.
     </li><li visbl="pub" name="ornl.elision.core.package#strToLiteral" data-isabs="false">
       <a id="strToLiteral(String):StringLiteral"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">strToLiteral</span>
-        
-        <span class="params">(<span name="string">string: String</span>)</span><span class="result">: <a name="ornl.elision.core.StringLiteral" class="extype" href="StringLiteral.html">StringLiteral</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">strToLiteral</span><span class="params">(<span name="string">string: String</span>)</span><span class="result">: <a name="ornl.elision.core.StringLiteral" class="extype" href="StringLiteral.html">StringLiteral</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert a string to a string literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a string to a string literal.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert a string to a string literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a string to a string literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#symToVariable" data-isabs="false">
       <a id="symToVariable(Symbol):Variable"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">symToVariable</span>
-        
-        <span class="params">(<span name="symbol">symbol: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symToVariable</span><span class="params">(<span name="symbol">symbol: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert a Scala symbol to a variable.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Scala symbol to a variable.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert a Scala symbol to a variable.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Scala symbol to a variable.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#toEString" data-isabs="false">
       <a id="toEString(String):String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">toEString</span>
-        
-        <span class="params">(<span name="str">str: String</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toEString</span><span class="params">(<span name="str">str: String</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Turn a string into a properly-escaped double-quoted string.</p><div class="fullcomment"><div class="comment cmt"><p>Turn a string into a properly-escaped double-quoted string.  The following
 transformations are performed.</p><pre>
-double quotation mark   -&gt; \&quot;
-newline                 -&gt; \n
-tab                     -&gt; \t
-carriage return         -&gt; \r
-backslash               -&gt; \\
-</pre><p>The resulting string is enclosed in double quotation marks.
+double quotation mark   -&gt; \<span class="lit">"
+newline                 -> \n
+tab                     -> \t
+carriage return         -> \r
+backslash               -> \\
+</span></pre><p>The resulting string is enclosed in double quotation marks.
 </p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string.</p></dd><dt>returns</dt><dd class="cmt"><p>The string with special character escaped.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#toESymbol" data-isabs="false">
       <a id="toESymbol(String):String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">toESymbol</span>
-        
-        <span class="params">(<span name="str">str: String</span>)</span><span class="result">: String</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toESymbol</span><span class="params">(<span name="str">str: String</span>)</span><span class="result">: String</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Turn a string into a properly-escaped symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Turn a string into a properly-escaped symbol.  Symbols must start with a
@@ -1790,56 +1944,60 @@ letter or underscore and consist of only letters, numbers, and the
 underscore.  If this is not the case, the symbol text must be enclosed in
 backticks, and any contained backticks and quotation marks must be escaped.</p><pre>
 Fred   Johnny12   Cat_Dog   _Dog
-``     ` Jason`   `65$`
+``     ` Jason`   `<span class="num">65</span>$`
 </pre></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The symbol text.</p></dd><dt>returns</dt><dd class="cmt"><p>The symbol with special characters escaped.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#toOmitSeq" data-isabs="false">
       <a id="toOmitSeq[A](IndexedSeq[A]):AnyRef { def omit(index: Int): ornl.elision.core.package.OmitSeq[A] }"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">toOmitSeq</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="seq">seq: IndexedSeq[A]</span>)</span><span class="result">: AnyRef { def omit(index: Int): ornl.elision.core.package.OmitSeq[A] }</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toOmitSeq</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="seq">seq: IndexedSeq[A]</span>)</span><span class="result">: AnyRef { def omit(index: Int): ornl.elision.core.package.OmitSeq[A] }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Invoking the <code>omit</code> method on an indexed sequence automagically transforms
 it into an omit sequence with the original sequence as its backing store.</p><div class="fullcomment"><div class="comment cmt"><p>Invoking the <code>omit</code> method on an indexed sequence automagically transforms
 it into an omit sequence with the original sequence as its backing store.
 </p></div><dl class="paramcmts block"><dt class="param">seq</dt><dd class="cmt"><p>The original sequence.
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#unwrapBindingsAtom" data-isabs="false">
       <a id="unwrapBindingsAtom(BindingsAtom):Bindings"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">unwrapBindingsAtom</span>
-        
-        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BindingsAtom" class="extype" href="BindingsAtom.html">BindingsAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unwrapBindingsAtom</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BindingsAtom" class="extype" href="BindingsAtom.html">BindingsAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Where needed, convert a bindings atom to a simple bindings object (unwrap).</p><div class="fullcomment"><div class="comment cmt"><p>Where needed, convert a bindings atom to a simple bindings object (unwrap).
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The bindings atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The bindings.
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#variableToSym" data-isabs="false">
       <a id="variableToSym(Variable):Symbol"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">variableToSym</span>
-        
-        <span class="params">(<span name="variable">variable: <a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a></span>)</span><span class="result">: <span name="scala.Symbol" class="extype">Symbol</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">variableToSym</span><span class="params">(<span name="variable">variable: <a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a></span>)</span><span class="result">: <span name="scala.Symbol" class="extype">Symbol</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Convert a variable to a Scala symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a variable to a Scala symbol.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+      <p class="shortcomment cmt">Convert a variable to a Scala symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a variable to a Scala symbol.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#warn" data-isabs="false">
       <a id="warn(String):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">warn</span>
-        
-        <span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Issue a warning.</p><div class="fullcomment"><div class="comment cmt"><p>Issue a warning.  This should be wired to whatever error reporting
@@ -1849,26 +2007,33 @@ mechanism you want to use.
     </li><li visbl="pub" name="ornl.elision.core.package#wrapBindingsAtom" data-isabs="false">
       <a id="wrapBindingsAtom(Bindings):BindingsAtom"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">wrapBindingsAtom</span>
-        
-        <span class="params">(<span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>)</span><span class="result">: <a name="ornl.elision.core.BindingsAtom" class="extype" href="BindingsAtom.html">BindingsAtom</a></span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wrapBindingsAtom</span><span class="params">(<span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>)</span><span class="result">: <a name="ornl.elision.core.BindingsAtom" class="extype" href="BindingsAtom.html">BindingsAtom</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Where needed, convert a bindings object into a bindings atom (wrap).</p><div class="fullcomment"><div class="comment cmt"><p>Where needed, convert a bindings object into a bindings atom (wrap).
 </p></div><dl class="paramcmts block"><dt class="param">binds</dt><dd class="cmt"><p>The bindings.</p></dd><dt>returns</dt><dd class="cmt"><p>The new bindings atom.
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li></ol>
             </div>
 
         
+        </div>
 
+        <div id="inheritedMembers">
         
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

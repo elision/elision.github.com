@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body class="type">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
         <a title="Go to companion" href="AtomParser$.html"><img src="../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.parse" class="extype" href="package.html">parse</a></p>
@@ -20,51 +20,53 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <span class="name">AtomParser</span>
-        
-        <span class="result"> extends <span name="org.parboiled.scala.Parser" class="extype">Parser</span> with <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AtomParser</span><span class="result"> extends <span name="org.parboiled.scala.Parser" class="extype">Parser</span> with <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A parser to parse a single atom.</p><p>TODO Remove the use of toggle and prefer a configuration option.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A parser to parse a single atom.</p><p>TODO Remove the use of toggle and prefer a configuration option.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a>, <span name="org.parboiled.scala.Parser" class="extype">Parser</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
-        
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+            </div>
+        <div id="ancestors">
+              <span class="filtertype">Inherited</span>
+              <ol><li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.parse.AtomParser" class="in"><span>AtomParser</span></li><li name="ornl.elision.core.Fickle" class="in"><span>Fickle</span></li><li name="org.parboiled.scala.Parser" class="in"><span>Parser</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+            </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          <div id="order">
-                <span class="filtertype">Ordering</span>
-                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
-              </div>
-          <div id="ancestors">
-                <span class="filtertype">Inherited</span>
-                <ol><li class="hideall out"><span>Hide All</span></li>
-                <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.parse.AtomParser" class="in"><span>AtomParser</span></li><li name="ornl.elision.core.Fickle" class="in"><span>Fickle</span></li><li name="org.parboiled.scala.Parser" class="in"><span>Parser</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-              </div>
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
               <ol><li visbl="pub" name="ornl.elision.parse.AtomParser#this" data-isabs="false">
       <a id="this:AtomParser"></a>
       <h4 class="signature">
-      <span class="kind">new</span>
-      <span class="symbol"> 
-        <span class="name">AtomParser</span>
-        
-        <span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="toggle">toggle: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AtomParser</span><span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="toggle">toggle: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The context for rulesets and operators.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>If true, enable tracing.  Off by default.</p></dd><dt class="param">toggle</dt><dd class="cmt"><p>If true, select the new (parser combinator) parser.
@@ -73,7 +75,7 @@
             </div>
 
         
-        
+
         
 
         <div class="values members" id="values">
@@ -81,77 +83,84 @@
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
       <a id="##():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">##</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#AlternativeOperatorDefinition" data-isabs="false">
       <a id="AlternativeOperatorDefinition:Rule1[SpecialFormNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">AlternativeOperatorDefinition</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AlternativeOperatorDefinition</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an operator definition.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#AnyInteger" data-isabs="false">
       <a id="AnyInteger:Rule1[UnsignedIntegerNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">AnyInteger</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AnyInteger</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an integer in hexadecimal, decimal, octal, or binary.</p><div class="fullcomment"><div class="comment cmt"><p>Parse an integer in hexadecimal, decimal, octal, or binary.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An unsigned integer.
@@ -159,11 +168,12 @@
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#AnyNumber" data-isabs="false">
       <a id="AnyNumber:Rule1[NumberNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">AnyNumber</span>
-        
-        <span class="result">: Rule1[<a name="ornl.elision.parse.AtomParser.NumberNode" class="extype" href="AtomParser$$NumberNode.html">NumberNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AnyNumber</span><span class="result">: Rule1[<a name="ornl.elision.parse.AtomParser.NumberNode" class="extype" href="AtomParser$$NumberNode.html">NumberNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a number.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a number.  The number can be an integer or a float, and can be
@@ -172,44 +182,48 @@ positive or negative.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#Atom" data-isabs="false">
       <a id="Atom:Rule1[AstNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">Atom</span>
-        
-        <span class="result">: Rule1[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Atom</span><span class="result">: Rule1[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an atom.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#AtomSeq" data-isabs="false">
       <a id="AtomSeq:Rule1[List[AstNode]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">AtomSeq</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[List[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AtomSeq</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[List[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse all the atoms that can be found in the input.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#BDigit" data-isabs="false">
       <a id="BDigit:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">BDigit</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BDigit</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a binary digit.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#BInteger" data-isabs="false">
       <a id="BInteger:Rule1[UnsignedIntegerNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">BInteger</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BInteger</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a binary integer.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a binary integer.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An unsigned integer.
@@ -217,33 +231,36 @@ positive or negative.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#BNumber" data-isabs="false">
       <a id="BNumber:Rule3[UnsignedIntegerNode, Option[UnsignedIntegerNode], Option[SignedIntegerNode]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">BNumber</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BNumber</span><span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a binary number that may be either an integer or a float.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#BindBlock" data-isabs="false">
       <a id="BindBlock:Rule1[(NakedSymbolNode, AstNode)]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">BindBlock</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>, <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>)]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BindBlock</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>, <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a simple bind from a special form.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#Character" data-isabs="false">
       <a id="Character:Rule1[String]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">Character</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Character</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a character in a string.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a character in a string.  The character is added to the end of the
@@ -253,22 +270,24 @@ are interpreted here.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#DDigit" data-isabs="false">
       <a id="DDigit:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">DDigit</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DDigit</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a decimal digit.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#DInteger" data-isabs="false">
       <a id="DInteger:Rule1[UnsignedIntegerNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">DInteger</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DInteger</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a decimal integer.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a decimal integer.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An unsigned integer.
@@ -276,66 +295,72 @@ are interpreted here.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#DNumber" data-isabs="false">
       <a id="DNumber:Rule3[UnsignedIntegerNode, Option[UnsignedIntegerNode], Option[SignedIntegerNode]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">DNumber</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">DNumber</span><span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a decimal number that may be either an integer or a float.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#EString" data-isabs="false">
       <a id="EString:Rule1[String]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">EString</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EString</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a double-quoted string.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ESymbol" data-isabs="false">
       <a id="ESymbol:Rule1[NakedSymbolNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ESymbol</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ESymbol</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a symbol.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#EVerb" data-isabs="false">
       <a id="EVerb:Rule1[String]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">EVerb</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EVerb</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a verbatim block.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#EscapedCharacter" data-isabs="false">
       <a id="EscapedCharacter:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">EscapedCharacter</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EscapedCharacter</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an escaped character.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#Exponent" data-isabs="false">
       <a id="Exponent:Rule1[SignedIntegerNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">Exponent</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Exponent</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an exponent expression.</p><div class="fullcomment"><div class="comment cmt"><p>Parse an exponent expression.  The expression does not include the
@@ -344,44 +369,48 @@ linking &quot;e&quot; or &quot;p&quot; exponent indicator.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ExternalParse" data-isabs="false">
       <a id="ExternalParse:Rule1[AtomSeqNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ExternalParse</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ExternalParse</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an external parser reference.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#FirstAtom" data-isabs="false">
       <a id="FirstAtom:Rule1[AstNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">FirstAtom</span>
-        
-        <span class="result">: Rule1[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FirstAtom</span><span class="result">: Rule1[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an atom, with the exception of the general operator application.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#HDigit" data-isabs="false">
       <a id="HDigit:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">HDigit</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HDigit</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a hexadecimal digit.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#HInteger" data-isabs="false">
       <a id="HInteger:Rule1[UnsignedIntegerNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">HInteger</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HInteger</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a hexadecimal integer.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a hexadecimal integer.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An unsigned integer.
@@ -389,55 +418,60 @@ linking &quot;e&quot; or &quot;p&quot; exponent indicator.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#HNumber" data-isabs="false">
       <a id="HNumber:Rule3[UnsignedIntegerNode, Option[UnsignedIntegerNode], Option[SignedIntegerNode]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">HNumber</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HNumber</span><span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a hexadecimal number that may be either an integer or a float.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ListBlock" data-isabs="false">
       <a id="ListBlock:Rule1[(NakedSymbolNode, AtomSeqNode)]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ListBlock</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>, <a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>)]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ListBlock</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>, <a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a list block from a special form.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#NormalCharacter" data-isabs="false">
       <a id="NormalCharacter:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">NormalCharacter</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">NormalCharacter</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a normal character.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ODigit" data-isabs="false">
       <a id="ODigit:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ODigit</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ODigit</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an octal digit.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#OInteger" data-isabs="false">
       <a id="OInteger:Rule1[UnsignedIntegerNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">OInteger</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">OInteger</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an octal integer.</p><div class="fullcomment"><div class="comment cmt"><p>Parse an octal integer.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An unsigned integer.
@@ -445,66 +479,72 @@ linking &quot;e&quot; or &quot;p&quot; exponent indicator.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ONumber" data-isabs="false">
       <a id="ONumber:Rule3[UnsignedIntegerNode, Option[UnsignedIntegerNode], Option[SignedIntegerNode]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ONumber</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ONumber</span><span class="result">: <span name="org.parboiled.scala.rules.Rule3" class="extype">Rule3</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>, <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a>], <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an octal number that may be either an integer or a float.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#OperatorPropertiesNode" data-isabs="false">
       <a id="OperatorPropertiesNode:Rule1[AlgPropNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">OperatorPropertiesNode</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AlgPropNode" class="extype" href="AtomParser$$AlgPropNode.html">AlgPropNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">OperatorPropertiesNode</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AlgPropNode" class="extype" href="AtomParser$$AlgPropNode.html">AlgPropNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an operator properties block.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#OperatorPrototypeNode" data-isabs="false">
       <a id="OperatorPrototypeNode:Rule1[(NakedSymbolNode, List[AstNode], AstNode)]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">OperatorPrototypeNode</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>, List[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>], <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>)]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">OperatorPrototypeNode</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(<a name="ornl.elision.parse.AtomParser.NakedSymbolNode" class="extype" href="AtomParser$$NakedSymbolNode.html">NakedSymbolNode</a>, List[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>], <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an operator prototype.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedAlgProp" data-isabs="false">
       <a id="ParsedAlgProp:Rule1[AlgPropNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedAlgProp</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AlgPropNode" class="extype" href="AtomParser$$AlgPropNode.html">AlgPropNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedAlgProp</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AlgPropNode" class="extype" href="AtomParser$$AlgPropNode.html">AlgPropNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an algebraic properties specification.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedApply" data-isabs="false">
       <a id="ParsedApply:Rule1[ApplicationNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedApply</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.ApplicationNode" class="extype" href="AtomParser$$ApplicationNode.html">ApplicationNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedApply</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.ApplicationNode" class="extype" href="AtomParser$$ApplicationNode.html">ApplicationNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse the &quot;usual&quot; operator application form.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedAtomSeq" data-isabs="false">
       <a id="ParsedAtomSeq:Rule1[AtomSeqNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedAtomSeq</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedAtomSeq</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a list of atoms, separated by commas.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a list of atoms, separated by commas.  No concept of associativity,
@@ -513,99 +553,108 @@ commutativity, etc., is inferred at this point.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedGeneralForm" data-isabs="false">
       <a id="ParsedGeneralForm:Rule1[SpecialFormNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedGeneralForm</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedGeneralForm</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse the general &quot;two atom&quot; form of the special form.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedLambda" data-isabs="false">
       <a id="ParsedLambda:Rule1[LambdaNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedLambda</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.LambdaNode" class="extype" href="AtomParser$$LambdaNode.html">LambdaNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedLambda</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.LambdaNode" class="extype" href="AtomParser$$LambdaNode.html">LambdaNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a lambda expression.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedLiteral" data-isabs="false">
       <a id="ParsedLiteral:Rule1[Product with Serializable with AstNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedLiteral</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span> with <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedLiteral</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span> with <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a literal symbol or a literal string.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedMapPair" data-isabs="false">
       <a id="ParsedMapPair:Rule1[MapPairNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedMapPair</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="AtomParser$$MapPairNode.html">MapPairNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedMapPair</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="AtomParser$$MapPairNode.html">MapPairNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a map pair.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedMetaVariable" data-isabs="false">
       <a id="ParsedMetaVariable:Rule1[MetaVariableNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedMetaVariable</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="AtomParser$$MetaVariableNode.html">MetaVariableNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedMetaVariable</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="AtomParser$$MetaVariableNode.html">MetaVariableNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a meta variable.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedSpecialBindForm" data-isabs="false">
       <a id="ParsedSpecialBindForm:Rule1[SpecialFormNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedSpecialBindForm</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedSpecialBindForm</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse the specialized short form of a special form.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedSpecialForm" data-isabs="false">
       <a id="ParsedSpecialForm:Rule1[SpecialFormNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedSpecialForm</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedSpecialForm</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.SpecialFormNode" class="extype" href="AtomParser$$SpecialFormNode.html">SpecialFormNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a special form node.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedTermVariable" data-isabs="false">
       <a id="ParsedTermVariable:Rule1[VariableNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedTermVariable</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedTermVariable</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a term variable.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedTypedList" data-isabs="false">
       <a id="ParsedTypedList:Rule1[AtomSeqNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedTypedList</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedTypedList</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.AtomSeqNode" class="extype" href="AtomParser$$AtomSeqNode.html">AtomSeqNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a &quot;typed&quot; list.</p><div class="fullcomment"><div class="comment cmt"><p>Parse a &quot;typed&quot; list.  That is, a list whose properties are specified.
@@ -613,143 +662,156 @@ commutativity, etc., is inferred at this point.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedTypedVariable" data-isabs="false">
       <a id="ParsedTypedVariable:Rule1[VariableNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedTypedVariable</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedTypedVariable</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a typed variable or metavariable.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedUntypedVariable" data-isabs="false">
       <a id="ParsedUntypedVariable:Rule1[VariableNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedUntypedVariable</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedUntypedVariable</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse an untyped variable or metavariable.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedVariable" data-isabs="false">
       <a id="ParsedVariable:Rule1[VariableNode]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ParsedVariable</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ParsedVariable</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a variable.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#SymChar" data-isabs="false">
       <a id="SymChar:Rule1[String]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">SymChar</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SymChar</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="java.lang.String" class="extype">String</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a character that is part of a symbol.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#SymNorm" data-isabs="false">
       <a id="SymNorm:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">SymNorm</span>
-        
-        <span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SymNorm</span><span class="result">: <span name="org.parboiled.scala.rules.Rule0" class="extype">Rule0</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a &quot;normal&quot; non-escaped character that is part of a symbol.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#WS" data-isabs="false">
       <a id="WS:Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">WS</span>
-        
-        <span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">WS</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse ignorable whitespace.</p>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#anyOf" data-isabs="false">
       <a id="anyOf(Characters):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">anyOf</span>
-        
-        <span class="params">(<span name="chars">chars: <span name="org.parboiled.support.Characters" class="extype">Characters</span></span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">anyOf</span><span class="params">(<span name="chars">chars: <span name="org.parboiled.support.Characters" class="extype">Characters</span></span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#anyOf" data-isabs="false">
       <a id="anyOf(Array[Char]):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">anyOf</span>
-        
-        <span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">anyOf</span><span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#anyOf" data-isabs="false">
       <a id="anyOf(String):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">anyOf</span>
-        
-        <span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">anyOf</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">asInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#buildParseTree" data-isabs="false">
       <a id="buildParseTree:Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">buildParseTree</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">buildParseTree</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#ch" data-isabs="false">
       <a id="ch(Char):CharRule"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ch</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.Char" class="extype">Char</span></span>)</span><span class="result">: CharRule</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ch</span><span class="params">(<span name="c">c: <span name="scala.Char" class="extype">Char</span></span>)</span><span class="result">: CharRule</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">clone</span>
-        
-        <span class="params">()</span><span class="result">: AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -759,44 +821,48 @@ commutativity, etc., is inferred at this point.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#context" data-isabs="false">
       <a id="context:Context"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">context</span>
-        
-        <span class="result">: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">context</span><span class="result">: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The context for rulesets and operators.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">eq</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">equals</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">finalize</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -806,341 +872,372 @@ commutativity, etc., is inferred at this point.
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">getClass</span>
-        
-        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">hashCode</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#ignoreCase" data-isabs="false">
       <a id="ignoreCase(Array[Char]):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ignoreCase</span>
-        
-        <span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ignoreCase</span><span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#ignoreCase" data-isabs="false">
       <a id="ignoreCase(String):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ignoreCase</span>
-        
-        <span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ignoreCase</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#ignoreCase" data-isabs="false">
       <a id="ignoreCase(Char):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ignoreCase</span>
-        
-        <span class="params">(<span name="c">c: <span name="scala.Char" class="extype">Char</span></span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ignoreCase</span><span class="params">(<span name="c">c: <span name="scala.Char" class="extype">Char</span></span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">isInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes[A, B](Int,Rule2[A, B],Rule0):Rule1[List[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule2[A, B]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule2[A, B]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes[A, B](Int,Rule2[A, B]):Rule1[List[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes[A](Int,Rule1[A],Rule0):Rule1[List[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule1[A]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule1[A]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes[A](Int,Rule1[A]):Rule1[List[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[List[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[List[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes[Z](Int,ReductionRule1[Z, Z],Rule0):ReductionRule1[Z, Z]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        <span class="tparams">[<span name="Z">Z</span>]</span>
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: ReductionRule1[Z, Z]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="tparams">[<span name="Z">Z</span>]</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: ReductionRule1[Z, Z]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes[Z](Int,ReductionRule1[Z, Z]):ReductionRule1[Z, Z]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        <span class="tparams">[<span name="Z">Z</span>]</span>
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="tparams">[<span name="Z">Z</span>]</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes(Int,Rule0,Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule0</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule0</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#nTimes" data-isabs="false">
       <a id="nTimes(Int,Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">nTimes</span>
-        
-        <span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nTimes</span><span class="params">(<span name="times">times: <span name="scala.Int" class="extype">Int</span></span>, <span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ne</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#noneOf" data-isabs="false">
       <a id="noneOf(Array[Char]):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">noneOf</span>
-        
-        <span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">noneOf</span><span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#noneOf" data-isabs="false">
       <a id="noneOf(String):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">noneOf</span>
-        
-        <span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">noneOf</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notify</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notifyAll</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore[A, B](Rule2[A, B],Rule0):Rule1[List[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule2[A, B]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="sub">sub: Rule2[A, B]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore[A](Rule1[A],Rule0):Rule1[List[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule1[A]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="sub">sub: Rule1[A]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore(Rule0,Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        
-        <span class="params">(<span name="sub">sub: Rule0</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="params">(<span name="sub">sub: Rule0</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore[A, B](Rule2[A, B]):Rule1[List[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore[A](Rule1[A]):Rule1[List[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[List[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[List[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore[Z](ReductionRule1[Z, Z]):ReductionRule1[Z, Z]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        <span class="tparams">[<span name="Z">Z</span>]</span>
-        <span class="params">(<span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="tparams">[<span name="Z">Z</span>]</span><span class="params">(<span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#oneOrMore" data-isabs="false">
       <a id="oneOrMore(Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">oneOrMore</span>
-        
-        <span class="params">(<span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">oneOrMore</span><span class="params">(<span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#optional" data-isabs="false">
       <a id="optional[A, B](Rule2[A, B]):Rule1[Option[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">optional</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[<span name="scala.Option" class="extype">Option</span>[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optional</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[<span name="scala.Option" class="extype">Option</span>[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#optional" data-isabs="false">
       <a id="optional[A](Rule1[A]):Rule1[Option[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">optional</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[<span name="scala.Option" class="extype">Option</span>[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optional</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[<span name="scala.Option" class="extype">Option</span>[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#optional" data-isabs="false">
       <a id="optional[Z](ReductionRule1[Z, Z]):ReductionRule1[Z, Z]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">optional</span>
-        <span class="tparams">[<span name="Z">Z</span>]</span>
-        <span class="params">(<span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optional</span><span class="tparams">[<span name="Z">Z</span>]</span><span class="params">(<span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#optional" data-isabs="false">
       <a id="optional(Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">optional</span>
-        
-        <span class="params">(<span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optional</span><span class="params">(<span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#parseAtoms" data-isabs="false">
       <a id="parseAtoms(Source):Presult"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">parseAtoms</span>
-        
-        <span class="params">(<span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>)</span><span class="result">: <a name="ornl.elision.parse.AtomParser.Presult" class="extype" href="AtomParser$$Presult.html">Presult</a></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parseAtoms</span><span class="params">(<span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>)</span><span class="result">: <a name="ornl.elision.parse.AtomParser.Presult" class="extype" href="AtomParser$$Presult.html">Presult</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Entry point to parse all atoms from the given source.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point to parse all atoms from the given source.
@@ -1149,11 +1246,12 @@ commutativity, etc., is inferred at this point.
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#parseAtoms" data-isabs="false">
       <a id="parseAtoms(String):Presult"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">parseAtoms</span>
-        
-        <span class="params">(<span name="line">line: String</span>)</span><span class="result">: <a name="ornl.elision.parse.AtomParser.Presult" class="extype" href="AtomParser$$Presult.html">Presult</a></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parseAtoms</span><span class="params">(<span name="line">line: String</span>)</span><span class="result">: <a name="ornl.elision.parse.AtomParser.Presult" class="extype" href="AtomParser$$Presult.html">Presult</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Entry point to parse all atoms from the given string.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point to parse all atoms from the given string.
@@ -1162,385 +1260,419 @@ commutativity, etc., is inferred at this point.
     </li><li visbl="pub" name="org.parboiled.scala.Parser#push" data-isabs="false">
       <a id="push[A, B, C](⇒ A,⇒ B,⇒ C):Rule3[A, B, C]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">push</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span>
-        <span class="params">(<span name="a">a: ⇒ A</span>, <span name="b">b: ⇒ B</span>, <span name="c">c: ⇒ C</span>)</span><span class="result">: Rule3[A, B, C]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">push</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="a">a: ⇒ A</span>, <span name="b">b: ⇒ B</span>, <span name="c">c: ⇒ C</span>)</span><span class="result">: Rule3[A, B, C]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#push" data-isabs="false">
       <a id="push[A, B](⇒ A,⇒ B):Rule2[A, B]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">push</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="a">a: ⇒ A</span>, <span name="b">b: ⇒ B</span>)</span><span class="result">: Rule2[A, B]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">push</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="a">a: ⇒ A</span>, <span name="b">b: ⇒ B</span>)</span><span class="result">: Rule2[A, B]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#push" data-isabs="false">
       <a id="push[A](⇒ A):Rule1[A]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">push</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="f">f: ⇒ A</span>)</span><span class="result">: Rule1[A]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">push</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: ⇒ A</span>)</span><span class="result">: Rule1[A]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#pushFromContext" data-isabs="false">
       <a id="pushFromContext[A]((Context[Any]) ⇒ A):Rule1[A]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">pushFromContext</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="f">f: (<span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ A</span>)</span><span class="result">: Rule1[A]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pushFromContext</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="f">f: (<span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ A</span>)</span><span class="result">: Rule1[A]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#rule" data-isabs="false">
       <a id="rule[T&lt;:Rule](String,RuleOption*)(⇒ T)((Matcher) ⇒ T):T"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rule</span>
-        <span class="tparams">[<span name="T">T &lt;: Rule</span>]</span>
-        <span class="params">(<span name="label">label: String</span>, <span name="options">options: <span name="org.parboiled.scala.RuleOption" class="extype">RuleOption</span>*</span>)</span><span class="params">(<span name="block">block: ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="creator">creator: (<span name="org.parboiled.matchers.Matcher" class="extype">Matcher</span>) ⇒ T</span>)</span><span class="result">: T</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rule</span><span class="tparams">[<span name="T">T &lt;: Rule</span>]</span><span class="params">(<span name="label">label: String</span>, <span name="options">options: <span name="org.parboiled.scala.RuleOption" class="extype">RuleOption</span>*</span>)</span><span class="params">(<span name="block">block: ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="creator">creator: (<span name="org.parboiled.matchers.Matcher" class="extype">Matcher</span>) ⇒ T</span>)</span><span class="result">: T</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#rule" data-isabs="false">
       <a id="rule[T&lt;:Rule](RuleOption,RuleOption*)(⇒ T)((Matcher) ⇒ T):T"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rule</span>
-        <span class="tparams">[<span name="T">T &lt;: Rule</span>]</span>
-        <span class="params">(<span name="firstOption">firstOption: <span name="org.parboiled.scala.RuleOption" class="extype">RuleOption</span></span>, <span name="more">more: <span name="org.parboiled.scala.RuleOption" class="extype">RuleOption</span>*</span>)</span><span class="params">(<span name="block">block: ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="creator">creator: (<span name="org.parboiled.matchers.Matcher" class="extype">Matcher</span>) ⇒ T</span>)</span><span class="result">: T</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rule</span><span class="tparams">[<span name="T">T &lt;: Rule</span>]</span><span class="params">(<span name="firstOption">firstOption: <span name="org.parboiled.scala.RuleOption" class="extype">RuleOption</span></span>, <span name="more">more: <span name="org.parboiled.scala.RuleOption" class="extype">RuleOption</span>*</span>)</span><span class="params">(<span name="block">block: ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="creator">creator: (<span name="org.parboiled.matchers.Matcher" class="extype">Matcher</span>) ⇒ T</span>)</span><span class="result">: T</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#rule" data-isabs="false">
       <a id="rule[T&lt;:Rule](⇒ T)((Matcher) ⇒ T):T"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">rule</span>
-        <span class="tparams">[<span name="T">T &lt;: Rule</span>]</span>
-        <span class="params">(<span name="block">block: ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="creator">creator: (<span name="org.parboiled.matchers.Matcher" class="extype">Matcher</span>) ⇒ T</span>)</span><span class="result">: T</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rule</span><span class="tparams">[<span name="T">T &lt;: Rule</span>]</span><span class="params">(<span name="block">block: ⇒ T</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="creator">creator: (<span name="org.parboiled.matchers.Matcher" class="extype">Matcher</span>) ⇒ T</span>)</span><span class="result">: T</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#run" data-isabs="false">
       <a id="run(⇒ Unit):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">run</span>
-        
-        <span class="params">(<span name="f">f: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="params">(<span name="f">f: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#str" data-isabs="false">
       <a id="str(Array[Char]):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">str</span>
-        
-        <span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">str</span><span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#str" data-isabs="false">
       <a id="str(String):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">str</span>
-        
-        <span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">str</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">synchronized</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#test" data-isabs="false">
       <a id="test(⇒ Boolean):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">test</span>
-        
-        <span class="params">(<span name="f">f: ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">test</span><span class="params">(<span name="f">f: ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#toRule" data-isabs="false">
       <a id="toRule(String):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">toRule</span>
-        
-        <span class="params">(<span name="string">string: String</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toRule</span><span class="params">(<span name="string">string: String</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Eliminate trailing whitespace.</p><div class="fullcomment"><div class="comment cmt"><p>Eliminate trailing whitespace.  This trick is found on the Parboiled web
 site in the examples.</p></div><dl class="paramcmts block"><dt class="param">string</dt><dd class="cmt"><p>Parsed text.
-</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser" class="extype" href="">AtomParser</a> → Parser</dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser" class="extype" href="">AtomParser</a> → Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#toRule" data-isabs="false">
       <a id="toRule(Symbol):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">toRule</span>
-        
-        <span class="params">(<span name="symbol">symbol: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toRule</span><span class="params">(<span name="symbol">symbol: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Parser</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#toRule" data-isabs="false">
       <a id="toRule(Array[Char]):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">implicit def</span>
-      <span class="symbol"> 
-        <span class="name">toRule</span>
-        
-        <span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toRule</span><span class="params">(<span name="chars">chars: <span name="scala.Array" class="extype">Array</span>[<span name="scala.Char" class="extype">Char</span>]</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>implicit </dd><dt>Definition Classes</dt><dd>Parser</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">toString</span>
-        
-        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#trace" data-isabs="false">
       <a id="trace:Boolean"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">trace</span>
-        
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">trace</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If true, enable tracing.</p><div class="fullcomment"><div class="comment cmt"><p>If true, enable tracing.  Off by default.</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, B, C, D, E, F, G, R]((A, B, C, D, E, F, G, Context[Any]) ⇒ R):WithContextAction7[A, B, C, D, E, F, G, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, B, C, D, E, F, G, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction7" class="extype">WithContextAction7</span>[A, B, C, D, E, F, G, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="G">G</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, B, C, D, E, F, G, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction7" class="extype">WithContextAction7</span>[A, B, C, D, E, F, G, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, B, C, D, E, F, R]((A, B, C, D, E, F, Context[Any]) ⇒ R):WithContextAction6[A, B, C, D, E, F, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, B, C, D, E, F, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction6" class="extype">WithContextAction6</span>[A, B, C, D, E, F, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="F">F</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, B, C, D, E, F, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction6" class="extype">WithContextAction6</span>[A, B, C, D, E, F, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, B, C, D, E, R]((A, B, C, D, E, Context[Any]) ⇒ R):WithContextAction5[A, B, C, D, E, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, B, C, D, E, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction5" class="extype">WithContextAction5</span>[A, B, C, D, E, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="E">E</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, B, C, D, E, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction5" class="extype">WithContextAction5</span>[A, B, C, D, E, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, B, C, D, R]((A, B, C, D, Context[Any]) ⇒ R):WithContextAction4[A, B, C, D, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, B, C, D, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction4" class="extype">WithContextAction4</span>[A, B, C, D, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="D">D</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, B, C, D, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction4" class="extype">WithContextAction4</span>[A, B, C, D, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, B, C, R]((A, B, C, Context[Any]) ⇒ R):WithContextAction3[A, B, C, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, B, C, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction3" class="extype">WithContextAction3</span>[A, B, C, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, B, C, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction3" class="extype">WithContextAction3</span>[A, B, C, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, B, R]((A, B, Context[Any]) ⇒ R):WithContextAction2[A, B, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, B, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction2" class="extype">WithContextAction2</span>[A, B, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, B, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction2" class="extype">WithContextAction2</span>[A, B, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#withContext" data-isabs="false">
       <a id="withContext[A, R]((A, Context[Any]) ⇒ R):WithContextAction1[A, R]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">withContext</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span>
-        <span class="params">(<span name="f">f: (A, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction1" class="extype">WithContextAction1</span>[A, R]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">withContext</span><span class="tparams">[<span name="A">A</span>, <span name="R">R</span>]</span><span class="params">(<span name="f">f: (A, <span name="org.parboiled.Context" class="extype">Context</span>[<span name="scala.Any" class="extype">Any</span>]) ⇒ R</span>)</span><span class="result">: <span name="org.parboiled.scala.WithContextAction1" class="extype">WithContextAction1</span>[A, R]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore[A, B](Rule2[A, B],Rule0):Rule1[List[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule2[A, B]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="sub">sub: Rule2[A, B]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore[A](Rule1[A],Rule0):Rule1[List[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule1[A]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="sub">sub: Rule1[A]</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule1[List[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore(Rule0,Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        
-        <span class="params">(<span name="sub">sub: Rule0</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="params">(<span name="sub">sub: Rule0</span>, <span name="separator">separator: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore[A, B](Rule2[A, B]):Rule1[List[(A, B)]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        <span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="tparams">[<span name="A">A</span>, <span name="B">B</span>]</span><span class="params">(<span name="sub">sub: Rule2[A, B]</span>)</span><span class="result">: Rule1[List[(A, B)]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore[A](Rule1[A]):Rule1[List[A]]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        <span class="tparams">[<span name="A">A</span>]</span>
-        <span class="params">(<span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[List[A]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="sub">sub: Rule1[A]</span>)</span><span class="result">: Rule1[List[A]]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore[Z](ReductionRule1[Z, Z]):ReductionRule1[Z, Z]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        <span class="tparams">[<span name="Z">Z</span>]</span>
-        <span class="params">(<span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="tparams">[<span name="Z">Z</span>]</span><span class="params">(<span name="sub">sub: ReductionRule1[Z, Z]</span>)</span><span class="result">: ReductionRule1[Z, Z]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#zeroOrMore" data-isabs="false">
       <a id="zeroOrMore(Rule0):Rule0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">zeroOrMore</span>
-        
-        <span class="params">(<span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zeroOrMore</span><span class="params">(<span name="sub">sub: Rule0</span>)</span><span class="result">: Rule0</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
@@ -1548,7 +1680,9 @@ site in the examples.</p></div><dl class="paramcmts block"><dt class="param">str
             </div>
 
         
+        </div>
 
+        <div id="inheritedMembers">
         <div name="ornl.elision.core.Fickle" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></h3>
             </div><div name="org.parboiled.scala.Parser" class="parent">
@@ -1558,10 +1692,14 @@ site in the examples.</p></div><dl class="paramcmts block"><dt class="param">str
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
             </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>
