@@ -220,6 +220,18 @@ and special operations.
       </span>
       </h4>
       <p class="shortcomment cmt">Figure out where to stash the context on exit.</p><div class="fullcomment"><div class="comment cmt"><p>Figure out where to stash the context on exit.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#_prop2close" data-isabs="false">
+      <a id="_prop2close:OpenHashMap[String, (PropertyManager) ⇒ Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_prop2close</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, (<a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.PropertyManager#_prop2desc" data-isabs="false">
       <a id="_prop2desc:OpenHashMap[String, String]"></a>
       <h4 class="signature">
@@ -416,18 +428,22 @@ unrecoverable error.
 </p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>A human-readable message.</p></dd><dt class="param">th</dt><dd class="cmt"><p>An optional throwable.
 </p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.PropertyManager#declareProperty" data-isabs="false">
-      <a id="declareProperty[TYPE](String,String,TYPE):Unit"></a>
+      <a id="declareProperty[TYPE](String,String,TYPE,(PropertyManager) ⇒ Unit):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">declareProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>, <span name="description">description: String</span>, <span name="default">default: TYPE</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">declareProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>, <span name="description">description: String</span>, <span name="default">default: TYPE</span>, <span name="onchange">onchange: (<a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Declare a property.</p><div class="fullcomment"><div class="comment cmt"><p>Declare a property.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The property name.</p></dd><dt class="param">description</dt><dd class="cmt"><p>Human-readable description of the property.</p></dd><dt class="param">default</dt><dd class="cmt"><p>The default value of the property.</p></dd><dt>returns</dt><dd class="cmt"><p>The default value.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The property name.</p></dd><dt class="param">description</dt><dd class="cmt"><p>Human-readable description of the property.</p></dd><dt class="param">default</dt><dd class="cmt"><p>The default value of the property.</p></dd><dt class="param">onchange</dt><dd class="cmt"><p>A closure to execute when the property is changed
+                   via the <code>setProperty</code> methods.  Can be omitted.
+                   The property manager instance is passed, not the new
+                   property value, as this provides access to all
+                   properties.</p></dd><dt>returns</dt><dd class="cmt"><p>The default value.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="../core/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#displayCheckPts" data-isabs="false">
       <a id="displayCheckPts:Unit"></a>
