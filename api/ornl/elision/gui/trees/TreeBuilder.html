@@ -598,6 +598,18 @@ If an id is given, the new NodeSprite will be mapped from that id in the current
       </span>
       </h4>
       <p class="shortcomment cmt">Loads a TreeSprite from a treexml file.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#loadFromFileJSON" data-isabs="false">
+      <a id="loadFromFileJSON(File):TreeSprite"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loadFromFileJSON</span><span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>)</span><span class="result">: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Loads a TreeSprite from a treejson file.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -762,7 +774,19 @@ The new scope starts with one mapping: &quot;subroot&quot; -&gt; the current sub
         <span class="name">saveToFile</span><span class="params">(<span name="treeSprite">treeSprite: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>, <span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Saves a TreeSprite to a file.</p>
+      <p class="shortcomment cmt">Saves a TreeSprite to a file as XML.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#saveToFileJSON" data-isabs="false">
+      <a id="saveToFileJSON(TreeSprite,String):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">saveToFileJSON</span><span class="params">(<span name="treeSprite">treeSprite: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>, <span name="path">path: String</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Saves a TreeSprite to a file as JSON.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeBuilder#savedNodeCount" data-isabs="false">
       <a id="savedNodeCount:ArrayStack[Int]"></a>
       <h4 class="signature">
