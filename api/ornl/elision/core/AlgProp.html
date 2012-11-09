@@ -241,27 +241,25 @@ are specified.
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">deBruijnIndex</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The De Bruijn index.</p><div class="fullcomment"><div class="comment cmt"><p>The De Bruijn index.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.AlgProp#depth" data-isabs="false">
       <a id="depth:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">depth</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The depth of the atom.</p><div class="fullcomment"><div class="comment cmt"><p>The depth of the atom.  An atom's depth is equal to the maximum depth
-of its children, plus one.  An atom with no children has depth zero.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.AlgProp#doApply" data-isabs="false">
       <a id="doApply(BasicAtom,Boolean):BasicAtom"></a>
       <h4 class="signature">
@@ -376,6 +374,38 @@ appropriate.
       <p class="shortcomment cmt">Fast check for identity.</p><div class="fullcomment"><div class="comment cmt"><p>Fast check for identity.
 </p></div><dl class="paramcmts block"><dt class="param">default</dt><dd class="cmt"><p>What to return if unspecified.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#getOperators" data-isabs="false">
+      <a id="getOperators(HashSet[String]):Option[HashSet[BasicAtom]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOperators</span><span class="params">(<span name="opNames">opNames: <span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[String]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get all the named operators referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the named operators referenced in an atom. Override this if the
+atom can actually contain operator expressions.
+</p></div><dl class="paramcmts block"><dt class="param">opNames</dt><dd class="cmt"><p>The names of the operators to look for.</p></dd><dt>returns</dt><dd class="cmt"><p>A set of the operators referenced in the atom, if it has
+any.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#getVariables" data-isabs="false">
+      <a id="getVariables():Option[HashSet[BasicAtom]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getVariables</span><span class="params">()</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get all the variables referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the variables referenced in an atom. Override this if the
+atom can actually contain variables.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A set of the variables referenced in the atom, if it has
+any.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -460,13 +490,13 @@ override this for variables; it is <code>false</code> by default.
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">isConstant</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">If true then this atom denotes a constant (it contains no variables).</p><div class="fullcomment"><div class="comment cmt"><p>If true then this atom denotes a constant (it contains no variables).</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isDeBruijnIndex" data-isabs="false">
       <a id="isDeBruijnIndex:Boolean"></a>
       <h4 class="signature">
@@ -529,13 +559,13 @@ represents false.
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">isTerm</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">If true then this atom denotes a term.</p><div class="fullcomment"><div class="comment cmt"><p>If true then this atom denotes a term.  If false, a metaterm.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AlgProp" class="extype" href="">AlgProp</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isTrue" data-isabs="false">
       <a id="isTrue:Boolean"></a>
       <h4 class="signature">

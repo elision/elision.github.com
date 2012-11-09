@@ -214,21 +214,21 @@ the classpath.
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.FileResolver#find" data-isabs="false">
-      <a id="find(String):Option[InputStream]"></a>
+      <a id="find(String):Option[(InputStream, String)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">find</span><span class="params">(<span name="name">name: String</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="java.io.InputStream" class="extype">InputStream</span>]</span>
+        <span class="name">find</span><span class="params">(<span name="name">name: String</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(<span name="java.io.InputStream" class="extype">InputStream</span>, String)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Locate the specified file in the allowed search paths.</p><div class="fullcomment"><div class="comment cmt"><p>Locate the specified file in the allowed search paths.</p><p>If the provided name is an absolute path, no search is performed.
 Otherwise the search path is used first (if enabled) and then the
 class path is used (if enabled).  If the file is found, a reader is
 created and returned.  Otherwise <code>None</code> is returned.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The file name, possibly including leading path.</p></dd><dt>returns</dt><dd class="cmt"><p>None if not found, or a reader to read the file.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The file name, possibly including leading path.</p></dd><dt>returns</dt><dd class="cmt"><p>None if not found, or a reader to read the file and the path of the file's parent directory.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>

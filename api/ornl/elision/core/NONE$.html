@@ -259,6 +259,38 @@ appropriate.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#getOperators" data-isabs="false">
+      <a id="getOperators(HashSet[String]):Option[HashSet[BasicAtom]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getOperators</span><span class="params">(<span name="opNames">opNames: <span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[String]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get all the named operators referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the named operators referenced in an atom. Override this if the
+atom can actually contain operator expressions.
+</p></div><dl class="paramcmts block"><dt class="param">opNames</dt><dd class="cmt"><p>The names of the operators to look for.</p></dd><dt>returns</dt><dd class="cmt"><p>A set of the operators referenced in the atom, if it has
+any.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#getVariables" data-isabs="false">
+      <a id="getVariables():Option[HashSet[BasicAtom]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getVariables</span><span class="params">()</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get all the variables referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the variables referenced in an atom. Override this if the
+atom can actually contain variables.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A set of the variables referenced in the atom, if it has
+any.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.NamedRootType#hashCode" data-isabs="false">
       <a id="hashCode:Int"></a>
       <h4 class="signature">
