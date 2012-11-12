@@ -167,22 +167,6 @@ This field specifies a closure to create the spouse object.  The
 basic atom constructor calls this closure, passing the basic atom
 itself, and caching the returned object.
 </p></div></div>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#clearTimeoutTime" data-isabs="false">
-      <a id="clearTimeoutTime:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">clearTimeoutTime</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Clear the wall clock time at which the current rewrite will time
-out.</p><div class="fullcomment"><div class="comment cmt"><p>Clear the wall clock time at which the current rewrite will time
-out. This indicates that we are no longer trying to time out a
-rewrite.
-</p></div></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -198,6 +182,19 @@ rewrite.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#computeTimeout" data-isabs="false">
+      <a id="computeTimeout:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">computeTimeout</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Compute the wall clock time at which the current rewrite will time
+out.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -333,19 +330,6 @@ rewrite.
       </span>
       </h4>
       <p class="shortcomment cmt">Check to see if the current rewrite has timed out.</p>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#setTimeoutTime" data-isabs="false">
-      <a id="setTimeoutTime:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setTimeoutTime</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Set the wall clock time at which the current rewrite will time
-out.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -358,6 +342,18 @@ out.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#timeoutTime" data-isabs="false">
+      <a id="timeoutTime:DynamicVariable[Long]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">timeoutTime</span><span class="result">: <span name="scala.util.DynamicVariable" class="extype">DynamicVariable</span>[<span name="scala.Long" class="extype">Long</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The clock time at which the current rewrite will time out.</p>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
