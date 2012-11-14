@@ -338,8 +338,7 @@ Most importantly, it causes its worker thread to exit after its current iteratio
         <span class="name">logic</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Overridden GamePanel event handler for the timer object.</p><div class="fullcomment"><div class="comment cmt"><p>Overridden GamePanel event handler for the timer object.
-It runs an iteration through the timerLoop method if it isn't currently loading something, and it tells the panel to repaint.
+      <p class="shortcomment cmt">We actually run the logic for this level is a thread separate from the EDT.</p><div class="fullcomment"><div class="comment cmt"><p>We actually run the logic for this level is a thread separate from the EDT. Here, we just tell the thread that it's safe to run another iteration.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a> → Level</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel#mainPaint" data-isabs="false">
       <a id="mainPaint(Graphics2D):Unit"></a>
@@ -390,6 +389,18 @@ It runs an iteration through the timerLoop method if it isn't currently loading 
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisPanel#nodeRClickMenu" data-isabs="false">
+      <a id="nodeRClickMenu:NodeRightClickMenu"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodeRClickMenu</span><span class="result">: <a name="ornl.elision.gui.trees.NodeRightClickMenu" class="extype" href="../trees/NodeRightClickMenu.html">NodeRightClickMenu</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A right-click menu that appears when you right-click a node.</p><div class="fullcomment"><div class="comment cmt"><p>A right-click menu that appears when you right-click a node.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="../trees/TreeVisPanel.html">TreeVisPanel</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
