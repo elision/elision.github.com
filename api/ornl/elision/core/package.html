@@ -1001,6 +1001,18 @@ time of each atom that is parsed.</p>
       </h4>
       <p class="comment cmt">Indicate that it is possible to enable and disable tracing of parsing at
 runtime.</p>
+    </li><li visbl="pub" name="ornl.elision.core.TypeUniverse" data-isabs="false">
+      <a id="TypeUniverse:TypeUniverse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TypeUniverse.html"><span class="name">TypeUniverse</span></a><span class="result"> extends SymbolLiteral</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator" data-isabs="false">
       <a id="TypedSymbolicOperator:TypedSymbolicOperator"></a>
       <h4 class="signature">
@@ -1869,6 +1881,24 @@ replace this with something rational as soon as reasonable.
       </span>
       </h4>
       
+    </li><li visbl="pub" name="ornl.elision.core.package#other_hashify" data-isabs="false">
+      <a id="other_hashify(BigInt,Any):BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">other_hashify</span><span class="params">(<span name="hash">hash: BigInt = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: BigInt</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Compute an alternate hash code from many different objects.</p><div class="fullcomment"><div class="comment cmt"><p>Compute an alternate hash code from many different objects. An
+alternate hash code is used in some cases to provide 2 different
+hash codes for an Elision object. These 2 hash codes are used to
+lower the chances of a hash collision (both different hash codes
+will need to collide for a hash collision to occur).
+</p></div><dl class="paramcmts block"><dt class="param">hash</dt><dd class="cmt"><p>The initial hash code.</p></dd><dt class="param">obj</dt><dd class="cmt"><p>The next object whose hash should be added.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#parse" data-isabs="false">
       <a id="parse(String,Context,Boolean,Boolean):Any"></a>
       <h4 class="signature">

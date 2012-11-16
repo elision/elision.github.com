@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.TypedSymbolicOperator</title>
+          <title>ornl.elision.core.TypeUniverse</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -14,9 +14,9 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <a title="Go to companion" href="TypedSymbolicOperator$.html"><img src="../../../lib/class_to_object_big.png" /></a>
+        <a title="Go to companion" href="TypeUniverse$.html"><img src="../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1><a title="Go to companion" href="TypedSymbolicOperator$.html">TypedSymbolicOperator</a></h1>
+        <h1><a title="Go to companion" href="TypeUniverse$.html">TypeUniverse</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,16 +25,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">TypedSymbolicOperator</span><span class="result"> extends <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></span>
+        <span class="name">TypeUniverse</span><span class="result"> extends <a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Encapsulate a typed symbolic operator.</p><h4> Purpose </h4><p>A <i>typed</i> symbolic operator computes its type based on the types of its
-parameters and the provided &quot;fully applied&quot; type.  The result has the form
-of a mapping from a domain to a co-domain.
-</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a>, <a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a>, <a name="ornl.elision.core.Applicable" class="extype" href="Applicable.html">Applicable</a>, <a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a>, <span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a>[<span name="scala.Symbol" class="extype">Symbol</span>], <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -48,7 +45,7 @@ of a mapping from a domain to a co-domain.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.TypedSymbolicOperator" class="in"><span>TypedSymbolicOperator</span></li><li name="ornl.elision.core.SymbolicOperator" class="in"><span>SymbolicOperator</span></li><li name="ornl.elision.core.Operator" class="in"><span>Operator</span></li><li name="ornl.elision.core.Applicable" class="in"><span>Applicable</span></li><li name="ornl.elision.core.SpecialForm" class="in"><span>SpecialForm</span></li><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.TypeUniverse" class="in"><span>TypeUniverse</span></li><li name="ornl.elision.core.SymbolLiteral" class="in"><span>SymbolLiteral</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.core.Literal" class="in"><span>Literal</span></li><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -58,7 +55,22 @@ of a mapping from a domain to a co-domain.
 
       <div id="template">
         <div id="allMembers">
-        
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.core.TypeUniverse#this" data-isabs="false">
+      <a id="this:TypeUniverse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TypeUniverse</span><span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -126,34 +138,6 @@ of a mapping from a domain to a co-domain.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#_check" data-isabs="false">
-      <a id="_check():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_check</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Check the parameters against the properties.</p><div class="fullcomment"><div class="comment cmt"><p>Check the parameters against the properties.  If any problems are detected,
-then an exception is thrown (<code>ArgumentListException</code>).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#apply" data-isabs="false">
-      <a id="apply(BasicAtom*):BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="args">args: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>*</span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Apply this operator to the given arguments.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this operator to the given arguments.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The result of applying this operator to the given argument list.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a> → <a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -166,6 +150,18 @@ then an exception is thrown (<code>ArgumentListException</code>).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#canEqual" data-isabs="false">
+      <a id="canEqual(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canEqual</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -181,56 +177,30 @@ then an exception is thrown (<code>ArgumentListException</code>).
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#content" data-isabs="false">
-      <a id="content:BasicAtom"></a>
+    </li><li visbl="pub" name="ornl.elision.core.Literal#deBruijnIndex" data-isabs="false">
+      <a id="deBruijnIndex:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">content</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#deBruijnIndex" data-isabs="false">
-      <a id="deBruijnIndex:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
         <span class="name">deBruijnIndex</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#depth" data-isabs="false">
+      <p class="shortcomment cmt">The De Bruijn index of all literals is zero.</p><div class="fullcomment"><div class="comment cmt"><p>The De Bruijn index of all literals is zero.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Literal#depth" data-isabs="false">
       <a id="depth:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">depth</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#doApply" data-isabs="false">
-      <a id="doApply(BasicAtom,Boolean):BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">doApply</span><span class="params">(<span name="rhs">rhs: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="bypass">bypass: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">All symbolic operator applications arrive here to get resolved.</p><div class="fullcomment"><div class="comment cmt"><p>All symbolic operator applications arrive here to get resolved.
-</p></div><dl class="paramcmts block"><dt class="param">rhs</dt><dd class="cmt"><p>The right-hand side (arguments).</p></dd><dt class="param">bypass</dt><dd class="cmt"><p>If true, bypass any native handler.</p></dd><dt>returns</dt><dd class="cmt"><p>The constructed atom.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a> → <a name="ornl.elision.core.Applicable" class="extype" href="Applicable.html">Applicable</a></dd></dl></div>
+      <p class="shortcomment cmt">The depth of all literals is zero.</p><div class="fullcomment"><div class="comment cmt"><p>The depth of all literals is zero.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -243,7 +213,7 @@ then an exception is thrown (<code>ArgumentListException</code>).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#equals" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Literal#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -254,7 +224,28 @@ then an exception is thrown (<code>ArgumentListException</code>).
         <span class="name">equals</span><span class="params">(<span name="other">other: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Two literals are equal iff their types are equal and their values are
+equal.</p><div class="fullcomment"><div class="comment cmt"><p>Two literals are equal iff their types are equal and their values are
+equal.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#evenMeta" data-isabs="false">
+      <a id="evenMeta:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evenMeta</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Whether this atom should be applied, even on meta-terms.</p><div class="fullcomment"><div class="comment cmt"><p>Whether this atom should be applied, even on meta-terms.  Do not mess
+with this; unless you are modifying the Elision language you want to
+leave this alone.  Only exceptional operators that must operate
+handlers to terms that will contain meta-terms need to change this.
+For nearly every operator the default handling of meta-terms is
+appropriate.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -314,31 +305,7 @@ atom can actually contain variables.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A set of the variables referenced in the atom, if it has
 any.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="prt" name="ornl.elision.core.SymbolicOperator#handler" data-isabs="false">
-      <a id="handler:Option[(ApplyData) ⇒ BasicAtom]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">handler</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The native handler, if one is declared.</p><div class="fullcomment"><div class="comment cmt"><p>The native handler, if one is declared.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="ornl.elision.core" class="extype" href="package.html">core</a>] </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#handlerB64" data-isabs="false">
-      <a id="handlerB64:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">handlerB64</span><span class="result">: String</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.TypeUniverse#hashCode" data-isabs="false">
       <a id="hashCode:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -349,7 +316,7 @@ any.
         <span class="name">hashCode</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.TypeUniverse" class="extype" href="">TypeUniverse</a> → <a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isBindable" data-isabs="false">
       <a id="isBindable:Boolean"></a>
       <h4 class="signature">
@@ -364,18 +331,18 @@ any.
       <p class="shortcomment cmt">If true then this atom can be bound.</p><div class="fullcomment"><div class="comment cmt"><p>If true then this atom can be bound.  Only variables should be bound, so
 override this for variables; it is <code>false</code> by default.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#isConstant" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Literal#isConstant" data-isabs="false">
       <a id="isConstant:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">isConstant</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <p class="shortcomment cmt">Literals are constants.</p><div class="fullcomment"><div class="comment cmt"><p>Literals are constants.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isDeBruijnIndex" data-isabs="false">
       <a id="isDeBruijnIndex:Boolean"></a>
       <h4 class="signature">
@@ -419,18 +386,18 @@ represents false.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#isTerm" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Literal#isTerm" data-isabs="false">
       <a id="isTerm:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">lazy val</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">isTerm</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <p class="shortcomment cmt">Literals are terms.</p><div class="fullcomment"><div class="comment cmt"><p>Literals are terms.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isTrue" data-isabs="false">
       <a id="isTrue:Boolean"></a>
       <h4 class="signature">
@@ -498,7 +465,7 @@ of type matching strategies may be done.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#otherHashCode" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.TypeUniverse#otherHashCode" data-isabs="false">
       <a id="otherHashCode:BigInt"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -509,8 +476,56 @@ of type matching strategies may be done.
         <span class="name">otherHashCode</span><span class="result">: <span name="scala.math.BigInt" class="extype">BigInt</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#rewrite" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.TypeUniverse" class="extype" href="">TypeUniverse</a> → <a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → <a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#productArity" data-isabs="false">
+      <a id="productArity:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#productElement" data-isabs="false">
+      <a id="productElement(Int):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productElement</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
+      <a id="productIterator:Iterator[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productIterator</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#productPrefix" data-isabs="false">
+      <a id="productPrefix:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#rewrite" data-isabs="false">
       <a id="rewrite(Bindings):(BasicAtom, Boolean)"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -525,7 +540,7 @@ of type matching strategies may be done.
 is expected that overriding types will handle rewriting those, as well.
 </p></div><dl class="paramcmts block"><dt class="param">binds</dt><dd class="cmt"><p>The bindings.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of rewriting this atom, and whether or not anything
 					changed.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#spouse" data-isabs="false">
       <a id="spouse:AnyRef"></a>
       <h4 class="signature">
@@ -551,19 +566,7 @@ is expected that overriding types will handle rewriting those, as well.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#tag" data-isabs="false">
-      <a id="tag:BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tag</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#theType" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Literal#theType" data-isabs="false">
       <a id="theType:BasicAtom"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -574,10 +577,7 @@ is expected that overriding types will handle rewriting those, as well.
         <span class="name">theType</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The type of an operator is a mapping from the operator domain to the
-operator codomain.</p><div class="fullcomment"><div class="comment cmt"><p>The type of an operator is a mapping from the operator domain to the
-operator codomain.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="">TypedSymbolicOperator</a> → <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a> → <a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <p class="shortcomment cmt">The type.</p><div class="fullcomment"><div class="comment cmt"><p>The type.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
       <a id="toParseString(Int):String"></a>
       <h4 class="signature">
@@ -658,7 +658,7 @@ observing the bindings, if any.  The type is checked prior to trying
 any matching.
 </p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>The subject atom to match.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Any bindings that must be observed.  This is optional.</p></dd><dt class="param">hints</dt><dd class="cmt"><p>Optional hints.</p></dd><dt>returns</dt><dd class="cmt"><p>The matching outcome.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Operator#tryMatchWithoutTypes" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Literal#tryMatchWithoutTypes" data-isabs="false">
       <a id="tryMatchWithoutTypes(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -669,12 +669,35 @@ any matching.
         <span class="name">tryMatchWithoutTypes</span><span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Proxy to the parent match method, but turn this operator into an operator
-reference in the process.</p><div class="fullcomment"><div class="comment cmt"><p>Proxy to the parent match method, but turn this operator into an operator
-reference in the process.</p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>The subject atom to match.
-</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Any bindings that must be observed.
-</p></dd><dt class="param">hints</dt><dd class="cmt"><p>Optional hints.
-</p></dd><dt>returns</dt><dd class="cmt"><p>The matching outcome.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a> → <a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <p class="shortcomment cmt">Try to match this atom, as a pattern, against the given subject.</p><div class="fullcomment"><div class="comment cmt"><p>Try to match this atom, as a pattern, against the given subject.  Do not
+do type matching for this atom, but use BasicAtom.tryMatch for any
+children, so their types are correctly matched.
+</p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>The subject atom to match.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Any bindings that must be observed.</p></dd><dt class="param">hints</dt><dd class="cmt"><p>Optional hints.</p></dd><dt>returns</dt><dd class="cmt"><p>The matching outcome.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#typ" data-isabs="false">
+      <a id="typ:BasicAtom"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typ</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolLiteral#value" data-isabs="false">
+      <a id="value:Symbol"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">value</span><span class="result">: <span name="scala.Symbol" class="extype">Symbol</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The value stored in this literal.</p><div class="fullcomment"><div class="comment cmt"><p>The value stored in this literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a> → <a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -723,18 +746,40 @@ reference in the process.</p></div><dl class="paramcmts block"><dt class="param"
     </li></ol>
             </div>
 
-        
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
+      <a id="productElements:Iterator[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.8.0) use productIterator instead">productElements</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.8.0)</i> use productIterator instead</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
-        <div name="ornl.elision.core.SymbolicOperator" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></h3>
-            </div><div name="ornl.elision.core.Operator" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a></h3>
-            </div><div name="ornl.elision.core.Applicable" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.Applicable" class="extype" href="Applicable.html">Applicable</a></h3>
-            </div><div name="ornl.elision.core.SpecialForm" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a></h3>
+        <div name="ornl.elision.core.SymbolLiteral" class="parent">
+              <h3>Inherited from <a name="ornl.elision.core.SymbolLiteral" class="extype" href="SymbolLiteral.html">SymbolLiteral</a></h3>
+            </div><div name="scala.Serializable" class="parent">
+              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="java.io.Serializable" class="parent">
+              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="scala.Product" class="parent">
+              <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
+            </div><div name="scala.Equals" class="parent">
+              <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
+            </div><div name="ornl.elision.core.Literal" class="parent">
+              <h3>Inherited from <a name="ornl.elision.core.Literal" class="extype" href="Literal.html">Literal</a>[<span name="scala.Symbol" class="extype">Symbol</span>]</h3>
             </div><div name="ornl.elision.core.BasicAtom" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></h3>
             </div><div name="scala.AnyRef" class="parent">
