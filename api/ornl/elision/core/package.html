@@ -193,7 +193,7 @@ list.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="BasicAtom.html"><span class="name">BasicAtom</span></a><span class="result"> extends AnyRef</span>
+        <a href="BasicAtom.html"><span class="name">BasicAtom</span></a><span class="result"> extends HasOtherHash</span>
       </span>
       </h4>
       <p class="comment cmt">The root of all atoms manipulated by the rewriter.</p>
@@ -258,18 +258,6 @@ as the result of a successful match.</p>
       </span>
       </h4>
       <p class="comment cmt">Provide a Boolean literal.</p>
-    </li><li visbl="pub" name="ornl.elision.core.CacheException" data-isabs="false">
-      <a id="CacheException:CacheException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="CacheException.html"><span class="name">CacheException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The cache contains the wrong type of item for the requested key.</p>
     </li><li visbl="pub" name="ornl.elision.core.CaseOperator" data-isabs="false">
       <a id="CaseOperator:CaseOperator"></a>
       <h4 class="signature">
@@ -294,18 +282,6 @@ as the result of a successful match.</p>
       </span>
       </h4>
       <p class="comment cmt">The commutative property</p>
-    </li><li visbl="pub" name="ornl.elision.core.Console" data-isabs="true">
-      <a id="Console:Console"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Console.html"><span class="name">Console</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide communication with a console.</p>
     </li><li visbl="pub" name="ornl.elision.core.Context" data-isabs="false">
       <a id="Context:Context"></a>
       <h4 class="signature">
@@ -363,7 +339,7 @@ the global set of bindings in force at any time.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends PropertyManager</span>
+        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends PropertyManager with Cache</span>
       </span>
       </h4>
       <p class="comment cmt">An executor is a class that can convert a string into a sequence of atoms.</p>
@@ -417,18 +393,6 @@ anyone trying to get some work done.</p>
       </h4>
       <p class="comment cmt">A little class to use to pass data back and forth from the subordinate
 interpreter.</p>
-    </li><li visbl="pub" name="ornl.elision.core.HasHistory" data-isabs="true">
-      <a id="HasHistory:HasHistory"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="HasHistory.html"><span class="name">HasHistory</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate that it a history is maintained.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754" data-isabs="false">
       <a id="IEEE754:IEEE754"></a>
       <h4 class="signature">
@@ -709,18 +673,6 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq" data-isabs="true">
-      <a id="OmitSeq:OmitSeq[A]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$OmitSeq.html"><span class="name">OmitSeq</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends IndexedSeq[A]</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The omit sequence class.</p>
     </li><li visbl="pub" name="ornl.elision.core.OpApply" data-isabs="false">
       <a id="OpApply:OpApply"></a>
       <h4 class="signature">
@@ -805,18 +757,6 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       <p class="comment cmt">An outcome reports the result of attempting a match.</p>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager" data-isabs="true">
-      <a id="PropertyManager:PropertyManager"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="PropertyManager.html"><span class="name">PropertyManager</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Manage a collection of properties.</p>
     </li><li visbl="pub" name="ornl.elision.core.RewriteRule" data-isabs="false">
       <a id="RewriteRule:RewriteRule"></a>
       <h4 class="signature">
@@ -962,45 +902,6 @@ a potentially new atom.</p>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a symbolic operator.</p>
-    </li><li visbl="pub" name="ornl.elision.core.Timeable" data-isabs="true">
-      <a id="Timeable:Timeable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Timeable.html"><span class="name">Timeable</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Specify that it is possible to enable and disable printing the execution
-time of each atom that is parsed.</p>
-    </li><li visbl="pub" name="ornl.elision.core.ToggleableParser" data-isabs="true">
-      <a id="ToggleableParser:ToggleableParser"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="ToggleableParser.html"><span class="name">ToggleableParser</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicates if it is possible to toggle the parser used
-</p>
-    </li><li visbl="pub" name="ornl.elision.core.TraceableParse" data-isabs="true">
-      <a id="TraceableParse:TraceableParse"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="TraceableParse.html"><span class="name">TraceableParse</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate that it is possible to enable and disable tracing of parsing at
-runtime.</p>
     </li><li visbl="pub" name="ornl.elision.core.TypeUniverse" data-isabs="false">
       <a id="TypeUniverse:TypeUniverse"></a>
       <h4 class="signature">
@@ -1489,19 +1390,6 @@ been created.</p>
       </span>
       </h4>
       <p class="comment cmt">A type for all operators.</p>
-    </li><li visbl="pub" name="ornl.elision.core.package.OmitSeq" data-isabs="false">
-      <a id="OmitSeq:OmitSeq"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="package$$OmitSeq$.html"><span class="name">OmitSeq</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide convenient construction of an omit sequence and automatic
-(implicit) transformation of indexed collections to an omit sequence.</p>
     </li><li visbl="pub" name="ornl.elision.core.Operator" data-isabs="false">
       <a id="Operator:Operator"></a>
       <h4 class="signature">
@@ -1538,18 +1426,6 @@ been created.</p>
       </span>
       </h4>
       <p class="comment cmt">Simplified construction of outcomes.</p>
-    </li><li visbl="pub" name="ornl.elision.core.PrintConsole" data-isabs="false">
-      <a id="PrintConsole:PrintConsole"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="PrintConsole$.html"><span class="name">PrintConsole</span></a><span class="result"> extends Console</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A simple console that uses <code>print</code> to write to the standard output.</p>
     </li><li visbl="pub" name="ornl.elision.core.RSREF" data-isabs="false">
       <a id="RSREF:RSREF"></a>
       <h4 class="signature">
@@ -1754,6 +1630,24 @@ been created.</p>
       </span>
       </h4>
       <p class="shortcomment cmt">Convert a Scala Boolean to a Boolean literal.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Scala Boolean to a Boolean literal.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.package#feq" data-isabs="false">
+      <a id="feq(BasicAtom,BasicAtom,⇒ Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">feq</span><span class="params">(<span name="atom1">atom1: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="atom2">atom2: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="other">other: ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform &quot;fast equality checking&quot; on two atoms.</p><div class="fullcomment"><div class="comment cmt"><p>Perform &quot;fast equality checking&quot; on two atoms.  This performs basic
+structural comparson of the atoms.  If this cannot prove that the two
+atoms are either equal to unequal, then the closure <code>other</code> is invoked
+to resolve.
+</p></div><dl class="paramcmts block"><dt class="param">atom1</dt><dd class="cmt"><p>The first atom.</p></dd><dt class="param">atom2</dt><dd class="cmt"><p>The second atom.</p></dd><dt class="param">other</dt><dd class="cmt"><p>Other checking to perform, if the fast check is
+               indeterminate.</p></dd><dt>returns</dt><dd class="cmt"><p>True if equal, false if not.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#giveMkParseString" data-isabs="false">
       <a id="giveMkParseString[A&lt;:BasicAtom](Seq[A]):AnyRef { def mkParseString(pre: String,mid: String,post: String): String }"></a>
       <h4 class="signature">
@@ -1770,29 +1664,6 @@ every sequence of objects that extend <a name="ornl.elision.core.BasicAtom" clas
 every sequence of objects that extend <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>.
 Try that with Java!
 </p></div><dl class="paramcmts block"><dt class="param">seq</dt><dd class="cmt"><p>The sequence to get the new method.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.package#hashify" data-isabs="false">
-      <a id="hashify(Int,Any):Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashify</span><span class="params">(<span name="hash">hash: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Provide a convenient method to compute a hash code from many different
-objects.</p><div class="fullcomment"><div class="comment cmt"><p>Provide a convenient method to compute a hash code from many different
-objects.  This is intended to be suitable for a few basic cases.</p><p>If you want to create a hash code for two objects alice and bob, try this.</p><pre>
-<span class="num">0</span> hashify alice hashify bob
-</pre><p>If you want to create a hash code for a sequence of objects in stuff, try
-this.</p><pre>
-stuff.foldLeft(<span class="num">0</span>)(_ hashify _)
-</pre><p>If you want to combine your hash code with your children's hash codes,
-try this.</p><pre>
-children.hashify(hashCode)(_ hashfiy _)
-</pre></div><dl class="paramcmts block"><dt class="param">hash</dt><dd class="cmt"><p>The initial hash code.</p></dd><dt class="param">obj</dt><dd class="cmt"><p>The next object whose hash should be added.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#intToLiteral" data-isabs="false">
       <a id="intToLiteral(BigInt):IntegerLiteral"></a>
@@ -1881,24 +1752,6 @@ replace this with something rational as soon as reasonable.
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.core.package#other_hashify" data-isabs="false">
-      <a id="other_hashify(BigInt,Any):BigInt"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">other_hashify</span><span class="params">(<span name="hash">hash: BigInt = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: BigInt</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Compute an alternate hash code from many different objects.</p><div class="fullcomment"><div class="comment cmt"><p>Compute an alternate hash code from many different objects. An
-alternate hash code is used in some cases to provide 2 different
-hash codes for an Elision object. These 2 hash codes are used to
-lower the chances of a hash collision (both different hash codes
-will need to collide for a hash collision to occur).
-</p></div><dl class="paramcmts block"><dt class="param">hash</dt><dd class="cmt"><p>The initial hash code.</p></dd><dt class="param">obj</dt><dd class="cmt"><p>The next object whose hash should be added.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#parse" data-isabs="false">
       <a id="parse(String,Context,Boolean,Boolean):Any"></a>
       <h4 class="signature">
@@ -1911,7 +1764,8 @@ will need to collide for a hash collision to occur).
       </span>
       </h4>
       <p class="shortcomment cmt">Attempt to parse the given string and return an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to parse the given string and return an atom.
-</p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string to parse.</p></dd><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>Whether to trace the parse.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing, which may be None.
+</p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string to parse.</p></dd><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>Whether to trace the parse.</p></dd><dt class="param">toggle</dt><dd class="cmt"><p>Choose whether to use the Parboiled parser (false) or the
+               Scala parser combinator parser (true).</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing, which may be None.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#strToLiteral" data-isabs="false">
       <a id="strToLiteral(String):StringLiteral"></a>
@@ -1978,14 +1832,14 @@ Fred   Johnny12   Cat_Dog   _Dog
 </pre></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The symbol text.</p></dd><dt>returns</dt><dd class="cmt"><p>The symbol with special characters escaped.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#toOmitSeq" data-isabs="false">
-      <a id="toOmitSeq[A](IndexedSeq[A]):AnyRef { def omit(index: Int): ornl.elision.core.package.OmitSeq[A] }"></a>
+      <a id="toOmitSeq[A](IndexedSeq[A]):AnyRef { def omit(index: Int): ornl.elision.util.OmitSeq[A] }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toOmitSeq</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="seq">seq: IndexedSeq[A]</span>)</span><span class="result">: AnyRef { def omit(index: Int): ornl.elision.core.package.OmitSeq[A] }</span>
+        <span class="name">toOmitSeq</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="seq">seq: IndexedSeq[A]</span>)</span><span class="result">: AnyRef { def omit(index: Int): ornl.elision.util.OmitSeq[A] }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Invoking the <code>omit</code> method on an indexed sequence automagically transforms

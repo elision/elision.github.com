@@ -25,15 +25,16 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Executor</span><span class="result"> extends <a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></span>
+        <span class="name">Executor</span><span class="result"> extends <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a> with <a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>An executor is a class that can convert a string into a sequence of atoms.</p><p>This can be done by parsing the usual Elision representation of atoms, or
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>An executor is a class that can convert a string into a sequence of atoms.
+This can be done by parsing the usual Elision representation of atoms, or
 by some other means.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="ornl.elision.repl.ERepl" class="extype" href="../repl/ERepl.html">ERepl</a>, <a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></div>
@@ -50,7 +51,7 @@ by some other means.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.core.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.Cache" class="in"><span>Cache</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -113,7 +114,7 @@ by some other means.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">console</span><span class="result">: <a name="ornl.elision.core.Console" class="extype" href="Console.html">Console</a></span>
+        <span class="name">console</span><span class="result">: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a console native handlers can use.</p>
@@ -210,7 +211,7 @@ will have been executed by the time this method returns.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#_prop2close" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#_prop2close" data-isabs="false">
       <a id="_prop2close:OpenHashMap[String, (PropertyManager) ⇒ Unit]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -218,11 +219,11 @@ will have been executed by the time this method returns.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">_prop2close</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, (<a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>]</span>
+        <span class="name">_prop2close</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, (<a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#_prop2desc" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#_prop2desc" data-isabs="false">
       <a id="_prop2desc:OpenHashMap[String, String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -233,8 +234,8 @@ will have been executed by the time this method returns.
         <span class="name">_prop2desc</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, String]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#_prop2val" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#_prop2val" data-isabs="false">
       <a id="_prop2val:OpenHashMap[String, Any]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -245,7 +246,7 @@ will have been executed by the time this method returns.
         <span class="name">_prop2val</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, <span name="scala.Any" class="extype">Any</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -258,6 +259,19 @@ will have been executed by the time this method returns.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Executor#clazzes" data-isabs="false">
+      <a id="clazzes:Set[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with Boolean with java.lang.Boolean]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clazzes</span><span class="result">: <span name="scala.collection.immutable.Set" class="extype">Set</span>[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with Boolean with java.lang.Boolean]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This property manager supports BigInts, Strings, and any BasicAtom.</p><div class="fullcomment"><div class="comment cmt"><p>This property manager supports BigInts, Strings, and any BasicAtom.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Executor" class="extype" href="">Executor</a> → <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -273,7 +287,7 @@ will have been executed by the time this method returns.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#declareProperty" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#declareProperty" data-isabs="false">
       <a id="declareProperty[TYPE](String,String,TYPE,(PropertyManager) ⇒ Unit):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -281,7 +295,7 @@ will have been executed by the time this method returns.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">declareProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>, <span name="description">description: String</span>, <span name="default">default: TYPE</span>, <span name="onchange">onchange: (<a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">declareProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>, <span name="description">description: String</span>, <span name="default">default: TYPE</span>, <span name="onchange">onchange: (<a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Declare a property.</p><div class="fullcomment"><div class="comment cmt"><p>Declare a property.
@@ -290,7 +304,7 @@ will have been executed by the time this method returns.
                    The property manager instance is passed, not the new
                    property value, as this provides access to all
                    properties.</p></dd><dt>returns</dt><dd class="cmt"><p>The default value.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -315,7 +329,7 @@ will have been executed by the time this method returns.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Executor#fetchAs" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.Cache#fetchAs" data-isabs="false">
       <a id="fetchAs[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -333,9 +347,9 @@ in general avoid using the cache.  Find somewhere else to shove your
 data!</p><p>If the key is present, but of the wrong type, an exception is thrown.
 This is a <code>CacheException</code>.
 </p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key for the item to retrieve.</p></dd><dt class="param">default</dt><dd class="cmt"><p>The value to return if the specified key is not present.
-								If this is returned, it is also stored, so be sure to type
-								it correctly.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested value, or the default value.
-</p></dd></dl></div>
+               If this is returned, it is also stored, so be sure to type
+               it correctly.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested value, or the default value.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -363,7 +377,7 @@ This is a <code>CacheException</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#getProperties" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getProperties" data-isabs="false">
       <a id="getProperties:List[(String, String, Any)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -377,8 +391,8 @@ This is a <code>CacheException</code>.
       <p class="shortcomment cmt">Get all declared properties.</p><div class="fullcomment"><div class="comment cmt"><p>Get all declared properties.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The returned value is a set of entries of the form (name,
          description, value).
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#getProperty" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getProperty" data-isabs="false">
       <a id="getProperty[TYPE](String)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -396,8 +410,8 @@ it, and not just for storing arbitrary data during execution.</p><p>Properties m
 it has been declared.</p><p>When getting a property value, specify the <code>TYPE</code> so the returned value
 is correctly typed.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The requested property value.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#getPropertyNames" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getPropertyNames" data-isabs="false">
       <a id="getPropertyNames:List[String]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -410,7 +424,7 @@ is correctly typed.
       </h4>
       <p class="shortcomment cmt">Get all public property names, sorted in alphabetical order.</p><div class="fullcomment"><div class="comment cmt"><p>Get all public property names, sorted in alphabetical order.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The property names.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -471,7 +485,7 @@ is correctly typed.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#setProperty" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#setProperty" data-isabs="false">
       <a id="setProperty[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -485,8 +499,8 @@ is correctly typed.
       <p class="shortcomment cmt">Set the value of a property.</p><div class="fullcomment"><div class="comment cmt"><p>Set the value of a property.  See the documentation of <code>getProperty</code> for
 information about the use of properties.
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The property value.</p></dd><dt>returns</dt><dd class="cmt"><p>The new property value.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Executor#stash" data-isabs="false">
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Cache#stash" data-isabs="false">
       <a id="stash[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -500,7 +514,7 @@ information about the use of properties.
       <p class="shortcomment cmt">Stash a value in the cache for later lookup with <code>fetchAs</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Stash a value in the cache for later lookup with <code>fetchAs</code>.  Read the
 documentation for <code>fetchAs</code> before you use the cache!
 </p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value.</p></dd><dt>returns</dt><dd class="cmt"><p>The stored value.
-</p></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -570,7 +584,7 @@ documentation for <code>fetchAs</code> before you use the cache!
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.PropertyManager#writeProperties" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#writeProperties" data-isabs="false">
       <a id="writeProperties(Console,Int):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -578,10 +592,47 @@ documentation for <code>fetchAs</code> before you use the cache!
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">writeProperties</span><span class="params">(<span name="console">console: <a name="ornl.elision.core.Console" class="extype" href="Console.html">Console</a></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">80</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">writeProperties</span><span class="params">(<span name="console">console: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">80</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></dd></dl></div>
+      <p class="shortcomment cmt">Write properties to a console.</p><div class="fullcomment"><div class="comment cmt"><p>Write properties to a console.
+</p></div><dl class="paramcmts block"><dt class="param">console</dt><dd class="cmt"><p>The console to get the output.</p></dd><dt class="param">width</dt><dd class="cmt"><p>The width of the console, or 80 if not specified.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Executor#writeProperty" data-isabs="false">
+      <a id="writeProperty(BasicAtom):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeProperty</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Handle atoms specially; print them as parse strings.</p><div class="fullcomment"><div class="comment cmt"><p>Handle atoms specially; print them as parse strings.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>An atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The parse string.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager#writeProperty" data-isabs="false">
+      <a id="writeProperty(Any):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeProperty</span><span class="params">(<span name="value">value: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a single property.</p><div class="fullcomment"><div class="comment cmt"><p>Write a single property.  This is used by <code>writeProperties</code> to write the
+value of each property.  If you have a property that requires special
+handling or representation, override this.  Use <code>super.writeProperty</code> for
+values you do not wish to handle.</p><p>Alternately you can just override this method in the derived class for
+the values you want to catch.</p><p>For example:</p><pre>
+<span class="kw">def</span> writeProperty(value: <span class="std">Int</span>) = <span class="lit">"[+value+"</span>]<span class="lit">"
+</span></pre><p>This will write <code>Int</code> values with square brackets, and will defer to the
+base class for all other values.</p><p>By default this method uses the <code>toString</code> method for the value.
+</p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The value to write.</p></dd><dt>returns</dt><dd class="cmt"><p>The string value to write.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -589,8 +640,10 @@ documentation for <code>fetchAs</code> before you use the cache!
         </div>
 
         <div id="inheritedMembers">
-        <div name="ornl.elision.core.PropertyManager" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.PropertyManager" class="extype" href="PropertyManager.html">PropertyManager</a></h3>
+        <div name="ornl.elision.util.Cache" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></h3>
+            </div><div name="ornl.elision.util.PropertyManager" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

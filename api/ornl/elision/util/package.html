@@ -29,7 +29,10 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This is the utility package for Elision.</p><p>This package provides common services and support for other parts of the
+Elision system.  Any part of Elision may use it, but it must not use other
+parts of the Elision system!  That is, it is a leaf in the use hierarchy.
+</p></div></div>
     
 
       <div id="mbrsel">
@@ -48,7 +51,105 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.util.Text" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.util.Cache" data-isabs="true">
+      <a id="Cache:Cache"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Cache.html"><span class="name">Cache</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide a simple, name-indexed, general purpose cache for any value.</p>
+    </li><li visbl="pub" name="ornl.elision.util.CacheException" data-isabs="false">
+      <a id="CacheException:CacheException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CacheException.html"><span class="name">CacheException</span></a><span class="result"> extends ElisionException</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The cache contains the wrong type of item for the requested key.</p>
+    </li><li visbl="pub" name="ornl.elision.util.Console" data-isabs="true">
+      <a id="Console:Console"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Console.html"><span class="name">Console</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide communication with a console.</p>
+    </li><li visbl="pub" name="ornl.elision.util.ElisionException" data-isabs="false">
+      <a id="ElisionException:ElisionException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ElisionException.html"><span class="name">ElisionException</span></a><span class="result"> extends Exception</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Root class for exceptions occurring within Elision.</p>
+    </li><li visbl="pub" name="ornl.elision.util.FileResolver" data-isabs="false">
+      <a id="FileResolver:FileResolver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FileResolver.html"><span class="name">FileResolver</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Given a file name locate the file in the search path or, if permitted, in
+the classpath.</p>
+    </li><li visbl="pub" name="ornl.elision.util.HasOtherHash" data-isabs="true">
+      <a id="HasOtherHash:HasOtherHash"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HasOtherHash.html"><span class="name">HasOtherHash</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Indicate that a class has an extra hash method.</p>
+    </li><li visbl="pub" name="ornl.elision.util.OmitSeq" data-isabs="true">
+      <a id="OmitSeq:OmitSeq[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OmitSeq.html"><span class="name">OmitSeq</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends IndexedSeq[A] with HasOtherHash</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An omit sequence permits rapid modification of a sequence by either
+omitting a single element or inserting a sequence.</p>
+    </li><li visbl="pub" name="ornl.elision.util.PropertyManager" data-isabs="true">
+      <a id="PropertyManager:PropertyManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="PropertyManager.html"><span class="name">PropertyManager</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Manage a collection of properties.</p>
+    </li><li visbl="pub" name="ornl.elision.util.Text" data-isabs="false">
       <a id="Text:Text"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -60,12 +161,154 @@
       </span>
       </h4>
       <p class="comment cmt">Text manipulation routines.</p>
+    </li><li visbl="pub" name="ornl.elision.util.Timeable" data-isabs="true">
+      <a id="Timeable:Timeable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Timeable.html"><span class="name">Timeable</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Specify that it is possible to enable and disable printing the execution
+time of each atom that is parsed.</p>
     </li></ol>
             </div>
 
         
 
-        
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.util.Debugger" data-isabs="false">
+      <a id="Debugger:Debugger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Debugger$.html"><span class="name">Debugger</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This is a class for managing and printing debug output during execution
+in a manner that &quot;agrees&quot; with Elision.</p>
+    </li><li visbl="pub" name="ornl.elision.util.ElisionException" data-isabs="false">
+      <a id="ElisionException:ElisionException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ElisionException$.html"><span class="name">ElisionException</span></a><span class="result"> extends Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Define convenient construction / extraction for Elision exceptions.</p>
+    </li><li visbl="pub" name="ornl.elision.util.FileResolver" data-isabs="false">
+      <a id="FileResolver:FileResolver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FileResolver$.html"><span class="name">FileResolver</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Common configuration for the file resolver.</p>
+    </li><li visbl="pub" name="ornl.elision.util.OmitSeq" data-isabs="false">
+      <a id="OmitSeq:OmitSeq"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="OmitSeq$.html"><span class="name">OmitSeq</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide convenient construction of an omit sequence and automatic
+(implicit) transformation of indexed collections to an omit sequence.</p>
+    </li><li visbl="pub" name="ornl.elision.util.PrintConsole" data-isabs="false">
+      <a id="PrintConsole:PrintConsole"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PrintConsole$.html"><span class="name">PrintConsole</span></a><span class="result"> extends Console</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A simple console that uses <code>print</code> to write to the standard output.</p>
+    </li><li visbl="pub" name="ornl.elision.util.package#hashify" data-isabs="false">
+      <a id="hashify(Int,Any):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashify</span><span class="params">(<span name="hash">hash: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Provide a convenient method to compute a hash code from many different
+objects.</p><div class="fullcomment"><div class="comment cmt"><p>Provide a convenient method to compute a hash code from many different
+objects.  This is intended to be suitable for a few basic cases.</p><p>If you want to create a hash code for two objects alice and bob, try this.</p><pre>
+<span class="num">0</span> hashify alice hashify bob
+</pre><p>If you want to create a hash code for a sequence of objects in stuff, try
+this.</p><pre>
+stuff.foldLeft(<span class="num">0</span>)(_ hashify _)
+</pre><p>If you want to combine your hash code with your children's hash codes,
+try this.</p><pre>
+children.hashify(hashCode)(_ hashfiy _)
+</pre></div><dl class="paramcmts block"><dt class="param">hash</dt><dd class="cmt"><p>The initial hash code.</p></dd><dt class="param">obj</dt><dd class="cmt"><p>The next object whose hash should be added.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.package#other_hashify" data-isabs="false">
+      <a id="other_hashify(BigInt,Any):BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">other_hashify</span><span class="params">(<span name="hash">hash: BigInt = <span class="symbol">0</span></span>, <span name="obj">obj: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: BigInt</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Compute an alternate hash code from many different objects.</p><div class="fullcomment"><div class="comment cmt"><p>Compute an alternate hash code from many different objects. An
+alternate hash code is used in some cases to provide 2 different
+hash codes for an Elision object. These 2 hash codes are used to
+lower the chances of a hash collision (both different hash codes
+will need to collide for a hash collision to occur).</p><p>If the object provides an &quot;other&quot; hash code, it must have a field or
+a field-like method <code>otherHashCode</code> that returns a <code>BigInt</code>.  This is
+used to compute the hash code returned by this method.
+</p></div><dl class="paramcmts block"><dt class="param">hash</dt><dd class="cmt"><p>The initial hash code.</p></dd><dt class="param">obj</dt><dd class="cmt"><p>The next object whose hash should be added.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.package#toQuotedString" data-isabs="false">
+      <a id="toQuotedString(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toQuotedString</span><span class="params">(<span name="str">str: String</span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Turn a string into a properly-escaped double-quoted string.</p><div class="fullcomment"><div class="comment cmt"><p>Turn a string into a properly-escaped double-quoted string.  The following
+transformations are performed.</p><pre>
+double quotation mark   -&gt; \<span class="lit">"
+newline                 -> \n
+tab                     -> \t
+carriage return         -> \r
+backslash               -> \\
+</span></pre><p>The resulting string is enclosed in double quotation marks.
+</p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string.</p></dd><dt>returns</dt><dd class="cmt"><p>The string with special character escaped.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.package" class="extype" href="package$.html">package</a></dd></dl></div>
+    </li></ol>
+            </div>
 
         
         </div>

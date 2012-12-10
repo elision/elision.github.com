@@ -41,7 +41,7 @@ use the methods in the <a name="ornl.elision.core.Apply" class="extype" href="Ap
 								synthetic!
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.core.Apply" class="extype" href="Apply.html">Apply</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.core.Apply" class="extype" href="Apply.html">Apply</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.util.HasOtherHash" class="extype" href="../util/HasOtherHash.html">HasOtherHash</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -55,7 +55,7 @@ use the methods in the <a name="ornl.elision.core.Apply" class="extype" href="Ap
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.OpApply" class="in"><span>OpApply</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.core.Apply" class="in"><span>Apply</span></li><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.OpApply" class="in"><span>OpApply</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.core.Apply" class="in"><span>Apply</span></li><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="ornl.elision.util.HasOtherHash" class="in"><span>HasOtherHash</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -505,7 +505,7 @@ of type matching strategies may be done.
         <span class="name">otherHashCode</span><span class="result">: <span name="scala.math.BigInt" class="extype">BigInt</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Apply" class="extype" href="Apply.html">Apply</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Apply" class="extype" href="Apply.html">Apply</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> → <a name="ornl.elision.util.HasOtherHash" class="extype" href="../util/HasOtherHash.html">HasOtherHash</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.OpApply#pabinds" data-isabs="false">
       <a id="pabinds:Bindings"></a>
       <h4 class="signature">
@@ -615,7 +615,7 @@ is expected that overriding types will handle rewriting those, as well.
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
         <span class="name">theType</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
@@ -805,6 +805,8 @@ order to successfully associatively match.</p><p>Hints passed in are ignored, an
               <h3>Inherited from <a name="ornl.elision.core.Apply" class="extype" href="Apply.html">Apply</a></h3>
             </div><div name="ornl.elision.core.BasicAtom" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></h3>
+            </div><div name="ornl.elision.util.HasOtherHash" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.HasOtherHash" class="extype" href="../util/HasOtherHash.html">HasOtherHash</a></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

@@ -29,7 +29,11 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"></div>
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Elision is a term rewriter.</p><p>This is the root package of the Elision system, and it contains classes
+and definitions shared by everything else in the system, as well as the
+code run at start-up from the command line.</p><p>Starting the Elision system is the job of ornl.elision.Main.</p><h4> Packages </h4><p>There are several sub-packages.</p><ul><li><a name="ornl.elision.core" class="extype" href="core/package.html">core</a> is the core package that contains the primary classes.</li><li><a name="ornl.elision.gui" class="extype" href="gui/package.html">gui</a> contains the Elision GUI, Eva.</li><li><a name="ornl.elision.parse" class="extype" href="parse/package.html">parse</a> contains the Elision parser(s).</li><li><a name="ornl.elision.repl" class="extype" href="repl/package.html">repl</a> contains the Elision REPL(s) and related classes.</li><li>ornl.elision.test contains tests to verify Elision functionality.</li><li><a name="ornl.elision.util" class="extype" href="util/package.html">util</a> contains common utilities used by the Elision system.</li></ul><p>Packages in Elision are organized into a use hierarchy.  In general, packages
+may use sub-packages, but not the reverse.</p><h4> Punch List </h4><p>This is the current punch list for Elision.  This list gets picked up by
+<a href="http://eclipse.org">Eclipse</a>.</p><ul><li>TODO Implicit corecions. Mark.</li><li>TODO Infix. DEFER.</li><li>TODO Need parser context for error messages. Stacy.</li><li>TODO Need package.scala files for all packages.  Stacy.</li><li>TODO Need support for command-line overrides.  Stacy.</li><li>TODO Need simple output configuration.  Stacy.</li></ul></div></div>
     
 
       <div id="mbrsel">
@@ -46,58 +50,7 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
-              <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.AbstractSwitch" data-isabs="true">
-      <a id="AbstractSwitch:AbstractSwitch"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="AbstractSwitch.html"><span class="name">AbstractSwitch</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Unifying class for all switches.</p>
-    </li><li visbl="pub" name="ornl.elision.ArgSwitch" data-isabs="false">
-      <a id="ArgSwitch:ArgSwitch"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="ArgSwitch.html"><span class="name">ArgSwitch</span></a><span class="params">(<span name="long">long: Option[String]</span>, <span name="short">short: Option[Char]</span>, <span name="description">description: String</span>, <span name="argument">argument: String</span>, <span name="closure">closure: (String) ⇒ Option[String]</span>)</span><span class="result"> extends AbstractSwitch with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Represent a switch that takes an argument.</p>
-    </li><li visbl="pub" name="ornl.elision.ElisionException" data-isabs="false">
-      <a id="ElisionException:ElisionException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ElisionException.html"><span class="name">ElisionException</span></a><span class="result"> extends Exception</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Root class for exceptions occurring within Elision.</p>
-    </li><li visbl="pub" name="ornl.elision.Switch" data-isabs="false">
-      <a id="Switch:Switch"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="Switch.html"><span class="name">Switch</span></a><span class="params">(<span name="long">long: Option[String]</span>, <span name="short">short: Option[Char]</span>, <span name="description">description: String</span>, <span name="closure">closure: () ⇒ Option[String]</span>)</span><span class="result"> extends AbstractSwitch with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide an implementation of a command line switch.</p>
-    </li></ol>
-            </div>
+        
 
         
 
@@ -115,31 +68,6 @@
       </span>
       </h4>
       <p class="comment cmt">Print some simple &quot;about&quot; text.</p>
-    </li><li visbl="pub" name="ornl.elision.Debugger" data-isabs="false">
-      <a id="Debugger:Debugger"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Debugger$.html"><span class="name">Debugger</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">This is a class for managing and printing debug output during execution
-in a manner that &quot;agrees&quot; with Elision.</p>
-    </li><li visbl="pub" name="ornl.elision.ElisionException" data-isabs="false">
-      <a id="ElisionException:ElisionException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ElisionException$.html"><span class="name">ElisionException</span></a><span class="result"> extends Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Define convenient construction / extraction for Elision exceptions.</p>
     </li><li visbl="pub" name="ornl.elision.Help" data-isabs="false">
       <a id="Help:Help"></a>
       <h4 class="signature">
@@ -189,30 +117,6 @@ its associated GUIs and applications.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.SwitchUsage" data-isabs="false">
-      <a id="SwitchUsage:SwitchUsage"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SwitchUsage$.html"><span class="name">SwitchUsage</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide usage help.</p>
-    </li><li visbl="pub" name="ornl.elision.Switches" data-isabs="false">
-      <a id="Switches:Switches"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Switches$.html"><span class="name">Switches</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide methods to work with the command line arguments.</p>
     </li><li visbl="pub" name="ornl.elision.Version" data-isabs="false">
       <a id="Version:Version"></a>
       <h4 class="signature">
@@ -225,6 +129,18 @@ its associated GUIs and applications.</p>
       </span>
       </h4>
       <p class="comment cmt">Provide information about the current version of Elision.</p>
+    </li><li visbl="pub" name="ornl.elision.cli" data-isabs="false">
+      <a id="cli:cli"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="cli/package.html"><span class="name">cli</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">This package provides support for command-line interfaces in Elision.</p>
     </li><li visbl="pub" name="ornl.elision.core" data-isabs="false">
       <a id="core:core"></a>
       <h4 class="signature">
@@ -273,18 +189,6 @@ its associated GUIs and applications.</p>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.test" data-isabs="false">
-      <a id="test:test"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a href="test/package.html"><span class="name">test</span></a>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="ornl.elision.util" data-isabs="false">
       <a id="util:util"></a>
       <h4 class="signature">
@@ -296,7 +200,7 @@ its associated GUIs and applications.</p>
         <a href="util/package.html"><span class="name">util</span></a>
       </span>
       </h4>
-      
+      <p class="comment cmt">This is the utility package for Elision.</p>
     </li></ol>
             </div>
 
