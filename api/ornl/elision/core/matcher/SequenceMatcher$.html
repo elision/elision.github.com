@@ -2,21 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.cli.Switches</title>
+          <title>ornl.elision.core.matcher.SequenceMatcher</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
     
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
-        <img src="../../../lib/object_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.cli" class="extype" href="package.html">cli</a></p>
-        <h1>Switches</h1>
+        <img src="../../../../lib/object_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="../package.html">core</a>.<a name="ornl.elision.core.matcher" class="extype" href="package.html">matcher</a></p>
+        <h1>SequenceMatcher</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,11 +25,17 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Switches</span><span class="result"> extends AnyRef</span>
+        <span class="name">SequenceMatcher</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide methods to work with the command line arguments.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Match two sequences of atoms.</p><h4> Purpose </h4><p>The goal here is to make matching simple(r).  For complex objects, you can
+have several items to match, any of which can return a match iterator, etc.
+It is best to concentrate that complexity here, and create a more general
+solution (or so the logic goes).</p><h4> Use </h4><p>To use this, provide two sequences of atoms.  The sequences must be the
+same length, or the whole match is immediately rejected.  This matcher
+tries to match the respective atom pairs in order, from the first to the
+last.  Matches are returned iff the entire sequence matches.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -46,7 +52,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.cli.Switches" class="in"><span>Switches</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.matcher.SequenceMatcher" class="in"><span>SequenceMatcher</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -124,45 +130,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.cli.Switches#apply" data-isabs="false">
-      <a id="apply(Array[String],Seq[AbstractSwitch],(String) ⇒ (Option[String], Boolean)):(List[String], Option[String], Int)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>, <span name="switches">switches: Seq[<a name="ornl.elision.cli.AbstractSwitch" class="extype" href="AbstractSwitch.html">AbstractSwitch</a>]</span>, <span name="handler">handler: (String) ⇒ (<span name="scala.Option" class="extype">Option</span>[String], <span name="scala.Boolean" class="extype">Boolean</span>) = <span class="symbol"><span class="name"><a href="../../../scala/package.html">(str) =&gt; (None, true)</a></span></span></span>)</span><span class="result">: (List[String], <span name="scala.Option" class="extype">Option</span>[String], <span name="scala.Int" class="extype">Int</span>)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Process the command line arguments, extract any switches and process them,
-and then return the resulting structure.</p><div class="fullcomment"><div class="comment cmt"><p>Process the command line arguments, extract any switches and process them,
-and then return the resulting structure.</p><p>Invoke this with the argument array and the defined switches.  Optionally
-an argument handler can be provided.  The return value contains an optional
-string that, if not <code>None</code>, specifies an error that stopped processing.
-The index of the argument where processing stopped is also returned.
-If the optional string is <code>None</code>, then no error was detected (and the
-integer value is undefined).  In all cases the list of arguments that have
-been fully processed and remain is returned.</p><p>Each command line argument is considered, and checked against the known
-switches.  There are three patterns for a likely switch.  If a switch is
-found, then the list of defined switches is checked and, if present, the
-closure for the switch is invoked at that time.  Otherwise an error is
-generated and processing stops.  Recognized switches are discarded.  The
-switch handler may return <code>None</code> to indicate success, or it may return
-an error message to stop processing with an error.</p><p>If the command line argument does not appear to be a switch, then it is
-passed to the argument handler.  The handler may return either <code>None</code> or
-an error string, and a Boolean flag.  An error string stops processing.
-The flag indicates whether to preserve (<code>true</code>) the argument in the list
-returned, or to discard (<code>false</code>) the argument.  Note that an argument
-that causes an error will not be preserved, regardless of the flag.</p><p>The default argument handler always returns <code>(None, true)</code>.</p><p>Switches come in the following forms:</p><ul><li>Single-character switches, such as <code>-d</code> and <code>-x</code>.  These may be combined
-   as <code>-dx</code>.  If an argument is required, it may be provided immediately
-   after the switch, or it may be the next argument: <code>-dFoo</code> and  <code>-d Foo</code>.
-   Because of this, a switch taking an argument must be the last switch
-   given on a single dash.</li><li>Simple long switches, such as <code>--clear</code> and <code>--help</code>.</li><li>Long switches that take an argument, such as <code>--debug=Foo</code>.
-</li></ul></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.</p></dd><dt class="param">switches</dt><dd class="cmt"><p>Known command line switches.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>A handler to invoke whenever an argument is found.</p></dd><dt>returns</dt><dd class="cmt"><p>A tuple with the remaining arguments, an optional string that
-         describes an error condition, and an integer that is the position
-         of the argument causing the error (if any).
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -186,7 +153,7 @@ that causes an error will not be preserved, regardless of the flag.</p><p>The de
         <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -225,7 +192,7 @@ that causes an error will not be preserved, regardless of the flag.</p><p>The de
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -301,6 +268,21 @@ that causes an error will not be preserved, regardless of the flag.</p><p>The de
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.matcher.SequenceMatcher#rewrite" data-isabs="false">
+      <a id="rewrite(OmitSeq[BasicAtom],Bindings):(OmitSeq[BasicAtom], Boolean)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rewrite</span><span class="params">(<span name="subjects">subjects: <a name="ornl.elision.util.OmitSeq" class="extype" href="../../util/OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>]</span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="../Bindings.html">Bindings</a></span>)</span><span class="result">: (<a name="ornl.elision.util.OmitSeq" class="extype" href="../../util/OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>], <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Rewrite a sequence of atoms by applying the given bindings to each.</p><div class="fullcomment"><div class="comment cmt"><p>Rewrite a sequence of atoms by applying the given bindings to each.
+</p></div><dl class="paramcmts block"><dt class="param">subjects</dt><dd class="cmt"><p>The atoms to rewrite.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>The bindings to apply.</p></dd><dt>returns</dt><dd class="cmt"><p>A pair consisting of the rewritten sequence of atoms and a flag
+					that is true if any rewrites succeeded.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -325,6 +307,20 @@ that causes an error will not be preserved, regardless of the flag.</p><p>The de
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.matcher.SequenceMatcher#tryMatch" data-isabs="false">
+      <a id="tryMatch(OmitSeq[BasicAtom],OmitSeq[BasicAtom],Bindings):Outcome"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tryMatch</span><span class="params">(<span name="patterns">patterns: <a name="ornl.elision.util.OmitSeq" class="extype" href="../../util/OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>]</span>, <span name="subjects">subjects: <a name="ornl.elision.util.OmitSeq" class="extype" href="../../util/OmitSeq.html">OmitSeq</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../BasicAtom.html">BasicAtom</a>]</span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="../Bindings.html">Bindings</a> = <span class="symbol"><span class="name"><a href="../../../package.html">Bindings()</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="../Outcome.html">Outcome</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Match two sequences of atoms, in order.</p><div class="fullcomment"><div class="comment cmt"><p>Match two sequences of atoms, in order.
+</p></div><dl class="paramcmts block"><dt class="param">patterns</dt><dd class="cmt"><p>The patterns.</p></dd><dt class="param">subjects</dt><dd class="cmt"><p>The subjects.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Bindings to honor in any match.  This can be omitted.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of the match.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
