@@ -202,9 +202,11 @@ as it is obtained by a processor.</p>
         <span class="name">fileReadStack</span><span class="result">: <span name="scala.collection.mutable.ArrayStack" class="extype">ArrayStack</span>[String]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A stack used to keep track of the current file we are loading operators from.</p><div class="fullcomment"><div class="comment cmt"><p>A stack used to keep track of the current file we are loading operators from.
-We use a stack here since we might access another file using operators such as inc().
-So this allows us to revert back to our previous file once we finish with an inc() instruction.
+      <p class="shortcomment cmt">A stack used to keep track of the current file we are loading
+operators from.</p><div class="fullcomment"><div class="comment cmt"><p>A stack used to keep track of the current file we are loading
+operators from. We use a stack here to support recursive file reading.
+This allows us to revert back to our previous file once we finish
+with an inc() instruction.
 </p></div></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
