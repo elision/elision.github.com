@@ -12,37 +12,26 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
-        <a title="Go to companion" href="Timeable$.html"><img src="../../../lib/trait_to_object_big.png" /></a>
+        <a title="Go to companion" href="Timeable.html"><img src="../../../lib/object_to_trait_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.util" class="extype" href="package.html">util</a></p>
-        <h1><a title="Go to companion" href="Timeable$.html">Timeable</a></h1>
+        <h1><a title="Go to companion" href="Timeable.html">Timeable</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
         <span class="name">Timeable</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Allow a class to implement timing of operations.</p><p>To use this you must implement the <code>reportElapsed</code> method that reports the
-elapsed time, and make sure that the <code>startTimer</code> and <code>stopTimer</code> methods
-are called at the appropriate places.</p><p>Do not use <code>reportElapsed</code> directly.  Implement it, and then invoke
-<code>showElapsed</code> at the appropriate place in your code.  The <code>showElapsed</code>
-method does nothing if timing is disabled, and invokes <code>reportElapsed</code> if
-it is.</p><p>Even when timing is disabled, the elapsed time information is still kept
-by <code>startTimer</code> and <code>stopTimer</code>, and can be checked by <code>getLastTimeMillis</code>,
-<code>getLastTime</code>, or <code>getLastTimeString</code>.
-</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
-        </div><div class="toggleContainer block">
-          <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="ornl.elision.repl.ERepl" class="extype" href="../repl/ERepl.html">ERepl</a>, <a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></div>
         </div></div>
     
 
@@ -70,28 +59,10 @@ by <code>startTimer</code> and <code>stopTimer</code>, and can be checked by <co
 
         
 
-        <div class="values members" id="values">
-              <h3>Abstract Value Members</h3>
-              <ol><li visbl="prt" name="ornl.elision.util.Timeable#reportElapsed" data-isabs="true">
-      <a id="reportElapsed:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">reportElapsed</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The report method.</p><div class="fullcomment"><div class="comment cmt"><p>The report method.  Implement this to generate a report.  Nothing
-is provided; use one of the <code>getLastTime</code> methods to get elapsed time
-data.  This is not intended for multithreaded use.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         <div class="values members" id="values">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -164,6 +135,42 @@ data.  This is not intended for multithreaded use.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Timeable#asTimeString" data-isabs="false">
+      <a id="asTimeString(Long):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asTimeString</span><span class="params">(<span name="millis">millis: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Convert a number of milliseconds into a string of the form:
+<code>MMMM:SS:mmm</code>
+Where <code>MMMM</code> is the elapsed minutes, <code>SS</code> is the elapsed seconds, and
+<code>mmm</code> is the elapsed milliseconds.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a number of milliseconds into a string of the form:
+<code>MMMM:SS:mmm</code>
+Where <code>MMMM</code> is the elapsed minutes, <code>SS</code> is the elapsed seconds, and
+<code>mmm</code> is the elapsed milliseconds.
+</p></div><dl class="paramcmts block"><dt class="param">millis</dt><dd class="cmt"><p>The millisecond count.</p></dd><dt>returns</dt><dd class="cmt"><p>The time string.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Timeable#asTriple" data-isabs="false">
+      <a id="asTriple(Long):(Long, Long, Long)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asTriple</span><span class="params">(<span name="millis">millis: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: (<span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Convert a number of milliseconds into a triple consisting of minutes,
+seconds, and milliseconds.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a number of milliseconds into a triple consisting of minutes,
+seconds, and milliseconds.
+</p></div><dl class="paramcmts block"><dt class="param">millis</dt><dd class="cmt"><p>The millisecond count.</p></dd><dt>returns</dt><dd class="cmt"><p>The triple of minutes, seconds, and milliseconds.
+</p></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -230,65 +237,6 @@ data.  This is not intended for multithreaded use.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#getCumulativeTimeMillis" data-isabs="false">
-      <a id="getCumulativeTimeMillis:Long"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getCumulativeTimeMillis</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Get the total elapsed time across all measured intervals.</p><div class="fullcomment"><div class="comment cmt"><p>Get the total elapsed time across all measured intervals.  This is updated
-at each <code>stopTimer</code> event and is reported in milliseconds.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTime" data-isabs="false">
-      <a id="getLastTime:(Long, Long, Long)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLastTime</span><span class="result">: (<span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Get the most recent duration.</p><div class="fullcomment"><div class="comment cmt"><p>Get the most recent duration.  This is set by <code>stopTimer</code> and is reported
-as a triple of minutes, seconds, and milliseconds.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTimeMillis" data-isabs="false">
-      <a id="getLastTimeMillis:Long"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLastTimeMillis</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Get the most recent duration.</p><div class="fullcomment"><div class="comment cmt"><p>Get the most recent duration.  This is set by <code>stopTimer</code> and is reported
-in milliseconds.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTimeString" data-isabs="false">
-      <a id="getLastTimeString:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLastTimeString</span><span class="result">: String</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Get the most recent duration.</p><div class="fullcomment"><div class="comment cmt"><p>Get the most recent duration.  This is set by <code>stopTimer</code> and is reported
-as a string of the form:
-<code>MMMM:SS:mmm</code>
-Where <code>MMMM</code> is the elapsed minutes, <code>SS</code> is the elapsed seconds, and
-<code>mmm</code> is the elapsed milliseconds.
-</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -349,45 +297,6 @@ Where <code>MMMM</code> is the elapsed minutes, <code>SS</code> is the elapsed s
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#showElapsed" data-isabs="false">
-      <a id="showElapsed:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">showElapsed</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">If timing is enabled, generate a report on the most recent elapsed
-interval measured by <code>startTimer</code>.</p><div class="fullcomment"><div class="comment cmt"><p>If timing is enabled, generate a report on the most recent elapsed
-interval measured by <code>startTimer</code>..<code>stopTimer</code>.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#startTimer" data-isabs="false">
-      <a id="startTimer:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">startTimer</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Start the timer.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#stopTimer" data-isabs="false">
-      <a id="stopTimer:Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stopTimer</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Stop the timer.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -400,66 +309,6 @@ interval measured by <code>startTimer</code>..<code>stopTimer</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#time" data-isabs="false">
-      <a id="time[RV](⇒ RV):RV"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">time</span><span class="tparams">[<span name="RV">RV</span>]</span><span class="params">(<span name="closure">closure: ⇒ RV</span>)</span><span class="result">: RV</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Start the timer for the duration of the given closure's evaluation, and
-then stop it.</p><div class="fullcomment"><div class="comment cmt"><p>Start the timer for the duration of the given closure's evaluation, and
-then stop it.  If timing is not enabled, this still executes the closure.
-</p></div><dl class="paramcmts block"><dt class="param">closure</dt><dd class="cmt"><p>The closure to execute.</p></dd><dt>returns</dt><dd class="cmt"><p>The value generated by the closure.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#time" data-isabs="false">
-      <a id="time(⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">time</span><span class="params">(<span name="closure">closure: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Start the timer for the duration of the given closure's evaluation, and
-then stop it.</p><div class="fullcomment"><div class="comment cmt"><p>Start the timer for the duration of the given closure's evaluation, and
-then stop it.  If timing is not enabled, this still executes the closure.
-</p></div><dl class="paramcmts block"><dt class="param">closure</dt><dd class="cmt"><p>The closure to execute.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#timing" data-isabs="false">
-      <a id="timing:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">timing</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Determine whether timing is enabled.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Timeable#timing_=" data-isabs="false">
-      <a id="timing_=(Boolean):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: timing_$eq">timing_=</span><span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Set whether timing is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Set whether timing is enabled.  This is different from starting and
-stopping the timer.  If timing is not enabled, then starting, stopping,
-and reporting are all ignored.
-</p></div><dl class="paramcmts block"><dt class="param">enable</dt><dd class="cmt"><p>If true, enable timing.  If false, do not.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
