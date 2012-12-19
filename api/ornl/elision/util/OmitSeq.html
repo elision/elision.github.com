@@ -119,6 +119,20 @@ sequence is immutable; these operations return a new sequence.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SeqLike → GenSeqLike</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasOtherHash#otherHashCode" data-isabs="true">
+      <a id="otherHashCode:BigInt"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">otherHashCode</span><span class="result">: BigInt</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">An alternate hash code.</p><div class="fullcomment"><div class="comment cmt"><p>An alternate hash code.  This should be computed in a different manner
+from the usual <code>hashCode</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.HasOtherHash" class="extype" href="HasOtherHash.html">HasOtherHash</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -1365,19 +1379,6 @@ can suffer, approaching linear time.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PartialFunction</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.OmitSeq#otherHashCode" data-isabs="false">
-      <a id="otherHashCode:BigInt"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">otherHashCode</span><span class="result">: <span name="scala.math.BigInt" class="extype">BigInt</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Alternate hash code for an OmitSeq.</p><div class="fullcomment"><div class="comment cmt"><p>Alternate hash code for an OmitSeq.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.OmitSeq" class="extype" href="">OmitSeq</a> → <a name="ornl.elision.util.HasOtherHash" class="extype" href="HasOtherHash.html">HasOtherHash</a></dd></dl></div>
     </li><li visbl="pub" name="scala.collection.SeqLike#padTo" data-isabs="false">
       <a id="padTo[B&gt;:A, That](Int,B)(CanBuildFrom[IndexedSeq[A], B, That]):That"></a>
       <h4 class="signature">
