@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.repl</title>
+          <title>ornl.elision.actors</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -16,7 +16,7 @@
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a></p>
-        <h1>repl</h1>
+        <h1>actors</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,7 +25,7 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <span class="name">repl</span>
+        <span class="name">actors</span>
       </span>
       </h4>
       
@@ -46,51 +46,24 @@
         <div id="allMembers">
         
 
-        <div class="types members" id="types">
-              <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.repl.ERepl" data-isabs="false">
-      <a id="ERepl:ERepl"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="ERepl.html"><span class="name">ERepl</span></a><span class="result"> extends Processor</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide a REPL to experiment with the new term rewriter.</p>
-    </li><li visbl="pub" name="ornl.elision.repl.LineState" data-isabs="false">
-      <a id="LineState:LineState"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="LineState.html"><span class="name">LineState</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Determine the state of the current provided line.</p>
-    </li></ol>
-            </div>
+        
 
         
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.repl.ReplMain" data-isabs="false">
-      <a id="ReplMain:ReplMain"></a>
+              <ol><li visbl="pub" name="ornl.elision.actors.ReplActor" data-isabs="false">
+      <a id="ReplActor:ReplActor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ReplMain$.html"><span class="name">ReplMain</span></a><span class="result"> extends AnyRef</span>
+        <a href="ReplActor$.html"><span class="name">ReplActor</span></a><span class="result"> extends Actor</span>
       </span>
       </h4>
-      <p class="comment cmt">Implement an interface to run the REPL from the prompt.</p>
+      <p class="comment cmt">The REPL's Actor object for communicating with the GUI</p>
     </li></ol>
             </div>
 

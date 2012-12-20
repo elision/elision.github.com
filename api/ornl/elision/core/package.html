@@ -380,6 +380,18 @@ anyone trying to get some work done.</p>
       </span>
       </h4>
       <p class="comment cmt">Provide a floating-point literal value.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Generator" data-isabs="true">
+      <a id="Generator:Generator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Generator.html"><span class="name">Generator</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The general form for a generator.</p>
     </li><li visbl="pub" name="ornl.elision.core.HandHolder" data-isabs="false">
       <a id="HandHolder:HandHolder"></a>
       <h4 class="signature">
@@ -1125,18 +1137,6 @@ a potentially new atom.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.ElisionGenerator" data-isabs="false">
-      <a id="ElisionGenerator:ElisionGenerator"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ElisionGenerator$.html"><span class="name">ElisionGenerator</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Generate the Elision code to create an atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.EmptySeq" data-isabs="false">
       <a id="EmptySeq:EmptySeq"></a>
       <h4 class="signature">
@@ -1185,6 +1185,18 @@ a potentially new atom.</p>
       </span>
       </h4>
       <p class="comment cmt">Companion object specifying the default IEEE 754 platform to use.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Generator" data-isabs="false">
+      <a id="Generator:Generator"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Generator$.html"><span class="name">Generator</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Generate text, in some form, from an Elision atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754Double" data-isabs="false">
       <a id="IEEE754Double:IEEE754Double"></a>
       <h4 class="signature">
@@ -1522,18 +1534,6 @@ been created.</p>
       </span>
       </h4>
       <p class="comment cmt">The SYMBOL type.</p>
-    </li><li visbl="pub" name="ornl.elision.core.ScalaGenerator" data-isabs="false">
-      <a id="ScalaGenerator:ScalaGenerator"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ScalaGenerator$.html"><span class="name">ScalaGenerator</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Generate the Scala code to create an atom.</p>
     </li><li visbl="pub" name="ornl.elision.core.SpecialForm" data-isabs="false">
       <a id="SpecialForm:SpecialForm"></a>
       <h4 class="signature">
@@ -1752,7 +1752,7 @@ replace this with something rational as soon as reasonable.
         <a href="matcher/package.html"><span class="name">matcher</span></a>
       </span>
       </h4>
-      
+      <p class="comment cmt">Provide implementations of specific forms of matching.</p>
     </li><li visbl="pub" name="ornl.elision.core.package#parse" data-isabs="false">
       <a id="parse(String,Context,Boolean,Boolean):Any"></a>
       <h4 class="signature">
@@ -1764,7 +1764,8 @@ replace this with something rational as soon as reasonable.
         <span class="name">parse</span><span class="params">(<span name="str">str: String</span>, <span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="Context.html">Context</a></span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="toggle">toggle: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Attempt to parse the given string and return an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to parse the given string and return an atom.
+      <p class="shortcomment cmt">Attempt to parse the given string and return an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to parse the given string and return an atom.  This uses the
+known executor instance.
 </p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string to parse.</p></dd><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>Whether to trace the parse.</p></dd><dt class="param">toggle</dt><dd class="cmt"><p>Choose whether to use the Parboiled parser (false) or the
                Scala parser combinator parser (true).</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing, which may be None.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>

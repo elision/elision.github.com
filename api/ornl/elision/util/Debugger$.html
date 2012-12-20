@@ -30,7 +30,7 @@
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This is a class for managing and printing debug output during execution
-in a manner that &quot;agrees&quot; with Elision.</p><p>Note: This class uses [ornl.elision.core.Console] to do its work.  Please
+in a manner that &quot;agrees&quot; with Elision.</p><p>Note: This class uses [ornl.elision.util.Console] to do its work.  Please
 do not attempt to use this class to debug <code>Console</code>!</p><p>To use this class set up your debugging modes via <code>setDebugModes</code>, and
 then use <code>debug</code> to print debugging messages.  The first argument is passed
 by name, so you can use this to avoid construction costs by deferring method
@@ -191,6 +191,20 @@ the various debug modes you can enable.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#console" data-isabs="false">
+      <a id="console:ornl.elision.util.PrintConsole.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">console</span><span class="result">: ornl.elision.util.PrintConsole.type</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The console to get debugging output.</p><div class="fullcomment"><div class="comment cmt"><p>The console to get debugging output.  By default this is a simple print
+console.
+</p></div></div>
     </li><li visbl="pub" name="ornl.elision.util.Debugger#debug" data-isabs="false">
       <a id="debug(⇒ String,String,Int):Unit"></a>
       <h4 class="signature">

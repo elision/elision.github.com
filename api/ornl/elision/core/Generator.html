@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.util.ElisionException</title>
+          <title>ornl.elision.core.Generator</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -14,32 +14,28 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <a title="Go to companion" href="ElisionException$.html"><img src="../../../lib/class_to_object_big.png" /></a>
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.util" class="extype" href="package.html">util</a></p>
-        <h1><a title="Go to companion" href="ElisionException$.html">ElisionException</a></h1>
+        <a title="Go to companion" href="Generator$.html"><img src="../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
+        <h1><a title="Go to companion" href="Generator$.html">Generator</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ElisionException</span><span class="result"> extends <span name="java.lang.Exception" class="extype">Exception</span></span>
+        <span class="name">Generator</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Root class for exceptions occurring within Elision.  These may be used
-internally to signal errors, such as during parsing, and do not represent
-critical failure conditions.</p><p>Such an exception should be caught at the top level of a REPL, and the
-message displayed.  For this reason, please choose suitable human-readable
-messages.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The general form for a generator.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="java.lang.Exception" class="extype">Exception</span>, <span name="java.lang.Throwable" class="extype">Throwable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
-          <div class="subClasses hiddenContent"><a name="ornl.elision.core.ArgumentListException" class="extype" href="../core/ArgumentListException.html">ArgumentListException</a>, <a name="ornl.elision.core.BindablePatternException" class="extype" href="../core/BindablePatternException.html">BindablePatternException</a>, <a name="ornl.elision.util.CacheException" class="extype" href="CacheException.html">CacheException</a>, <a name="ornl.elision.core.IdentityRuleException" class="extype" href="../core/IdentityRuleException.html">IdentityRuleException</a>, <a name="ornl.elision.core.IllegalPropertiesSpecification" class="extype" href="../core/IllegalPropertiesSpecification.html">IllegalPropertiesSpecification</a>, <a name="ornl.elision.core.LambdaUnboundedRecursionException" class="extype" href="../core/LambdaUnboundedRecursionException.html">LambdaUnboundedRecursionException</a>, <a name="ornl.elision.core.LambdaVariableMismatchException" class="extype" href="../core/LambdaVariableMismatchException.html">LambdaVariableMismatchException</a>, <a name="ornl.elision.core.LiteralPatternException" class="extype" href="../core/LiteralPatternException.html">LiteralPatternException</a>, <a name="ornl.elision.util.Version.MainException" class="extype" href="Version$$MainException.html">MainException</a>, <a name="ornl.elision.core.NativeHandlerException" class="extype" href="../core/NativeHandlerException.html">NativeHandlerException</a>, <a name="ornl.elision.core.NoSuchRulesetException" class="extype" href="../core/NoSuchRulesetException.html">NoSuchRulesetException</a>, <a name="ornl.elision.core.OperatorDefinitionException" class="extype" href="../core/OperatorDefinitionException.html">OperatorDefinitionException</a>, <a name="ornl.elision.core.OperatorRedefinitionException" class="extype" href="../core/OperatorRedefinitionException.html">OperatorRedefinitionException</a>, <a name="ornl.elision.core.SpecialFormException" class="extype" href="../core/SpecialFormException.html">SpecialFormException</a>, <a name="ornl.elision.parse.SpecialFormException" class="extype" href="../parse/SpecialFormException.html">SpecialFormException</a>, <a name="ornl.elision.core.UndefinedOperatorException" class="extype" href="../core/UndefinedOperatorException.html">UndefinedOperatorException</a></div>
+          <div class="subClasses hiddenContent"><a name="ornl.elision.generators.ElisionGenerator" class="extype" href="../generators/ElisionGenerator$.html">ElisionGenerator</a>, <a name="ornl.elision.generators.ScalaGenerator" class="extype" href="../generators/ScalaGenerator$.html">ScalaGenerator</a></div>
         </div></div>
     
 
@@ -53,7 +49,7 @@ messages.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.util.ElisionException" class="in"><span>ElisionException</span></li><li name="java.lang.Exception" class="in"><span>Exception</span></li><li name="java.lang.Throwable" class="in"><span>Throwable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Generator" class="in"><span>Generator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -65,28 +61,49 @@ messages.
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.util.ElisionException#this" data-isabs="false">
-      <a id="this:ElisionException"></a>
+              <ol><li visbl="pub" name="ornl.elision.core.Generator#this" data-isabs="false">
+      <a id="this:Generator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ElisionException</span><span class="params">(<span name="msg">msg: String</span>)</span>
+        <span class="name">Generator</span><span class="params">()</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>Human-readable message.
-</p></dd></dl></div>
+      
     </li></ol>
             </div>
 
         
 
-        
+        <div class="values members" id="values">
+              <h3>Abstract Value Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.core.Generator#apply" data-isabs="true">
+      <a id="apply(BasicAtom,Appendable,Int):Appendable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span> = <span class="symbol"><span class="name"><a href="../../../java/lang/package.html">new StringBuffer()</a></span></span></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Generate output from an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate output from an atom.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">buf</dt><dd class="cmt"><p>The buffer to get the result.  If not provided, one is
+               created.</p></dd><dt class="param">limit</dt><dd class="cmt"><p>The nesting limit of this atom.  If the limit is zero, then
+               an ellipsis is printed instead of the atom.  Otherwise
+               the limit is decreased for each parenthesized and bracketed
+               pair, until zero is reached.  If the limit is negative,
+               then there is effectively no limit.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable for chaining.
+</p></dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members" id="values">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -147,18 +164,6 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#addSuppressed" data-isabs="false">
-      <a id="addSuppressed(Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addSuppressed</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -210,18 +215,6 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#fillInStackTrace" data-isabs="false">
-      <a id="fillInStackTrace():Throwable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fillInStackTrace</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -237,18 +230,6 @@ messages.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getCause" data-isabs="false">
-      <a id="getCause():Throwable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getCause</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -261,54 +242,6 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getLocalizedMessage" data-isabs="false">
-      <a id="getLocalizedMessage():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLocalizedMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getMessage" data-isabs="false">
-      <a id="getMessage():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getStackTrace" data-isabs="false">
-      <a id="getStackTrace():Array[StackTraceElement]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getSuppressed" data-isabs="false">
-      <a id="getSuppressed():Array[Throwable]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSuppressed</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.Throwable" class="extype">Throwable</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -321,18 +254,6 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#initCause" data-isabs="false">
-      <a id="initCause(Throwable):Throwable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">initCause</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -345,18 +266,6 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.ElisionException#msg" data-isabs="false">
-      <a id="msg:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">msg</span><span class="result">: String</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Human-readable message.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -393,54 +302,6 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
-      <a id="printStackTrace(PrintWriter):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintWriter" class="extype">PrintWriter</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
-      <a id="printStackTrace(PrintStream):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
-      <a id="printStackTrace():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">printStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#setStackTrace" data-isabs="false">
-      <a id="setStackTrace(Array[StackTraceElement]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -453,7 +314,7 @@ messages.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#toString" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -464,7 +325,7 @@ messages.
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -517,13 +378,7 @@ messages.
         </div>
 
         <div id="inheritedMembers">
-        <div name="java.lang.Exception" class="parent">
-              <h3>Inherited from <span name="java.lang.Exception" class="extype">Exception</span></h3>
-            </div><div name="java.lang.Throwable" class="parent">
-              <h3>Inherited from <span name="java.lang.Throwable" class="extype">Throwable</span></h3>
-            </div><div name="java.io.Serializable" class="parent">
-              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="scala.AnyRef" class="parent">
+        <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

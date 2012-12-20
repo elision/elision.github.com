@@ -38,7 +38,7 @@ method.  The REPL provides for command line editing, a persistent history,
 and special operations.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a>, <a name="ornl.elision.parse.HasHistory" class="extype" href="../parse/HasHistory.html">HasHistory</a>, <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a>, <a name="ornl.elision.parse.ToggleableParser" class="extype" href="../parse/ToggleableParser.html">ToggleableParser</a>, <a name="ornl.elision.parse.TraceableParse" class="extype" href="../parse/TraceableParse.html">TraceableParse</a>, <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a>, <a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a>, <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a>, <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a>, <a name="ornl.elision.parse.ToggleableParser" class="extype" href="../parse/ToggleableParser.html">ToggleableParser</a>, <a name="ornl.elision.parse.TraceableParse" class="extype" href="../parse/TraceableParse.html">TraceableParse</a>, <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a>, <a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -52,7 +52,7 @@ and special operations.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.repl.ERepl" class="in"><span>ERepl</span></li><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.parse.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.util.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.parse.ToggleableParser" class="in"><span>ToggleableParser</span></li><li name="ornl.elision.parse.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.Cache" class="in"><span>Cache</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.repl.ERepl" class="in"><span>ERepl</span></li><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.util.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.util.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.parse.ToggleableParser" class="in"><span>ToggleableParser</span></li><li name="ornl.elision.parse.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.Cache" class="in"><span>Cache</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -285,7 +285,7 @@ line to the history, if that is desired.  This is used by the system to
 add informational lines to the history.  The default implementation does
 nothing.
 </p></div><dl class="paramcmts block"><dt class="param">line</dt><dd class="cmt"><p>The line to add to the history.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.parse.HasHistory" class="extype" href="../parse/HasHistory.html">HasHistory</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -592,7 +592,7 @@ at each <code>stopTimer</code> event and is reported in milliseconds.
       </h4>
       <p class="shortcomment cmt">Get a history entry by its index.</p><div class="fullcomment"><div class="comment cmt"><p>Get a history entry by its index.
 </p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>The index of the history item.</p></dd><dt>returns</dt><dd class="cmt"><p>The entry, or <code>None</code> if the index does not exist in the history.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.parse.HasHistory" class="extype" href="../parse/HasHistory.html">HasHistory</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.repl.ERepl#getHistoryFilename" data-isabs="false">
       <a id="getHistoryFilename:String"></a>
       <h4 class="signature">
@@ -607,7 +607,7 @@ at each <code>stopTimer</code> event and is reported in milliseconds.
       <p class="shortcomment cmt">Get the file that holds the persistent history.</p><div class="fullcomment"><div class="comment cmt"><p>Get the file that holds the persistent history.  By default this returns
 the string <code>(no history file)</code>, so you should override this if you have
 a history file.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.parse.HasHistory" class="extype" href="../parse/HasHistory.html">HasHistory</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.repl.ERepl#getHistoryIterator" data-isabs="false">
       <a id="getHistoryIterator:Iterator[String]"></a>
       <h4 class="signature">
@@ -622,7 +622,7 @@ a history file.
       <p class="shortcomment cmt">Get an iterator over the history.</p><div class="fullcomment"><div class="comment cmt"><p>Get an iterator over the history.  By default this returns the empty
 iterator, so override this to return the appropriate iterator if your
 processor supports history.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.parse.HasHistory" class="extype" href="../parse/HasHistory.html">HasHistory</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.repl.ERepl" class="extype" href="">ERepl</a> → <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTime" data-isabs="false">
       <a id="getLastTime:(Long, Long, Long)"></a>
       <h4 class="signature">
@@ -1258,8 +1258,8 @@ base class for all other values.</p><p>By default this method uses the <code>toS
         <div id="inheritedMembers">
         <div name="ornl.elision.parse.Processor" class="parent">
               <h3>Inherited from <a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></h3>
-            </div><div name="ornl.elision.parse.HasHistory" class="parent">
-              <h3>Inherited from <a name="ornl.elision.parse.HasHistory" class="extype" href="../parse/HasHistory.html">HasHistory</a></h3>
+            </div><div name="ornl.elision.util.HasHistory" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></h3>
             </div><div name="ornl.elision.util.Timeable" class="parent">
               <h3>Inherited from <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a></h3>
             </div><div name="ornl.elision.parse.ToggleableParser" class="parent">
