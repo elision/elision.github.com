@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.SymbolicOperator</title>
+          <title>ornl.elision.core.AtomWalker</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -12,25 +12,126 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../../../lib/object_big.png" />
+        <a title="Go to companion" href="AtomWalker$.html"><img src="../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1>SymbolicOperator</h1>
+        <h1><a title="Go to companion" href="AtomWalker$.html">AtomWalker</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">SymbolicOperator</span><span class="result"> extends AnyRef</span>
+        <span class="name">AtomWalker</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Construction and matching of symbolic operators.
-</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Traverse an atom hierarchy.  The traversal is depth-first.  The atom is
+visited, then its type is visited recursively (optionally), then the
+children of the atom are visited.</p><p>The visitor can terminate the traversal by returning <code>false</code>.  This stops
+further traversal.</p><p>To use this, make an instance and specify whether types should be visited.
+Then pass an atom and a visitor to the <code>apply</code> method.  The <code>typ</code> argument
+specifies whether the provided atom is a type (true) or term (false).  This
+is passed to the visitor.</p><h4> Visitors </h4><p>The visitor takes two arguments: the atom to visit and a flag indicating
+whether the provided atom was reached as the type of an atom (true) or
+as a term (false).  The visitor returns true to continue the traversal,
+and false to terminate it.</p><h4> Types </h4><p>Traversal is complicated by the fact that every atom has a type, and the
+type can contain arbitrary atoms.  To make this a little better the visitor
+is provided with a flag that indicates whether the atom is a type or term.
+If true, the atom is the type of another atom.  If false, it is a term.
+Note that children of the type are terms, and their types are types.</p><p>Type traversal is optional.  If disabled, then types are not visited.</p><h4> Handling Recursion </h4><p>The traversal always terminates when <code>^TYPE<code> is reached, and does not
+descend into the LIST(...) type to avoid an infinite recursion.</code></code></p><h4> Caution: Lazy Types </h4><p>Note that exploration will cause lazy types to be generated, and can be
+costly as a result.  To avoid this disable visiting types.</p><h4> Example </h4><p>An example may help.  Given the atom <code>foo(5, 9, bar(21, \</code><code>$</code><code>x:INTEGER.</code><code>$</code><code>x))</code>
+the traversal visits the nodes in the following way, with type visiting
+enabled:</p><pre>
+foo(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
+INTEGER
+^TYPE
+foo:OPREF
+OPREF
+^TYPE
+%AC(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
+LIST(INTEGER)
+^TYPE
+%AC
+^TYPE
+<span class="kw">true</span>
+BOOLEAN
+^TYPE
+<span class="kw">true</span>
+BOOLEAN
+^TYPE
+<span class="num">5</span>
+INTEGER
+^TYPE
+<span class="num">9</span>
+INTEGER
+^TYPE
+bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
+INTEGER
+^TYPE
+bar:OPREF
+OPREF
+^TYPE
+%(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
+LIST(ANY)
+^TYPE
+%
+^TYPE
+<span class="num">21</span>
+INTEGER
+^TYPE
+$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER
+MAP(INTEGER,INTEGER)
+^TYPE
+MAP:OPREF
+OPREF
+^TYPE
+%(INTEGER,INTEGER)
+LIST(^TYPE)
+^TYPE
+%
+^TYPE
+INTEGER
+^TYPE
+INTEGER
+^TYPE
+$`:<span class="num">1</span>`:INTEGER
+INTEGER
+^TYPE
+<span class="kw">true</span>
+BOOLEAN
+^TYPE
+$`:<span class="num">1</span>`:INTEGER
+INTEGER
+^TYPE
+<span class="kw">true</span>
+BOOLEAN
+^TYPE
+</pre><p>Alternately you can visit without types.</p><pre>
+foo(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
+foo:OPREF
+%AC(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
+%AC
+<span class="kw">true</span>
+<span class="kw">true</span>
+<span class="num">5</span>
+<span class="num">9</span>
+bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
+bar:OPREF
+%(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
+%
+<span class="num">21</span>
+$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER
+$`:<span class="num">1</span>`:INTEGER
+<span class="kw">true</span>
+$`:<span class="num">1</span>`:INTEGER
+<span class="kw">true</span>
+</pre><p>The above traversal is explained below.</p><ol class="decimal"><li>Visit <code>foo(...)</code>, an operator application.</li><li>Visit the operator <code>foo:OPREF</code>.</li><li>Visit the argument list <code>%AC(...)</code>, an atom sequence.</li><li>Visit the properties <code>%AC</code>.</li><li>Visit the associative specification <code>true</code>.</li><li>Visit the commutative specification <code>true</code>.</li><li>Visit each of the arguments.  The first is <code>5</code>.</li><li>Visit the second argument <code>9</code>.</li><li>Visit the third argument <code>bar(...)</code>, an operator application.</li><li>Visit the operator <code>bar:OPREF</code>.</li><li>Visit the argument list <code>%(...)</code>, an atom sequence.</li><li>Visit the properties <code>%</code>.</li><li>Visit each of the arguments.  The first is <code>21</code>.</li><li>Visit the second argument, a lambda.</li><li>Visit the lambda variable <code><code><code>$</code></code>:1</code>.</li><li>Visit the lambda variable's guard <code>true</code>.</li><li>Visit the lambda body, consisting of a variable.</li><li>Visit the variable's guard, <code>true</code>.
+</li></ol></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -46,7 +147,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.SymbolicOperator" class="in"><span>SymbolicOperator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.AtomWalker" class="in"><span>AtomWalker</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -56,7 +157,22 @@
 
       <div id="template">
         <div id="allMembers">
-        
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.core.AtomWalker#this" data-isabs="false">
+      <a id="this:AtomWalker"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AtomWalker</span><span class="params">(<span name="withtypes">withtypes: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">withtypes</dt><dd class="cmt"><p>If true, visit types.  If false, do not.</p></dd></dl></div>
+    </li></ol>
+            </div>
 
         
 
@@ -124,53 +240,79 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#LIST" data-isabs="false">
-      <a id="LIST:OperatorRef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">LIST</span><span class="result">: <a name="ornl.elision.core.OperatorRef" class="extype" href="OperatorRef.html">OperatorRef</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The well-known list operator.</p><div class="fullcomment"><div class="comment cmt"><p>The well-known list operator.  This is used to define the type of lists
-such as the atom sequence.  It has type ^TYPE, indicating that it is a
-root type.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#MAP" data-isabs="false">
-      <a id="MAP:OperatorRef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">MAP</span><span class="result">: <a name="ornl.elision.core.OperatorRef" class="extype" href="OperatorRef.html">OperatorRef</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The well-known MAP operator.</p><div class="fullcomment"><div class="comment cmt"><p>The well-known MAP operator.  This is needed to define the types of
-operators, but is not used to define its own type.  The type of the MAP
-operator is ^TYPE, indicating that it is a root type.  We could, with
-great justice, use xx (the cross product) for this operator, but don't.
-This makes the types of operators look more natural when viewed.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean):SymbolicOperator"></a>
+    </li><li visbl="pub" name="ornl.elision.core.AtomWalker#apply" data-isabs="false">
+      <a id="apply(BasicAtom,(BasicAtom, Boolean) ⇒ Boolean,Boolean):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="ddetail">ddetail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></span>
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="visitor">visitor: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="typ">typ: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Make a symbolic operator from the provided parts.</p><div class="fullcomment"><div class="comment cmt"><p>Make a symbolic operator from the provided parts.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt class="param">params</dt><dd class="cmt"><p>The operator parameters.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
-											meta-terms.  This is not advisable, and you should
-											probably leave this with the default value of false.</p></dd><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
+      <p class="shortcomment cmt">Handle visiting an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Handle visiting an atom.  This is where general dispatch occurs to other
+<code>apply</code> methods, and most atoms are handled.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to visit.</p></dd><dt class="param">visitor</dt><dd class="cmt"><p>The visitor.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>Is this atom a type?</p></dd><dt>returns</dt><dd class="cmt"><p>False iff the visitor terminates the traversal.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AtomWalker#apply" data-isabs="false">
+      <a id="apply(SpecialForm,(BasicAtom, Boolean) ⇒ Boolean,Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a></span>, <span name="visitor">visitor: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="typ">typ: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Handle visiting a special form.</p><div class="fullcomment"><div class="comment cmt"><p>Handle visiting a special form.  This is where operators, rules, and
+other special forms are handled.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to visit.</p></dd><dt class="param">visitor</dt><dd class="cmt"><p>The visitor.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>Is this atom a type?</p></dd><dt>returns</dt><dd class="cmt"><p>False iff the visitor terminates the traversal.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AtomWalker#apply" data-isabs="false">
+      <a id="apply(AlgProp,(BasicAtom, Boolean) ⇒ Boolean,Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.AlgProp" class="extype" href="AlgProp.html">AlgProp</a></span>, <span name="visitor">visitor: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="typ">typ: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Handle visiting an algorithmic property node.</p><div class="fullcomment"><div class="comment cmt"><p>Handle visiting an algorithmic property node.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to visit.</p></dd><dt class="param">visitor</dt><dd class="cmt"><p>The visitor.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>Is this atom a type?</p></dd><dt>returns</dt><dd class="cmt"><p>False iff the visitor terminates the traversal.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AtomWalker#apply" data-isabs="false">
+      <a id="apply(ornl.elision.core.Literal[_],(BasicAtom, Boolean) ⇒ Boolean,Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: ornl.elision.core.Literal[_]</span>, <span name="visitor">visitor: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="typ">typ: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Handle visiting a literal.</p><div class="fullcomment"><div class="comment cmt"><p>Handle visiting a literal.  This is where named root types and the type
+universe are handled.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to visit.</p></dd><dt class="param">visitor</dt><dd class="cmt"><p>The visitor.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>Is this atom a type?</p></dd><dt>returns</dt><dd class="cmt"><p>False iff the visitor terminates the traversal.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AtomWalker#apply" data-isabs="false">
+      <a id="apply(Option[BasicAtom],(BasicAtom, Boolean) ⇒ Boolean,Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>, <span name="visitor">visitor: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="typ">typ: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Visit an optional atom.</p><div class="fullcomment"><div class="comment cmt"><p>Visit an optional atom.  If the optional atom is not <code>None</code>, then the
+atom is unwrapped and passed to the visitor.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The optional atom to visit.</p></dd><dt class="param">visitor</dt><dd class="cmt"><p>The visitor.</p></dd><dt>returns</dt><dd class="cmt"><p>False iff the visitor stopped traversal.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -274,20 +416,6 @@ This makes the types of operators look more natural when viewed.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#makeOperatorType" data-isabs="false">
-      <a id="makeOperatorType(AtomSeq,BasicAtom):BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">makeOperatorType</span><span class="params">(<span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Compute an operator type.</p><div class="fullcomment"><div class="comment cmt"><p>Compute an operator type.
-</p></div><dl class="paramcmts block"><dt class="param">params</dt><dd class="cmt"><p>The parameters.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt>returns</dt><dd class="cmt"><p>The type for the operator.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -348,20 +476,6 @@ This makes the types of operators look more natural when viewed.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#unapply" data-isabs="false">
-      <a id="unapply(SymbolicOperator):Some[(String, BasicAtom, AtomSeq)]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unapply</span><span class="params">(<span name="so">so: <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(String, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a>)]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Extract the parts of a symbolic operator.</p><div class="fullcomment"><div class="comment cmt"><p>Extract the parts of a symbolic operator.
-</p></div><dl class="paramcmts block"><dt class="param">so</dt><dd class="cmt"><p>The operator.</p></dd><dt>returns</dt><dd class="cmt"><p>The triple of name, computed type, and parameters.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -407,22 +521,6 @@ This makes the types of operators look more natural when viewed.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#xx" data-isabs="false">
-      <a id="xx:OperatorRef"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">xx</span><span class="result">: <a name="ornl.elision.core.OperatorRef" class="extype" href="OperatorRef.html">OperatorRef</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The well-known cross product operator.</p><div class="fullcomment"><div class="comment cmt"><p>The well-known cross product operator.  This is needed to define the
-types of operators, but is not used to define its own type.  The type
-of the cross product is ANY.  Note that it must be ANY, since it is
-associative.
-</p></div></div>
     </li></ol>
             </div>
 
