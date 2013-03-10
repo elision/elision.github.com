@@ -14,9 +14,9 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <a title="Go to companion" href="TreeSprite$.html"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <img src="../../../../lib/class_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.trees" class="extype" href="package.html">trees</a></p>
-        <h1><a title="Go to companion" href="TreeSprite$.html">TreeSprite</a></h1>
+        <h1>TreeSprite</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -34,6 +34,9 @@ Rather, it represents a tree data structure as a renderable sprite.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="sage2D.sprites.Sprite" class="extype">Sprite</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="ornl.elision.gui.trees.DefaultTreeSprite" class="extype" href="DefaultTreeSprite$.html">DefaultTreeSprite</a>, <a name="ornl.elision.gui.elision.sprites.ElisionTreeSprite" class="extype" href="../elision/sprites/ElisionTreeSprite.html">ElisionTreeSprite</a>, <a name="ornl.elision.gui.elision.sprites.ElisionWelcomeTree" class="extype" href="../elision/sprites/ElisionWelcomeTree$.html">ElisionWelcomeTree</a></div>
         </div></div>
     
 
@@ -67,7 +70,7 @@ Rather, it represents a tree data structure as a renderable sprite.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TreeSprite</span><span class="params">(<span name="x">x: <span name="scala.Double" class="extype">Double</span></span>, <span name="y">y: <span name="scala.Double" class="extype">Double</span></span>, <span name="root">root: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a></span>)</span>
+        <span class="name">TreeSprite</span><span class="params">(<span name="x">x: <span name="scala.Double" class="extype">Double</span></span>, <span name="y">y: <span name="scala.Double" class="extype">Double</span></span>)</span>
       </span>
       </h4>
       
@@ -164,6 +167,42 @@ Rather, it represents a tree data structure as a renderable sprite.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#borderColor" data-isabs="false">
+      <a id="borderColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">borderColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#boxColor" data-isabs="false">
+      <a id="boxColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boxColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">expandable node colors: Dash blue</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#camera" data-isabs="false">
+      <a id="camera:Camera"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">camera</span><span class="result">: <span name="sage2D.Camera" class="extype">Camera</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A reference to a Camera object.</p><div class="fullcomment"><div class="comment cmt"><p>A reference to a Camera object. This is used by NodeSprite only for clipping since the camera's transform is already applied before calling the NodeSprite's render method.</p></div></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -191,38 +230,30 @@ Rather, it represents a tree data structure as a renderable sprite.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#computeYOffsets" data-isabs="false">
-      <a id="computeYOffsets(NodeSprite):(Double, Double)"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#comBorderColor" data-isabs="false">
+      <a id="comBorderColor:Color"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">computeYOffsets</span><span class="params">(<span name="node">node: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a></span>)</span><span class="result">: (<span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>)</span>
+        <span class="name">comBorderColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Recursively determines what the correct y-0ffsets for the nodes should be after decompression.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively determines what the correct y-0ffsets for the nodes should be after decompression.
-These y-offsets will help the tree to look nice when expanded.
-They are stored internally in the tree's NodeSprites.</p></div><dl class="paramcmts block"><dt class="param">node</dt><dd class="cmt"><p>The node for whose children we are currently computing the y-offsets for.
-</p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#countLeaves" data-isabs="false">
-      <a id="countLeaves(NodeSprite):Int"></a>
+      
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#comBoxColor" data-isabs="false">
+      <a id="comBoxColor:Color"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">countLeaves</span><span class="params">(<span name="node">node: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a></span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span class="name">comBoxColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Recursively counts the number of leaf nodes among node's descendants.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively counts the number of leaf nodes among node's descendants.
-A node is counted as a leaf node as far as this method is concerned if it is decompressed
-and either it has no children or all its children are compressed.
-This method recursively computes the number of leaves for all decompressed nodes in the tree and stores them
-inside the nodes for easy reuse.</p></div><dl class="paramcmts block"><dt class="param">node</dt><dd class="cmt"><p>The node whose leaf descendants we are currently counting</p></dd><dt>returns</dt><dd class="cmt"><p>The number of node's leaf descendants
-</p></dd></dl></div>
+      <p class="shortcomment cmt">comment node color: Twilight lavender</p>
     </li><li visbl="pub" name="sage2D.sprites.Sprite#curTrans" data-isabs="false">
       <a id="curTrans:AffineTransform"></a>
       <h4 class="signature">
@@ -235,6 +266,54 @@ inside the nodes for easy reuse.</p></div><dl class="paramcmts block"><dt class=
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#debugBorderColor" data-isabs="false">
+      <a id="debugBorderColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debugBorderColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#debugBoxColor" data-isabs="false">
+      <a id="debugBoxColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debugBoxColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">debug node colors: Apple orange</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#defX" data-isabs="false">
+      <a id="defX:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defX</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The base x-offset for child nodes from their parent node</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#defY" data-isabs="false">
+      <a id="defY:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defY</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The minimum y-offset between two sibling nodes</p>
     </li><li visbl="pub" name="sage2D.sprites.Sprite#destroy" data-isabs="false">
       <a id="destroy:Unit"></a>
       <h4 class="signature">
@@ -335,6 +414,30 @@ inside the nodes for easy reuse.</p></div><dl class="paramcmts block"><dt class=
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#font" data-isabs="false">
+      <a id="font:Font"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">font</span><span class="result">: <span name="java.awt.Font" class="extype">Font</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A constant-width font used in the NodeSprites' labels.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#formatter" data-isabs="false">
+      <a id="formatter:SyntaxFormatter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">formatter</span><span class="result">: <a name="ornl.elision.syntax.SyntaxFormatter" class="extype" href="../../syntax/SyntaxFormatter.html">SyntaxFormatter</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">syntax formatter (default one only does line-wrapping).</p>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -356,6 +459,18 @@ inside the nodes for easy reuse.</p></div><dl class="paramcmts block"><dt class=
       </span>
       <span class="symbol">
         <span class="name">getCollisionBox</span><span class="result">: <span name="java.awt.geom.Rectangle2D" class="extype">Rectangle2D</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="sage2D.sprites.Sprite#getScreenPosition" data-isabs="false">
+      <a id="getScreenPosition:Point2D"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getScreenPosition</span><span class="result">: <span name="java.awt.geom.Point2D" class="extype">Point2D</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
@@ -419,6 +534,43 @@ inside the nodes for easy reuse.</p></div><dl class="paramcmts block"><dt class=
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#leafBoxColor" data-isabs="false">
+      <a id="leafBoxColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">leafBoxColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">leaf node colors: Rare grey</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#makeRoot" data-isabs="false">
+      <a id="makeRoot(String,Boolean):NodeSprite"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeRoot</span><span class="params">(<span name="term">term: String = <span class="symbol">&quot;Root&quot;</span></span>, <span name="isComment">isComment: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Creates (or replaces) the root node for this tree.</p><div class="fullcomment"><div class="comment cmt"><p>Creates (or replaces) the root node for this tree.</p></div><dl class="paramcmts block"><dt class="param">term</dt><dd class="cmt"><p>The root's label</p></dd><dt class="param">isComment</dt><dd class="cmt"><p>If true, the root's label won't use syntax coloring.</p></dd><dt>returns</dt><dd class="cmt"><p>The root node.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#maxTermLength" data-isabs="false">
+      <a id="maxTermLength:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxTermLength</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The maximum length of a line of text in a node's label.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -484,13 +636,13 @@ inside the nodes for easy reuse.</p></div><dl class="paramcmts block"><dt class=
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">var</span>
       </span>
       <span class="symbol">
         <span class="name">root</span><span class="result">: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="NodeSprite.html">NodeSprite</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">reference to root node.</p>
     </li><li visbl="pub" name="sage2D.sprites.Sprite#rotate" data-isabs="false">
       <a id="rotate(Double):Unit"></a>
       <h4 class="signature">
@@ -592,6 +744,42 @@ If the mouse is not over a node, nothing happens.</p></div><dl class="paramcmts 
 and the immediate children of its ancestor nodes are decompressed out to depth n.
 Non-immediate children of node and its ancestors are compressed.</p></div><dl class="paramcmts block"><dt class="param">node</dt><dd class="cmt"><p>The node being selected.</p></dd><dt class="param">n</dt><dd class="cmt"><p>The decompression depth for expanding the tree relative to node.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#selectedBorderColor" data-isabs="false">
+      <a id="selectedBorderColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selectedBorderColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#selectedBoxColor" data-isabs="false">
+      <a id="selectedBoxColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selectedBoxColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">selected node colors : Flutter yellow</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#selectedLeafBoxColor" data-isabs="false">
+      <a id="selectedLeafBoxColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selectedLeafBoxColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#selectedNode" data-isabs="false">
       <a id="selectedNode:NodeSprite"></a>
       <h4 class="signature">
@@ -628,6 +816,30 @@ Non-immediate children of node and its ancestors are compressed.</p></div><dl cl
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#syntaxColoring" data-isabs="false">
+      <a id="syntaxColoring:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">syntaxColoring</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If false, syntax coloring is disabled for the entire tree.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite#textColor" data-isabs="false">
+      <a id="textColor:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">textColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">black, just black.</p>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">

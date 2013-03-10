@@ -374,6 +374,21 @@ may be unspecified.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>IterableLike → Equals</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#cleanRulesets" data-isabs="false">
+      <a id="cleanRulesets:Option[BitSet]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cleanRulesets</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The rulesets with respect to which this atom is clean.</p><div class="fullcomment"><div class="comment cmt"><p>The rulesets with respect to which this atom is clean. If this is
+not None the atom has already been rewritten with some set of
+rulesets. If None, the atom has never been rewritten.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -2602,6 +2617,20 @@ correctly type subsequences.</p></div><dl class="paramcmts block"><dt class="par
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableLike → FilterMonadic</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AtomSeq#xatoms" data-isabs="false">
+      <a id="xatoms:IndexedSeq[BasicAtom]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xatoms</span><span class="result">: <span name="scala.collection.IndexedSeq" class="extype">IndexedSeq</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Determine whether we have to sort the atoms.</p><div class="fullcomment"><div class="comment cmt"><p>Determine whether we have to sort the atoms.  If we know the list is
+commutative, then we have to sort it.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></dd></dl></div>
     </li><li visbl="pub" name="scala.collection.IterableLike#zip" data-isabs="false">
       <a id="zip[A1&gt;:BasicAtom, B, That](GenIterable[B])(CanBuildFrom[IndexedSeq[BasicAtom], (A1, B), That]):That"></a>
       <h4 class="signature">

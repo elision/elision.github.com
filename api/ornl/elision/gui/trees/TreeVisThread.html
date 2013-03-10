@@ -29,7 +29,9 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A swing worker thread to run the Tree Visualization interaction logic and rendering in so that the EDT doesn't get tied up during large tree renderings.</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A worker thread for running the Tree Visualization interaction logic and
+rendering, so that the EDT doesn't get tied up during large tree renderings.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="java.lang.Thread" class="extype">Thread</span>, <span name="java.lang.Runnable" class="extype">Runnable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -65,7 +67,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TreeVisThread</span><span class="params">(<span name="treeVis">treeVis: <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="TreeVisPanel.html">TreeVisPanel</a></span>, <span name="gt">gt: <span name="sage2D.GameTimer" class="extype">GameTimer</span></span>)</span>
+        <span class="name">TreeVisThread</span><span class="params">(<span name="treeVis">treeVis: <a name="ornl.elision.gui.trees.TreeVisLevel" class="extype" href="TreeVisLevel.html">TreeVisLevel</a></span>, <span name="gt">gt: <span name="sage2D.GameTimer" class="extype">GameTimer</span></span>)</span>
       </span>
       </h4>
       
@@ -138,18 +140,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#_continue" data-isabs="false">
-      <a id="_continue:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_continue</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -432,6 +422,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Thread</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#isReady" data-isabs="false">
+      <a id="isReady:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isReady</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="java.lang.Thread#join" data-isabs="false">
       <a id="join():Unit"></a>
       <h4 class="signature">
@@ -524,7 +526,7 @@
         <span class="name">render</span><span class="result">: <span name="java.awt.Image" class="extype">Image</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Prepares an image containing the current frame rendering for the tree visualization.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#run" data-isabs="false">
       <a id="run():Unit"></a>
       <h4 class="signature">
@@ -634,14 +636,14 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Thread → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread#treeVis" data-isabs="false">
-      <a id="treeVis:TreeVisPanel"></a>
+      <a id="treeVis:TreeVisLevel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">treeVis</span><span class="result">: <a name="ornl.elision.gui.trees.TreeVisPanel" class="extype" href="TreeVisPanel.html">TreeVisPanel</a></span>
+        <span class="name">treeVis</span><span class="result">: <a name="ornl.elision.gui.trees.TreeVisLevel" class="extype" href="TreeVisLevel.html">TreeVisLevel</a></span>
       </span>
       </h4>
       

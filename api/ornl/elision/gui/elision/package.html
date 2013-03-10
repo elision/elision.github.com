@@ -48,19 +48,7 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.elision.EliAboutDialog" data-isabs="false">
-      <a id="EliAboutDialog:EliAboutDialog"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="EliAboutDialog.html"><span class="name">EliAboutDialog</span></a><span class="result"> extends Dialog</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A dialog window containing version information for the Elision GUI</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliAtomPropsPane" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.gui.elision.EliAtomPropsPane" data-isabs="false">
       <a id="EliAtomPropsPane:EliAtomPropsPane"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -72,30 +60,6 @@
       </span>
       </h4>
       <p class="comment cmt">A scrolling pane for displaying an Elision atom's internal properties.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliFileFilter" data-isabs="false">
-      <a id="EliFileFilter:EliFileFilter"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="EliFileFilter.html"><span class="name">EliFileFilter</span></a><span class="result"> extends FileFilter</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A FileFilter that only accepts .</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliHelpDialog" data-isabs="false">
-      <a id="EliHelpDialog:EliHelpDialog"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="EliHelpDialog.html"><span class="name">EliHelpDialog</span></a><span class="result"> extends Dialog</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A dialog window containing help docs for the Elision GUI</p>
     </li><li visbl="pub" name="ornl.elision.gui.elision.EliParseStringPane" data-isabs="false">
       <a id="EliParseStringPane:EliParseStringPane"></a>
       <h4 class="signature">
@@ -120,30 +84,42 @@
       </span>
       </h4>
       <p class="comment cmt">A thread to run the Elision REPL in</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisPanel" data-isabs="false">
-      <a id="EliTreeVisPanel:EliTreeVisPanel"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeBuilder" data-isabs="false">
+      <a id="EliTreeBuilder:EliTreeBuilder"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="EliTreeVisPanel.html"><span class="name">EliTreeVisPanel</span></a><span class="result"> extends TreeVisPanel</span>
+        <a href="EliTreeBuilder.html"><span class="name">EliTreeBuilder</span></a><span class="result"> extends Thread</span>
       </span>
       </h4>
-      <p class="comment cmt">An extension of TreeVisPanel that handles some Elision-specific functions.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.RulePredDialog" data-isabs="false">
-      <a id="RulePredDialog:RulePredDialog"></a>
+      <p class="comment cmt">A factory class used to contruct TreeSprites.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeBuilderActor" data-isabs="false">
+      <a id="EliTreeBuilderActor:EliTreeBuilderActor"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="RulePredDialog.html"><span class="name">RulePredDialog</span></a><span class="result"> extends Dialog</span>
+        <a href="EliTreeBuilderActor.html"><span class="name">EliTreeBuilderActor</span></a><span class="result"> extends Actor</span>
       </span>
       </h4>
-      
+      <p class="comment cmt">An actor object for doing concurrent operations with a EliTreeBuilder.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.elision.EliTreeVisLevel" data-isabs="false">
+      <a id="EliTreeVisLevel:EliTreeVisLevel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="EliTreeVisLevel.html"><span class="name">EliTreeVisLevel</span></a><span class="result"> extends TreeVisLevel</span>
+      </span>
+      </h4>
+      <p class="comment cmt">An extension of TreeVisLevel that handles some Elision-specific functions.</p>
     </li></ol>
             </div>
 
@@ -151,19 +127,7 @@
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.elision.EliMenu" data-isabs="false">
-      <a id="EliMenu:EliMenu"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="EliMenu$.html"><span class="name">EliMenu</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The menu for Elision-mode-specific things.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes" data-isabs="false">
       <a id="EliRegexes:EliRegexes"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -187,18 +151,18 @@
       </span>
       </h4>
       <p class="comment cmt">Web color constants for Elision syntax highlighting in Eva.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.HelpDialog" data-isabs="false">
-      <a id="HelpDialog:HelpDialog"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.elision.sprites" data-isabs="false">
+      <a id="sprites:sprites"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a href="HelpDialog$.html"><span class="name">HelpDialog</span></a><span class="result"> extends AnyRef</span>
+        <a href="sprites/package.html"><span class="name">sprites</span></a>
       </span>
       </h4>
-      <p class="comment cmt">Contains static text data used by EliHelpDialog</p>
+      
     </li></ol>
             </div>
 

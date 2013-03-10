@@ -29,7 +29,7 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This is the Eva's main window.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This is the Eva's main application  window.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="scala.swing.SimpleSwingApplication" class="extype">SimpleSwingApplication</span>, <span name="scala.swing.SwingApplication" class="extype">SwingApplication</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -136,18 +136,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#bgColor" data-isabs="false">
-      <a id="bgColor:Color"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bgColor</span><span class="result">: <span name="java.awt.Color" class="extype">Color</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The universal background color for the GUI's panels</p>
     </li><li visbl="pub" name="ornl.elision.gui.mainGUI#changeMode" data-isabs="false">
       <a id="changeMode(String):Unit"></a>
       <h4 class="signature">
@@ -175,18 +163,6 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#config" data-isabs="false">
-      <a id="config:EvaConfig"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">config</span><span class="result">: <a name="ornl.elision.gui.EvaConfig" class="extype" href="EvaConfig.html">EvaConfig</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Eva's configuration settings</p>
     </li><li visbl="pub" name="ornl.elision.gui.mainGUI#consolePanel" data-isabs="false">
       <a id="consolePanel:ConsolePanel"></a>
       <h4 class="signature">
@@ -195,7 +171,7 @@
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">consolePanel</span><span class="result">: <a name="ornl.elision.gui.ConsolePanel" class="extype" href="ConsolePanel.html">ConsolePanel</a></span>
+        <span class="name">consolePanel</span><span class="result">: <a name="ornl.elision.gui.console.ConsolePanel" class="extype" href="console/ConsolePanel.html">ConsolePanel</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The panel housing the onboard console</p>
@@ -222,7 +198,7 @@
         <span class="name">defaultTitle</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The default title bar text.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -247,6 +223,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#evaMenuBar" data-isabs="false">
+      <a id="evaMenuBar:EvaMenuBar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evaMenuBar</span><span class="result">: <a name="ornl.elision.gui.menus.EvaMenuBar" class="extype" href="menus/EvaMenuBar.html">EvaMenuBar</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The menu bar</p>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -286,18 +274,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.mainGUI#guiMenuBar" data-isabs="false">
-      <a id="guiMenuBar:GuiMenuBar"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">guiMenuBar</span><span class="result">: <a name="ornl.elision.gui.GuiMenuBar" class="extype" href="GuiMenuBar.html">GuiMenuBar</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The menu bar</p>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -359,6 +335,7 @@
       </h4>
       <p class="shortcomment cmt">This string controls what mode Eva is currently running in.</p><div class="fullcomment"><div class="comment cmt"><p>This string controls what mode Eva is currently running in.
 Currently supported modes are:
+Welcome
 Elision
 </p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
@@ -518,14 +495,14 @@ Elision
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.mainGUI" class="extype" href="">mainGUI</a> → SimpleSwingApplication</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.mainGUI#visPanel" data-isabs="false">
-      <a id="visPanel:GamePanel"></a>
+      <a id="visPanel:EvaVisPanel"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">visPanel</span><span class="result">: <span name="sage2D.GamePanel" class="extype">GamePanel</span></span>
+        <span class="name">visPanel</span><span class="result">: <a name="ornl.elision.gui.EvaVisPanel" class="extype" href="EvaVisPanel.html">EvaVisPanel</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The panel housing Eva's current visualization.</p>

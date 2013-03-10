@@ -14,9 +14,9 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <a title="Go to companion" href="NodeSprite$.html"><img src="../../../../lib/class_to_object_big.png" /></a>
+        <img src="../../../../lib/class_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.trees" class="extype" href="package.html">trees</a></p>
-        <h1><a title="Go to companion" href="NodeSprite$.html">NodeSprite</a></h1>
+        <h1>NodeSprite</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -30,8 +30,8 @@
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A sprite used to represent a rewritten term node in a TreeSprite.
-The x,y coordinates for NodeSprites are relative to their parent's x,y coordinates. In the case
-of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleContainer block">
+The x,y coordinates for NodeSprites are relative to their parent's x,y
+coordinates. In the case of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="sage2D.sprites.Sprite" class="extype">Sprite</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -67,10 +67,12 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">NodeSprite</span><span class="params">(<span name="term">term: String = <span class="symbol">&quot;Unnamed Node&quot;</span></span>, <span name="parent">parent: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="">NodeSprite</a> = <span class="symbol">null</span></span>, <span name="isComment">isComment: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span>
+        <span class="name">NodeSprite</span><span class="params">(<span name="term">term: String = <span class="symbol">&quot;Unnamed Node&quot;</span></span>, <span name="tree">tree: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>, <span name="parent">parent: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="">NodeSprite</a> = <span class="symbol">null</span></span>, <span name="isComment">isComment: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">term</dt><dd class="cmt"><p>A string to be used as this node's label. This will be the parse string of the atom this node represents.</p></dd><dt class="param">parent</dt><dd class="cmt"><p>This node's parent NodeSprite.</p></dd><dt class="param">isComment</dt><dd class="cmt"><p>Flag indicates that this node is just a documentation string and doesn't actually represent an atom.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">term</dt><dd class="cmt"><p>A string to be used as this node's label. This will be the
+               parse string of the atom this node represents.</p></dd><dt class="param">tree</dt><dd class="cmt"><p>The TreeSprite this node belongs to.</p></dd><dt class="param">parent</dt><dd class="cmt"><p>This node's parent NodeSprite.</p></dd><dt class="param">isComment</dt><dd class="cmt"><p>Flag indicates that this node is just a documentation
+                  string and doesn't actually represent an atom.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -141,6 +143,67 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#_adjustedLeafCount" data-isabs="false">
+      <a id="_adjustedLeafCount:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_adjustedLeafCount</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This node's subtree's adjusted number of expanded leaf nodes.</p><div class="fullcomment"><div class="comment cmt"><p>This node's subtree's adjusted number of expanded leaf nodes.
+This isn't the actual number of leaf nodes and is really just used for
+computing the layout of the nodes in the subtree.
+</p></div></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#_computeYOffsets" data-isabs="false">
+      <a id="_computeYOffsets:(Double, Double)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_computeYOffsets</span><span class="result">: (<span name="scala.Double" class="extype">Double</span>, <span name="scala.Double" class="extype">Double</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Recursively computes what the world coordinates for all nodes in this node's
+expanded subtree.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively computes what the world coordinates for all nodes in this node's
+expanded subtree. These coordinates are stored in their nodes for later use.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The upper and lower bounding y-coordinates of this node's
+           expanded subtree.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#_countAdjustedLeaves" data-isabs="false">
+      <a id="_countAdjustedLeaves:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_countAdjustedLeaves</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Counts the number of expanded leaves in this node's subtree for the
+purpose of determining layout metrics.</p><div class="fullcomment"><div class="comment cmt"><p>Counts the number of expanded leaves in this node's subtree for the
+purpose of determining layout metrics. Multilined nodes may count
+as more than 1 leaf.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>An adjusted number of &quot;leaves&quot; in this node's expanded subtree.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#_excessHeight" data-isabs="false">
+      <a id="_excessHeight:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_excessHeight</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the excess height of this node in pixels beyond what it would
+normally be if its label were only 1 line.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#addChild" data-isabs="false">
       <a id="addChild(NodeSprite):Unit"></a>
       <h4 class="signature">
@@ -154,18 +217,6 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </h4>
       <p class="shortcomment cmt">Adds a child node to this NodeSprite.</p><div class="fullcomment"><div class="comment cmt"><p>Adds a child node to this NodeSprite.</p></div><dl class="paramcmts block"><dt class="param">node</dt><dd class="cmt"><p>The child being added to this node.
 </p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#allLines" data-isabs="false">
-      <a id="allLines:Array[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">allLines</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[String]</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="sage2D.sprites.Sprite#angle" data-isabs="false">
       <a id="angle:Double"></a>
       <h4 class="signature">
@@ -178,6 +229,18 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#apply" data-isabs="false">
+      <a id="apply(Int):NodeSprite"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="i">i: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="">NodeSprite</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Apply method returns this node's child at index i.</p>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -202,6 +265,30 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <p class="shortcomment cmt">The node's renderable box shape.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#boxHeight" data-isabs="false">
+      <a id="boxHeight:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boxHeight</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The node's height</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#boxWidth" data-isabs="false">
+      <a id="boxWidth:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boxWidth</span><span class="result">: <span name="scala.Double" class="extype">Double</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The node's width</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#children" data-isabs="false">
       <a id="children:ArrayBuffer[NodeSprite]"></a>
       <h4 class="signature">
@@ -241,6 +328,45 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#computeSubtreeMetrics" data-isabs="false">
+      <a id="computeSubtreeMetrics:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">computeSubtreeMetrics</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Computes the layout metrics for this subtree.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#containsScreenPt" data-isabs="false">
+      <a id="containsScreenPt(Point2D):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">containsScreenPt</span><span class="params">(<span name="screenPt">screenPt: <span name="java.awt.geom.Point2D" class="extype">Point2D</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Checks to see if the bounding box of this node contains a screen coordinate.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#countLeaves" data-isabs="false">
+      <a id="countLeaves:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countLeaves</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Counts the number of expanded leaves in this node's subtree.</p><div class="fullcomment"><div class="comment cmt"><p>Counts the number of expanded leaves in this node's subtree.
+This is recursively computed for all nodes in the subtree and the leaf
+counts are stored in the numLeaves variable of each node for later use.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The number of &quot;leaves&quot; in this node's expanded subtree.
+</p></dd></dl></div>
     </li><li visbl="pub" name="sage2D.sprites.Sprite#curTrans" data-isabs="false">
       <a id="curTrans:AffineTransform"></a>
       <h4 class="signature">
@@ -278,6 +404,18 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </h4>
       <p class="shortcomment cmt">Draws this node and recursively calls its decompressed children to be rendered.</p><div class="fullcomment"><div class="comment cmt"><p>Draws this node and recursively calls its decompressed children to be rendered.</p></div><dl class="paramcmts block"><dt class="param">g</dt><dd class="cmt"><p>The graphics context this node is being rendered on.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="">NodeSprite</a> → Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#drawThis" data-isabs="false">
+      <a id="drawThis(Graphics2D):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">drawThis</span><span class="params">(<span name="g">g: <span name="java.awt.Graphics2D" class="extype">Graphics2D</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Draws this node.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -302,18 +440,6 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#excessHeight" data-isabs="false">
-      <a id="excessHeight:Int"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">excessHeight</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Returns the excess height of this node in pixels beyond what it would normally be if its label were only 1 line.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#expansion" data-isabs="false">
       <a id="expansion:Double"></a>
       <h4 class="signature">
@@ -365,6 +491,18 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#formattedString" data-isabs="false">
+      <a id="formattedString:SyntaxFormattedString"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">formattedString</span><span class="result">: <a name="ornl.elision.syntax.SyntaxFormattedString" class="extype" href="../../syntax/SyntaxFormattedString.html">SyntaxFormattedString</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">data for syntax highlighting and formatting</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#getChildPosition" data-isabs="false">
       <a id="getChildPosition(Int):Point2D"></a>
       <h4 class="signature">
@@ -376,7 +514,7 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">getChildPosition</span><span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.awt.geom.Point2D" class="extype">Point2D</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Obtains the position of a child node relative to this node.</p><div class="fullcomment"><div class="comment cmt"><p>Obtains the position of a child node relative to this node.</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>the index of the child whose position we need.</p></dd><dt>returns</dt><dd class="cmt"><p>the child node's position relative to its parent.
+      <p class="shortcomment cmt">Obtains the expanded position of a child node relative to this node.</p><div class="fullcomment"><div class="comment cmt"><p>Obtains the expanded position of a child node relative to this node.</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>the index of the child whose position we need.</p></dd><dt>returns</dt><dd class="cmt"><p>the child node's position relative to its parent.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
@@ -401,7 +539,7 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">getCollisionBox</span><span class="result">: <span name="java.awt.geom.Rectangle2D" class="extype">Rectangle2D</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Returns the rectangle representing this node's bounding box in world coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the rectangle representing this node's bounding box in world coordinates.
+      <p class="shortcomment cmt"> Returns the rectangle representing this node's bounding box in world coordinates.</p><div class="fullcomment"><div class="comment cmt"><p> Returns the rectangle representing this node's bounding box in world coordinates.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="">NodeSprite</a> → Sprite</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#getLongestSibling" data-isabs="false">
       <a id="getLongestSibling:Double"></a>
@@ -416,6 +554,30 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </h4>
       <p class="shortcomment cmt">Gets the width of the longest sibling's box.</p><div class="fullcomment"><div class="comment cmt"><p>Gets the width of the longest sibling's box.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the length of this node's parent's longest child.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#getScreenBox" data-isabs="false">
+      <a id="getScreenBox:Rectangle2D"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getScreenBox</span><span class="result">: <span name="java.awt.geom.Rectangle2D" class="extype">Rectangle2D</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Returns the rectangle of this node's bounding box in screen coordinates.</p>
+    </li><li visbl="pub" name="sage2D.sprites.Sprite#getScreenPosition" data-isabs="false">
+      <a id="getScreenPosition:Point2D"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getScreenPosition</span><span class="result">: <span name="java.awt.geom.Point2D" class="extype">Point2D</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#getWorldPosition" data-isabs="false">
       <a id="getWorldPosition:Point2D"></a>
       <h4 class="signature">
@@ -464,7 +626,8 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">isComment</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Flag indicates that this node is just a documentation string and doesn't actually represent an atom.</p>
+      <p class="shortcomment cmt">Flag indicates that this node is just a documentation
+                  string and doesn't actually represent an atom.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#isCompressed" data-isabs="false">
       <a id="isCompressed:Boolean"></a>
       <h4 class="signature">
@@ -549,18 +712,21 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Sprite</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#longestLine" data-isabs="false">
-      <a id="longestLine:String"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#makeChild" data-isabs="false">
+      <a id="makeChild(String,Boolean):NodeSprite"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">var</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">longestLine</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+        <span class="name">makeChild</span><span class="params">(<span name="term">term: String = <span class="symbol">&quot;child node&quot;</span></span>, <span name="isComment">isComment: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <a name="ornl.elision.gui.trees.NodeSprite" class="extype" href="">NodeSprite</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The longest line of text in this node's label.</p>
+      <p class="shortcomment cmt">Produces a child node for this NodeSprite that is appended to its
+children list.</p><div class="fullcomment"><div class="comment cmt"><p>Produces a child node for this NodeSprite that is appended to its
+children list.</p></div><dl class="paramcmts block"><dt class="param">term</dt><dd class="cmt"><p>The term contained by the child node.</p></dd><dt class="param">isComment</dt><dd class="cmt"><p>true if the child node's term will not be syntax colored.</p></dd><dt>returns</dt><dd class="cmt"><p>The new child node.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -608,7 +774,7 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">numLeaves</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">This node's current number of leaf nodes (any decompressed descendant node that either has no children or whose children are compressed counts as a leaf node)</p>
+      <p class="shortcomment cmt">The number of leaves in this node's currently expanded subtree.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#offsetY" data-isabs="false">
       <a id="offsetY:Double"></a>
       <h4 class="signature">
@@ -776,7 +942,9 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">subTreeLowerY</span><span class="result">: <span name="scala.Double" class="extype">Double</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The lower y-boundary of this node's subtree in world coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>The lower y-boundary of this node's subtree in world coordinates. Used for efficient mouse collisions with the tree's nodes.</p></div></div>
+      <p class="shortcomment cmt">The lower y-boundary of this node's subtree in world coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>The lower y-boundary of this node's subtree in world coordinates.
+Used for efficient mouse collisions with the tree's nodes.
+</p></div></div>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#subTreeUpperY" data-isabs="false">
       <a id="subTreeUpperY:Double"></a>
       <h4 class="signature">
@@ -788,7 +956,9 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">subTreeUpperY</span><span class="result">: <span name="scala.Double" class="extype">Double</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The upper y-boundary of this node's subtree in world coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>The upper y-boundary of this node's subtree in world coordinates. Used for efficient mouse collisions with the tree's nodes.</p></div></div>
+      <p class="shortcomment cmt">The upper y-boundary of this node's subtree in world coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>The upper y-boundary of this node's subtree in world coordinates.
+Used for efficient mouse collisions with the tree's nodes.
+</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -801,18 +971,6 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#syntaxColoring" data-isabs="false">
-      <a id="syntaxColoring:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">syntaxColoring</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Flag for drawing the node's label with syntax coloring.</p>
     </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#term" data-isabs="false">
       <a id="term:String"></a>
       <h4 class="signature">
@@ -824,19 +982,8 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
         <span class="name">term</span><span class="result">: String</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A string to be used as this node's label.</p><div class="fullcomment"><div class="comment cmt"><p>A string to be used as this node's label. This will be the parse string of the atom this node represents.</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#termLines" data-isabs="false">
-      <a id="termLines:ArrayBuffer[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">termLines</span><span class="result">: <span name="scala.collection.mutable.ArrayBuffer" class="extype">ArrayBuffer</span>[String]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">An ArrayBuffer containing the lines of text in this node's label</p>
+      <p class="shortcomment cmt">A string to be used as this node's label.</p><div class="fullcomment"><div class="comment cmt"><p>A string to be used as this node's label. This will be the
+               parse string of the atom this node represents.</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
@@ -849,6 +996,18 @@ of a TreeSprite's root node, this should be 0,0.</p></div><div class="toggleCont
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite#tree" data-isabs="false">
+      <a id="tree:TreeSprite"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tree</span><span class="result">: <a name="ornl.elision.gui.trees.TreeSprite" class="extype" href="TreeSprite.html">TreeSprite</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The TreeSprite this node belongs to.</p>
     </li><li visbl="pub" name="sage2D.sprites.Sprite#updateTransform" data-isabs="false">
       <a id="updateTransform:Unit"></a>
       <h4 class="signature">

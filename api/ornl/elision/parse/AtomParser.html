@@ -25,14 +25,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">AtomParser</span><span class="result"> extends <span name="org.parboiled.scala.Parser" class="extype">Parser</span> with <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></span>
+        <span class="name">AtomParser</span><span class="result"> extends <span name="org.parboiled.scala.Parser" class="extype">Parser</span> with <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a> with <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></span>
       </span>
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A parser to parse a single atom.</p><p>TODO Remove the use of toggle and prefer a configuration option.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a>, <span name="org.parboiled.scala.Parser" class="extype">Parser</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a>, <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a>, <span name="org.parboiled.scala.Parser" class="extype">Parser</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -46,7 +46,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.AtomParser" class="in"><span>AtomParser</span></li><li name="ornl.elision.core.Fickle" class="in"><span>Fickle</span></li><li name="org.parboiled.scala.Parser" class="in"><span>Parser</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.parse.AtomParser" class="in"><span>AtomParser</span></li><li name="ornl.elision.core.Fickle" class="in"><span>Fickle</span></li><li name="ornl.elision.parse.AbstractParser" class="in"><span>AbstractParser</span></li><li name="org.parboiled.scala.Parser" class="in"><span>Parser</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -575,14 +575,14 @@ commutativity, etc., is inferred at this point.
       </h4>
       <p class="shortcomment cmt">Parse a lambda expression.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#ParsedLiteral" data-isabs="false">
-      <a id="ParsedLiteral:Rule1[Product with Serializable with AstNode]"></a>
+      <a id="ParsedLiteral:Rule1[Product with AstNode with Serializable]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ParsedLiteral</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span> with <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
+        <span class="name">ParsedLiteral</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[<span name="scala.Product" class="extype">Product</span> with <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> with <span name="scala.Serializable" class="extype">Serializable</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a literal symbol or a literal string.</p>
@@ -719,6 +719,18 @@ commutativity, etc., is inferred at this point.
       </span>
       </h4>
       <p class="shortcomment cmt">Parse a &quot;normal&quot; non-escaped character that is part of a symbol.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser#VarName" data-isabs="false">
+      <a id="VarName:Rule1[(String, Boolean)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VarName</span><span class="result">: <span name="org.parboiled.scala.rules.Rule1" class="extype">Rule1</span>[(String, <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Parse a variable name and determine if this is a by-name variable.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#WS" data-isabs="false">
       <a id="WS:Rule0"></a>
       <h4 class="signature">
@@ -1237,12 +1249,12 @@ commutativity, etc., is inferred at this point.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parseAtoms</span><span class="params">(<span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>)</span><span class="result">: <a name="ornl.elision.parse.AtomParser.Presult" class="extype" href="AtomParser$$Presult.html">Presult</a></span>
+        <span class="name">parseAtoms</span><span class="params">(<span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>)</span><span class="result">: <a name="ornl.elision.parse.Presult" class="extype" href="Presult.html">Presult</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Entry point to parse all atoms from the given source.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point to parse all atoms from the given source.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The parsing result.
-</p></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser" class="extype" href="">AtomParser</a> → <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser#parseAtoms" data-isabs="false">
       <a id="parseAtoms(String):Presult"></a>
       <h4 class="signature">
@@ -1251,12 +1263,12 @@ commutativity, etc., is inferred at this point.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parseAtoms</span><span class="params">(<span name="line">line: String</span>)</span><span class="result">: <a name="ornl.elision.parse.AtomParser.Presult" class="extype" href="AtomParser$$Presult.html">Presult</a></span>
+        <span class="name">parseAtoms</span><span class="params">(<span name="line">line: String</span>)</span><span class="result">: <a name="ornl.elision.parse.Presult" class="extype" href="Presult.html">Presult</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Entry point to parse all atoms from the given string.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point to parse all atoms from the given string.
 </p></div><dl class="paramcmts block"><dt class="param">line</dt><dd class="cmt"><p>The string to parse.</p></dd><dt>returns</dt><dd class="cmt"><p>The parsing result.
-</p></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser" class="extype" href="">AtomParser</a> → <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a></dd></dl></div>
     </li><li visbl="pub" name="org.parboiled.scala.Parser#push" data-isabs="false">
       <a id="push[A, B, C](⇒ A,⇒ B,⇒ C):Rule3[A, B, C]"></a>
       <h4 class="signature">
@@ -1685,6 +1697,8 @@ site in the examples.</p></div><dl class="paramcmts block"><dt class="param">str
         <div id="inheritedMembers">
         <div name="ornl.elision.core.Fickle" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></h3>
+            </div><div name="ornl.elision.parse.AbstractParser" class="parent">
+              <h3>Inherited from <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a></h3>
             </div><div name="org.parboiled.scala.Parser" class="parent">
               <h3>Inherited from <span name="org.parboiled.scala.Parser" class="extype">Parser</span></h3>
             </div><div name="scala.AnyRef" class="parent">

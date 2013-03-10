@@ -127,6 +127,30 @@ details.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_incCacheCounter" data-isabs="false">
+      <a id="_incCacheCounter(((Int, BigInt), BitSet)):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_incCacheCounter</span><span class="params">(<span name="key">key: ((<span name="scala.Int" class="extype">Int</span>, BigInt), <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>)</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">safely increments the counter for a key in _cacheCounter.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_incNormalCounter" data-isabs="false">
+      <a id="_incNormalCounter(((Int, BigInt), BitSet)):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_incNormalCounter</span><span class="params">(<span name="key">key: ((<span name="scala.Int" class="extype">Int</span>, BigInt), <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>)</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">safely increments the counter for a key in _normalCounter.</p>
     </li><li visbl="prt" name="ornl.elision.core.Memo#_offlinecache" data-isabs="false">
       <a id="_offlinecache:String"></a>
       <h4 class="signature">
@@ -139,6 +163,102 @@ details.
       </span>
       </h4>
       <p class="shortcomment cmt">Figure out the location to store the cache.</p><div class="fullcomment"><div class="comment cmt"><p>Figure out the location to store the cache.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyCache" data-isabs="false">
+      <a id="_replacementPolicyCache:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyCache</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implementation of a replacement policy for _cache.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyCacheFIFO" data-isabs="false">
+      <a id="_replacementPolicyCacheFIFO:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyCacheFIFO</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyCacheLFU" data-isabs="false">
+      <a id="_replacementPolicyCacheLFU:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyCacheLFU</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyCacheLRU" data-isabs="false">
+      <a id="_replacementPolicyCacheLRU:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyCacheLRU</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyNormal" data-isabs="false">
+      <a id="_replacementPolicyNormal:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyNormal</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Implementation of a replacement policy for _normal.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyNormalFIFO" data-isabs="false">
+      <a id="_replacementPolicyNormalFIFO:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyNormalFIFO</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyNormalLFU" data-isabs="false">
+      <a id="_replacementPolicyNormalLFU:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyNormalLFU</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#_replacementPolicyNormalLRU" data-isabs="false">
+      <a id="_replacementPolicyNormalLRU:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_replacementPolicyNormalLRU</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -151,6 +271,18 @@ details.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#clear" data-isabs="false">
+      <a id="clear:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clear</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -246,6 +378,42 @@ details.
       <p class="shortcomment cmt">Get information about the cache and its use.</p><div class="fullcomment"><div class="comment cmt"><p>Get information about the cache and its use.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Number of hits, number of misses, and size of online cache.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#get_FIFO" data-isabs="false">
+      <a id="get_FIFO(BasicAtom,BitSet):Option[(BasicAtom, Boolean)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get_FIFO</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#get_LFU" data-isabs="false">
+      <a id="get_LFU(BasicAtom,BitSet):Option[(BasicAtom, Boolean)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get_LFU</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#get_old" data-isabs="false">
+      <a id="get_old(BasicAtom,BitSet):Option[(BasicAtom, Boolean)]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get_old</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -320,6 +488,42 @@ details.
       <p class="shortcomment cmt">Put something in the cache.</p><div class="fullcomment"><div class="comment cmt"><p>Put something in the cache.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The unrewritten atom.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets used to rewrite.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The final rewritten atom.</p></dd><dt class="param">level</dt><dd class="cmt"><p>The lowest level of the rewrite.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Memo#put_FIFO" data-isabs="false">
+      <a id="put_FIFO(BasicAtom,BitSet,BasicAtom,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">put_FIFO</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>, <span name="value">value: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="level">level: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#put_LFU" data-isabs="false">
+      <a id="put_LFU(BasicAtom,BitSet,BasicAtom,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">put_LFU</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>, <span name="value">value: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="level">level: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="ornl.elision.core.Memo#put_old" data-isabs="false">
+      <a id="put_old(BasicAtom,BitSet,BasicAtom,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">put_old</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rulesets">rulesets: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>, <span name="value">value: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="level">level: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core.Memo#showStats" data-isabs="false">
       <a id="showStats:Unit"></a>
       <h4 class="signature">

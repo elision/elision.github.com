@@ -31,7 +31,7 @@
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Eva's welcome mode visualization. All it does is display the Eva logo and visualize a quadtree structure for demonstrating collision detections between sprites.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="sage2D.Level" class="extype">Level</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="sage2D.Level" class="extype">Level</span>, <span name="scala.swing.Publisher" class="extype">Publisher</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -45,7 +45,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.gui.welcome.WelcomePanel" class="in"><span>WelcomePanel</span></li><li name="sage2D.Level" class="in"><span>Level</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.gui.welcome.WelcomePanel" class="in"><span>WelcomePanel</span></li><li name="sage2D.Level" class="in"><span>Level</span></li><li name="scala.swing.Publisher" class="in"><span>Publisher</span></li><li name="scala.swing.Reactor" class="in"><span>Reactor</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -189,6 +189,18 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Reactor#deafTo" data-isabs="false">
+      <a id="deafTo(Publisher*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deafTo</span><span class="params">(<span name="ps">ps: <span name="scala.swing.Publisher" class="extype">Publisher</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -312,6 +324,30 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Level</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Reactor#listenTo" data-isabs="false">
+      <a id="listenTo(Publisher*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listenTo</span><span class="params">(<span name="ps">ps: <span name="scala.swing.Publisher" class="extype">Publisher</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Publisher#listeners" data-isabs="false">
+      <a id="listeners:RefSet[Reaction] { val underlying: scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]] }"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listeners</span><span class="result">: <span name="scala.swing.RefSet" class="extype">RefSet</span>[Reaction] { val underlying: scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]] }</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Publisher</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.welcome.WelcomePanel#loadData" data-isabs="false">
       <a id="loadData:Unit"></a>
       <h4 class="signature">
@@ -396,6 +432,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Level</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Publisher#publish" data-isabs="false">
+      <a id="publish(Event):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">publish</span><span class="params">(<span name="e">e: <span name="scala.swing.event.Event" class="extype">Event</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Publisher</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.welcome.WelcomePanel#quadSprite" data-isabs="false">
       <a id="quadSprite:QuadTreeSprite"></a>
       <h4 class="signature">
@@ -408,6 +456,18 @@
       </span>
       </h4>
       <p class="shortcomment cmt">A renderable wrapper for sage2D's quadtree.</p>
+    </li><li visbl="pub" name="scala.swing.Reactor#reactions" data-isabs="false">
+      <a id="reactions:Reactions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reactions</span><span class="result">: <span name="scala.swing.Reactions" class="extype">Reactions</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.gui.welcome.WelcomePanel#render" data-isabs="false">
       <a id="render(Graphics2D):Unit"></a>
       <h4 class="signature">
@@ -498,6 +558,10 @@
         <div id="inheritedMembers">
         <div name="sage2D.Level" class="parent">
               <h3>Inherited from <span name="sage2D.Level" class="extype">Level</span></h3>
+            </div><div name="scala.swing.Publisher" class="parent">
+              <h3>Inherited from <span name="scala.swing.Publisher" class="extype">Publisher</span></h3>
+            </div><div name="scala.swing.Reactor" class="parent">
+              <h3>Inherited from <span name="scala.swing.Reactor" class="extype">Reactor</span></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

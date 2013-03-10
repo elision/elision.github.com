@@ -48,7 +48,31 @@
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.parse.AtomParser" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.parse.AST" data-isabs="true">
+      <a id="AST:AST[TYPE]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AST.html"><span class="name">AST</span></a><span class="tparams">[<span name="TYPE">+TYPE &lt;: BasicAtom</span>]</span><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for abstract syntax tree nodes.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.AbstractParser" data-isabs="true">
+      <a id="AbstractParser:AbstractParser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractParser.html"><span class="name">AbstractParser</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">This serves to unify the various parsers currently in Elision.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser" data-isabs="false">
       <a id="AtomParser:AtomParser"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -56,10 +80,34 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="AtomParser.html"><span class="name">AtomParser</span></a><span class="result"> extends Parser with Fickle</span>
+        <a href="AtomParser.html"><span class="name">AtomParser</span></a><span class="result"> extends Parser with AbstractParser with Fickle</span>
       </span>
       </h4>
       <p class="comment cmt">A parser to parse a single atom.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.ElisionParser" data-isabs="false">
+      <a id="ElisionParser:ElisionParser"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ElisionParser.html"><span class="name">ElisionParser</span></a><span class="result"> extends Parser with AbstractParser</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Implement a parser for Elision atoms.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.Failure" data-isabs="false">
+      <a id="Failure:Failure"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Failure.html"><span class="name">Failure</span></a><span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The parse failed.</p>
     </li><li visbl="pub" name="ornl.elision.parse.ParseCombinators" data-isabs="false">
       <a id="ParseCombinators:ParseCombinators"></a>
       <h4 class="signature">
@@ -72,6 +120,18 @@
       </span>
       </h4>
       
+    </li><li visbl="pub" name="ornl.elision.parse.Presult" data-isabs="true">
+      <a id="Presult:Presult"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Presult.html"><span class="name">Presult</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A parse result.</p>
     </li><li visbl="pub" name="ornl.elision.parse.Processor" data-isabs="false">
       <a id="Processor:Processor"></a>
       <h4 class="signature">
@@ -96,6 +156,18 @@
       </span>
       </h4>
       <p class="comment cmt">A special form was incorrectly formatted.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.Success" data-isabs="false">
+      <a id="Success:Success"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Success.html"><span class="name">Success</span></a><span class="params">(<span name="nodes">nodes: List[BA]</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The parse was successful.</p>
     </li><li visbl="pub" name="ornl.elision.parse.ToggleableParser" data-isabs="true">
       <a id="ToggleableParser:ToggleableParser"></a>
       <h4 class="signature">
@@ -129,7 +201,19 @@ runtime.</p>
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.parse.AtomParser" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.parse.AST" data-isabs="false">
+      <a id="AST:AST"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AST$.html"><span class="name">AST</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Create abstract syntax tree nodes.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser" data-isabs="false">
       <a id="AtomParser:AtomParser"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -166,6 +250,18 @@ supporting functions.</p>
       </span>
       </h4>
       <p class="comment cmt">Supporting methods and classes for the <code>Processor</code> class.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.ProcessorControl" data-isabs="false">
+      <a id="ProcessorControl:ProcessorControl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ProcessorControl$.html"><span class="name">ProcessorControl</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Manage the default parser kind to use.</p>
     </li></ol>
             </div>
 

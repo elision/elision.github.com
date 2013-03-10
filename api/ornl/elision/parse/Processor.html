@@ -351,6 +351,33 @@ unrecoverable error.</p><div class="fullcomment"><div class="comment cmt"><p>Sav
 unrecoverable error.
 </p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>A human-readable message.</p></dd><dt class="param">th</dt><dd class="cmt"><p>An optional throwable.
 </p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#crashRoot" data-isabs="false">
+      <a id="crashRoot:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">crashRoot</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Determine if root execution stops when an error occurs.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#crashRoot_=" data-isabs="false">
+      <a id="crashRoot_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: crashRoot_$eq">crashRoot_=</span><span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify whether to stop root execution on errors.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to stop root execution on errors.
+</p></div><dl class="paramcmts block"><dt class="param">enable</dt><dd class="cmt"><p>If true, stop root execution if an error occurs.
+               If false, do not.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#declareProperty" data-isabs="false">
       <a id="declareProperty[TYPE](String,String,TYPE,(PropertyManager) ⇒ Unit):Unit"></a>
       <h4 class="signature">
@@ -579,6 +606,34 @@ as a string of the form:
 Where <code>MMMM</code> is the elapsed minutes, <code>SS</code> is the elapsed seconds, and
 <code>mmm</code> is the elapsed milliseconds.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasHistory#getNextHistoryEntry" data-isabs="false">
+      <a id="getNextHistoryEntry:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNextHistoryEntry</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Moves the history to the next entry and returns that entry.</p><div class="fullcomment"><div class="comment cmt"><p>Moves the history to the next entry and returns that entry.
+The default implementation returns None.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasHistory#getPreviousHistoryEntry" data-isabs="false">
+      <a id="getPreviousHistoryEntry:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPreviousHistoryEntry</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Moves the history to the previous entry and returns that entry.</p><div class="fullcomment"><div class="comment cmt"><p>Moves the history to the previous entry and returns that entry.
+The default implementation returns None.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getProperties" data-isabs="false">
       <a id="getProperties:List[(String, String, Any)]"></a>
       <h4 class="signature">
@@ -807,6 +862,22 @@ queue, so it will be processed before any other currently registered
 handlers.
 </p></div><dl class="paramcmts block"><dt class="param">handler</dt><dd class="cmt"><p>The handler to add.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasHistory#replaceHistoryLine" data-isabs="false">
+      <a id="replaceHistoryLine(Int,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replaceHistoryLine</span><span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>, <span name="line">line: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Replace an existing line in the history.</p><div class="fullcomment"><div class="comment cmt"><p>Replace an existing line in the history.  If the line does not exist,
+nothing should be done.  This is an optional operation; the default
+implementation does nothing.
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>The index of the history item.</p></dd><dt class="param">line</dt><dd class="cmt"><p>The line to replace the history item.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#reportElapsed" data-isabs="false">
       <a id="reportElapsed:Unit"></a>
       <h4 class="signature">
@@ -834,6 +905,21 @@ data.  This is not intended for multithreaded use.
       </span>
       </h4>
       <p class="shortcomment cmt">Saves a context checkpoint.</p>
+    </li><li visbl="pub" name="ornl.elision.parse.Processor#setParser" data-isabs="false">
+      <a id="setParser(Symbol):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setParser</span><span class="params">(<span name="kind">kind: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Set the parser.</p><div class="fullcomment"><div class="comment cmt"><p>Set the parser.
+</p></div><dl class="paramcmts block"><dt class="param">kind</dt><dd class="cmt"><p>The kind of parser to use.  Must be one of the known
+             values.  At present that is <code>old</code>, <code>combinator</code>, and <code>new</code>.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#setProperty" data-isabs="false">
       <a id="setProperty[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
@@ -1012,7 +1098,7 @@ and reporting are all ignored.
         <span class="name" title="gt4s: toggle_$eq">toggle_=</span><span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Specify whether to trace the parser.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to trace the parser.
+      <p class="shortcomment cmt">Specify whether to toggle the parser.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to toggle the parser.
 </p></div><dl class="paramcmts block"><dt class="param">enable</dt><dd class="cmt"><p>If true, trace the parser.  If false, do not.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="">Processor</a> → <a name="ornl.elision.parse.ToggleableParser" class="extype" href="ToggleableParser.html">ToggleableParser</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#trace" data-isabs="false">

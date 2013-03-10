@@ -33,7 +33,7 @@
 </p></div><dl class="paramcmts block"><dt class="param">left</dt><dd class="cmt"><p>The left atom.</p></dd><dt class="param">right</dt><dd class="cmt"><p>THe right atom.
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -47,7 +47,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.MapPairNode" class="in"><span>MapPairNode</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.MapPairNode" class="in"><span>MapPairNode</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="ornl.elision.parse.AST" class="in"><span>AST</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -256,6 +256,19 @@
       </h4>
       <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The generated atom.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AstNode#interpret" data-isabs="false">
+      <a id="interpret(Context):BasicAtom"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpret</span><span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt>returns</dt><dd class="cmt"><p>The generated atom.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> → <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -480,6 +493,8 @@
               <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
             </div><div name="ornl.elision.parse.AtomParser.AstNode" class="parent">
               <h3>Inherited from <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></h3>
+            </div><div name="ornl.elision.parse.AST" class="parent">
+              <h3>Inherited from <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

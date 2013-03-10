@@ -118,7 +118,7 @@ the parse.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="AtomParser$$AstNode.html"><span class="name">AstNode</span></a><span class="result"> extends AnyRef</span>
+        <a href="AtomParser$$AstNode.html"><span class="name">AstNode</span></a><span class="result"> extends AST[BasicAtom]</span>
       </span>
       </h4>
       <p class="comment cmt">An abstract syntax tree node resulting from parsing an atom.</p>
@@ -158,18 +158,6 @@ the parse.</p>
       </span>
       </h4>
       <p class="comment cmt">Commutative property.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.Failure" data-isabs="false">
-      <a id="Failure:Failure"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="AtomParser$$Failure.html"><span class="name">Failure</span></a><span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The parse failed.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.FloatNode" data-isabs="false">
       <a id="FloatNode:FloatNode"></a>
       <h4 class="signature">
@@ -279,18 +267,6 @@ the parse.</p>
       </span>
       </h4>
       <p class="comment cmt">A node representing a &quot;naked&quot; operator.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.Presult" data-isabs="true">
-      <a id="Presult:Presult"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">sealed abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="AtomParser$$Presult.html"><span class="name">Presult</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A parse result.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.PropertyNode" data-isabs="true">
       <a id="PropertyNode:PropertyNode"></a>
       <h4 class="signature">
@@ -363,18 +339,6 @@ the parse.</p>
       </span>
       </h4>
       <p class="comment cmt">A node representing a string literal.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.Success" data-isabs="false">
-      <a id="Success:Success"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="AtomParser$$Success.html"><span class="name">Success</span></a><span class="params">(<span name="nodes">nodes: List[AstNode]</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">The parse was successful.</p>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.SymbolLiteralNode" data-isabs="false">
       <a id="SymbolLiteralNode:SymbolLiteralNode"></a>
       <h4 class="signature">

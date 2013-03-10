@@ -72,10 +72,10 @@ deferred until the atom is rewritten.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MetaVariable</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="name">name: String</span>, <span name="guard">guard: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> = <span class="symbol">Literal.TRUE</span></span>, <span name="labels">labels: Set[String] = <span name="scala.this.Predef.Set.apply[String]()" class="defval">...</span></span>)</span>
+        <span class="name">MetaVariable</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="name">name: String</span>, <span name="guard">guard: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> = <span class="symbol">Literal.TRUE</span></span>, <span name="labels">labels: Set[String] = <span name="scala.this.Predef.Set.apply[String]()" class="defval">...</span></span>, <span name="byName">byName: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The variable type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">guard</dt><dd class="cmt"><p>The variable's guard.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The variable type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">guard</dt><dd class="cmt"><p>The variable's guard.  Default is true.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.  Default is none.</p></dd><dt class="param">byName</dt><dd class="cmt"><p>If true, this is a &quot;by name&quot; variable.  Default is false.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -175,6 +175,21 @@ guard is true, then the new bindings are returned.  If it is false, then
 a <a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a> instance is returned.
 </p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>The atom to which the variable is to be bound.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Other bindings that must be honored.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="Variable.html">Variable</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#cleanRulesets" data-isabs="false">
+      <a id="cleanRulesets:Option[BitSet]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cleanRulesets</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The rulesets with respect to which this atom is clean.</p><div class="fullcomment"><div class="comment cmt"><p>The rulesets with respect to which this atom is clean. If this is
+not None the atom has already been rewritten with some set of
+rulesets. If None, the atom has never been rewritten.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">

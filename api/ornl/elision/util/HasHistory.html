@@ -268,6 +268,34 @@ a history file.
 iterator, so override this to return the appropriate iterator if your
 processor supports history.
 </p></div></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasHistory#getNextHistoryEntry" data-isabs="false">
+      <a id="getNextHistoryEntry:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getNextHistoryEntry</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Moves the history to the next entry and returns that entry.</p><div class="fullcomment"><div class="comment cmt"><p>Moves the history to the next entry and returns that entry.
+The default implementation returns None.
+</p></div></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasHistory#getPreviousHistoryEntry" data-isabs="false">
+      <a id="getPreviousHistoryEntry:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getPreviousHistoryEntry</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Moves the history to the previous entry and returns that entry.</p><div class="fullcomment"><div class="comment cmt"><p>Moves the history to the previous entry and returns that entry.
+The default implementation returns None.
+</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -328,6 +356,22 @@ processor supports history.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.HasHistory#replaceHistoryLine" data-isabs="false">
+      <a id="replaceHistoryLine(Int,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replaceHistoryLine</span><span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>, <span name="line">line: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Replace an existing line in the history.</p><div class="fullcomment"><div class="comment cmt"><p>Replace an existing line in the history.  If the line does not exist,
+nothing should be done.  This is an optional operation; the default
+implementation does nothing.
+</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>The index of the history item.</p></dd><dt class="param">line</dt><dd class="cmt"><p>The line to replace the history item.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">

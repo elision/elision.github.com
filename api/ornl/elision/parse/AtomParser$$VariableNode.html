@@ -32,7 +32,7 @@
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A node representing a variable reference.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="AtomParser$$MetaVariableNode.html">MetaVariableNode</a></div>
@@ -49,7 +49,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.VariableNode" class="in"><span>VariableNode</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.VariableNode" class="in"><span>VariableNode</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="ornl.elision.parse.AST" class="in"><span>AST</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -69,10 +69,10 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">VariableNode</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>, <span name="name">name: String</span>, <span name="grd">grd: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>, <span name="labels">labels: Set[String]</span>)</span>
+        <span class="name">VariableNode</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>, <span name="name">name: String</span>, <span name="grd">grd: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>, <span name="labels">labels: Set[String]</span>, <span name="byName">byName: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels associated with the variable.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.  Default is none.</p></dd><dt class="param">byName</dt><dd class="cmt"><p>If true, this is a &quot;by name&quot; variable.  Default is false.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -155,6 +155,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#byName" data-isabs="false">
+      <a id="byName:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">byName</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If true, this is a &quot;by name&quot; variable.</p><div class="fullcomment"><div class="comment cmt"><p>If true, this is a &quot;by name&quot; variable.  Default is false.
+</p></div></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -258,6 +271,19 @@
       </h4>
       <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The generated atom.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="">VariableNode</a> → <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AstNode#interpret" data-isabs="false">
+      <a id="interpret(Context):BasicAtom"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpret</span><span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt>returns</dt><dd class="cmt"><p>The generated atom.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> → <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -281,7 +307,7 @@
         <span class="name">labels</span><span class="result">: Set[String]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Labels associated with the variable.</p>
+      <p class="shortcomment cmt">Labels for this variable.</p><div class="fullcomment"><div class="comment cmt"><p>Labels for this variable.  Default is none.</p></div></div>
     </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#name" data-isabs="false">
       <a id="name:String"></a>
       <h4 class="signature">
@@ -420,6 +446,8 @@
         <div id="inheritedMembers">
         <div name="ornl.elision.parse.AtomParser.AstNode" class="parent">
               <h3>Inherited from <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></h3>
+            </div><div name="ornl.elision.parse.AST" class="parent">
+              <h3>Inherited from <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

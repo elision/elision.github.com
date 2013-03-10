@@ -125,18 +125,18 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.MetaVariable#apply" data-isabs="false">
-      <a id="apply(BasicAtom,String,BasicAtom,Set[String]):MetaVariable"></a>
+      <a id="apply(BasicAtom,String,BasicAtom,Set[String],Boolean):MetaVariable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="name">name: String</span>, <span name="guard">guard: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> = <span class="symbol"><span class="name"><a href="Literal$.html">Literal.TRUE</a></span></span></span>, <span name="labels">labels: Set[String] = <span class="symbol">Set[String]()</span></span>)</span><span class="result">: <a name="ornl.elision.core.MetaVariable" class="extype" href="MetaVariable.html">MetaVariable</a></span>
+        <span class="name">apply</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="name">name: String</span>, <span name="guard">guard: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> = <span class="symbol"><span class="name"><a href="Literal$.html">Literal.TRUE</a></span></span></span>, <span name="labels">labels: Set[String] = <span class="symbol">Set[String]()</span></span>, <span name="byName">byName: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="ornl.elision.core.MetaVariable" class="extype" href="MetaVariable.html">MetaVariable</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a new metavariable instance.</p><div class="fullcomment"><div class="comment cmt"><p>Make a new metavariable instance.
-</p></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The variable type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">guard</dt><dd class="cmt"><p>The variable's guard.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.
+</p></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The variable type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">guard</dt><dd class="cmt"><p>The variable's guard.  Default is true.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.  Default is none.</p></dd><dt class="param">byName</dt><dd class="cmt"><p>If true, this is a &quot;by name&quot; variable.  Default is false.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -301,18 +301,18 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.MetaVariable#unapply" data-isabs="false">
-      <a id="unapply(MetaVariable):Some[(BasicAtom, String, BasicAtom, Set[String])]"></a>
+      <a id="unapply(MetaVariable):Some[(BasicAtom, String, BasicAtom, Set[String], Boolean)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unapply</span><span class="params">(<span name="vx">vx: <a name="ornl.elision.core.MetaVariable" class="extype" href="MetaVariable.html">MetaVariable</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, String, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, Set[String])]</span>
+        <span class="name">unapply</span><span class="params">(<span name="vx">vx: <a name="ornl.elision.core.MetaVariable" class="extype" href="MetaVariable.html">MetaVariable</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, String, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, Set[String], <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Extract the parts of a metavariable.</p><div class="fullcomment"><div class="comment cmt"><p>Extract the parts of a metavariable.
-</p></div><dl class="paramcmts block"><dt class="param">vx</dt><dd class="cmt"><p>The variable.</p></dd><dt>returns</dt><dd class="cmt"><p>The type, name, guard, and labels.
+</p></div><dl class="paramcmts block"><dt class="param">vx</dt><dd class="cmt"><p>The variable.</p></dd><dt>returns</dt><dd class="cmt"><p>The type, name, guard, labels, and by-name status.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>

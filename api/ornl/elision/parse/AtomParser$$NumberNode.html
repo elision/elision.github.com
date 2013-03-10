@@ -32,7 +32,7 @@
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Root of all numeric abstract syntax tree nodes.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="ornl.elision.parse.AtomParser.FloatNode" class="extype" href="AtomParser$$FloatNode.html">FloatNode</a>, <a name="ornl.elision.parse.AtomParser.SignedIntegerNode" class="extype" href="AtomParser$$SignedIntegerNode.html">SignedIntegerNode</a>, <a name="ornl.elision.parse.AtomParser.UnsignedIntegerNode" class="extype" href="AtomParser$$UnsignedIntegerNode.html">UnsignedIntegerNode</a></div>
@@ -49,7 +49,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.NumberNode" class="in"><span>NumberNode</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.NumberNode" class="in"><span>NumberNode</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="ornl.elision.parse.AST" class="in"><span>AST</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -262,6 +262,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AstNode#interpret" data-isabs="false">
+      <a id="interpret(Context):BasicAtom"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpret</span><span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt>returns</dt><dd class="cmt"><p>The generated atom.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> → <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -388,6 +401,8 @@
         <div id="inheritedMembers">
         <div name="ornl.elision.parse.AtomParser.AstNode" class="parent">
               <h3>Inherited from <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></h3>
+            </div><div name="ornl.elision.parse.AST" class="parent">
+              <h3>Inherited from <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

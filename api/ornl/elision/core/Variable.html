@@ -33,17 +33,26 @@
 valid symbol.  So the following are valid variables:
 - <code>$</code><code>x</code>
 - <code>$</code><code>Fred51_2</code>
-- <code>$`1`</code></p><h4> Guards </h4><p>A variable is allowed to have a guard.  The guard is substituted before the
+- <code>$`1`</code></p><p>It is also possible to construct a &quot;by name&quot; variable.  This is a variable
+that has an implicit guard (in addition to any other guards it may have)
+that restricts the variable to only matching itself.  That is, the by-name
+variable FOO matches only the variable FOO, and not anything else.  This
+is denoted by enclosing the variable name in quotation marks.
+- <code>$</code><code>&quot;</code><code>FOO</code><code>&quot;</code>
+By-name variables otherwise behave as synonyms for the variable itself, so
+if you directly bind <code>$</code><code>&quot;FOO&quot;</code> to 17, you have actually bound <code>$</code><code>FOO</code>
+to 17.</p><h4> Guards </h4><p>A variable is allowed to have a guard.  The guard is substituted before the
 variable is bound, and must evaluate to <code>true</code> to allow the binding to take
 place.</p><p>In fact, the variable &quot;guard&quot; is more.  The guard is specified as an atom
 in curly braces after the variable name and before any type information.
-For proposed binding of variable <code>$</code><code>x</code> to value <code>v</code>, with guard <code>g</code>, we do the
-following.</p><p>- If <code>g</code> is a ornl.elision.core.Rewritable, then <code>g.a</code> is computed and
+For proposed binding of variable <code>$</code><code>x</code> to value <code>v</code>, with guard <code>g</code>, we do
+the following.</p><p>- If <code>g</code> is a ornl.elision.core.Rewritable, then <code>g.a</code> is computed and
   if the flag is true, <code>$</code><code>x</code> is bound to the resulting atom.
 - If <code>g</code> is a <a name="ornl.elision.core.Applicable" class="extype" href="Applicable.html">Applicable</a>, then <code>g.a</code> is computed and
   <code>$</code><code>x</code> is bound the result.
 - Otherwise <code>g</code> is assumed to be a predicate, and is rewritten with the
-  potential bindings.  If the result is true, then <code>$</code><code>x</code> is bound to <code>v</code>.</p><p>In all other cases the binding attempt is rejected.</p><h4> Type </h4><p>Every variable must have a type, and the type can be <code>ANY</code>.</p><h4> Equality and Matching </h4><p>Variables are equal iff their name, type, guard, and labels are all equal.</p><p>Variables can be bound, so that gets checked during matching.  A variable
+  potential bindings.  If the result is true, then <code>$</code><code>x</code> is bound to <code>v</code>.</p><p>In all other cases the binding attempt is rejected.</p><p>See the previous section for information on the implicit guard created for
+a &quot;by name&quot; variable.</p><h4> Type </h4><p>Every variable must have a type, and the type can be <code>ANY</code>.</p><h4> Equality and Matching </h4><p>Variables are equal iff their name, type, guard, and labels are all equal.</p><p>Variables can be bound, so that gets checked during matching.  A variable
 pattern matches a subject iff it is already bound to that subject, or if it
 is unbound and the types match.  Guards are not matched; this would be
 problematic, as the guards are used to determine whether a match succeeds!
@@ -87,10 +96,10 @@ Labels are also not matched, as they serve a different semantic purpose.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Variable</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="name">name: String</span>, <span name="guard">guard: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> = <span class="symbol">Literal.TRUE</span></span>, <span name="labels">labels: Set[String] = <span name="scala.this.Predef.Set.apply[String]()" class="defval">...</span></span>)</span>
+        <span class="name">Variable</span><span class="params">(<span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="name">name: String</span>, <span name="guard">guard: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> = <span class="symbol">Literal.TRUE</span></span>, <span name="labels">labels: Set[String] = <span name="scala.this.Predef.Set.apply[String]()" class="defval">...</span></span>, <span name="byName">byName: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The variable type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">guard</dt><dd class="cmt"><p>The variable's guard.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">typ</dt><dd class="cmt"><p>The variable type.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The variable name.</p></dd><dt class="param">guard</dt><dd class="cmt"><p>The variable's guard.  Default is true.</p></dd><dt class="param">labels</dt><dd class="cmt"><p>Labels for this variable.  Default is none.</p></dd><dt class="param">byName</dt><dd class="cmt"><p>If true, this is a &quot;by name&quot; variable.  Default is false.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -190,6 +199,34 @@ guard is true, then the new bindings are returned.  If it is false, then
 a <a name="ornl.elision.core.Fail" class="extype" href="Fail.html">Fail</a> instance is returned.
 </p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>The atom to which the variable is to be bound.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Other bindings that must be honored.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Variable#byName" data-isabs="false">
+      <a id="byName:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">byName</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If true, this is a &quot;by name&quot; variable.</p><div class="fullcomment"><div class="comment cmt"><p>If true, this is a &quot;by name&quot; variable.  Default is false.
+</p></div></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#cleanRulesets" data-isabs="false">
+      <a id="cleanRulesets:Option[BitSet]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cleanRulesets</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The rulesets with respect to which this atom is clean.</p><div class="fullcomment"><div class="comment cmt"><p>The rulesets with respect to which this atom is clean. If this is
+not None the atom has already been rewritten with some set of
+rulesets. If None, the atom has never been rewritten.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -340,7 +377,7 @@ any.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><
         <span class="name">guard</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The variable's guard.</p>
+      <p class="shortcomment cmt">The variable's guard.</p><div class="fullcomment"><div class="comment cmt"><p>The variable's guard.  Default is true.</p></div></div>
     </li><li visbl="pub" name="ornl.elision.core.Variable#hashCode" data-isabs="false">
       <a id="hashCode:Int"></a>
       <h4 class="signature">
@@ -457,7 +494,7 @@ represents true.
         <span class="name">labels</span><span class="result">: Set[String]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Labels for this variable.</p>
+      <p class="shortcomment cmt">Labels for this variable.</p><div class="fullcomment"><div class="comment cmt"><p>Labels for this variable.  Default is none.</p></div></div>
     </li><li visbl="prt" name="ornl.elision.core.BasicAtom#matchTypes" data-isabs="false">
       <a id="matchTypes(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">
