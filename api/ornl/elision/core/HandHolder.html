@@ -30,7 +30,11 @@
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A little class to use to pass data back and forth from the subordinate
-interpreter.
+interpreter.  Since a native handler must return an atom, this is the
+return value of the passed closure.</p><p>A native handler is parsed by a subordinate Scala interpreter.  This has
+to bind something available in *this* scope - specifically it binds up
+an instance of <code>HandHolder</code> and passes it back.  Initially this holds
+<code>None</code>, but if the hander can be parsed it returns <code>Some</code> closure.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
