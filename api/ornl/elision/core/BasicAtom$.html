@@ -378,54 +378,6 @@ out.</p>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceMatching" data-isabs="false">
-      <a id="traceMatching:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">traceMatching</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Enable (if true) or disable (if false) match tracing.</p>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceTerse" data-isabs="false">
-      <a id="traceTerse:(Any) ⇒ Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">traceTerse</span><span class="result">: (<span name="scala.Any" class="extype">Any</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Specify terse tracing for certain objects during matching.</p><div class="fullcomment"><div class="comment cmt"><p>Specify terse tracing for certain objects during matching.</p><p>This is a closure that selects the objects to trace.  The closure must
-take an object (it will be the <code>this</code> object at runtime) and return a
-Boolean indicating whether matching should be traced for that object.
-This will only occur, of course, if <code>traceMatching</code> is set to true.  By
-default this value is set to <code>(obj: Any) =&gt; true)</code>, which traces
-everything.</p><p>Note that full tracing takes precedence over terse tracing.
-</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#traceVerbose" data-isabs="false">
-      <a id="traceVerbose:(Any) ⇒ Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">traceVerbose</span><span class="result">: (<span name="scala.Any" class="extype">Any</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Specify verbose tracing for certain objects during matching.</p><div class="fullcomment"><div class="comment cmt"><p>Specify verbose tracing for certain objects during matching.</p><p>This is a closure that selects the objects to trace.  The closure must
-take an object (it will be the <code>this</code> object at runtime) and return a
-Boolean indicating whether matching should be traced for that object.
-This will only occur, of course, if <code>traceMatching</code> is set to true.  By
-default this value is set to <code>(obj: Any) =&gt; false)</code>, which traces
-nothing.</p><p>Note that full tracing takes precedence over terse tracing.
-</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">

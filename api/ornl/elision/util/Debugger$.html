@@ -332,7 +332,8 @@ This does not automatically enable the tag.
       <p class="shortcomment cmt">Perform some action if the specified debugging tag is enabled, and only
 if the tag is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Perform some action if the specified debugging tag is enabled, and only
 if the tag is enabled.  Use this by specifying the tag, and then giving
-the actions in brackets after.</p><pre>
+the actions in brackets after.</p><p>The drawback is that you cannot use an <code>else</code>, and if you bind up vars or
+vals in the block, they are out of scope outside the block.</p><pre>
 ifdebug(<span class="lit">"tim"</span>) {
   println(<span class="lit">"Tim is go!"</span>)
 }
