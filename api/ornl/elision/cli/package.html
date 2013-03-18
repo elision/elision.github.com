@@ -75,6 +75,18 @@ package.  Other packages may use it, except for <code>ornl.elision.util</code>.
       </span>
       </h4>
       <p class="comment cmt">Represent a switch that takes an argument.</p>
+    </li><li visbl="pub" name="ornl.elision.cli.Setting" data-isabs="false">
+      <a id="Setting:Setting"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Setting.html"><span class="name">Setting</span></a><span class="params">(<span name="name">name: String</span>, <span name="envvar">envvar: Option[String]</span>, <span name="javaprop">javaprop: Option[String]</span>, <span name="default">default: Option[String]</span>, <span name="description">description: String</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Base class for a settings definition.</p>
     </li><li visbl="pub" name="ornl.elision.cli.Switch" data-isabs="false">
       <a id="Switch:Switch"></a>
       <h4 class="signature">
@@ -94,30 +106,18 @@ package.  Other packages may use it, except for <code>ornl.elision.util</code>.
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.cli.SwitchUsage" data-isabs="false">
-      <a id="SwitchUsage:SwitchUsage"></a>
+              <ol><li visbl="pub" name="ornl.elision.cli.CLI" data-isabs="false">
+      <a id="CLI:CLI"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="SwitchUsage$.html"><span class="name">SwitchUsage</span></a><span class="result"> extends AnyRef</span>
+        <a href="CLI$.html"><span class="name">CLI</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
-      <p class="comment cmt">Provide usage help.</p>
-    </li><li visbl="pub" name="ornl.elision.cli.Switches" data-isabs="false">
-      <a id="Switches:Switches"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Switches$.html"><span class="name">Switches</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide methods to work with the command line arguments.</p>
+      <p class="comment cmt">Provide algorithms to implement a command line interface.</p>
     </li></ol>
             </div>
 
