@@ -152,14 +152,14 @@
       </h4>
       <p class="shortcomment cmt">Print help for a collection of switches and settings.</p>
     </li><li visbl="pub" name="ornl.elision.cli.CLI#apply" data-isabs="false">
-      <a id="apply(Array[String],Seq[AbstractSwitch],Seq[Setting],(String) ⇒ (Option[String], Boolean)):CLIState"></a>
+      <a id="apply(Array[String],Seq[AbstractSwitch],Seq[Setting],Boolean,(String) ⇒ (Option[String], Boolean)):CLIState"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>, <span name="switches">switches: Seq[<a name="ornl.elision.cli.AbstractSwitch" class="extype" href="AbstractSwitch.html">AbstractSwitch</a>]</span>, <span name="settings">settings: Seq[<a name="ornl.elision.cli.Setting" class="extype" href="Setting.html">Setting</a>]</span>, <span name="handler">handler: (String) ⇒ (<span name="scala.Option" class="extype">Option</span>[String], <span name="scala.Boolean" class="extype">Boolean</span>) = <span class="symbol"><span class="name"><a href="../../../scala/package.html">(str) =&gt; (None, true)</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.cli.CLI.CLIState" class="extype" href="CLI$$CLIState.html">CLIState</a></span>
+        <span class="name">apply</span><span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>, <span name="switches">switches: Seq[<a name="ornl.elision.cli.AbstractSwitch" class="extype" href="AbstractSwitch.html">AbstractSwitch</a>]</span>, <span name="settings">settings: Seq[<a name="ornl.elision.cli.Setting" class="extype" href="Setting.html">Setting</a>]</span>, <span name="keepunknown">keepunknown: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="handler">handler: (String) ⇒ (<span name="scala.Option" class="extype">Option</span>[String], <span name="scala.Boolean" class="extype">Boolean</span>) = <span class="symbol"><span class="name"><a href="../../../scala/package.html">(str) =&gt; (None, true)</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.cli.CLI.CLIState" class="extype" href="CLI$$CLIState.html">CLIState</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Process the command line arguments, extract any switches and process them,
@@ -192,7 +192,9 @@ Additionally, any argument that starts with three dashes is treated as
 an argument, and not a switch.  The first two dashes are discarded.  Thus
 the argument <code>---foo</code> becomes <code>-foo</code>.  This makes it possible to pass
 arguments that start with a dash.
-</li></ul></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.</p></dd><dt class="param">switches</dt><dd class="cmt"><p>Known command line switches.</p></dd><dt class="param">settings</dt><dd class="cmt"><p>Known settings.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>A handler to invoke whenever an argument is found.
+</li></ul></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.</p></dd><dt class="param">switches</dt><dd class="cmt"><p>Known command line switches.</p></dd><dt class="param">settings</dt><dd class="cmt"><p>Known settings.</p></dd><dt class="param">keepunknown</dt><dd class="cmt"><p>Preserve unknown settings.  If true, then any
+                     settings that are not recognized are kept and
+                     returned as arguments.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>A handler to invoke whenever an argument is found.
                      The default handler always returns <code>(None, true)</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>The state of the command line after processing.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
@@ -246,6 +248,25 @@ arguments that start with a dash.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.cli.CLI#fail" data-isabs="false">
+      <a id="fail(Array[String],Int,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fail</span><span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>, <span name="position">position: <span name="scala.Int" class="extype">Int</span></span>, <span name="err">err: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Print out an error message about the command line, highlighting the
+offending element.</p><div class="fullcomment"><div class="comment cmt"><p>Print out an error message about the command line, highlighting the
+offending element.  You should follow this with calling <code>sys.exit(N)</code>,
+where <code>N</code> is the (non-zero) exit value you want.</p><p>To use this pass the arguments, the position of the bad argument, and
+the error message.  The arguments are printed, and the offending
+argument is &quot;underlined&quot; with carets.
+</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.</p></dd><dt class="param">position</dt><dd class="cmt"><p>The index of the bad argument or switch.</p></dd><dt class="param">err</dt><dd class="cmt"><p>Text describing the error.
+</p></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
