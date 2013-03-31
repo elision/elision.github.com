@@ -48,69 +48,69 @@ costly as a result.  To avoid this disable visiting types.</p><h4> Example </h4>
 the traversal visits the nodes in the following way, with type visiting
 enabled:</p><pre>
 foo(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
-INTEGER
-^TYPE
-foo:OPREF
-OPREF
-^TYPE
-%AC(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
-LIST(INTEGER)
-^TYPE
-%AC
-^TYPE
-<span class="kw">true</span>
-BOOLEAN
-^TYPE
-<span class="kw">true</span>
-BOOLEAN
-^TYPE
-<span class="num">5</span>
-INTEGER
-^TYPE
-<span class="num">9</span>
-INTEGER
-^TYPE
-bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
-INTEGER
-^TYPE
-bar:OPREF
-OPREF
-^TYPE
-%(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
-LIST(ANY)
-^TYPE
-%
-^TYPE
-<span class="num">21</span>
-INTEGER
-^TYPE
-$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER
-MAP(INTEGER,INTEGER)
-^TYPE
-MAP:OPREF
-OPREF
-^TYPE
-%(INTEGER,INTEGER)
-LIST(^TYPE)
-^TYPE
-%
-^TYPE
-INTEGER
-^TYPE
-INTEGER
-^TYPE
-$`:<span class="num">1</span>`:INTEGER
-INTEGER
-^TYPE
-<span class="kw">true</span>
-BOOLEAN
-^TYPE
-$`:<span class="num">1</span>`:INTEGER
-INTEGER
-^TYPE
-<span class="kw">true</span>
-BOOLEAN
-^TYPE
+ INTEGER
+  ^TYPE
+ foo:OPREF
+  OPREF
+   ^TYPE
+ %AC(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
+  LIST(INTEGER)
+   ^TYPE
+  %AC
+   ^TYPE
+   <span class="kw">true</span>
+    BOOLEAN
+     ^TYPE
+   <span class="kw">true</span>
+    BOOLEAN
+     ^TYPE
+  <span class="num">5</span>
+   INTEGER
+    ^TYPE
+  <span class="num">9</span>
+   INTEGER
+    ^TYPE
+  bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
+   INTEGER
+    ^TYPE
+   bar:OPREF
+    OPREF
+     ^TYPE
+   %(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER)
+    LIST(ANY)
+     ^TYPE
+    %
+     ^TYPE
+    <span class="num">21</span>
+     INTEGER
+      ^TYPE
+    $`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER
+     MAP(INTEGER,INTEGER)
+      ^TYPE
+      MAP:OPREF
+       OPREF
+        ^TYPE
+      %(INTEGER,INTEGER)
+       LIST(^TYPE)
+        ^TYPE
+       %
+        ^TYPE
+       INTEGER
+        ^TYPE
+       INTEGER
+        ^TYPE
+     $`:<span class="num">1</span>`:INTEGER
+      INTEGER
+       ^TYPE
+      <span class="kw">true</span>
+       BOOLEAN
+        ^TYPE
+     $`:<span class="num">1</span>`:INTEGER
+      INTEGER
+       ^TYPE
+      <span class="kw">true</span>
+       BOOLEAN
+        ^TYPE
 </pre><p>Alternately you can visit without types.</p><pre>
 foo(<span class="num">5</span>,<span class="num">9</span>,bar(<span class="num">21</span>,$`:<span class="num">1</span>`:INTEGER.$`:<span class="num">1</span>`:INTEGER))
 foo:OPREF

@@ -137,6 +137,20 @@
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.RewriteRule#apply" data-isabs="false">
+      <a id="apply(BasicAtom,BasicAtom,Seq[BasicAtom],Set[String],Option[String],String,String,Boolean):RewriteRule"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="pattern">pattern: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="rewrite">rewrite: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="guards">guards: Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>, <span name="rulesets">rulesets: Set[String]</span>, <span name="name">name: <span name="scala.Option" class="extype">Option</span>[String]</span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="synthetic">synthetic: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <a name="ornl.elision.core.RewriteRule" class="extype" href="RewriteRule.html">RewriteRule</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Create a rewrite rule.</p><div class="fullcomment"><div class="comment cmt"><p>Create a rewrite rule.
+</p></div><dl class="paramcmts block"><dt class="param">pattern</dt><dd class="cmt"><p>The pattern to match.</p></dd><dt class="param">rewrite</dt><dd class="cmt"><p>The rewrite to apply on match.</p></dd><dt class="param">guards</dt><dd class="cmt"><p>Guards that must be true to accept a match.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The rulesets that contain this rule.</p></dd><dt class="param">name</dt><dd class="cmt"><p>Optional rule name.</p></dd><dt class="param">description</dt><dd class="cmt"><p>Optional rule description.</p></dd><dt class="param">detail</dt><dd class="cmt"><p>Optional detailed rule description.</p></dd><dt class="param">synthetic</dt><dd class="cmt"><p>If true, this is a synthetic rule.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.RewriteRule#apply" data-isabs="false">
       <a id="apply(BasicAtom,BasicAtom,Seq[BasicAtom],Set[String],Boolean):RewriteRule"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -339,14 +353,14 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RewriteRule#unapply" data-isabs="false">
-      <a id="unapply(RewriteRule):Some[(BasicAtom, BasicAtom, Seq[BasicAtom], Set[String], Boolean)]"></a>
+      <a id="unapply(RewriteRule):Some[(BasicAtom, BasicAtom, Seq[BasicAtom], Set[String], Option[String], String, String, Boolean)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unapply</span><span class="params">(<span name="rule">rule: <a name="ornl.elision.core.RewriteRule" class="extype" href="RewriteRule.html">RewriteRule</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>], Set[String], <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
+        <span class="name">unapply</span><span class="params">(<span name="rule">rule: <a name="ornl.elision.core.RewriteRule" class="extype" href="RewriteRule.html">RewriteRule</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>], Set[String], <span name="scala.Option" class="extype">Option</span>[String], String, String, <span name="scala.Boolean" class="extype">Boolean</span>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Break a rewrite rule into its parts.</p><div class="fullcomment"><div class="comment cmt"><p>Break a rewrite rule into its parts.  The synthetic flag is not returned.

@@ -31,7 +31,12 @@
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>An executor is a class that can convert a string into a sequence of atoms.
 This can be done by parsing the usual Elision representation of atoms, or
-by some other means.
+by some other means.</p><p>An executor also holds some other information.  Specifically it holds three
+similar items.</p><ul><li>A <u>cache</u> to hold temporary storage for internal algorithms.  That is,
+   these are for internal mutable storage and are not user-visible.</li><li>A set of <u>properties</u> that hold user-configurable items to control
+   Elision.  That is, these are user-visible and mutable.</li><li>The collection of <u>settings</u> that were parsed from the command line,
+   or left at their defaults.  These are (typically) regarded as immutable
+   and are user-visible.  These are held for later reference.</li></ul><p>Note that the settings must be specified at construction time.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -146,6 +151,18 @@ sequence may be empty, and it may be lazily constructed.</p><p>If operators are 
 will have been executed by the time this method returns.
 </p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to parse.</p></dd><dt>returns</dt><dd class="cmt"><p>The sequence of atoms.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Executor#settings" data-isabs="true">
+      <a id="settings:Map[String, String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">settings</span><span class="result">: Map[String, String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The settings, from the command line parser.</p>
     </li></ol>
             </div>
 
@@ -425,6 +442,19 @@ is correctly typed.
       <p class="shortcomment cmt">Get all public property names, sorted in alphabetical order.</p><div class="fullcomment"><div class="comment cmt"><p>Get all public property names, sorted in alphabetical order.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The property names.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Executor#getSetting" data-isabs="false">
+      <a id="getSetting(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSetting</span><span class="params">(<span name="name">name: String</span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get the value of a setting, which must be defined.</p><div class="fullcomment"><div class="comment cmt"><p>Get the value of a setting, which must be defined.  If the setting
+</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -598,20 +628,6 @@ documentation for <code>fetchAs</code> before you use the cache!
       <p class="shortcomment cmt">Write properties to a console.</p><div class="fullcomment"><div class="comment cmt"><p>Write properties to a console.
 </p></div><dl class="paramcmts block"><dt class="param">console</dt><dd class="cmt"><p>The console to get the output.</p></dd><dt class="param">width</dt><dd class="cmt"><p>The width of the console, or 80 if not specified.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Executor#writeProperty" data-isabs="false">
-      <a id="writeProperty(BasicAtom):String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">writeProperty</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Handle atoms specially; print them as parse strings.</p><div class="fullcomment"><div class="comment cmt"><p>Handle atoms specially; print them as parse strings.
-</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>An atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The parse string.
-</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#writeProperty" data-isabs="false">
       <a id="writeProperty(Any):String"></a>
       <h4 class="signature">

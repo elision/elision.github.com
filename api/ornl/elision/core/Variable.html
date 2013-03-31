@@ -182,6 +182,32 @@ Labels are also not matched, as they serve a different semantic purpose.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Variable#asMetaVariable" data-isabs="false">
+      <a id="asMetaVariable:MetaVariable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asMetaVariable</span><span class="result">: <a name="ornl.elision.core.MetaVariable" class="extype" href="MetaVariable.html">MetaVariable</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Make a meta version of this variable.</p><div class="fullcomment"><div class="comment cmt"><p>Make a meta version of this variable.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The new metavariable.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Variable#asVariable" data-isabs="false">
+      <a id="asVariable:Variable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asVariable</span><span class="result">: <a name="ornl.elision.core.Variable" class="extype" href="">Variable</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Make a non-meta version of this variable.</p><div class="fullcomment"><div class="comment cmt"><p>Make a non-meta version of this variable.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The new variable.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Variable#bindMe" data-isabs="false">
       <a id="bindMe(BasicAtom,Bindings):Outcome"></a>
       <h4 class="signature">
@@ -584,6 +610,23 @@ of type matching strategies may be done.
       </span>
       </h4>
       <p class="shortcomment cmt">The prefix for this variable.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Variable#replace" data-isabs="false">
+      <a id="replace(Map[BasicAtom, BasicAtom]):(BasicAtom, Boolean)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replace</span><span class="params">(<span name="map">map: Map[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Systematically replace one basic atom with another basic atom.</p><div class="fullcomment"><div class="comment cmt"><p>Systematically replace one basic atom with another basic atom.</p><p>Note that you can use this to search for a subterm.  The idea is to map
+the subterm to itself (so no real &quot;change&quot; is made) and then look at the
+flag on return.
+</p></div><dl class="paramcmts block"><dt class="param">map</dt><dd class="cmt"><p>A mapping from old atom to replacement atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of the replacement (a potentially new atom), and a
+         flag indicating whether or not any replacement was performed.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Variable" class="extype" href="">Variable</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Variable#rewrite" data-isabs="false">
       <a id="rewrite(Bindings):(BasicAtom, Boolean)"></a>
       <h4 class="signature">
@@ -682,7 +725,7 @@ written (&quot;streamed&quot;) to the given appendable.
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The returned string should
-be able to &quot;round trip,&quot; that is, <a name="ornl.elision.parse.AtomParser" class="extype" href="../parse/AtomParser.html">AtomParser</a> must
+be able to &quot;round trip,&quot; that is, ornl.elision.parse.AtomParser must
 be able to parse it and return an atom equal to this one.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>

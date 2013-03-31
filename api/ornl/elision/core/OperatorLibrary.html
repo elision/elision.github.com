@@ -204,33 +204,18 @@ described in the class comments.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
-      <a id="clone():AnyRef"></a>
+    </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary#clone" data-isabs="false">
+      <a id="clone():OperatorLibrary"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a name="ornl.elision.core.OperatorLibrary" class="extype" href="">OperatorLibrary</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary#cloneOpLib" data-isabs="false">
-      <a id="cloneOpLib:OperatorLibrary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cloneOpLib</span><span class="result">: <a name="ornl.elision.core.OperatorLibrary" class="extype" href="">OperatorLibrary</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Makes a copy of this operator library.</p>
+      <p class="shortcomment cmt">Makes a copy of this operator library.</p><div class="fullcomment"><div class="comment cmt"><p>Makes a copy of this operator library.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.OperatorLibrary" class="extype" href="">OperatorLibrary</a> → AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -403,29 +388,6 @@ skipped.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary#register" data-isabs="false">
-      <a id="register(String,(ApplyData) ⇒ BasicAtom):OperatorLibrary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">register</span><span class="params">(<span name="name">name: String</span>, <span name="handler">handler: (<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.OperatorLibrary" class="extype" href="">OperatorLibrary</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Register a native handler for an operator.</p><div class="fullcomment"><div class="comment cmt"><p>Register a native handler for an operator.  The operator must already be
-defined.  Note that the handler is not always invoked; only if
-an operator is applied to an argument list is the handler invoked, and
-then only if the argument list survives processing for the operator
-properties (absorber, etc.).
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The operator name.  This is always passed to the handler
-								as the first argument.  This makes it possible to write
-								a single handler for many similar operators.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The handler.  It must take the operator and the argument
-								list, and will be passed the bindings resulting from
-								matching the parameters against the arguments.  It must
-								return a new atom.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -454,7 +416,7 @@ that are parseable by AtomParser.</p><div class="fullcomment"><div class="commen
 that are parseable by AtomParser.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A parseable version of this instance.
 </p></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary#toString" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -465,11 +427,7 @@ that are parseable by AtomParser.
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Turn the operator library into a sequence of newline-terminated strings
-that are parseable as Scala.</p><div class="fullcomment"><div class="comment cmt"><p>Turn the operator library into a sequence of newline-terminated strings
-that are parseable as Scala.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A parseable version of this instance.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.OperatorLibrary" class="extype" href="">OperatorLibrary</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">

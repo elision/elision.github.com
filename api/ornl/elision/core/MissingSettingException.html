@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.parse.AtomParser.MetaVariableNode</title>
+          <title>ornl.elision.core.MissingSettingException</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -15,25 +15,24 @@
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.parse" class="extype" href="package.html">parse</a>.<a name="ornl.elision.parse.AtomParser" class="extype" href="AtomParser$.html">AtomParser</a></p>
-        <h1>MetaVariableNode</h1>
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
+        <h1>MissingSettingException</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">MetaVariableNode</span><span class="params">(<span name="vx">vx: <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></span>)</span><span class="result"> extends <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="name">MissingSettingException</span><span class="result"> extends <a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A node representing a metavariable reference.
-</p></div><dl class="paramcmts block"><dt class="param">vx</dt><dd class="cmt"><p>An ordinary variable node to promote.
-</p></dd></dl><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A requested setting is not present.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a>, <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a>, <span name="java.lang.Exception" class="extype">Exception</span>, <span name="java.lang.Throwable" class="extype">Throwable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -47,7 +46,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.MetaVariableNode" class="in"><span>MetaVariableNode</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.parse.AtomParser.VariableNode" class="in"><span>VariableNode</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="ornl.elision.parse.AST" class="in"><span>AST</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.MissingSettingException" class="in"><span>MissingSettingException</span></li><li name="ornl.elision.util.ElisionException" class="in"><span>ElisionException</span></li><li name="java.lang.Exception" class="in"><span>Exception</span></li><li name="java.lang.Throwable" class="in"><span>Throwable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -59,18 +58,18 @@
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#this" data-isabs="false">
-      <a id="this:MetaVariableNode"></a>
+              <ol><li visbl="pub" name="ornl.elision.core.MissingSettingException#this" data-isabs="false">
+      <a id="this:MissingSettingException"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MetaVariableNode</span><span class="params">(<span name="vx">vx: <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></span>)</span>
+        <span class="name">MissingSettingException</span><span class="params">(<span name="msg">msg: String</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">vx</dt><dd class="cmt"><p>An ordinary variable node to promote.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>A human-readable message describing the error.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -141,6 +140,18 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#addSuppressed" data-isabs="false">
+      <a id="addSuppressed(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addSuppressed</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -153,30 +164,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#byName" data-isabs="false">
-      <a id="byName:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">byName</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#canEqual" data-isabs="false">
-      <a id="canEqual(Any):Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">canEqual</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -204,7 +191,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#equals" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -215,7 +202,19 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → Equals → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#fillInStackTrace" data-isabs="false">
+      <a id="fillInStackTrace():Throwable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fillInStackTrace</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -231,6 +230,18 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getCause" data-isabs="false">
+      <a id="getCause():Throwable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getCause</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -243,19 +254,55 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#grd" data-isabs="false">
-      <a id="grd:Option[AstNode]"></a>
+    </li><li visbl="pub" name="java.lang.Throwable#getLocalizedMessage" data-isabs="false">
+      <a id="getLocalizedMessage():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">grd</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>]</span>
+        <span class="name">getLocalizedMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#hashCode" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getMessage" data-isabs="false">
+      <a id="getMessage():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getStackTrace" data-isabs="false">
+      <a id="getStackTrace():Array[StackTraceElement]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getSuppressed" data-isabs="false">
+      <a id="getSuppressed():Array[Throwable]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSuppressed</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.Throwable" class="extype">Throwable</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -266,33 +313,19 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#interpret" data-isabs="false">
-      <a id="interpret:MetaVariable"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#initCause" data-isabs="false">
+      <a id="initCause(Throwable):Throwable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">interpret</span><span class="result">: <a name="ornl.elision.core.MetaVariable" class="extype" href="../core/MetaVariable.html">MetaVariable</a></span>
+        <span class="name">initCause</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The generated atom.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a> → <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AstNode#interpret" data-isabs="false">
-      <a id="interpret(Context):BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">interpret</span><span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt>returns</dt><dd class="cmt"><p>The generated atom.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> → <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -305,30 +338,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#labels" data-isabs="false">
-      <a id="labels:Set[String]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">labels</span><span class="result">: Set[String]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#name" data-isabs="false">
-      <a id="name:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">name</span><span class="result">: String</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -365,54 +374,54 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#productArity" data-isabs="false">
-      <a id="productArity:Int"></a>
+    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
+      <a id="printStackTrace(PrintWriter):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintWriter" class="extype">PrintWriter</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#productElement" data-isabs="false">
-      <a id="productElement(Int):Any"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
+      <a id="printStackTrace(PrintStream):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productElement</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
+        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
-      <a id="productIterator:Iterator[Any]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
+      <a id="printStackTrace():Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productIterator</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
+        <span class="name">printStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#productPrefix" data-isabs="false">
-      <a id="productPrefix:String"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#setStackTrace" data-isabs="false">
+      <a id="setStackTrace(Array[StackTraceElement]):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+        <span class="name">setStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -425,7 +434,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#toString" data-isabs="false">
+    </li><li visbl="pub" name="java.lang.Throwable#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -433,34 +442,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: String</span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MetaVariableNode" class="extype" href="">MetaVariableNode</a> → AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.VariableNode#typ" data-isabs="false">
-      <a id="typ:AstNode"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">typ</span><span class="result">: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MetaVariableNode#vx" data-isabs="false">
-      <a id="vx:VariableNode"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">vx</span><span class="result">: <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">An ordinary variable node to promote.</p>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -509,42 +494,18 @@
     </li></ol>
             </div>
 
-        <div class="values members" id="values">
-              <h3>Deprecated Value Members</h3>
-              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
-      <a id="productElements:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 2.8.0) use productIterator instead">productElements</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.8.0)</i> use productIterator instead</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
-        <div name="scala.Serializable" class="parent">
-              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
+        <div name="ornl.elision.util.ElisionException" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a></h3>
+            </div><div name="java.lang.Exception" class="parent">
+              <h3>Inherited from <span name="java.lang.Exception" class="extype">Exception</span></h3>
+            </div><div name="java.lang.Throwable" class="parent">
+              <h3>Inherited from <span name="java.lang.Throwable" class="extype">Throwable</span></h3>
             </div><div name="java.io.Serializable" class="parent">
               <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="scala.Product" class="parent">
-              <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
-            </div><div name="scala.Equals" class="parent">
-              <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
-            </div><div name="ornl.elision.parse.AtomParser.VariableNode" class="parent">
-              <h3>Inherited from <a name="ornl.elision.parse.AtomParser.VariableNode" class="extype" href="AtomParser$$VariableNode.html">VariableNode</a></h3>
-            </div><div name="ornl.elision.parse.AtomParser.AstNode" class="parent">
-              <h3>Inherited from <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></h3>
-            </div><div name="ornl.elision.parse.AST" class="parent">
-              <h3>Inherited from <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

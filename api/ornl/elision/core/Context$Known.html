@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.parse.AtomParser.MapPairNode</title>
+          <title>ornl.elision.core.Context.Known</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -15,8 +15,8 @@
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
         <img src="../../../lib/class_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.parse" class="extype" href="package.html">parse</a>.<a name="ornl.elision.parse.AtomParser" class="extype" href="AtomParser$.html">AtomParser</a></p>
-        <h1>MapPairNode</h1>
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a>.<a name="ornl.elision.core.Context" class="extype" href="Context.html">Context</a></p>
+        <h1>Known</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,15 +25,16 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">MapPairNode</span><span class="params">(<span name="left">left: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>, <span name="right">right: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>)</span><span class="result"> extends <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="name">Known</span><span class="params">(<span name="operators">operators: Set[<a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a>]</span>, <span name="rulesets">rulesets: Set[<a name="ornl.elision.core.RulesetRef" class="extype" href="RulesetRef.html">RulesetRef</a>]</span>)</span><span class="result"> extends <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Represent a map pair atom.
-</p></div><dl class="paramcmts block"><dt class="param">left</dt><dd class="cmt"><p>The left atom.</p></dd><dt class="param">right</dt><dd class="cmt"><p>THe right atom.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Maintain the set of known operators and rulesets.  No  <code>te that this is
+immutable
+</code></p></div><dl class="paramcmts block"><dt class="param">operators</dt><dd class="cmt"><p>The set of known operators.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The set of known rulesets.
 </p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a>, <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -47,7 +48,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.AtomParser.MapPairNode" class="in"><span>MapPairNode</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.parse.AtomParser.AstNode" class="in"><span>AstNode</span></li><li name="ornl.elision.parse.AST" class="in"><span>AST</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Context.Known" class="in"><span>Known</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -59,18 +60,18 @@
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#this" data-isabs="false">
-      <a id="this:MapPairNode"></a>
+              <ol><li visbl="pub" name="ornl.elision.core.Context.Known#this" data-isabs="false">
+      <a id="this:Known"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MapPairNode</span><span class="params">(<span name="left">left: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>, <span name="right">right: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>)</span>
+        <span class="name">Known</span><span class="params">(<span name="operators">operators: Set[<a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a>] = <span name="scala.this.Predef.Set.apply[ornl.elision.core.Operator]()" class="defval">...</span></span>, <span name="rulesets">rulesets: Set[<a name="ornl.elision.core.RulesetRef" class="extype" href="RulesetRef.html">RulesetRef</a>] = <span name="scala.this.Predef.Set.apply[ornl.elision.core.RulesetRef]()" class="defval">...</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">left</dt><dd class="cmt"><p>The left atom.</p></dd><dt class="param">right</dt><dd class="cmt"><p>THe right atom.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">operators</dt><dd class="cmt"><p>The set of known operators.</p></dd><dt class="param">rulesets</dt><dd class="cmt"><p>The set of known rulesets.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -117,6 +118,20 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#+" data-isabs="false">
+      <a id="+(BasicAtom):Known"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $plus">+</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Add an atom to the known set.</p><div class="fullcomment"><div class="comment cmt"><p>Add an atom to the known set.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to add.</p></dd><dt>returns</dt><dd class="cmt"><p>A new <code>Known</code> instance.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -141,6 +156,21 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#apply" data-isabs="false">
+      <a id="apply(BasicAtom):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Test whether an atom (an operator or ruleset) is known.</p><div class="fullcomment"><div class="comment cmt"><p>Test whether an atom (an operator or ruleset) is known.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>Can be any atom, but only operators and rulesets have
+               the potential to be &quot;known.&quot;</p></dd><dt>returns</dt><dd class="cmt"><p>True iff the atom is known.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -153,7 +183,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#canEqual" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#canEqual" data-isabs="false">
       <a id="canEqual(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -164,7 +194,7 @@
         <span class="name">canEqual</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → Equals</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → Equals</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -192,7 +222,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#equals" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -203,7 +233,7 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → Equals → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → Equals → AnyRef → Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -231,7 +261,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -242,33 +272,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#interpret" data-isabs="false">
-      <a id="interpret:MapPair"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">interpret</span><span class="result">: <a name="ornl.elision.core.MapPair" class="extype" href="../core/MapPair.html">MapPair</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The generated atom.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.AstNode#interpret" data-isabs="false">
-      <a id="interpret(Context):BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">interpret</span><span class="params">(<span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Interpret this abstract syntax tree to generate an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Interpret this abstract syntax tree to generate an atom.</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt>returns</dt><dd class="cmt"><p>The generated atom.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a> → <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -281,18 +285,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#left" data-isabs="false">
-      <a id="left:AstNode"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">left</span><span class="result">: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The left atom.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -329,7 +321,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#productArity" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#operators" data-isabs="false">
+      <a id="operators:Set[Operator]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">operators</span><span class="result">: Set[<a name="ornl.elision.core.Operator" class="extype" href="Operator.html">Operator</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The set of known operators.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#productArity" data-isabs="false">
       <a id="productArity:Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -340,8 +344,8 @@
         <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#productElement" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#productElement" data-isabs="false">
       <a id="productElement(Int):Any"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -352,7 +356,7 @@
         <span class="name">productElement</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → Product</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → Product</dd></dl></div>
     </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
       <a id="productIterator:Iterator[Any]"></a>
       <h4 class="signature">
@@ -365,7 +369,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#productPrefix" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#productPrefix" data-isabs="false">
       <a id="productPrefix:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -376,19 +380,19 @@
         <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#right" data-isabs="false">
-      <a id="right:AstNode"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → Product</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#rulesets" data-isabs="false">
+      <a id="rulesets:Set[RulesetRef]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">right</span><span class="result">: <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></span>
+        <span class="name">rulesets</span><span class="result">: Set[<a name="ornl.elision.core.RulesetRef" class="extype" href="RulesetRef.html">RulesetRef</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">THe right atom.</p>
+      <p class="shortcomment cmt">The set of known rulesets.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -401,7 +405,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.AtomParser.MapPairNode#toString" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.Context.Known#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -412,7 +416,7 @@
         <span class="name">toString</span><span class="params">()</span><span class="result">: String</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.AtomParser.MapPairNode" class="extype" href="">MapPairNode</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context.Known" class="extype" href="">Known</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -491,10 +495,6 @@
               <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
             </div><div name="scala.Equals" class="parent">
               <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
-            </div><div name="ornl.elision.parse.AtomParser.AstNode" class="parent">
-              <h3>Inherited from <a name="ornl.elision.parse.AtomParser.AstNode" class="extype" href="AtomParser$$AstNode.html">AstNode</a></h3>
-            </div><div name="ornl.elision.parse.AST" class="parent">
-              <h3>Inherited from <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

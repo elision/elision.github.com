@@ -937,7 +937,9 @@ any.
       </span>
       </h4>
       <p class="shortcomment cmt">Get all the variables referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the variables referenced in an atom. Override this if the
-atom can actually contain variables.
+atom can actually contain variables.</p><p>The set uses hash codes to distinguish elements, and variables and
+metavariables have distinct hash codes, so <code>$</code><code>x</code> and <code>$</code><code>$</code><code>x</code> will
+both be included - if present - in the result.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A set of the variables referenced in the atom, if it has
 any.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
@@ -1812,6 +1814,23 @@ of type matching strategies may be done.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.AtomSeq#replace" data-isabs="false">
+      <a id="replace(Map[BasicAtom, BasicAtom]):(BasicAtom, Boolean)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replace</span><span class="params">(<span name="map">map: Map[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Systematically replace one basic atom with another basic atom.</p><div class="fullcomment"><div class="comment cmt"><p>Systematically replace one basic atom with another basic atom.</p><p>Note that you can use this to search for a subterm.  The idea is to map
+the subterm to itself (so no real &quot;change&quot; is made) and then look at the
+flag on return.
+</p></div><dl class="paramcmts block"><dt class="param">map</dt><dd class="cmt"><p>A mapping from old atom to replacement atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of the replacement (a potentially new atom), and a
+         flag indicating whether or not any replacement was performed.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.AtomSeq" class="extype" href="">AtomSeq</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="scala.collection.TraversableLike#repr" data-isabs="false">
       <a id="repr:IndexedSeq[BasicAtom]"></a>
       <h4 class="signature">
@@ -2392,7 +2411,7 @@ written (&quot;streamed&quot;) to the given appendable.
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The returned string should
-be able to &quot;round trip,&quot; that is, <a name="ornl.elision.parse.AtomParser" class="extype" href="../parse/AtomParser.html">AtomParser</a> must
+be able to &quot;round trip,&quot; that is, ornl.elision.parse.AtomParser must
 be able to parse it and return an atom equal to this one.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>

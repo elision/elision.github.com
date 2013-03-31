@@ -71,12 +71,12 @@ types of operators.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">SymbolicOperator</span><span class="params">(<span name="sfh">sfh: <a name="ornl.elision.core.SpecialFormHolder" class="extype" href="SpecialFormHolder.html">SpecialFormHolder</a></span>, <span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span>
+        <span class="name">SymbolicOperator</span><span class="params">(<span name="sfh">sfh: <a name="ornl.elision.core.SpecialFormHolder" class="extype" href="SpecialFormHolder.html">SpecialFormHolder</a></span>, <span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span></span>, <span name="handlertxt">handlertxt: <span name="scala.Option" class="extype">Option</span>[String]</span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">sfh</dt><dd class="cmt"><p>The parsed special form data.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt class="param">params</dt><dd class="cmt"><p>The operator parameters.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
-											meta-terms.  This is not advisable, and you should
-											probably leave this with the default value of false.
+                   meta-terms.  This is not advisable, and you should
+                   probably leave this with the default value of false.</p></dd><dt class="param">handlertxt</dt><dd class="cmt"><p>The text for an optional native handler.
 </p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li></ol>
             </div>
@@ -332,22 +332,36 @@ any.
       </span>
       </h4>
       <p class="shortcomment cmt">Get all the variables referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the variables referenced in an atom. Override this if the
-atom can actually contain variables.
+atom can actually contain variables.</p><p>The set uses hash codes to distinguish elements, and variables and
+metavariables have distinct hash codes, so <code>$</code><code>x</code> and <code>$</code><code>$</code><code>x</code> will
+both be included - if present - in the result.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>A set of the variables referenced in the atom, if it has
 any.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
-    </li><li visbl="prt" name="ornl.elision.core.SymbolicOperator#handler" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#handler" data-isabs="false">
       <a id="handler:Option[(ApplyData) ⇒ BasicAtom]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">var</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">handler</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[(<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The native handler, if one is declared.</p><div class="fullcomment"><div class="comment cmt"><p>The native handler, if one is declared.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="ornl.elision.core" class="extype" href="package.html">core</a>] </dd></dl></div>
+      <p class="shortcomment cmt">The native handler, if any.</p>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#handlertxt" data-isabs="false">
+      <a id="handlertxt:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handlertxt</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The text for an optional native handler.</p>
     </li><li visbl="pub" name="ornl.elision.core.SpecialForm#hashCode" data-isabs="false">
       <a id="hashCode:Int"></a>
       <h4 class="signature">
@@ -532,6 +546,23 @@ of type matching strategies may be done.
       </span>
       </h4>
       <p class="shortcomment cmt">The operator parameters.</p>
+    </li><li visbl="pub" name="ornl.elision.core.SpecialForm#replace" data-isabs="false">
+      <a id="replace(Map[BasicAtom, BasicAtom]):(BasicAtom, Boolean)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">replace</span><span class="params">(<span name="map">map: Map[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Systematically replace one basic atom with another basic atom.</p><div class="fullcomment"><div class="comment cmt"><p>Systematically replace one basic atom with another basic atom.</p><p>Note that you can use this to search for a subterm.  The idea is to map
+the subterm to itself (so no real &quot;change&quot; is made) and then look at the
+flag on return.
+</p></div><dl class="paramcmts block"><dt class="param">map</dt><dd class="cmt"><p>A mapping from old atom to replacement atom.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of the replacement (a potentially new atom), and a
+         flag indicating whether or not any replacement was performed.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.SpecialForm" class="extype" href="SpecialForm.html">SpecialForm</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.SpecialForm#rewrite" data-isabs="false">
       <a id="rewrite(Bindings):(BasicAtom, Boolean)"></a>
       <h4 class="signature">
@@ -642,7 +673,7 @@ written (&quot;streamed&quot;) to the given appendable.
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The returned string should
-be able to &quot;round trip,&quot; that is, <a name="ornl.elision.parse.AtomParser" class="extype" href="../parse/AtomParser.html">AtomParser</a> must
+be able to &quot;round trip,&quot; that is, ornl.elision.parse.AtomParser must
 be able to parse it and return an atom equal to this one.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The string.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>

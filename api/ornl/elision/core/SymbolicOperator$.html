@@ -157,20 +157,20 @@ great justice, use xx (the cross product) for this operator, but don't.
 This makes the types of operators look more natural when viewed.
 </p></div></div>
     </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean):SymbolicOperator"></a>
+      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean,Option[String]):SymbolicOperator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="ddetail">ddetail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></span>
+        <span class="name">apply</span><span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="ddetail">ddetail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="handler">handler: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.core.SymbolicOperator" class="extype" href="SymbolicOperator.html">SymbolicOperator</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a symbolic operator from the provided parts.</p><div class="fullcomment"><div class="comment cmt"><p>Make a symbolic operator from the provided parts.
 </p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt class="param">params</dt><dd class="cmt"><p>The operator parameters.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
 											meta-terms.  This is not advisable, and you should
-											probably leave this with the default value of false.</p></dd><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
+											probably leave this with the default value of false.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The text for an optional native handler.</p></dd><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
@@ -324,6 +324,18 @@ This makes the types of operators look more natural when viewed.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.SymbolicOperator#reportTime" data-isabs="false">
+      <a id="reportTime():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reportTime</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Print out the time spent compiling native handlers.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">

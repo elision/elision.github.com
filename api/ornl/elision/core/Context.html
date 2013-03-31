@@ -75,7 +75,22 @@ provided by a higher-level (semantically) class.</p><p>This class provides for m
     </li></ol>
             </div>
 
-        
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.core.Context.Known" data-isabs="false">
+      <a id="Known:Known"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Context$Known.html"><span class="name">Known</span></a><span class="params">(<span name="operators">operators: Set[Operator]</span>, <span name="rulesets">rulesets: Set[RulesetRef]</span>)</span><span class="result"> extends Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Maintain the set of known operators and rulesets.</p>
+    </li></ol>
+            </div>
 
         
 
@@ -195,33 +210,30 @@ provided by a higher-level (semantically) class.</p><p>This class provides for m
       <p class="shortcomment cmt">Set the bindings to use.</p><div class="fullcomment"><div class="comment cmt"><p>Set the bindings to use. Any prior value is lost.
 </p></div><dl class="paramcmts block"><dt class="param">bindings</dt><dd class="cmt"><p>The new bindings.</p></dd><dt>returns</dt><dd class="cmt"><p>This context.
 </p></dd></dl></div>
-    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
-      <a id="clone():AnyRef"></a>
+    </li><li visbl="pub" name="ornl.elision.core.Context#clone" data-isabs="false">
+      <a id="clone():Context"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a name="ornl.elision.core.Context" class="extype" href="">Context</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Context#cloneContext" data-isabs="false">
-      <a id="cloneContext:Context"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context" class="extype" href="">Context</a> → AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context#declare" data-isabs="false">
+      <a id="declare(BasicAtom):BasicAtom"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cloneContext</span><span class="result">: <a name="ornl.elision.core.Context" class="extype" href="">Context</a></span>
+        <span class="name">declare</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Creates a copy of this context</p>
+      
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -435,6 +447,23 @@ to reconstruct the set of rules in this context.</p><div class="fullcomment"><di
 to reconstruct the set of rules in this context.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The parseable rule sets.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Context" class="extype" href="">Context</a> → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context#traverse" data-isabs="false">
+      <a id="traverse(Appendable,BasicAtom,Known,Symbol):Known"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">traverse</span><span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="target">target: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="known">known: <a name="ornl.elision.core.Context.Known" class="extype" href="Context$Known.html">Known</a></span>, <span name="kind">kind: <span name="scala.Symbol" class="extype">Symbol</span></span>)</span><span class="result">: <a name="ornl.elision.core.Context.Known" class="extype" href="Context$Known.html">Known</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write an atom's dependencies, then write the atom itself.</p><div class="fullcomment"><div class="comment cmt"><p>Write an atom's dependencies, then write the atom itself.  The
+dependencies considered are operators and rulesets.</p><p>The idea is that by processing the resulting declarations in order the
+same atom is reconstructed.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>An appendable to get the output.</p></dd><dt class="param">target</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">known</dt><dd class="cmt"><p>The known items.</p></dd><dt class="param">kind</dt><dd class="cmt"><p>The format for the output.  Can be either <code>'elision</code>
+                 or <code>'scala</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>The updated known
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.Context#unbind" data-isabs="false">
       <a id="unbind(String):Context"></a>
       <h4 class="signature">
@@ -494,6 +523,20 @@ to reconstruct the set of rules in this context.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Context#write" data-isabs="false">
+      <a id="write(Appendable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span><span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write the context to the given appendable.</p><div class="fullcomment"><div class="comment cmt"><p>Write the context to the given appendable.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable to get the context.
+</p></dd></dl></div>
     </li></ol>
             </div>
 

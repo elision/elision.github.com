@@ -417,6 +417,18 @@ anyone trying to get some work done.</p>
       </h4>
       <p class="comment cmt">A little class to use to pass data back and forth from the subordinate
 interpreter.</p>
+    </li><li visbl="pub" name="ornl.elision.core.HandlerClass" data-isabs="true">
+      <a id="HandlerClass:HandlerClass"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HandlerClass.html"><span class="name">HandlerClass</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Trait for all handlers.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754" data-isabs="false">
       <a id="IEEE754:IEEE754"></a>
       <h4 class="signature">
@@ -636,6 +648,18 @@ rule.</p>
       </span>
       </h4>
       <p class="comment cmt">Define a metavariable.</p>
+    </li><li visbl="pub" name="ornl.elision.core.MissingSettingException" data-isabs="false">
+      <a id="MissingSettingException:MissingSettingException"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MissingSettingException.html"><span class="name">MissingSettingException</span></a><span class="result"> extends ElisionException</span>
+      </span>
+      </h4>
+      <p class="comment cmt">A requested setting is not present.</p>
     </li><li visbl="pub" name="ornl.elision.core.Mutable" data-isabs="true">
       <a id="Mutable:Mutable"></a>
       <h4 class="signature">
@@ -661,6 +685,18 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       <p class="comment cmt">Provide a very simple implementation of <code>RootType</code>.</p>
+    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler" data-isabs="false">
+      <a id="NativeCompiler:NativeCompiler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NativeCompiler.html"><span class="name">NativeCompiler</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide for the compilation and caching of native operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.NativeHandlerException" data-isabs="false">
       <a id="NativeHandlerException:NativeHandlerException"></a>
       <h4 class="signature">
@@ -926,18 +962,6 @@ a potentially new atom.</p>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a symbolic operator.</p>
-    </li><li visbl="pub" name="ornl.elision.core.TypeUniverse" data-isabs="false">
-      <a id="TypeUniverse:TypeUniverse"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="TypeUniverse.html"><span class="name">TypeUniverse</span></a><span class="result"> extends SymbolLiteral</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator" data-isabs="false">
       <a id="TypedSymbolicOperator:TypedSymbolicOperator"></a>
       <h4 class="signature">
@@ -1149,30 +1173,6 @@ a potentially new atom.</p>
       </span>
       </h4>
       <p class="comment cmt">Construction and matching of macros (case operators).</p>
-    </li><li visbl="pub" name="ornl.elision.core.package#D" data-isabs="false">
-      <a id="D[A&lt;:Seq[BasicAtom]](A):A"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">D</span><span class="tparams">[<span name="A">A &lt;: Seq[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>]</span><span class="params">(<span name="seq">seq: A</span>)</span><span class="result">: A</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.package#D" data-isabs="false">
-      <a id="D(BasicAtom):BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">D</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.EmptySeq" data-isabs="false">
       <a id="EmptySeq:EmptySeq"></a>
       <h4 class="signature">
@@ -1923,7 +1923,8 @@ it into an omit sequence with the original sequence as its backing store.
       </span>
       </h4>
       <p class="shortcomment cmt">Issue a warning.</p><div class="fullcomment"><div class="comment cmt"><p>Issue a warning.  This should be wired to whatever error reporting
-mechanism you want to use.
+mechanism you want to use.  This uses the console of the known
+executor, so that must be correctly set first.
 </p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text of the warning.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#wrapBindingsAtom" data-isabs="false">

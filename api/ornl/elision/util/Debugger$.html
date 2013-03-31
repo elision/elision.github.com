@@ -32,10 +32,9 @@
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>This is a class for managing and printing debug output during execution
 in a manner that &quot;agrees&quot; with Elision.</p><p>Note: This class uses [ornl.elision.util.Console] to do its work.  Please
 do not attempt to use this class to debug <code>Console</code>!</p><p>To use this class set up your debugging modes via <code>setDebugModes</code>, and
-then use <code>debug</code> to print debugging messages.  The first argument is passed
+then use <code>apply</code> to print debugging messages.  The second argument is passed
 by name, so you can use this to avoid construction costs by deferring method
-invocation.</p><p>The tag is the second element to the debug statement to enable omitting it;
-if omitted, the tag is treated as the empty string.</p><pre>
+invocation.</p><p>The tag is the first element to the debug statement and may not be omitted.</p><pre>
 <span class="kw">import</span> ornl.elision.Debugger._
 <span class="kw">import</span> ornl.elision.Debugger.Mode._
 
@@ -44,20 +43,21 @@ enableDebugModes(<span class="lit">"timer"</span>, ON|TICK)
 enableDebugModes(<span class="lit">"start"</span>, ON|START)
 enableDebugModes(<span class="lit">"stop"</span>, ON|STOP)
 
-debug(<span class="lit">"Debug point reached."</span>, <span class="lit">"simple"</span>, <span class="num">4</span>)
+Debugger(<span class="lit">"simple"</span>, <span class="lit">"Debug point reached."</span>, <span class="num">4</span>)
 ...
-debug(<span class="lit">"Starting timer."</span>, <span class="lit">"start"</span>)
+Debugger(<span class="lit">"start"</span>, <span class="lit">"Starting timer."</span>)
 ...
-debug(<span class="lit">"Reporting elapsed time."</span>, <span class="lit">"stop"</span>)
-</pre><p>Alternately, include the things you want to do in an <code>ifdebug</code> block.</p><pre>
+Debugger(<span class="lit">"stop"</span>, <span class="lit">"Reporting elapsed time."</span>)
+</pre><p>Alternately, include the things you want to do in an <code>Debugger</code> block.</p><pre>
 <span class="kw">import</span> ornl.elision.Debugger._
 
-ifdebug(<span class="lit">"simple"</span>) {
+Debugger(<span class="lit">"simple"</span>) {
   println(<span class="lit">"The simple mode is enabled."</span>)
   <span class="kw">for</span> (i <span class="kw">&lt;-</span> <span class="num">1</span> upto <span class="num">1000</span>) println(i)
 }
 </pre><p>There are several things you can do; see [ornl.elision.Debugger.Mode] for
-the various debug modes you can enable.
+the various debug modes you can enable.</p><p>Note that by default all tags are disabled except for the empty string tag
+<code>&quot;&quot;</code>, which is <code>ON</code>.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
@@ -152,6 +152,34 @@ the various debug modes you can enable.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#D" data-isabs="false">
+      <a id="D(String,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">D</span><span class="params">(<span name="tag">tag: String</span>, <span name="message">message: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Simple interface for use from Java to write a debug message.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to write a debug message.  The message
+is always evaluated, as Java does not allow by-name parameters.</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.</p></dd><dt class="param">message</dt><dd class="cmt"><p>The message to write.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#D" data-isabs="false">
+      <a id="D(String,String,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">D</span><span class="params">(<span name="tag">tag: String</span>, <span name="message">message: String</span>, <span name="id">id: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Simple interface for use from Java to write a debug message.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to write a debug message.  The message
+is always evaluated, as Java does not allow by-name parameters.</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.</p></dd><dt class="param">message</dt><dd class="cmt"><p>The message to write.</p></dd><dt class="param">id</dt><dd class="cmt"><p>The id.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Debugger.Mode" data-isabs="false">
       <a id="Mode:Mode"></a>
       <h4 class="signature">
@@ -164,6 +192,44 @@ the various debug modes you can enable.
       </span>
       </h4>
       <p class="comment cmt">This enumeration provides the different modes for debug reporting.</p>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#apply" data-isabs="false">
+      <a id="apply(String,⇒ Any,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="tag">tag: String</span>, <span name="message">message: ⇒ <span name="scala.Any" class="extype">Any</span></span>, <span name="id">id: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a debugging tag based on the enabled modes.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a debugging tag based on the enabled modes.</p><pre>
+Debugger(<span class="lit">"simple"</span>, <span class="lit">"Processing item: "</span> + num)
+</pre></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>A closure to generate an object.  The object is then
+               converted to a string via <code>toString</code> before writing.</p></dd><dt class="param">id</dt><dd class="cmt"><p>An optional id number.  This is printed if positive.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#apply" data-isabs="false">
+      <a id="apply(String)(⇒ Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="tag">tag: String</span>)</span><span class="params">(<span name="action">action: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform some action if the specified debugging tag is enabled, and only
+if the tag is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Perform some action if the specified debugging tag is enabled, and only
+if the tag is enabled.  Use this by specifying the tag, and then giving
+the actions in brackets after.</p><p>The drawback is that you cannot use an <code>else</code>, and if you bind up vars or
+vals in the block, they are out of scope outside the block.</p><pre>
+Debugger(<span class="lit">"tim"</span>) {
+  Debugger.debugln(<span class="lit">"Tim is go!"</span>)
+}
+</pre></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.</p></dd><dt class="param">action</dt><dd class="cmt"><p>The action to perform.  This is only evaluated iff the tag
+               is enabled.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -205,19 +271,64 @@ the various debug modes you can enable.
       <p class="shortcomment cmt">The console to get debugging output.</p><div class="fullcomment"><div class="comment cmt"><p>The console to get debugging output.  By default this is a simple print
 console.
 </p></div></div>
-    </li><li visbl="pub" name="ornl.elision.util.Debugger#debug" data-isabs="false">
-      <a id="debug(⇒ String,String,Int):Unit"></a>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#debugf" data-isabs="false">
+      <a id="debugf(String,Any*):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">debug</span><span class="params">(<span name="message">message: ⇒ String</span>, <span name="tag">tag: String = <span class="symbol">&quot;&quot;</span></span>, <span name="id">id: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">debugf</span><span class="params">(<span name="format">format: String</span>, <span name="items">items: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Emit a debugging tag based on the enabled modes.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a debugging tag based on the enabled modes.
-</p></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>A closure to generate the message to write.</p></dd><dt class="param">id</dt><dd class="cmt"><p>An optional id number.  This is printed if positive.
+      <p class="shortcomment cmt">Simple interface for use from Java to print a message with the
+empty string for its tag.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to print a message with the
+empty string for its tag.  This is the tag that is enabled by default.
+The message is always evaluated, as Java does not allow by-name
+parameters.  This method writes behaves in the same manner as <code>printf</code>.</p></div></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#debugln" data-isabs="false">
+      <a id="debugln(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debugln</span><span class="params">(<span name="message">message: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Simple interface for use from Java to print a message with the
+empty string for its tag.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to print a message with the
+empty string for its tag.  This is the tag that is enabled by default.
+The message is always evaluated, as Java does not allow by-name
+parameters.  This methods behaves in the same manner as <code>println</code>.</p></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>The message to write.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#debugoff" data-isabs="false">
+      <a id="debugoff(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debugoff</span><span class="params">(<span name="tag">tag: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Simple interface for use from Java to disable a debugging tag.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to disable a debugging tag.</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#debugon" data-isabs="false">
+      <a id="debugon(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">debugon</span><span class="params">(<span name="tag">tag: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Simple interface for use from Java to enable a debugging tag.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to enable a debugging tag.</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Debugger#disableDebugModes" data-isabs="false">
       <a id="disableDebugModes(String,Int):Unit"></a>
@@ -318,28 +429,6 @@ This does not automatically enable the tag.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Debugger#ifdebug" data-isabs="false">
-      <a id="ifdebug(String)(⇒ Unit):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ifdebug</span><span class="params">(<span name="tag">tag: String = <span class="symbol">&quot;&quot;</span></span>)</span><span class="params">(<span name="action">action: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Perform some action if the specified debugging tag is enabled, and only
-if the tag is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Perform some action if the specified debugging tag is enabled, and only
-if the tag is enabled.  Use this by specifying the tag, and then giving
-the actions in brackets after.</p><p>The drawback is that you cannot use an <code>else</code>, and if you bind up vars or
-vals in the block, they are out of scope outside the block.</p><pre>
-ifdebug(<span class="lit">"tim"</span>) {
-  println(<span class="lit">"Tim is go!"</span>)
-}
-</pre></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.</p></dd><dt class="param">action</dt><dd class="cmt"><p>The action to perform.  This is only evaluated iff the tag
-               is enabled.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -352,6 +441,20 @@ ifdebug(<span class="lit">"tim"</span>) {
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Debugger#mode" data-isabs="false">
+      <a id="mode(String):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mode</span><span class="params">(<span name="name">name: String</span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Simple interface for use from Java to obtain a mode id.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to obtain a mode id.</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The name of a mode.</p></dd><dt>returns</dt><dd class="cmt"><p>An <code>id</code> value to use with other methods where <code>Mode</code> is
+         required.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
