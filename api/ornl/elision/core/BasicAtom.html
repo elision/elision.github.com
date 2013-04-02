@@ -108,10 +108,11 @@ you implement <code>BasicAtom</code>.</p><ul><li>Specify the type of the object.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BasicAtom</span><span class="params">()</span>
+        <span class="name">BasicAtom</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a> = <span class="symbol">ornl.elision.util.Loc.internal</span></span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>The location where this atom originated.
+</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -540,6 +541,18 @@ represents false.
       <p class="shortcomment cmt">If true, this atom represents true.</p><div class="fullcomment"><div class="comment cmt"><p>If true, this atom represents true.  Override this for an atom that
 represents true.
 </p></div></div>
+    </li><li visbl="pub" name="ornl.elision.core.BasicAtom#loc" data-isabs="false">
+      <a id="loc:Loc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loc</span><span class="result">: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The location where this atom originated.</p>
     </li><li visbl="prt" name="ornl.elision.core.BasicAtom#matchTypes" data-isabs="false">
       <a id="matchTypes(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">

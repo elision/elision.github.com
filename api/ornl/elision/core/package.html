@@ -537,7 +537,7 @@ point standard.</p>
         <a href="LambdaVariableMismatchException.html"><span class="name">LambdaVariableMismatchException</span></a><span class="result"> extends ElisionException</span>
       </span>
       </h4>
-      <p class="comment cmt">A lambda variable does not match the body.</p>
+      <p class="comment cmt">A lambda variable does not match the argument.</p>
     </li><li visbl="pub" name="ornl.elision.core.Literal" data-isabs="true">
       <a id="Literal:Literal[TYPE]"></a>
       <h4 class="signature">
@@ -1801,7 +1801,7 @@ replace this with something rational as soon as reasonable.
       </span>
       </h4>
       <p class="shortcomment cmt">Attempt to parse the given string and return an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to parse the given string and return an atom.  This uses the
-known executor instance.
+known executor instance and treats the source as internal.
 </p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string to parse.</p></dd><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>Whether to trace the parse.</p></dd><dt class="param">toggle</dt><dd class="cmt"><p>Choose whether to use the Parboiled parser (false) or the
                Scala parser combinator parser (true).</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing, which may be None.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
@@ -1912,14 +1912,14 @@ it into an omit sequence with the original sequence as its backing store.
       </h4>
       <p class="shortcomment cmt">Convert a variable to a Scala symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a variable to a Scala symbol.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#warn" data-isabs="false">
-      <a id="warn(String):Unit"></a>
+      <a id="warn(Loc,String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">warn</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">warn</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Issue a warning.</p><div class="fullcomment"><div class="comment cmt"><p>Issue a warning.  This should be wired to whatever error reporting

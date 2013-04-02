@@ -433,14 +433,14 @@ unrecoverable error.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#execute" data-isabs="false">
-      <a id="execute(String):Unit"></a>
+      <a id="execute(String,String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">execute</span><span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute the provided text.</p><div class="fullcomment"><div class="comment cmt"><p>Execute the provided text.  The text must form a complete sequence of
@@ -453,7 +453,7 @@ invoking the garbage collector to try to recover.  Finally, a runtime
 exception (a <code>Throwable</code>) causes a core dump and is reported as an
 internal error.</p><p>In all cases the system attempts to continue, unless a second exception
 occurs while handling the first.
-</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to parse.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the data source, to be provided to the parser.</p></dd><dt class="param">text</dt><dd class="cmt"><p>The text to parse.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Cache#fetchAs" data-isabs="false">
       <a id="fetchAs[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
@@ -782,20 +782,21 @@ is correctly typed.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#parse" data-isabs="false">
-      <a id="parse(String):ParseResult"></a>
+      <a id="parse(String,String):ParseResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parse</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <a name="ornl.elision.core.Executor.ParseResult" class="extype" href="../core/Executor$ParseResult.html">ParseResult</a></span>
+        <span class="name">parse</span><span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <a name="ornl.elision.core.Executor.ParseResult" class="extype" href="../core/Executor$ParseResult.html">ParseResult</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse the given string and return a sequence of basic atoms.</p><div class="fullcomment"><div class="comment cmt"><p>Parse the given string and return a sequence of basic atoms.  The
 sequence may be empty, and it may be lazily constructed.</p><p>If operators are present in the stream, and applied, any side effects
 will have been executed by the time this method returns.
-</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to parse.</p></dd><dt>returns</dt><dd class="cmt"><p>The sequence of atoms.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the data source.  This can be a filename,
+               <code>&quot;(console)&quot;</code>, or <code>&quot;&quot;</code> for an internal source.</p></dd><dt class="param">text</dt><dd class="cmt"><p>The text to parse.</p></dd><dt>returns</dt><dd class="cmt"><p>The sequence of atoms.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="">Processor</a> → <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#read" data-isabs="false">
       <a id="read(Source,String):Unit"></a>

@@ -299,18 +299,18 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.ElisionException#unapply" data-isabs="false">
-      <a id="unapply(ElisionException):Some[String]"></a>
+      <a id="unapply(ElisionException):Some[(Loc, String)]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unapply</span><span class="params">(<span name="ee">ee: <a name="ornl.elision.util.ElisionException" class="extype" href="ElisionException.html">ElisionException</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[String]</span>
+        <span class="name">unapply</span><span class="params">(<span name="ee">ee: <a name="ornl.elision.util.ElisionException" class="extype" href="ElisionException.html">ElisionException</a></span>)</span><span class="result">: <span name="scala.Some" class="extype">Some</span>[(<a name="ornl.elision.util.Loc" class="extype" href="Loc.html">Loc</a>, String)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Extract the message from an exception.</p><div class="fullcomment"><div class="comment cmt"><p>Extract the message from an exception.
-</p></div><dl class="paramcmts block"><dt class="param">ee</dt><dd class="cmt"><p>An Elision exception.</p></dd><dt>returns</dt><dd class="cmt"><p>The extracted message.
+</p></div><dl class="paramcmts block"><dt class="param">ee</dt><dd class="cmt"><p>An Elision exception.</p></dd><dt>returns</dt><dd class="cmt"><p>The extracted location and message.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>

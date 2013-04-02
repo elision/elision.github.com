@@ -125,18 +125,18 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.TypedSymbolicOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean,Option[String]):TypedSymbolicOperator"></a>
+      <a id="apply(Loc,String,BasicAtom,AtomSeq,String,String,Boolean,Option[String]):TypedSymbolicOperator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="ddetail">ddetail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="handler">handler: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></span>
+        <span class="name">apply</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="params">params: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="ddetail">ddetail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="handler">handler: <span name="scala.Option" class="extype">Option</span>[String] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.core.TypedSymbolicOperator" class="extype" href="TypedSymbolicOperator.html">TypedSymbolicOperator</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a typed symbolic operator from the provided parts.</p><div class="fullcomment"><div class="comment cmt"><p>Make a typed symbolic operator from the provided parts.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt class="param">params</dt><dd class="cmt"><p>The operator parameters.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>Location of the definition of this operator.</p></dd><dt class="param">name</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The type of the fully-applied operator.</p></dd><dt class="param">params</dt><dd class="cmt"><p>The operator parameters.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
 											meta-terms.  This is not advisable, and you should
 											probably leave this with the default value of false.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>Optional native handler code.  Default is <code>None</code>.</p></dd><dt>returns</dt><dd class="cmt"><p>The typed symbolic operator.
 </p></dd></dl></div>

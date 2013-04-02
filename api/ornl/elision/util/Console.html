@@ -277,6 +277,21 @@ zero.
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Console#error" data-isabs="false">
+      <a id="error(Loc,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="Loc.html">Loc</a></span>, <span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
+the quiet level is two or lower.  Suppressed errors are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#error" data-isabs="false">
       <a id="error(String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -290,6 +305,22 @@ zero.
       <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
 the quiet level is two or lower.  Suppressed errors are still counted.
 </p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#errorf" data-isabs="false">
+      <a id="errorf(Loc,String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errorf</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="Loc.html">Loc</a></span>, <span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
+the quiet level is two or lower.  A newline is always written after
+the message.  Suppressed errors are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Console#errorf" data-isabs="false">
       <a id="errorf(String,Any*):Unit"></a>
@@ -667,6 +698,22 @@ only done if the quiet level is three or lower.
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Console#warn" data-isabs="false">
+      <a id="warn(Loc,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="Loc.html">Loc</a></span>, <span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
+if the quiet level is one or lower.  Suppressed warnings are still
+counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warn" data-isabs="false">
       <a id="warn(String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -681,6 +728,22 @@ only done if the quiet level is three or lower.
 if the quiet level is one or lower.  Suppressed warnings are still
 counted.
 </p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warnf" data-isabs="false">
+      <a id="warnf(Loc,String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warnf</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="Loc.html">Loc</a></span>, <span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
+if the quiet level is one or lower.  A newline is always written after
+the message.  Suppressed warnings are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Console#warnf" data-isabs="false">
       <a id="warnf(String,Any*):Unit"></a>

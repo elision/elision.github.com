@@ -204,18 +204,18 @@ which must specify the configuration option <code>elision.cache</code>.
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.NativeCompiler#compile" data-isabs="false">
-      <a id="compile(String,String,String):(ApplyData) ⇒ BasicAtom"></a>
+      <a id="compile(Loc,String,String):(ApplyData) ⇒ BasicAtom"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compile</span><span class="params">(<span name="source">source: String</span>, <span name="operator">operator: String</span>, <span name="handler">handler: String</span>)</span><span class="result">: (<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
+        <span class="name">compile</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="operator">operator: String</span>, <span name="handler">handler: String</span>)</span><span class="result">: (<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Compile (or load a pre-compiled cached) handler.</p><div class="fullcomment"><div class="comment cmt"><p>Compile (or load a pre-compiled cached) handler.
-</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>Source file for this operator definition.</p></dd><dt class="param">operator</dt><dd class="cmt"><p>Name of the operator to get the handler.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The source code of the handler.</p></dd><dt>returns</dt><dd class="cmt"><p>The handler.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>Location of the operator definition.</p></dd><dt class="param">operator</dt><dd class="cmt"><p>Name of the operator to get the handler.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The source code of the handler.</p></dd><dt>returns</dt><dd class="cmt"><p>The handler.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>

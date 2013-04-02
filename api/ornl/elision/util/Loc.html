@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.IllegalPropertiesSpecification</title>
+          <title>ornl.elision.util.Loc</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -14,9 +14,9 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../../../lib/class_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1>IllegalPropertiesSpecification</h1>
+        <a title="Go to companion" href="Loc$.html"><img src="../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.util" class="extype" href="package.html">util</a></p>
+        <h1><a title="Go to companion" href="Loc$.html">Loc</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,17 +25,17 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">IllegalPropertiesSpecification</span><span class="result"> extends <a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a></span>
+        <span class="name">Loc</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Indicate a properties specification is illegal.  This typically indicates a
-bad value for a property (setting commutativity to a non Boolean value, for
-instance, such as &quot;5&quot;) or using properties incorrectly (such as
-specifying idempotency but not associativity).
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide information about the source of an atom's definition.</p><p>This is primarily useful for atoms that have originated from a parse, and
+not so much for atoms that have been created programmatically - but still,
+you may wish to pass along information.</p><p>See the companion object for common idioms.</p><p>The <code>source</code> corresponding to the empty string is taken to be &quot;internal,&quot;
+and indicates that the location should be suppressed in display.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a>, <span name="java.lang.Exception" class="extype">Exception</span>, <span name="java.lang.Throwable" class="extype">Throwable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -49,7 +49,7 @@ specifying idempotency but not associativity).
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.IllegalPropertiesSpecification" class="in"><span>IllegalPropertiesSpecification</span></li><li name="ornl.elision.util.ElisionException" class="in"><span>ElisionException</span></li><li name="java.lang.Exception" class="in"><span>Exception</span></li><li name="java.lang.Throwable" class="in"><span>Throwable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.util.Loc" class="in"><span>Loc</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -61,18 +61,18 @@ specifying idempotency but not associativity).
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.core.IllegalPropertiesSpecification#this" data-isabs="false">
-      <a id="this:IllegalPropertiesSpecification"></a>
+              <ol><li visbl="pub" name="ornl.elision.util.Loc#this" data-isabs="false">
+      <a id="this:Loc"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IllegalPropertiesSpecification</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="msg">msg: String</span>)</span>
+        <span class="name">Loc</span><span class="params">(<span name="source">source: String</span>, <span name="line">line: <span name="scala.Int" class="extype">Int</span></span>, <span name="column">column: <span name="scala.Int" class="extype">Int</span></span>, <span name="text">text: <span name="scala.Option" class="extype">Option</span>[String]</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>Location of the bad property specification.</p></dd><dt class="param">msg</dt><dd class="cmt"><p>Human readable message.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The source (a filename, the console, or internal) of the atom.</p></dd><dt class="param">line</dt><dd class="cmt"><p>First line of the atom's declaration.</p></dd><dt class="param">column</dt><dd class="cmt"><p>First column number of the atom's declaration.</p></dd><dt class="param">text</dt><dd class="cmt"><p>The optional text of the atom's declaration.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -143,18 +143,6 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#addSuppressed" data-isabs="false">
-      <a id="addSuppressed(Throwable):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addSuppressed</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -182,6 +170,18 @@ specifying idempotency but not associativity).
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Loc#column" data-isabs="false">
+      <a id="column:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">column</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">First column number of the atom's declaration.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -206,18 +206,6 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#fillInStackTrace" data-isabs="false">
-      <a id="fillInStackTrace():Throwable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fillInStackTrace</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -233,18 +221,6 @@ specifying idempotency but not associativity).
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getCause" data-isabs="false">
-      <a id="getCause():Throwable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getCause</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -257,54 +233,6 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getLocalizedMessage" data-isabs="false">
-      <a id="getLocalizedMessage():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLocalizedMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getMessage" data-isabs="false">
-      <a id="getMessage():String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getStackTrace" data-isabs="false">
-      <a id="getStackTrace():Array[StackTraceElement]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#getSuppressed" data-isabs="false">
-      <a id="getSuppressed():Array[Throwable]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSuppressed</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.Throwable" class="extype">Throwable</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -317,18 +245,6 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#initCause" data-isabs="false">
-      <a id="initCause(Throwable):Throwable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">initCause</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -341,6 +257,18 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Loc#line" data-isabs="false">
+      <a id="line:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">line</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">First line of the atom's declaration.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -377,54 +305,18 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
-      <a id="printStackTrace(PrintWriter):Unit"></a>
+    </li><li visbl="pub" name="ornl.elision.util.Loc#source" data-isabs="false">
+      <a id="source:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintWriter" class="extype">PrintWriter</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">source</span><span class="result">: String</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
-      <a id="printStackTrace(PrintStream):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
-      <a id="printStackTrace():Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">printStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
-    </li><li visbl="pub" name="java.lang.Throwable#setStackTrace" data-isabs="false">
-      <a id="setStackTrace(Array[StackTraceElement]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+      <p class="shortcomment cmt">The source (a filename, the console, or internal) of the atom.</p>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -437,7 +329,19 @@ specifying idempotency but not associativity).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.ElisionException#toString" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.Loc#text" data-isabs="false">
+      <a id="text:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">text</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The optional text of the atom's declaration.</p>
+    </li><li visbl="pub" name="ornl.elision.util.Loc#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -448,7 +352,7 @@ specifying idempotency but not associativity).
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a> → Throwable → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Loc" class="extype" href="">Loc</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -501,15 +405,7 @@ specifying idempotency but not associativity).
         </div>
 
         <div id="inheritedMembers">
-        <div name="ornl.elision.util.ElisionException" class="parent">
-              <h3>Inherited from <a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a></h3>
-            </div><div name="java.lang.Exception" class="parent">
-              <h3>Inherited from <span name="java.lang.Exception" class="extype">Exception</span></h3>
-            </div><div name="java.lang.Throwable" class="parent">
-              <h3>Inherited from <span name="java.lang.Throwable" class="extype">Throwable</span></h3>
-            </div><div name="java.io.Serializable" class="parent">
-              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="scala.AnyRef" class="parent">
+        <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

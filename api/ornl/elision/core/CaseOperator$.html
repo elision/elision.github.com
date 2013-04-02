@@ -125,18 +125,18 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.CaseOperator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,AtomSeq,String,String,Boolean):CaseOperator"></a>
+      <a id="apply(Loc,String,BasicAtom,AtomSeq,String,String,Boolean):CaseOperator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="cases">cases: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a name="ornl.elision.core.CaseOperator" class="extype" href="CaseOperator.html">CaseOperator</a></span>
+        <span class="name">apply</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="name">name: String</span>, <span name="typ">typ: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="cases">cases: <a name="ornl.elision.core.AtomSeq" class="extype" href="AtomSeq.html">AtomSeq</a></span>, <span name="description">description: String</span>, <span name="detail">detail: String</span>, <span name="evenMeta">evenMeta: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a name="ornl.elision.core.CaseOperator" class="extype" href="CaseOperator.html">CaseOperator</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a case operator from the components.</p><div class="fullcomment"><div class="comment cmt"><p>Make a case operator from the components.
-</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The operator type (may be <code>ANY</code>).</p></dd><dt class="param">cases</dt><dd class="cmt"><p>The cases, as a sequence of atoms.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">detail</dt><dd class="cmt"><p>Optional detailed help for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>Location of the definition of this operator.</p></dd><dt class="param">name</dt><dd class="cmt"><p>Operator name.</p></dd><dt class="param">typ</dt><dd class="cmt"><p>The operator type (may be <code>ANY</code>).</p></dd><dt class="param">cases</dt><dd class="cmt"><p>The cases, as a sequence of atoms.</p></dd><dt class="param">description</dt><dd class="cmt"><p>An optional short description for the operator.</p></dd><dt class="param">detail</dt><dd class="cmt"><p>Optional detailed help for the operator.</p></dd><dt class="param">evenMeta</dt><dd class="cmt"><p>Apply this operator even when the arguments contain
 											meta-terms.  This is not advisable, and you should
 											probably leave this with the default value of false.</p></dd><dt>returns</dt><dd class="cmt"><p>The new case operator.
 </p></dd></dl></div>

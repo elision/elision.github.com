@@ -233,7 +233,11 @@ provided by a higher-level (semantically) class.</p><p>This class provides for m
         <span class="name">declare</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>)</span><span class="result">: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">Declare an atom to this context.</p><div class="fullcomment"><div class="comment cmt"><p>Declare an atom to this context.  If the atom is the kind that is held in
+the context (an operator, a rule, a ruleset name, a map pair that maps a
+variable to an atom) then it is added to the correct registry.
+</p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to declare.</p></dd><dt>returns</dt><dd class="cmt"><p>The atom.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -534,7 +538,17 @@ same atom is reconstructed.
         <span class="name">write</span><span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Write the context to the given appendable.</p><div class="fullcomment"><div class="comment cmt"><p>Write the context to the given appendable.
+      <p class="shortcomment cmt">Write the context to the given appendable.</p><div class="fullcomment"><div class="comment cmt"><p>Write the context to the given appendable.</p><p>The purpose of this is to write a compilable version of the entire context
+as a single object that, when executed, creates and returns a complete
+context object.  While this is effective for those items that are
+contained in the context, it does not necessarily capture those items
+contained in the executor.</p><p>The basic structure of the file that is created is the following.</p><pre>
+<span class="kw">object</span> SC21e4fe213a6c {
+  <span class="kw">def</span> generate(): Context
+}
+</pre><p>After loading the context, the <code>generate</code> method will create a new context
+object, populating the operator library, the rule library, the bindings,
+etc.
 </p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable to get the context.
 </p></dd></dl></div>
     </li></ol>

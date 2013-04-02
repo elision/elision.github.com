@@ -66,10 +66,11 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ElisionParser</span><span class="params">(<span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span>
+        <span class="name">ElisionParser</span><span class="params">(<span name="name">name: String</span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">trace</dt><dd class="cmt"><p>If true, enable tracing.  False by default.
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the input source (typically a filename).  This should
+               be <code>&quot;(console)&quot;</code> for the console, and <code>&quot;&quot;</code> for internal use.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>If true, enable tracing.  False by default.
 </p></dd></dl></div>
     </li></ol>
             </div>
@@ -917,6 +918,19 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.ElisionParser#name" data-isabs="false">
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Name of the input source (typically a filename).</p><div class="fullcomment"><div class="comment cmt"><p>Name of the input source (typically a filename).  This should
+               be <code>&quot;(console)&quot;</code> for the console, and <code>&quot;&quot;</code> for internal use.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.ElisionParser" class="extype" href="">ElisionParser</a> → <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -1121,7 +1135,7 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
       </span>
       </h4>
       <p class="shortcomment cmt">Entry point to parse all atoms from the given source.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point to parse all atoms from the given source.
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The parsing result.
+</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The input source.</p></dd><dt>returns</dt><dd class="cmt"><p>The parsing result.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.ElisionParser" class="extype" href="">ElisionParser</a> → <a name="ornl.elision.parse.AbstractParser" class="extype" href="AbstractParser.html">AbstractParser</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AbstractParser#parseAtoms" data-isabs="false">
       <a id="parseAtoms(String):Presult"></a>
@@ -1281,6 +1295,20 @@ escape sequence that will be interpreted here.</p><p>See <code>toEString</code> 
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Parser</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.ElisionParser#toLoc" data-isabs="false">
+      <a id="toLoc(org.parboiled.Context[_]):Loc"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toLoc</span><span class="params">(<span name="context">context: org.parboiled.Context[_]</span>)</span><span class="result">: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Transform a Parboiled context into a location.</p><div class="fullcomment"><div class="comment cmt"><p>Transform a Parboiled context into a location.
+</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>The parboiled context.</p></dd><dt>returns</dt><dd class="cmt"><p>The new location instance.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.ElisionParser#toRule" data-isabs="false">
       <a id="toRule(String):Rule0"></a>
       <h4 class="signature">
@@ -1332,19 +1360,6 @@ site in the examples.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.parse.ElisionParser#trace" data-isabs="false">
-      <a id="trace:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">trace</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">If true, enable tracing.</p><div class="fullcomment"><div class="comment cmt"><p>If true, enable tracing.  False by default.
-</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">

@@ -524,18 +524,18 @@
 </p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>The ruleset name.</p></dd><dt>returns</dt><dd class="cmt"><p>The new AST.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#special" data-isabs="false">
-      <a id="special(BA,BA):AST[BasicAtom]"></a>
+      <a id="special(BA,BA,Loc):AST[BasicAtom]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">special</span><span class="params">(<span name="tag">tag: BA</span>, <span name="content">content: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>
+        <span class="name">special</span><span class="params">(<span name="tag">tag: BA</span>, <span name="content">content: BA</span>, <span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a special form AST.</p><div class="fullcomment"><div class="comment cmt"><p>Make a special form AST.
-</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag AST.</p></dd><dt class="param">content</dt><dd class="cmt"><p>The content AST.</p></dd><dt>returns</dt><dd class="cmt"><p>The new special form AST.
+</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag AST.</p></dd><dt class="param">content</dt><dd class="cmt"><p>The content AST.</p></dd><dt class="param">loc</dt><dd class="cmt"><p>The location where this node arose.</p></dd><dt>returns</dt><dd class="cmt"><p>The new special form AST.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#string" data-isabs="false">
       <a id="string(String,BA):AST[StringLiteral]"></a>
