@@ -29,7 +29,7 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The REPL's Actor object for communicating with the GUI</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The REPL's Actor object for communicating with a GUI.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="scala.actors.Actor" class="extype">Actor</span>, <span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.actors.InputChannel" class="extype">InputChannel</span>[<span name="scala.Any" class="extype">Any</span>], <span name="scala.actors.ActorCanReply" class="extype">ActorCanReply</span>, <span name="scala.actors.ReplyReactor" class="extype">ReplyReactor</span>, <span name="scala.actors.ReactorCanReply" class="extype">ReactorCanReply</span>, <span name="scala.actors.Reactor" class="extype">Reactor</span>[<span name="scala.Any" class="extype">Any</span>], <span name="scala.actors.Combinators" class="extype">Combinators</span>, <span name="scala.actors.AbstractActor" class="extype">AbstractActor</span>, <span name="scala.actors.CanReply" class="extype">CanReply</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Any" class="extype">Any</span>], <span name="scala.actors.OutputChannel" class="extype">OutputChannel</span>[<span name="scala.Any" class="extype">Any</span>], AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -433,7 +433,7 @@ It will discard any other input in its mailbox.
         <span class="name">guiActor</span><span class="result">: <span name="scala.actors.Actor" class="extype">Actor</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">a reference to the GUI's actor.</p>
+      <p class="shortcomment cmt">a reference to the GUI's actor.</p><div class="fullcomment"><div class="comment cmt"><p>a reference to the GUI's actor. Null if we are not connected to a GUI.</p></div></div>
     </li><li visbl="pub" name="ornl.elision.actors.ReplActor#guiColumns" data-isabs="false">
       <a id="guiColumns:Int"></a>
       <h4 class="signature">
@@ -458,18 +458,6 @@ It will discard any other input in its mailbox.
       </span>
       </h4>
       <p class="shortcomment cmt">a string for storing the most recent input from a GUI</p>
-    </li><li visbl="pub" name="ornl.elision.actors.ReplActor#guiMode" data-isabs="false">
-      <a id="guiMode:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">guiMode</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">a flag that tells the REPL whether it is receiving input from a GUI or from the console.</p>
     </li><li visbl="pub" name="ornl.elision.actors.ReplActor#guiRows" data-isabs="false">
       <a id="guiRows:Int"></a>
       <h4 class="signature">
@@ -650,6 +638,20 @@ It will discard any other input in its mailbox.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → InputChannel → ReplyReactor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.actors.ReplActor#readLine" data-isabs="false">
+      <a id="readLine(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">readLine</span><span class="params">(<span name="prompt">prompt: String</span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Prompts the GUI for input.</p><div class="fullcomment"><div class="comment cmt"><p>Prompts the GUI for input. This blocks until the GUI sets the
+value for guiInput and sends a (&quot;wait&quot;, false) message to us.</p></div><dl class="paramcmts block"><dt class="param">prompt</dt><dd class="cmt"><p>The prompt string. e.g.: &quot;e&gt; &quot;</p></dd><dt>returns</dt><dd class="cmt"><p>The line of input from the GUI.
+</p></dd></dl></div>
     </li><li visbl="prt" name="ornl.elision.actors.ReplActor#readResolve" data-isabs="false">
       <a id="readResolve():AnyRef"></a>
       <h4 class="signature">
@@ -875,18 +877,20 @@ It will discard any other input in its mailbox.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.actors.ReplActor#waitOnGUI" data-isabs="false">
-      <a id="waitOnGUI(() ⇒ Unit,String):Unit"></a>
+    </li><li visbl="pub" name="ornl.elision.actors.ReplActor#waitForGUI" data-isabs="false">
+      <a id="waitForGUI(String):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">waitOnGUI</span><span class="params">(<span name="doStuff">doStuff: () ⇒ <span name="scala.Unit" class="extype">Unit</span> = <span class="symbol">null</span></span>, <span name="msg">msg: String = <span class="symbol">null</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">waitForGUI</span><span class="params">(<span name="msg">msg: String = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">forces the calling thread to wait for the GUI to finish doing something.</p>
+      <p class="shortcomment cmt">Pause until the GUI sends a wake up message.</p><div class="fullcomment"><div class="comment cmt"><p>Pause until the GUI sends a wake up message. Optionally, display a
+message about what we're waiting on, but only if verbose is true.</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The optional message.
+</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.actors.ReplActor#waitingForGuiInput" data-isabs="false">
       <a id="waitingForGuiInput:Boolean"></a>
       <h4 class="signature">
