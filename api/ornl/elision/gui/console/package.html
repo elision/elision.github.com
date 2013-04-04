@@ -60,30 +60,18 @@
       </span>
       </h4>
       <p class="comment cmt"> This panel displays Eva's current REPL in a scrollable EditorPane.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.console.EditorPaneInputStream" data-isabs="false">
-      <a id="EditorPaneInputStream:EditorPaneInputStream"></a>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole" data-isabs="false">
+      <a id="EvaConsole:EvaConsole"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="EditorPaneInputStream.html"><span class="name">EditorPaneInputStream</span></a><span class="result"> extends AnyRef</span>
+        <a href="EvaConsole.html"><span class="name">EvaConsole</span></a><span class="result"> extends EditorPane with Actor with Console</span>
       </span>
       </h4>
-      <p class="comment cmt">It's not actually an InputStream, but it facilitates in sending input from a textArea to the current REPL.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.console.EditorPaneOutputStream" data-isabs="false">
-      <a id="EditorPaneOutputStream:EditorPaneOutputStream"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="EditorPaneOutputStream.html"><span class="name">EditorPaneOutputStream</span></a><span class="result"> extends FilterOutputStream with Actor</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An OutputStream object that is convenient for redirecting stdout and stderr to a EditorPane object.</p>
+      <p class="comment cmt">An EditorPane-based Elision Console used by Eva.</p>
     </li><li visbl="pub" name="ornl.elision.gui.console.ReplThread" data-isabs="true">
       <a id="ReplThread:ReplThread"></a>
       <h4 class="signature">

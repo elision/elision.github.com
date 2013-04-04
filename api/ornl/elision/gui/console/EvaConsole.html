@@ -1,0 +1,2470 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>ornl.elision.gui.console.EvaConsole</title>
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+    
+        </head>
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+      <div id="definition">
+        <img src="../../../../lib/class_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.console" class="extype" href="package.html">console</a></p>
+        <h1>EvaConsole</h1>
+      </div>
+
+      <h4 class="signature" id="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EvaConsole</span><span class="result"> extends <span name="scala.swing.EditorPane" class="extype">EditorPane</span> with <span name="scala.actors.Actor" class="extype">Actor</span> with <a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></span>
+      </span>
+      </h4>
+      
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>An EditorPane-based Elision Console used by Eva. This should eventually
+be registered as the console for Eva's Elision REPL instance.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a>, <span name="scala.actors.Actor" class="extype">Actor</span>, <span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.actors.InputChannel" class="extype">InputChannel</span>[<span name="scala.Any" class="extype">Any</span>], <span name="scala.actors.ActorCanReply" class="extype">ActorCanReply</span>, <span name="scala.actors.ReplyReactor" class="extype">ReplyReactor</span>, <span name="scala.actors.ReactorCanReply" class="extype">ReactorCanReply</span>, <span name="scala.actors.Reactor" class="extype">Reactor</span>[<span name="scala.Any" class="extype">Any</span>], <span name="scala.actors.Combinators" class="extype">Combinators</span>, <span name="scala.actors.AbstractActor" class="extype">AbstractActor</span>, <span name="scala.actors.CanReply" class="extype">CanReply</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Any" class="extype">Any</span>], <span name="scala.actors.OutputChannel" class="extype">OutputChannel</span>[<span name="scala.Any" class="extype">Any</span>], <span name="scala.swing.EditorPane" class="extype">EditorPane</span>, <span name="scala.swing.TextComponent" class="extype">TextComponent</span>, <span name="scala.swing.Component" class="extype">Component</span>, <span name="scala.swing.UIElement" class="extype">UIElement</span>, <span name="scala.swing.LazyPublisher" class="extype">LazyPublisher</span>, <span name="scala.swing.Publisher" class="extype">Publisher</span>, <span name="scala.swing.Reactor" class="extype">Reactor</span>, <span name="scala.Proxy" class="extype">Proxy</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div></div>
+    
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+            </div>
+        <div id="ancestors">
+              <span class="filtertype">Inherited</span>
+              <ol><li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.gui.console.EvaConsole" class="in"><span>EvaConsole</span></li><li name="ornl.elision.util.Console" class="in"><span>Console</span></li><li name="scala.actors.Actor" class="in"><span>Actor</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.actors.InputChannel" class="in"><span>InputChannel</span></li><li name="scala.actors.ActorCanReply" class="in"><span>ActorCanReply</span></li><li name="scala.actors.ReplyReactor" class="in"><span>ReplyReactor</span></li><li name="scala.actors.ReactorCanReply" class="in"><span>ReactorCanReply</span></li><li name="scala.actors.Reactor" class="in"><span>Reactor</span></li><li name="scala.actors.Combinators" class="in"><span>Combinators</span></li><li name="scala.actors.AbstractActor" class="in"><span>AbstractActor</span></li><li name="scala.actors.CanReply" class="in"><span>CanReply</span></li><li name="scala.actors.OutputChannel" class="in"><span>OutputChannel</span></li><li name="scala.swing.EditorPane" class="in"><span>EditorPane</span></li><li name="scala.swing.TextComponent" class="in"><span>TextComponent</span></li><li name="scala.swing.Component" class="in"><span>Component</span></li><li name="scala.swing.UIElement" class="in"><span>UIElement</span></li><li name="scala.swing.LazyPublisher" class="in"><span>LazyPublisher</span></li><li name="scala.swing.Publisher" class="in"><span>Publisher</span></li><li name="scala.swing.Reactor" class="in"><span>Reactor</span></li><li name="scala.Proxy" class="in"><span>Proxy</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+            </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#this" data-isabs="false">
+      <a id="this:EvaConsole"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EvaConsole</span><span class="params">(<span name="console">console: <a name="ornl.elision.gui.console.ConsolePanel" class="extype" href="ConsolePanel.html">ConsolePanel</a></span>)</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="scala.actors.ReactorCanReply#Future" data-isabs="false">
+      <a id="Future:Future[P]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Future</span><span class="tparams">[<span name="P">+P</span>]</span><span class="result"> = <span name="scala.actors.Future" class="extype">Future</span>[P]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReactorCanReply → CanReply</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members" id="values">
+              <h3>Value Members</h3>
+              <ol><li visbl="pub" name="scala.actors.ReplyReactor#!" data-isabs="false">
+      <a id="!(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang">!</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReplyReactor → Reactor → OutputChannel</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.ActorCanReply#!!" data-isabs="false">
+      <a id="!!(Any):Future[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$bang">!!</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: Future[<span name="scala.Any" class="extype">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ActorCanReply → ReactorCanReply → CanReply</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.ActorCanReply#!!" data-isabs="false">
+      <a id="!![A](Any,PartialFunction[Any, A]):Future[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$bang">!!</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>, <span name="handler">handler: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, A]</span>)</span><span class="result">: Future[A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ActorCanReply → ReactorCanReply → CanReply</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+      <a id="!=(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.ActorCanReply#!?" data-isabs="false">
+      <a id="!?(Long,Any):Option[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$qmark">!?</span><span class="params">(<span name="msec">msec: <span name="scala.Long" class="extype">Long</span></span>, <span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ActorCanReply → ReactorCanReply → CanReply</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.ActorCanReply#!?" data-isabs="false">
+      <a id="!?(Any):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $bang$qmark">!?</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ActorCanReply → ReactorCanReply → CanReply</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <a id="==(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#?" data-isabs="false">
+      <a id="?:Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: $qmark">?</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → InputChannel</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_anchorPos" data-isabs="false">
+      <a id="_anchorPos:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_anchorPos</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The position of the last output character in textArea.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_chompFirstLine" data-isabs="false">
+      <a id="_chompFirstLine():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_chompFirstLine</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Removes the first <br/> tag and everything before it in the EditorPane's readOnlyOutput.</br/></p><div class="fullcomment"><div class="comment cmt"><p>Removes the first <br/> tag and everything before it in the EditorPane's readOnlyOutput.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if the readOnlyOutput currently has at least 1 new line tag. Otherwise false.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_enforceMaxLines" data-isabs="false">
+      <a id="_enforceMaxLines:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_enforceMaxLines</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If the current number of lines in the text area is greater than maxlines,
+it erases the oldest lines until the number of lines until it is no longer greater
+than maxLines.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_readOnlyOutput" data-isabs="false">
+      <a id="_readOnlyOutput:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_readOnlyOutput</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The contents of textArea since the last time it received output.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_sendCaretToEnd" data-isabs="false">
+      <a id="_sendCaretToEnd:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_sendCaretToEnd</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the caret's position to the end of the allowed input area.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_sendCaretToStart" data-isabs="false">
+      <a id="_sendCaretToStart:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_sendCaretToStart</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Sets the caret's position to the beginning of the allowed input area.</p>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#_updateReadOnlyText" data-isabs="false">
+      <a id="_updateReadOnlyText(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_updateReadOnlyText</span><span class="params">(<span name="newTxt">newTxt: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Appends new already-processed text to our readOnlyOutput.</p><div class="fullcomment"><div class="comment cmt"><p>Appends new already-processed text to our readOnlyOutput.</p></div><dl class="paramcmts block"><dt class="param">newTxt</dt><dd class="cmt"><p>The text being appended to readOnlyOutput.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#act" data-isabs="false">
+      <a id="act():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">act</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.console.EvaConsole" class="extype" href="">EvaConsole</a> → Reactor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#applyFormatting" data-isabs="false">
+      <a id="applyFormatting:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">applyFormatting</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">flag for applying Elision formatting to output</p>
+    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#background" data-isabs="false">
+      <a id="background:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">background</span><span class="result">: Color</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#background_=" data-isabs="false">
+      <a id="background_=(Color):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: background_$eq">background_=</span><span class="params">(<span name="c">c: Color</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#border" data-isabs="false">
+      <a id="border:Border"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">border</span><span class="result">: <span name="javax.swing.border.Border" class="extype">Border</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#border_=" data-isabs="false">
+      <a id="border_=(Border):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: border_$eq">border_=</span><span class="params">(<span name="b">b: <span name="javax.swing.border.Border" class="extype">Border</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#bounds" data-isabs="false">
+      <a id="bounds:Rectangle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bounds</span><span class="result">: <span name="java.awt.Rectangle" class="extype">Rectangle</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#console" data-isabs="false">
+      <a id="console:ConsolePanel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">console</span><span class="result">: <a name="ornl.elision.gui.console.ConsolePanel" class="extype" href="ConsolePanel.html">ConsolePanel</a></span>
+      </span>
+      </h4>
+      
+    </li><li visbl="pub" name="scala.swing.EditorPane#contentType" data-isabs="false">
+      <a id="contentType:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contentType</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EditorPane</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.EditorPane#contentType_=" data-isabs="false">
+      <a id="contentType_=(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: contentType_$eq">contentType_=</span><span class="params">(<span name="t">t: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EditorPane</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Combinators#continue" data-isabs="false">
+      <a id="continue():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">continue</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Combinators</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#copy" data-isabs="false">
+      <a id="copy():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copy</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#cursor" data-isabs="false">
+      <a id="cursor:Cursor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cursor</span><span class="result">: <span name="java.awt.Cursor" class="extype">Cursor</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#cursor_=" data-isabs="false">
+      <a id="cursor_=(Cursor):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: cursor_$eq">cursor_=</span><span class="params">(<span name="c">c: <span name="java.awt.Cursor" class="extype">Cursor</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#cut" data-isabs="false">
+      <a id="cut():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cut</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Reactor#deafTo" data-isabs="false">
+      <a id="deafTo(Publisher*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">deafTo</span><span class="params">(<span name="ps">ps: <span name="scala.swing.Publisher" class="extype">Publisher</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#defaultPause" data-isabs="false">
+      <a id="defaultPause():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultPause</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default pause operation.</p><div class="fullcomment"><div class="comment cmt"><p>The default pause operation.  Wait for a user-entered character.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>True if output should continue; false if the user wants to
+         terminate the output.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#displayable" data-isabs="false">
+      <a id="displayable:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">displayable</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#doPause" data-isabs="false">
+      <a id="doPause():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doPause</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Perform whatever &quot;pause&quot; is configured for this console, and return
+whether the user elected to continue.</p><div class="fullcomment"><div class="comment cmt"><p>Perform whatever &quot;pause&quot; is configured for this console, and return
+whether the user elected to continue.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>True if the user wants to continue; false if not.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#editable" data-isabs="false">
+      <a id="editable:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">editable</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#editable_=" data-isabs="false">
+      <a id="editable_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: editable_$eq">editable_=</span><span class="params">(<span name="x">x: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.EditorPane#editorKit" data-isabs="false">
+      <a id="editorKit:EditorKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">editorKit</span><span class="result">: <span name="javax.swing.text.EditorKit" class="extype">EditorKit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EditorPane</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.EditorPane#editorKit_=" data-isabs="false">
+      <a id="editorKit_=(EditorKit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: editorKit_$eq">editorKit_=</span><span class="params">(<span name="k">k: <span name="javax.swing.text.EditorKit" class="extype">EditorKit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EditorPane</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#emit" data-isabs="false">
+      <a id="emit(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emit</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a message.</p><div class="fullcomment"><div class="comment cmt"><p>Write a message.  The message is only written if the quiet level is
+zero.
+</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#emitf" data-isabs="false">
+      <a id="emitf(String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a message.</p><div class="fullcomment"><div class="comment cmt"><p>Write a message.  The message is only written if the quiet level is
+zero.
+</p></div><dl class="paramcmts block"><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#emitln" data-isabs="false">
+      <a id="emitln(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitln</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write a message.</p><div class="fullcomment"><div class="comment cmt"><p>Write a message.  The message is only written if the quiet level is
+zero.
+</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#enabled" data-isabs="false">
+      <a id="enabled:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">enabled</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#enabled_=" data-isabs="false">
+      <a id="enabled_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: enabled_$eq">enabled_=</span><span class="params">(<span name="b">b: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.Proxy#equals" data-isabs="false">
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="that">that: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Proxy → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#error" data-isabs="false">
+      <a id="error(Loc,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../../util/Loc.html">Loc</a></span>, <span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
+the quiet level is two or lower.  Suppressed errors are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#error" data-isabs="false">
+      <a id="error(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
+the quiet level is two or lower.  Suppressed errors are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#errorf" data-isabs="false">
+      <a id="errorf(Loc,String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errorf</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../../util/Loc.html">Loc</a></span>, <span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
+the quiet level is two or lower.  A newline is always written after
+the message.  Suppressed errors are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#errorf" data-isabs="false">
+      <a id="errorf(String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errorf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit an error message, with the ERROR prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit an error message, with the ERROR prefix.  This is only done if
+the quiet level is two or lower.  A newline is always written after
+the message.  Suppressed errors are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#errors" data-isabs="false">
+      <a id="errors:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">errors</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get the error count.</p><div class="fullcomment"><div class="comment cmt"><p>Get the error count.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#evaPause" data-isabs="false">
+      <a id="evaPause():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evaPause</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A closure for pausing the repl.</p>
+    </li><li visbl="prt" name="scala.actors.Reactor#exceptionHandler" data-isabs="false">
+      <a id="exceptionHandler:PartialFunction[Exception, Unit]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exceptionHandler</span><span class="result">: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[Exception, <span name="scala.Unit" class="extype">Unit</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="prt" name="scala.actors.Actor#exit" data-isabs="false">
+      <a id="exit():Nothing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exit</span><span class="params">()</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>Actor → Reactor</dd></dl></div>
+    </li><li visbl="prt" name="scala.actors.Actor#exit" data-isabs="false">
+      <a id="exit(AnyRef):Nothing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">exit</span><span class="params">(<span name="reason">reason: AnyRef</span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#focusable" data-isabs="false">
+      <a id="focusable:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">focusable</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#focusable_=" data-isabs="false">
+      <a id="focusable_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: focusable_$eq">focusable_=</span><span class="params">(<span name="b">b: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#font" data-isabs="false">
+      <a id="font:Font"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">font</span><span class="result">: Font</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#font_=" data-isabs="false">
+      <a id="font_=(Font):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: font_$eq">font_=</span><span class="params">(<span name="f">f: Font</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#foreground" data-isabs="false">
+      <a id="foreground:Color"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">foreground</span><span class="result">: Color</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#foreground_=" data-isabs="false">
+      <a id="foreground_=(Color):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: foreground_$eq">foreground_=</span><span class="params">(<span name="c">c: Color</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.ReplyReactor#forward" data-isabs="false">
+      <a id="forward(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forward</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ReplyReactor → Reactor → OutputChannel</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
+      <a id="getClass():java.lang.Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#getHistory" data-isabs="false">
+      <a id="getHistory(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getHistory</span><span class="params">(<span name="direction">direction: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Cycles one step up or down through the input history and sets the current input text to the obtained historical input.</p><div class="fullcomment"><div class="comment cmt"><p>Cycles one step up or down through the input history and sets the current input text to the obtained historical input.</p></div><dl class="paramcmts block"><dt class="param">direction</dt><dd class="cmt"><p>An integer in range [-1,1] telling the history which direction to cycle. 1 means go back 1, -1 means go forward 1.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#getLength" data-isabs="false">
+      <a id="getLength():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getLength</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">gets the length of the EditorPane's text.</p>
+    </li><li visbl="pub" name="scala.actors.Actor#getState" data-isabs="false">
+      <a id="getState:Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getState</span><span class="result">: <span name="scala.Enumeration.Value" class="extype">Value</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → ReplyReactor → Reactor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#getText" data-isabs="false">
+      <a id="getText():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getText</span><span class="params">()</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">gets the text of the EditorPane</p>
+    </li><li visbl="pub" name="scala.swing.Component#hasFocus" data-isabs="false">
+      <a id="hasFocus:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasFocus</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.Proxy#hashCode" data-isabs="false">
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Proxy → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#height" data-isabs="false">
+      <a id="height:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">height</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Obtains the length of a page of text.</p><div class="fullcomment"><div class="comment cmt"><p>Obtains the length of a page of text.  If output (sent at one time)
+exceeds this, then the pager is invoked.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The number of lines on the screen, minus one.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#height_=" data-isabs="false">
+      <a id="height_=(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: height_$eq">height_=</span><span class="params">(<span name="size">size: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify the length of a page of text.</p><div class="fullcomment"><div class="comment cmt"><p>Specify the length of a page of text.  If output (sent at one time)
+exceeds this, then the pager is invoked.
+</p></div><dl class="paramcmts block"><dt class="param">size</dt><dd class="cmt"><p>The number of lines on the screen, minus one.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#ignoreRepaint" data-isabs="false">
+      <a id="ignoreRepaint:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ignoreRepaint</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#ignoreRepaint_=" data-isabs="false">
+      <a id="ignoreRepaint_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: ignoreRepaint_$eq">ignoreRepaint_=</span><span class="params">(<span name="b">b: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#initP" data-isabs="false">
+      <a id="initP:JComponent"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">initP</span><span class="result">: <span name="javax.swing.JComponent" class="extype">JComponent</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#inputVerifier" data-isabs="false">
+      <a id="inputVerifier:(Component) ⇒ Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputVerifier</span><span class="result">: (<span name="scala.swing.Component" class="extype">Component</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#inputVerifier_=" data-isabs="false">
+      <a id="inputVerifier_=((Component) ⇒ Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: inputVerifier_$eq">inputVerifier_=</span><span class="params">(<span name="v">v: (<span name="scala.swing.Component" class="extype">Component</span>) ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#inset" data-isabs="false">
+      <a id="inset:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inset</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The border width.</p>
+    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#line" data-isabs="false">
+      <a id="line(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">line</span><span class="params">(<span name="ch">ch: String = <span class="symbol">&quot;-&quot;</span></span>)</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get a &quot;line&quot; string based on the current width.</p><div class="fullcomment"><div class="comment cmt"><p>Get a &quot;line&quot; string based on the current width.
+</p></div><dl class="paramcmts block"><dt class="param">ch</dt><dd class="cmt"><p>A string to repeat to make up the line.  By default this
+           is <code>-</code>.  As many full instances of this string will be
+           concatenated as the line allows.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested line.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#lineCount" data-isabs="false">
+      <a id="lineCount(String):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lineCount</span><span class="params">(<span name="txt">txt: String</span>)</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Counts the number of lines in the EditorPane by counting the number of <br/> tags.</br/></p><div class="fullcomment"><div class="comment cmt"><p>Counts the number of lines in the EditorPane by counting the number of <br/> tags.</p></div><dl class="paramcmts block"><dt class="param">txt</dt><dd class="cmt"><p>The string we are counting new line tags in.</p></dd><dt>returns</dt><dd class="cmt"><p>The number of new line tags in txt.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#link" data-isabs="false">
+      <a id="link(⇒ Unit):Actor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">link</span><span class="params">(<span name="body">body: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.actors.Actor" class="extype">Actor</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#link" data-isabs="false">
+      <a id="link(AbstractActor):AbstractActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">link</span><span class="params">(<span name="to">to: <span name="scala.actors.AbstractActor" class="extype">AbstractActor</span></span>)</span><span class="result">: <span name="scala.actors.AbstractActor" class="extype">AbstractActor</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Reactor#listenTo" data-isabs="false">
+      <a id="listenTo(Publisher*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listenTo</span><span class="params">(<span name="ps">ps: <span name="scala.swing.Publisher" class="extype">Publisher</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Publisher#listeners" data-isabs="false">
+      <a id="listeners:RefSet[Reaction] { val underlying: scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]] }"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">listeners</span><span class="result">: <span name="scala.swing.RefSet" class="extype">RefSet</span>[Reaction] { val underlying: scala.collection.mutable.HashSet[scala.ref.Reference[scala.swing.Reactions.Reaction]] }</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Publisher</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#locale" data-isabs="false">
+      <a id="locale:Locale"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">locale</span><span class="result">: <span name="java.util.Locale" class="extype">Locale</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#location" data-isabs="false">
+      <a id="location:Point"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">location</span><span class="result">: <span name="java.awt.Point" class="extype">Point</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#locationOnScreen" data-isabs="false">
+      <a id="locationOnScreen:Point"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">locationOnScreen</span><span class="result">: <span name="java.awt.Point" class="extype">Point</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Combinators#loop" data-isabs="false">
+      <a id="loop(⇒ Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loop</span><span class="params">(<span name="body">body: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Combinators</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Combinators#loopWhile" data-isabs="false">
+      <a id="loopWhile(⇒ Boolean)(⇒ Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loopWhile</span><span class="params">(<span name="cond">cond: ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="params">(<span name="body">body: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Combinators</dd></dl></div>
+    </li><li visbl="prt" name="scala.actors.Reactor#mailboxSize" data-isabs="false">
+      <a id="mailboxSize:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mailboxSize</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#maximumSize" data-isabs="false">
+      <a id="maximumSize:Dimension"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maximumSize</span><span class="result">: <span name="java.awt.Dimension" class="extype">Dimension</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#maximumSize_=" data-isabs="false">
+      <a id="maximumSize_=(Dimension):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: maximumSize_$eq">maximumSize_=</span><span class="params">(<span name="x">x: Dimension</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#minimumSize" data-isabs="false">
+      <a id="minimumSize:Dimension"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minimumSize</span><span class="result">: <span name="java.awt.Dimension" class="extype">Dimension</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#minimumSize_=" data-isabs="false">
+      <a id="minimumSize_=(Dimension):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: minimumSize_$eq">minimumSize_=</span><span class="params">(<span name="x">x: Dimension</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Reactor#mkBody" data-isabs="false">
+      <a id="mkBody[A](⇒ A):Body[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mkBody</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="body">body: ⇒ A</span>)</span><span class="result">: <span name="scala.actors.Actor.Body" class="extype">Body</span>[A]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor → Combinators</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#name" data-isabs="false">
+      <a id="name:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#name_=" data-isabs="false">
+      <a id="name_=(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: name_$eq">name_=</span><span class="params">(<span name="s">s: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Component#onFirstSubscribe" data-isabs="false">
+      <a id="onFirstSubscribe():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onFirstSubscribe</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Component → UIElement → LazyPublisher</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.UIElement#onLastUnsubscribe" data-isabs="false">
+      <a id="onLastUnsubscribe():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">onLastUnsubscribe</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>UIElement → LazyPublisher</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#opaque" data-isabs="false">
+      <a id="opaque:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opaque</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#opaque_=" data-isabs="false">
+      <a id="opaque_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: opaque_$eq">opaque_=</span><span class="params">(<span name="b">b: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#paint" data-isabs="false">
+      <a id="paint(Graphics2D):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paint</span><span class="params">(<span name="g">g: Graphics2D</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Component#paintBorder" data-isabs="false">
+      <a id="paintBorder(Graphics2D):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paintBorder</span><span class="params">(<span name="g">g: Graphics2D</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Component#paintChildren" data-isabs="false">
+      <a id="paintChildren(Graphics2D):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paintChildren</span><span class="params">(<span name="g">g: Graphics2D</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="prt" name="scala.swing.Component#paintComponent" data-isabs="false">
+      <a id="paintComponent(Graphics2D):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paintComponent</span><span class="params">(<span name="g">g: Graphics2D</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#panic" data-isabs="false">
+      <a id="panic(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">panic</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send output no matter what the quiet level.</p><div class="fullcomment"><div class="comment cmt"><p>Send output no matter what the quiet level.  Please do not abuse this.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to send.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#panicf" data-isabs="false">
+      <a id="panicf(String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">panicf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send output no matter what the quiet level.</p><div class="fullcomment"><div class="comment cmt"><p>Send output no matter what the quiet level.  Please do not abuse this.
+</p></div><dl class="paramcmts block"><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#panicln" data-isabs="false">
+      <a id="panicln(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">panicln</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send output no matter what the quiet level.</p><div class="fullcomment"><div class="comment cmt"><p>Send output no matter what the quiet level.  Please do not abuse this.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to send.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#paste" data-isabs="false">
+      <a id="paste():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">paste</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#pause_=" data-isabs="false">
+      <a id="pause_=(() ⇒ Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: pause_$eq">pause_=</span><span class="params">(<span name="pager">pager: () ⇒ <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify a closure to invoke when a screen has filled.</p><div class="fullcomment"><div class="comment cmt"><p>Specify a closure to invoke when a screen has filled.  By default this is
+the pager specified by <code>defaultPause</code>.  The pager should return a Boolean
+value that is true to continue, and false if output should be terminated.
+</p></div><dl class="paramcmts block"><dt class="param">pager</dt><dd class="cmt"><p>The pager to invoke.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.EditorPane#peer" data-isabs="false">
+      <a id="peer:JEditorPane"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">peer</span><span class="result">: <span name="javax.swing.JEditorPane" class="extype">JEditorPane</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EditorPane → TextComponent → Component → UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#preferredSize" data-isabs="false">
+      <a id="preferredSize:Dimension"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">preferredSize</span><span class="result">: <span name="java.awt.Dimension" class="extype">Dimension</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#preferredSize_=" data-isabs="false">
+      <a id="preferredSize_=(Dimension):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: preferredSize_$eq">preferredSize_=</span><span class="params">(<span name="x">x: Dimension</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Publisher#publish" data-isabs="false">
+      <a id="publish(Event):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">publish</span><span class="params">(<span name="e">e: <span name="scala.swing.event.Event" class="extype">Event</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Publisher</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#quiet" data-isabs="false">
+      <a id="quiet:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">quiet</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">See if quiet is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>See if quiet is enabled.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#quiet_=" data-isabs="false">
+      <a id="quiet_=(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: quiet_$eq">quiet_=</span><span class="params">(<span name="level">level: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify whether to be quiet.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to be quiet.  How quiet it determined by levels.
+* 0 : all output
+* 1 : suppress most output except warnings, errors, and requested
+* 2 : suppress warnings but not errors or requested output
+* 3 : suppress warnings and errors, but not requested output
+* 4 : suppress everything
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#react" data-isabs="false">
+      <a id="react(PartialFunction[Any, Unit]):Nothing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">react</span><span class="params">(<span name="handler">handler: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Unit" class="extype">Unit</span>]</span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → InputChannel → ReplyReactor → Reactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#reactWithin" data-isabs="false">
+      <a id="reactWithin(Long)(PartialFunction[Any, Unit]):Nothing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reactWithin</span><span class="params">(<span name="msec">msec: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="params">(<span name="handler">handler: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Unit" class="extype">Unit</span>]</span>)</span><span class="result">: <span name="scala.Nothing" class="extype">Nothing</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → InputChannel → ReplyReactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Reactor#reactions" data-isabs="false">
+      <a id="reactions:Reactions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reactions</span><span class="result">: <span name="scala.swing.Reactions" class="extype">Reactions</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#receive" data-isabs="false">
+      <a id="receive[R](PartialFunction[Any, R]):R"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">receive</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="f">f: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, R]</span>)</span><span class="result">: R</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → InputChannel</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#receiveWithin" data-isabs="false">
+      <a id="receiveWithin[R](Long)(PartialFunction[Any, R]):R"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">receiveWithin</span><span class="tparams">[<span name="R">R</span>]</span><span class="params">(<span name="msec">msec: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="params">(<span name="f">f: <span name="scala.PartialFunction" class="extype">PartialFunction</span>[<span name="scala.Any" class="extype">Any</span>, R]</span>)</span><span class="result">: R</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → InputChannel</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Reactor#receiver" data-isabs="false">
+      <a id="receiver:Actor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">receiver</span><span class="result">: <span name="scala.actors.Actor" class="extype">Actor</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor → OutputChannel</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#repaint" data-isabs="false">
+      <a id="repaint(Rectangle):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repaint</span><span class="params">(<span name="rect">rect: Rectangle</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#repaint" data-isabs="false">
+      <a id="repaint():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">repaint</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="prt" name="scala.actors.ReplyReactor#reply" data-isabs="false">
+      <a id="reply(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reply</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>ReplyReactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#requestFocus" data-isabs="false">
+      <a id="requestFocus():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">requestFocus</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#requestFocusInWindow" data-isabs="false">
+      <a id="requestFocusInWindow():Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">requestFocusInWindow</span><span class="params">()</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#reset" data-isabs="false">
+      <a id="reset:Console"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reset</span><span class="result">: <a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Reset the error and warnings counts to zero.</p><div class="fullcomment"><div class="comment cmt"><p>Reset the error and warnings counts to zero.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Reactor#restart" data-isabs="false">
+      <a id="restart():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">restart</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#revalidate" data-isabs="false">
+      <a id="revalidate():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">revalidate</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="prt" name="scala.actors.Actor#scheduler" data-isabs="false">
+      <a id="scheduler:IScheduler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">scheduler</span><span class="result">: <span name="scala.actors.IScheduler" class="extype">IScheduler</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>Actor → Reactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#selectAll" data-isabs="false">
+      <a id="selectAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selectAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#selected" data-isabs="false">
+      <a id="selected:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selected</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#self" data-isabs="false">
+      <a id="self:Component"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">self</span><span class="result">: <span name="java.awt.Component" class="extype">Component</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement → Proxy</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#send" data-isabs="false">
+      <a id="send(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send explicitly requested output.</p><div class="fullcomment"><div class="comment cmt"><p>Send explicitly requested output.  This is only done if the quiet
+level is three or lower.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to send.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Reactor#send" data-isabs="false">
+      <a id="send(Any,OutputChannel[Any]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">send</span><span class="params">(<span name="msg">msg: <span name="scala.Any" class="extype">Any</span></span>, <span name="replyTo">replyTo: <span name="scala.actors.OutputChannel" class="extype">OutputChannel</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Reactor → OutputChannel</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#sendToInputStream" data-isabs="false">
+      <a id="sendToInputStream:Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendToInputStream</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">This sends whatever is the current input text to the Repl's actor so that it can be processed by the Repl.</p><div class="fullcomment"><div class="comment cmt"><p>This sends whatever is the current input text to the Repl's actor so that it can be processed by the Repl.
+The input is also saved into the input history.
+</p></div></div>
+    </li><li visbl="prt" name="scala.actors.ReplyReactor#sender" data-isabs="false">
+      <a id="sender:OutputChannel[Any]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sender</span><span class="result">: <span name="scala.actors.OutputChannel" class="extype">OutputChannel</span>[<span name="scala.Any" class="extype">Any</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="scala.actors" class="extype" href="../../../../scala/actors/package.html">actors</a>] </dd><dt>Definition Classes</dt><dd>ReplyReactor</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#sendf" data-isabs="false">
+      <a id="sendf(String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send explicitly requested output, followed by a newline.</p><div class="fullcomment"><div class="comment cmt"><p>Send explicitly requested output, followed by a newline.  This is
+only done if the quiet level is three or lower.  A newline is always
+written after the message.
+</p></div><dl class="paramcmts block"><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#sendln" data-isabs="false">
+      <a id="sendln(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendln</span><span class="params">(<span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send explicitly requested output, followed by a newline.</p><div class="fullcomment"><div class="comment cmt"><p>Send explicitly requested output, followed by a newline.  This is
+only done if the quiet level is three or lower.
+</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text to send.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#showing" data-isabs="false">
+      <a id="showing:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">showing</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#size" data-isabs="false">
+      <a id="size:Dimension"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">size</span><span class="result">: <span name="java.awt.Dimension" class="extype">Dimension</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#start" data-isabs="false">
+      <a id="start():Actor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">start</span><span class="params">()</span><span class="result">: <span name="scala.actors.Actor" class="extype">Actor</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor → Reactor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.LazyPublisher#subscribe" data-isabs="false">
+      <a id="subscribe(Reaction):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subscribe</span><span class="params">(<span name="listener">listener: Reaction</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LazyPublisher → Publisher</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
+      <a id="synchronized[T0](⇒ T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#text" data-isabs="false">
+      <a id="text:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">text</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.TextComponent#text_=" data-isabs="false">
+      <a id="text_=(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: text_$eq">text_=</span><span class="params">(<span name="t">t: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TextComponent</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#toString" data-isabs="false">
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component → Proxy → AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#toolkit" data-isabs="false">
+      <a id="toolkit:Toolkit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toolkit</span><span class="result">: <span name="java.awt.Toolkit" class="extype">Toolkit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#tooltip" data-isabs="false">
+      <a id="tooltip:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tooltip</span><span class="result">: String</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#tooltip_=" data-isabs="false">
+      <a id="tooltip_=(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: tooltip_$eq">tooltip_=</span><span class="params">(<span name="t">t: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#trapExit" data-isabs="false">
+      <a id="trapExit:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">trapExit</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="pub" name="scala.actors.Actor#unlink" data-isabs="false">
+      <a id="unlink(AbstractActor):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unlink</span><span class="params">(<span name="from">from: <span name="scala.actors.AbstractActor" class="extype">AbstractActor</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.LazyPublisher#unsubscribe" data-isabs="false">
+      <a id="unsubscribe(Reaction):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unsubscribe</span><span class="params">(<span name="listener">listener: Reaction</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LazyPublisher → Publisher</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#visible" data-isabs="false">
+      <a id="visible:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">visible</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#visible_=" data-isabs="false">
+      <a id="visible_=(Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: visible_$eq">visible_=</span><span class="params">(<span name="b">b: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warn" data-isabs="false">
+      <a id="warn(Loc,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../../util/Loc.html">Loc</a></span>, <span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
+if the quiet level is one or lower.  Suppressed warnings are still
+counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warn" data-isabs="false">
+      <a id="warn(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="msg">msg: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
+if the quiet level is one or lower.  Suppressed warnings are still
+counted.
+</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>The message.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warnf" data-isabs="false">
+      <a id="warnf(Loc,String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warnf</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../../util/Loc.html">Loc</a></span>, <span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
+if the quiet level is one or lower.  A newline is always written after
+the message.  Suppressed warnings are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>A location relevant to this message.</p></dd><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warnf" data-isabs="false">
+      <a id="warnf(String,Any*):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warnf</span><span class="params">(<span name="form">form: String</span>, <span name="args">args: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Emit a warning message, with the WARNING prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Emit a warning message, with the WARNING prefix.  This is only done
+if the quiet level is one or lower.  A newline is always written after
+the message.  Suppressed warnings are still counted.
+</p></div><dl class="paramcmts block"><dt class="param">form</dt><dd class="cmt"><p>The format string.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The arguments required by the format string.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#warnings" data-isabs="false">
+      <a id="warnings:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warnings</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get the warning count.</p><div class="fullcomment"><div class="comment cmt"><p>Get the warning count.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#width" data-isabs="false">
+      <a id="width:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">width</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Obtains the number of columns of output until wrapping is assumed.</p><div class="fullcomment"><div class="comment cmt"><p>Obtains the number of columns of output until wrapping is assumed.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The number of columns.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#width_=" data-isabs="false">
+      <a id="width_=(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: width_$eq">width_=</span><span class="params">(<span name="size">size: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Set the number of columns of output until wrapping is assumed.</p><div class="fullcomment"><div class="comment cmt"><p>Set the number of columns of output until wrapping is assumed.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.gui.console.EvaConsole#write" data-isabs="false">
+      <a id="write(String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">write</span><span class="params">(<span name="_newTxt">_newTxt: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Send the given text to the appropriate destination.</p><div class="fullcomment"><div class="comment cmt"><p>Send the given text to the appropriate destination.  This is the method
+that controls where output goes, and which must be implemented.  *You
+should not use this method.*  You want <code>send</code>, <code>sendln</code>, <code>warn</code> or
+<code>error</code>, instead.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.console.EvaConsole" class="extype" href="">EvaConsole</a> → <a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.util.Console#writeText_=" data-isabs="false">
+      <a id="writeText_=((String) ⇒ Unit):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: writeText_$eq">writeText_=</span><span class="params">(<span name="writer">writer: (String) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Specify a closure to invoke when text is written to the Console.</p><div class="fullcomment"><div class="comment cmt"><p>Specify a closure to invoke when text is written to the Console.
+By default this is the writer specified by <code>_defaultWriteText</code>.
+The writer should accept a String of text to be printed as its parameter.
+</p></div><dl class="paramcmts block"><dt class="param">writer</dt><dd class="cmt"><p>The writer to invoke.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#xLayoutAlignment" data-isabs="false">
+      <a id="xLayoutAlignment:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xLayoutAlignment</span><span class="result">: <span name="scala.Double" class="extype">Double</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#xLayoutAlignment_=" data-isabs="false">
+      <a id="xLayoutAlignment_=(Double):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: xLayoutAlignment_$eq">xLayoutAlignment_=</span><span class="params">(<span name="x">x: <span name="scala.Double" class="extype">Double</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#yLayoutAlignment" data-isabs="false">
+      <a id="yLayoutAlignment:Double"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">yLayoutAlignment</span><span class="result">: <span name="scala.Double" class="extype">Double</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.Component#yLayoutAlignment_=" data-isabs="false">
+      <a id="yLayoutAlignment_=(Double):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name" title="gt4s: yLayoutAlignment_$eq">yLayoutAlignment_=</span><span class="params">(<span name="y">y: <span name="scala.Double" class="extype">Double</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div class="values members" id="values">
+              <h3>Deprecated Value Members</h3>
+              <ol><li visbl="pub" name="scala.swing.Component#Mouse" data-isabs="false">
+      <a id="Mouse:EvaConsole.this.mouse.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 2.8.0) Use mouse instead">Mouse</span><span class="result">: EvaConsole.this.mouse.type</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Component</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.8.0)</i> Use mouse instead</p></dd></dl></div>
+    </li><li visbl="pub" name="scala.swing.UIElement#size_=" data-isabs="false">
+      <a id="size_=(Dimension):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="gt4s: size_$eq. Deprecated: (Since version 2.8.0) Explicit size assignment for UIElements is not supported anymore. Use a layout manager or subclass Window.">size_=</span><span class="params">(<span name="dim">dim: Dimension</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>UIElement</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.8.0)</i> Explicit size assignment for UIElements is not supported anymore. Use a layout manager or subclass Window.</p></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div name="ornl.elision.util.Console" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.Console" class="extype" href="../../util/Console.html">Console</a></h3>
+            </div><div name="scala.actors.Actor" class="parent">
+              <h3>Inherited from <span name="scala.actors.Actor" class="extype">Actor</span></h3>
+            </div><div name="scala.Serializable" class="parent">
+              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="java.io.Serializable" class="parent">
+              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="scala.actors.InputChannel" class="parent">
+              <h3>Inherited from <span name="scala.actors.InputChannel" class="extype">InputChannel</span>[<span name="scala.Any" class="extype">Any</span>]</h3>
+            </div><div name="scala.actors.ActorCanReply" class="parent">
+              <h3>Inherited from <span name="scala.actors.ActorCanReply" class="extype">ActorCanReply</span></h3>
+            </div><div name="scala.actors.ReplyReactor" class="parent">
+              <h3>Inherited from <span name="scala.actors.ReplyReactor" class="extype">ReplyReactor</span></h3>
+            </div><div name="scala.actors.ReactorCanReply" class="parent">
+              <h3>Inherited from <span name="scala.actors.ReactorCanReply" class="extype">ReactorCanReply</span></h3>
+            </div><div name="scala.actors.Reactor" class="parent">
+              <h3>Inherited from <span name="scala.actors.Reactor" class="extype">Reactor</span>[<span name="scala.Any" class="extype">Any</span>]</h3>
+            </div><div name="scala.actors.Combinators" class="parent">
+              <h3>Inherited from <span name="scala.actors.Combinators" class="extype">Combinators</span></h3>
+            </div><div name="scala.actors.AbstractActor" class="parent">
+              <h3>Inherited from <span name="scala.actors.AbstractActor" class="extype">AbstractActor</span></h3>
+            </div><div name="scala.actors.CanReply" class="parent">
+              <h3>Inherited from <span name="scala.actors.CanReply" class="extype">CanReply</span>[<span name="scala.Any" class="extype">Any</span>, <span name="scala.Any" class="extype">Any</span>]</h3>
+            </div><div name="scala.actors.OutputChannel" class="parent">
+              <h3>Inherited from <span name="scala.actors.OutputChannel" class="extype">OutputChannel</span>[<span name="scala.Any" class="extype">Any</span>]</h3>
+            </div><div name="scala.swing.EditorPane" class="parent">
+              <h3>Inherited from <span name="scala.swing.EditorPane" class="extype">EditorPane</span></h3>
+            </div><div name="scala.swing.TextComponent" class="parent">
+              <h3>Inherited from <span name="scala.swing.TextComponent" class="extype">TextComponent</span></h3>
+            </div><div name="scala.swing.Component" class="parent">
+              <h3>Inherited from <span name="scala.swing.Component" class="extype">Component</span></h3>
+            </div><div name="scala.swing.UIElement" class="parent">
+              <h3>Inherited from <span name="scala.swing.UIElement" class="extype">UIElement</span></h3>
+            </div><div name="scala.swing.LazyPublisher" class="parent">
+              <h3>Inherited from <span name="scala.swing.LazyPublisher" class="extype">LazyPublisher</span></h3>
+            </div><div name="scala.swing.Publisher" class="parent">
+              <h3>Inherited from <span name="scala.swing.Publisher" class="extype">Publisher</span></h3>
+            </div><div name="scala.swing.Reactor" class="parent">
+              <h3>Inherited from <span name="scala.swing.Reactor" class="extype">Reactor</span></h3>
+            </div><div name="scala.Proxy" class="parent">
+              <h3>Inherited from <span name="scala.Proxy" class="extype">Proxy</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
+              <h3>Inherited from AnyRef</h3>
+            </div><div name="scala.Any" class="parent">
+              <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
