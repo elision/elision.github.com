@@ -338,6 +338,50 @@ new instance is technically independent of the original.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#getActiveRulesets" data-isabs="false">
+      <a id="getActiveRulesets():Set[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getActiveRulesets</span><span class="params">()</span><span class="result">: Set[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get the set of active ruleset names.</p><div class="fullcomment"><div class="comment cmt"><p>Get the set of active ruleset names.  This may include the <code>DEFAULT</code>
+ruleset.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The set of active ruleset names.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#getAllRules" data-isabs="false">
+      <a id="getAllRules():List[RewriteRule]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAllRules</span><span class="params">()</span><span class="result">: <span name="scala.collection.immutable.List" class="extype">List</span>[<a name="ornl.elision.core.RewriteRule" class="extype" href="RewriteRule.html">RewriteRule</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get all rules contained in the system, in the order they would be
+considered during rewrite.</p><div class="fullcomment"><div class="comment cmt"><p>Get all rules contained in the system, in the order they would be
+considered during rewrite.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The list of rules.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#getAllRulesets" data-isabs="false">
+      <a id="getAllRulesets():Iterable[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getAllRulesets</span><span class="params">()</span><span class="result">: <span name="scala.collection.mutable.Iterable" class="extype">Iterable</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get all ruleset names.</p><div class="fullcomment"><div class="comment cmt"><p>Get all ruleset names.  Note that this includes the <code>DEFAULT</code> ruleset.</p><p>return An iterable list of ruleset names.
+</p></div></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -381,6 +425,20 @@ of the specified rulesets.
 of the currently active rulesets.</p><div class="fullcomment"><div class="comment cmt"><p>Get the list of rules that apply to the given atom and which are in any
 of the currently active rulesets.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to which the rule may apply.</p></dd><dt>returns</dt><dd class="cmt"><p>A list of rules.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary#getRulesetBits" data-isabs="false">
+      <a id="getRulesetBits(Set[String]):BitSet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getRulesetBits</span><span class="params">(<span name="names">names: Set[String]</span>)</span><span class="result">: <span name="scala.collection.mutable.BitSet" class="extype">BitSet</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get the bit set for a collection of rulesets.</p><div class="fullcomment"><div class="comment cmt"><p>Get the bit set for a collection of rulesets.
+</p></div><dl class="paramcmts block"><dt class="param">names</dt><dd class="cmt"><p>The name of the rulesets to include.</p></dd><dt>returns</dt><dd class="cmt"><p>The bits set for those rulesets.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>

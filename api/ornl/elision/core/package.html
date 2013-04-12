@@ -258,6 +258,18 @@ as the result of a successful match.</p>
       </span>
       </h4>
       <p class="comment cmt">Hold data from a special form where the content is a bindings atom.</p>
+    </li><li visbl="pub" name="ornl.elision.core.BitStringLiteral" data-isabs="false">
+      <a id="BitStringLiteral:BitStringLiteral"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="BitStringLiteral.html"><span class="name">BitStringLiteral</span></a><span class="params">(<span name="typ">typ: BasicAtom</span>, <span name="bits">bits: BigInt</span>, <span name="len">len: Int</span>)</span><span class="result"> extends Literal[(BigInt, Int)] with Product with Serializable</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide an bit string literal.</p>
     </li><li visbl="pub" name="ornl.elision.core.BooleanLiteral" data-isabs="false">
       <a id="BooleanLiteral:BooleanLiteral"></a>
       <h4 class="signature">
@@ -302,7 +314,7 @@ as the result of a successful match.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="Context.html"><span class="name">Context</span></a><span class="result"> extends Fickle with Mutable</span>
+        <a href="Context.html"><span class="name">Context</span></a><span class="result"> extends Fickle with Mutable with Cache</span>
       </span>
       </h4>
       <p class="comment cmt">A context provides access to operator libraries and rules, along with
@@ -351,7 +363,7 @@ the global set of bindings in force at any time.</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends PropertyManager with Cache</span>
+        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends PropertyManager</span>
       </span>
       </h4>
       <p class="comment cmt">An executor is a class that can convert a string into a sequence of atoms.</p>
@@ -542,7 +554,7 @@ point standard.</p>
       <a id="Literal:Literal[TYPE]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">abstract </span>
+        <span class="modifier">sealed abstract </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -1101,6 +1113,18 @@ a potentially new atom.</p>
       </span>
       </h4>
       <p class="comment cmt">A type for all bindings.</p>
+    </li><li visbl="pub" name="ornl.elision.core.BITSTRING" data-isabs="false">
+      <a id="BITSTRING:BITSTRING"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BITSTRING$.html"><span class="name">BITSTRING</span></a><span class="result"> extends NamedRootType</span>
+      </span>
+      </h4>
+      <p class="comment cmt">The BITSTRING type.</p>
     </li><li visbl="pub" name="ornl.elision.core.BOOLEAN" data-isabs="false">
       <a id="BOOLEAN:BOOLEAN"></a>
       <h4 class="signature">
@@ -1414,6 +1438,18 @@ a potentially new atom.</p>
       </h4>
       <p class="comment cmt">The companion object maintains a registry of the named root types that have
 been created.</p>
+    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler" data-isabs="false">
+      <a id="NativeCompiler:NativeCompiler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NativeCompiler$.html"><span class="name">NativeCompiler</span></a><span class="result"> extends AnyRef</span>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core.NoProps" data-isabs="false">
       <a id="NoProps:NoProps"></a>
       <h4 class="signature">
@@ -1789,22 +1825,6 @@ replace this with something rational as soon as reasonable.
       </span>
       </h4>
       <p class="comment cmt">Provide implementations of specific forms of matching.</p>
-    </li><li visbl="pub" name="ornl.elision.core.package#parse" data-isabs="false">
-      <a id="parse(String,Context,Boolean,Boolean):Any"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">parse</span><span class="params">(<span name="str">str: String</span>, <span name="context">context: <a name="ornl.elision.core.Context" class="extype" href="Context.html">Context</a></span>, <span name="trace">trace: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>, <span name="toggle">toggle: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Attempt to parse the given string and return an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Attempt to parse the given string and return an atom.  This uses the
-known executor instance and treats the source as internal.
-</p></div><dl class="paramcmts block"><dt class="param">str</dt><dd class="cmt"><p>The string to parse.</p></dd><dt class="param">context</dt><dd class="cmt"><p>The context.</p></dd><dt class="param">trace</dt><dd class="cmt"><p>Whether to trace the parse.</p></dd><dt class="param">toggle</dt><dd class="cmt"><p>Choose whether to use the Parboiled parser (false) or the
-               Scala parser combinator parser (true).</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing, which may be None.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#strToLiteral" data-isabs="false">
       <a id="strToLiteral(String):StringLiteral"></a>
       <h4 class="signature">
@@ -1911,22 +1931,6 @@ it into an omit sequence with the original sequence as its backing store.
       </span>
       </h4>
       <p class="shortcomment cmt">Convert a variable to a Scala symbol.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a variable to a Scala symbol.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.package#warn" data-isabs="false">
-      <a id="warn(Loc,String):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">warn</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Issue a warning.</p><div class="fullcomment"><div class="comment cmt"><p>Issue a warning.  This should be wired to whatever error reporting
-mechanism you want to use.  This uses the console of the known
-executor, so that must be correctly set first.
-</p></div><dl class="paramcmts block"><dt class="param">text</dt><dd class="cmt"><p>The text of the warning.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.package" class="extype" href="package$.html">package</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.package#wrapBindingsAtom" data-isabs="false">
       <a id="wrapBindingsAtom(Bindings):BindingsAtom"></a>
       <h4 class="signature">

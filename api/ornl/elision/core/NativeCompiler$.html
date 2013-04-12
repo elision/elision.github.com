@@ -12,26 +12,24 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
-        <a title="Go to companion" href="NativeCompiler$.html"><img src="../../../lib/class_to_object_big.png" /></a>
+        <a title="Go to companion" href="NativeCompiler.html"><img src="../../../lib/object_to_class_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1><a title="Go to companion" href="NativeCompiler$.html">NativeCompiler</a></h1>
+        <h1><a title="Go to companion" href="NativeCompiler.html">NativeCompiler</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">class</span>
+        <span class="kind">object</span>
       </span>
       <span class="symbol">
         <span class="name">NativeCompiler</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide for the compilation and caching of native operators.</p><p>The location of the native cache is obtained from the executor instance,
-which must specify the configuration option <code>elision.cache</code>.
-</p></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
@@ -57,22 +55,7 @@ which must specify the configuration option <code>elision.cache</code>.
 
       <div id="template">
         <div id="allMembers">
-        <div class="members" id="constructors">
-              <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.core.NativeCompiler#this" data-isabs="false">
-      <a id="this:NativeCompiler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">NativeCompiler</span><span class="params">()</span>
-      </span>
-      </h4>
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -167,20 +150,6 @@ which must specify the configuration option <code>elision.cache</code>.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler#compile" data-isabs="false">
-      <a id="compile(Loc,String,String):(ApplyData) ⇒ BasicAtom"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">compile</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="operator">operator: String</span>, <span name="handler">handler: String</span>)</span><span class="result">: (<a name="ornl.elision.core.ApplyData" class="extype" href="ApplyData.html">ApplyData</a>) ⇒ <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Compile (or load a pre-compiled cached) handler.</p><div class="fullcomment"><div class="comment cmt"><p>Compile (or load a pre-compiled cached) handler.
-</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>Location of the operator definition.</p></dd><dt class="param">operator</dt><dd class="cmt"><p>Name of the operator to get the handler.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The source code of the handler.</p></dd><dt>returns</dt><dd class="cmt"><p>The handler.
-</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -292,6 +261,21 @@ which must specify the configuration option <code>elision.cache</code>.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler#stash" data-isabs="false">
+      <a id="stash(String,String,String,HandlerClass):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stash</span><span class="params">(<span name="source">source: String</span>, <span name="operator">operator: String</span>, <span name="handler">handler: String</span>, <span name="obj">obj: <a name="ornl.elision.core.HandlerClass" class="extype" href="HandlerClass.html">HandlerClass</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Stash a handler.</p><div class="fullcomment"><div class="comment cmt"><p>Stash a handler.  The compiler checks here before it checks the cache,
+so this can provide an &quot;override&quot; with an in-memory cache.
+</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The source file.</p></dd><dt class="param">operator</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The handler.</p></dd><dt class="param">obj</dt><dd class="cmt"><p>The object to stash.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -361,6 +345,21 @@ which must specify the configuration option <code>elision.cache</code>.
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler#writeStash" data-isabs="false">
+      <a id="writeStash(String,String,String,Appendable):Appendable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeStash</span><span class="params">(<span name="source">source: String</span>, <span name="operator">operator: String</span>, <span name="handler">handler: String</span>, <span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Write Scala code to stash a handler.</p><div class="fullcomment"><div class="comment cmt"><p>Write Scala code to stash a handler.  This adds the code to invoke
+<code>stash</code> with the object.
+</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The source file.</p></dd><dt class="param">operator</dt><dd class="cmt"><p>The operator name.</p></dd><dt class="param">handler</dt><dd class="cmt"><p>The handler.</p></dd><dt class="param">app</dt><dd class="cmt"><p>An appendable to get the output.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
+</p></dd></dl></div>
     </li></ol>
             </div>
 

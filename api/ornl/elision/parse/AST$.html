@@ -259,6 +259,20 @@
       <p class="shortcomment cmt">Construct a bindings AST.</p><div class="fullcomment"><div class="comment cmt"><p>Construct a bindings AST.
 </p></div><dl class="paramcmts block"><dt class="param">pairs</dt><dd class="cmt"><p>A list of pairs consisting of name (string) and value AST.</p></dd><dt>returns</dt><dd class="cmt"><p>The new bindings AST.
 </p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.parse.AST#bitstring" data-isabs="false">
+      <a id="bitstring(Option[Boolean],(Int, String),(Int, String),Option[BA]):AST[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.BitStringLiteral }"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bitstring</span><span class="params">(<span name="oflag">oflag: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="bits">bits: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="len">len: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="otyp">otyp: <span name="scala.Option" class="extype">Option</span>[BA]</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.BitStringLiteral }</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Make an AST for a bit string.</p><div class="fullcomment"><div class="comment cmt"><p>Make an AST for a bit string.
+</p></div><dl class="paramcmts block"><dt class="param">bits</dt><dd class="cmt"><p>An integer to interpret as the bits.</p></dd><dt class="param">len</dt><dd class="cmt"><p>The length.</p></dd><dt class="param">otyp</dt><dd class="cmt"><p>The overriding type for the bit string.</p></dd><dt>returns</dt><dd class="cmt"><p>The constructed literal AST node.
+</p></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">

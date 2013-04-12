@@ -124,6 +124,31 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.repl.ReplMain#_wantCompile" data-isabs="false">
+      <a id="_wantCompile:Option[String]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_wantCompile</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">If compilation is desired set this to <code>Some(</code>fn<code>)</code>, where fn is the
+output file name.</p>
+    </li><li visbl="pub" name="ornl.elision.repl.ReplMain#_wantPrior" data-isabs="false">
+      <a id="_wantPrior:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_wantPrior</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Iff true then the prior context should be loaded.</p>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -237,7 +262,8 @@
         <span class="name">main</span><span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Entry point when run from the prompt.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point when run from the prompt.
+      <p class="shortcomment cmt">Entry point when run from the prompt.</p><div class="fullcomment"><div class="comment cmt"><p>Entry point when run from the prompt.  If you just want to read the
+settings and not start the REPL, use <code>prep</code>.
 </p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.
 </p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
@@ -276,15 +302,31 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.repl.ReplMain#runRepl" data-isabs="false">
-      <a id="runRepl(Map[String, String]):Unit"></a>
+    </li><li visbl="pub" name="ornl.elision.repl.ReplMain#prep" data-isabs="false">
+      <a id="prep(Array[String]):Option[CLIState]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runRepl</span><span class="params">(<span name="settings">settings: Map[String, String]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">prep</span><span class="params">(<span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<a name="ornl.elision.cli.CLI.CLIState" class="extype" href="../cli/CLI$$CLIState.html">CLIState</a>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Prepare by reading the arguments.</p><div class="fullcomment"><div class="comment cmt"><p>Prepare by reading the arguments.  This handles the generic startup case
+and provides use of the &quot;usual&quot; switches.
+</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>Command line arguments.</p></dd><dt>returns</dt><dd class="cmt"><p>An optional settings.  If <code>None</code>, then an error was found, and
+         control should stop.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.repl.ReplMain#runRepl" data-isabs="false">
+      <a id="runRepl(CLIState):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runRepl</span><span class="params">(<span name="settings">settings: <a name="ornl.elision.cli.CLI.CLIState" class="extype" href="../cli/CLI$$CLIState.html">CLIState</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Start the REPL.</p><div class="fullcomment"><div class="comment cmt"><p>Start the REPL.

@@ -25,21 +25,21 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Executor</span><span class="result"> extends <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a> with <a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></span>
+        <span class="name">Executor</span><span class="result"> extends <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></span>
       </span>
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>An executor is a class that can convert a string into a sequence of atoms.
 This can be done by parsing the usual Elision representation of atoms, or
-by some other means.</p><p>An executor also holds some other information.  Specifically it holds three
-similar items.</p><ul><li>A <u>cache</u> to hold temporary storage for internal algorithms.  That is,
-   these are for internal mutable storage and are not user-visible.</li><li>A set of <u>properties</u> that hold user-configurable items to control
+by some other means.</p><p>An executor also holds some other information.  Specifically it holds two
+similar items.</p><ul><li>A set of <u>properties</u> that hold user-configurable items to control
    Elision.  That is, these are user-visible and mutable.</li><li>The collection of <u>settings</u> that were parsed from the command line,
    or left at their defaults.  These are (typically) regarded as immutable
-   and are user-visible.  These are held for later reference.</li></ul><p>Note that the settings must be specified at construction time.
+   and are user-visible.  These are held for later reference.</li></ul><p>There is also a cache held by the <code>Context</code> for items that should be saved
+when / if the context is saved.</p><p>Note that the settings must be specified at construction time.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="ornl.elision.repl.ERepl" class="extype" href="../repl/ERepl.html">ERepl</a>, <a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></div>
@@ -56,7 +56,7 @@ similar items.</p><ul><li>A <u>cache</u> to hold temporary storage for internal 
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.Cache" class="in"><span>Cache</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -347,27 +347,6 @@ will have been executed by the time this method returns.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Cache#fetchAs" data-isabs="false">
-      <a id="fetchAs[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fetchAs</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="key">key: String</span>, <span name="default">default: TYPE</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mTYPE">mTYPE: <span name="scala.reflect.Manifest" class="extype">Manifest</span>[TYPE]</span>)</span><span class="result">: TYPE</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Provide typed access to the content of the cache.</p><div class="fullcomment"><div class="comment cmt"><p>Provide typed access to the content of the cache.  This is intended for
-use by native operators.  To avoid conflicts, name your cache entries
-starting with your operator name.  This causes a performance hit, so
-in general avoid using the cache.  Find somewhere else to shove your
-data!</p><p>If the key is present, but of the wrong type, an exception is thrown.
-This is a <code>CacheException</code>.
-</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key for the item to retrieve.</p></dd><dt class="param">default</dt><dd class="cmt"><p>The value to return if the specified key is not present.
-               If this is returned, it is also stored, so be sure to type
-               it correctly.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested value, or the default value.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -531,21 +510,6 @@ is correctly typed.
 information about the use of properties.
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The property value.</p></dd><dt>returns</dt><dd class="cmt"><p>The new property value.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Cache#stash" data-isabs="false">
-      <a id="stash[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stash</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="key">key: String</span>, <span name="value">value: TYPE</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mTYPE">mTYPE: <span name="scala.reflect.Manifest" class="extype">Manifest</span>[TYPE]</span>)</span><span class="result">: TYPE</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Stash a value in the cache for later lookup with <code>fetchAs</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Stash a value in the cache for later lookup with <code>fetchAs</code>.  Read the
-documentation for <code>fetchAs</code> before you use the cache!
-</p></div><dl class="paramcmts block"><dt class="param">key</dt><dd class="cmt"><p>The key.</p></dd><dt class="param">value</dt><dd class="cmt"><p>The value.</p></dd><dt>returns</dt><dd class="cmt"><p>The stored value.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -657,9 +621,7 @@ base class for all other values.</p><p>By default this method uses the <code>toS
         </div>
 
         <div id="inheritedMembers">
-        <div name="ornl.elision.util.Cache" class="parent">
-              <h3>Inherited from <a name="ornl.elision.util.Cache" class="extype" href="../util/Cache.html">Cache</a></h3>
-            </div><div name="ornl.elision.util.PropertyManager" class="parent">
+        <div name="ornl.elision.util.PropertyManager" class="parent">
               <h3>Inherited from <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>

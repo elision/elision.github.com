@@ -272,37 +272,37 @@ Debugger(<span class="lit">"tim"</span>) {
 console.
 </p></div></div>
     </li><li visbl="pub" name="ornl.elision.util.Debugger#debugf" data-isabs="false">
-      <a id="debugf(String,Any*):Unit"></a>
+      <a id="debugf(String,String,Any*):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">debugf</span><span class="params">(<span name="format">format: String</span>, <span name="items">items: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">debugf</span><span class="params">(<span name="tag">tag: String</span>, <span name="format">format: String</span>, <span name="items">items: <span name="scala.Any" class="extype">Any</span>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Simple interface for use from Java to print a message with the
-empty string for its tag.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to print a message with the
-empty string for its tag.  This is the tag that is enabled by default.
-The message is always evaluated, as Java does not allow by-name
-parameters.  This method writes behaves in the same manner as <code>printf</code>.</p></div></div>
+      <p class="shortcomment cmt">Simple interface for use from Java to print a message without an implicit
+end of line.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to print a message without an implicit
+end of line.  The message is always evaluated, as Java does not allow
+by-name parameters.  This method writes behaves in the same manner as
+<code>printf</code>.</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Debugger#debugln" data-isabs="false">
-      <a id="debugln(Any):Unit"></a>
+      <a id="debugln(String,Any):Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">debugln</span><span class="params">(<span name="message">message: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">debugln</span><span class="params">(<span name="tag">tag: String</span>, <span name="message">message: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Simple interface for use from Java to print a message with the
-empty string for its tag.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to print a message with the
-empty string for its tag.  This is the tag that is enabled by default.
-The message is always evaluated, as Java does not allow by-name
-parameters.  This methods behaves in the same manner as <code>println</code>.</p></div><dl class="paramcmts block"><dt class="param">message</dt><dd class="cmt"><p>The message to write.
+      <p class="shortcomment cmt">Simple interface for use from Java to print a message with an
+implicit end of line.</p><div class="fullcomment"><div class="comment cmt"><p>Simple interface for use from Java to print a message with an
+implicit end of line.  The message is always evaluated, as Java does not
+allow by-name parameters.  This methods behaves in the same manner as
+<code>println</code>.</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The debugging tag.</p></dd><dt class="param">message</dt><dd class="cmt"><p>The message to write.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Debugger#debugoff" data-isabs="false">
       <a id="debugoff(String):Unit"></a>
