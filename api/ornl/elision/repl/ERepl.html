@@ -38,7 +38,7 @@ method.  The REPL provides for command line editing, a persistent history,
 and special operations.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a>, <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a>, <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a>, <a name="ornl.elision.parse.TraceableParse" class="extype" href="../parse/TraceableParse.html">TraceableParse</a>, <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a>, <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a>, <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a>, <a name="ornl.elision.parse.TraceableParse" class="extype" href="../parse/TraceableParse.html">TraceableParse</a>, <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a>, <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -52,7 +52,7 @@ and special operations.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.repl.ERepl" class="in"><span>ERepl</span></li><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.util.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.util.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.parse.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.core.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.repl.ERepl" class="in"><span>ERepl</span></li><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.util.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.util.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.parse.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.context.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -82,7 +82,7 @@ and special operations.
 
         <div class="types members" id="types">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.core.Executor.ParseFailure" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.context.Executor.ParseFailure" data-isabs="false">
       <a id="ParseFailure:ParseFailure"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,11 +90,11 @@ and special operations.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="../core/Executor$ParseFailure.html"><span class="name">ParseFailure</span></a><span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends ParseResult with Product with Serializable</span>
+        <a href="../context/Executor$ParseFailure.html"><span class="name">ParseFailure</span></a><span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends ParseResult with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The parse failed.</p>
-    </li><li visbl="pub" name="ornl.elision.core.Executor.ParseResult" data-isabs="true">
+    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseResult" data-isabs="true">
       <a id="ParseResult:ParseResult"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -102,11 +102,11 @@ and special operations.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a href="../core/Executor$ParseResult.html"><span class="name">ParseResult</span></a><span class="result"> extends AnyRef</span>
+        <a href="../context/Executor$ParseResult.html"><span class="name">ParseResult</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">A parse result.</p>
-    </li><li visbl="pub" name="ornl.elision.core.Executor.ParseSuccess" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess" data-isabs="false">
       <a id="ParseSuccess:ParseSuccess"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -114,7 +114,7 @@ and special operations.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="../core/Executor$ParseSuccess.html"><span class="name">ParseSuccess</span></a><span class="params">(<span name="nodes">nodes: List[BasicAtom]</span>)</span><span class="result"> extends ParseResult with Product with Serializable</span>
+        <a href="../context/Executor$ParseSuccess.html"><span class="name">ParseSuccess</span></a><span class="params">(<span name="nodes">nodes: List[BasicAtom]</span>)</span><span class="result"> extends ParseResult with Product with Serializable</span>
       </span>
       </h4>
       <p class="comment cmt">The parse was successful.</p>
@@ -356,23 +356,23 @@ operators, and any operators for including other files).
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">checkpoints</span><span class="result">: <span name="scala.collection.mutable.ArrayBuffer" class="extype">ArrayBuffer</span>[(<span name="java.util.Date" class="extype">Date</span>, <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a>)]</span>
+        <span class="name">checkpoints</span><span class="result">: <span name="scala.collection.mutable.ArrayBuffer" class="extype">ArrayBuffer</span>[(<span name="java.util.Date" class="extype">Date</span>, <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">The list of context checkpoints</p><div class="fullcomment"><div class="comment cmt"><p>The list of context checkpoints</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Executor#clazzes" data-isabs="false">
-      <a id="clazzes:Set[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with Boolean with java.lang.Boolean]]"></a>
+    </li><li visbl="pub" name="ornl.elision.context.Executor#clazzes" data-isabs="false">
+      <a id="clazzes:Set[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with java.lang.Boolean &lt;: java.lang.Object]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">clazzes</span><span class="result">: <span name="scala.collection.immutable.Set" class="extype">Set</span>[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with Boolean with java.lang.Boolean]]</span>
+        <span class="name">clazzes</span><span class="result">: <span name="scala.collection.immutable.Set" class="extype">Set</span>[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with java.lang.Boolean &lt;: java.lang.Object]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">This property manager supports BigInts, Strings, and any BasicAtom.</p><div class="fullcomment"><div class="comment cmt"><p>This property manager supports BigInts, Strings, and any BasicAtom.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a> → <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a> → <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.repl.ERepl#clean" data-isabs="false">
       <a id="clean():Unit"></a>
       <h4 class="signature">
@@ -411,7 +411,7 @@ operators, and any operators for including other files).
         <span class="name">console</span><span class="result">: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Specify the console.</p><div class="fullcomment"><div class="comment cmt"><p>Specify the console.  We don't know the number of lines.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></dd></dl></div>
+      <p class="shortcomment cmt">Specify the console.</p><div class="fullcomment"><div class="comment cmt"><p>Specify the console.  We don't know the number of lines.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#context" data-isabs="false">
       <a id="context:Context"></a>
       <h4 class="signature">
@@ -420,11 +420,11 @@ operators, and any operators for including other files).
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">context</span><span class="result">: <a name="ornl.elision.core.Context" class="extype" href="../core/Context.html">Context</a></span>
+        <span class="name">context</span><span class="result">: <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the context used by this executor instance.</p><div class="fullcomment"><div class="comment cmt"><p>Get the context used by this executor instance.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#coredump" data-isabs="false">
       <a id="coredump(String,Option[Throwable]):Unit"></a>
       <h4 class="signature">
@@ -724,7 +724,7 @@ is correctly typed.
       <p class="shortcomment cmt">Get all public property names, sorted in alphabetical order.</p><div class="fullcomment"><div class="comment cmt"><p>Get all public property names, sorted in alphabetical order.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The property names.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Executor#getSetting" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.context.Executor#getSetting" data-isabs="false">
       <a id="getSetting(String):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -736,7 +736,7 @@ is correctly typed.
       </span>
       </h4>
       <p class="shortcomment cmt">Get the value of a setting, which must be defined.</p><div class="fullcomment"><div class="comment cmt"><p>Get the value of a setting, which must be defined.  If the setting
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -831,7 +831,7 @@ is correctly typed.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">parse</span><span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <a name="ornl.elision.core.Executor.ParseResult" class="extype" href="../core/Executor$ParseResult.html">ParseResult</a></span>
+        <span class="name">parse</span><span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <a name="ornl.elision.context.Executor.ParseResult" class="extype" href="../context/Executor$ParseResult.html">ParseResult</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse the given string and return a sequence of basic atoms.</p><div class="fullcomment"><div class="comment cmt"><p>Parse the given string and return a sequence of basic atoms.  The
@@ -839,7 +839,7 @@ sequence may be empty, and it may be lazily constructed.</p><p>If operators are 
 will have been executed by the time this method returns.
 </p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the data source.  This can be a filename,
                <code>&quot;(console)&quot;</code>, or <code>&quot;&quot;</code> for an internal source.</p></dd><dt class="param">text</dt><dd class="cmt"><p>The text to parse.</p></dd><dt>returns</dt><dd class="cmt"><p>The sequence of atoms.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#read" data-isabs="false">
       <a id="read(Source,String):Unit"></a>
       <h4 class="signature">
@@ -1000,7 +1000,7 @@ information about the use of properties.
       </span>
       </h4>
       <p class="shortcomment cmt">The settings, from the command line parser.</p><div class="fullcomment"><div class="comment cmt"><p>The settings, from the command line parser.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="../parse/Processor.html">Processor</a> → <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#showElapsed" data-isabs="false">
       <a id="showElapsed:Unit"></a>
       <h4 class="signature">
@@ -1132,7 +1132,7 @@ and reporting are all ignored.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toBasicAtom</span><span class="params">(<span name="result">result: <a name="ornl.elision.core.Executor.ParseResult" class="extype" href="../core/Executor$ParseResult.html">ParseResult</a></span>)</span><span class="result">: List[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>
+        <span class="name">toBasicAtom</span><span class="params">(<span name="result">result: <a name="ornl.elision.context.Executor.ParseResult" class="extype" href="../context/Executor$ParseResult.html">ParseResult</a></span>)</span><span class="result">: List[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Convert a result from parsing to a list of basic atoms.</p><div class="fullcomment"><div class="comment cmt"><p>Convert a result from parsing to a list of basic atoms.
@@ -1274,8 +1274,8 @@ base class for all other values.</p><p>By default this method uses the <code>toS
               <h3>Inherited from <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a></h3>
             </div><div name="ornl.elision.parse.TraceableParse" class="parent">
               <h3>Inherited from <a name="ornl.elision.parse.TraceableParse" class="extype" href="../parse/TraceableParse.html">TraceableParse</a></h3>
-            </div><div name="ornl.elision.core.Executor" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.Executor" class="extype" href="../core/Executor.html">Executor</a></h3>
+            </div><div name="ornl.elision.context.Executor" class="parent">
+              <h3>Inherited from <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></h3>
             </div><div name="ornl.elision.util.PropertyManager" class="parent">
               <h3>Inherited from <a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></h3>
             </div><div name="scala.AnyRef" class="parent">

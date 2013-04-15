@@ -29,11 +29,13 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Elision is a term rewriter.</p><p>This is the root package of the Elision system, and it contains classes
-and definitions shared by everything else in the system, as well as the
-code run at start-up from the command line.</p><p>Starting the Elision system is the job of ornl.elision.Main.</p><h4> Packages </h4><p>There are several sub-packages.</p><ul><li><a name="ornl.elision.core" class="extype" href="core/package.html">core</a> is the core package that contains the primary classes.</li><li><a name="ornl.elision.gui" class="extype" href="gui/package.html">gui</a> contains the Elision GUI, Eva.</li><li><a name="ornl.elision.parse" class="extype" href="parse/package.html">parse</a> contains the Elision parser(s).</li><li><a name="ornl.elision.repl" class="extype" href="repl/package.html">repl</a> contains the Elision REPL(s) and related classes.</li><li>ornl.elision.test contains tests to verify Elision functionality.</li><li><a name="ornl.elision.util" class="extype" href="util/package.html">util</a> contains common utilities used by the Elision system.</li></ul><p>Packages in Elision are organized into a use hierarchy.  In general, packages
-may use sub-packages, but not the reverse.</p><h4> Punch List </h4><p>This is the current punch list for Elision.  This list gets picked up by
-<a href="http://eclipse.org">Eclipse</a>.</p><ul><li>TODO Need package.scala files for all packages.  Stacy.</li><li>TODO Visitors for BasicAtoms.  ?</li><li>TODO STOP parsing on first error.  ?</li><li>TODO Prioritize places in Elision where unit tests most needed.  Stacy</li><li>TODO Implicit corecions. Mark.</li><li>TODO Infix. DEFER.</li><li>TODO Need parser context for error messages. Stacy.</li><li>TODO Need support for command-line overrides.  Stacy.</li><li>TODO Need simple output configuration.  Stacy.</li></ul></div></div>
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Elision is a term rewriter.</p><p>This is the root package of the Elision system, and it is responsible for
+startup and command line processing.</p><p>Starting the Elision system is the job of ornl.elision.Main.</p><p>This package uses <a name="ornl.elision.cli" class="extype" href="cli/package.html">cli</a> and <a name="ornl.elision.util" class="extype" href="util/package.html">util</a>, but should
+not use any other package.  No other package in Elision may use this package.</p><h4> Packages </h4><p>There are several sub-packages.</p><ul><li><a name="ornl.elision.actors" class="extype" href="actors/package.html">actors</a> contains actors used for internal communication.</li><li><a name="ornl.elision.cli" class="extype" href="cli/package.html">cli</a> contains classes for interpreting the CLI.</li><li><a name="ornl.elision.core" class="extype" href="core/package.html">core</a> is the core package that contains the primary classes.</li><li><a name="ornl.elision.generators" class="extype" href="generators/package.html">generators</a> provides generators to convert atoms to strings.</li><li><a name="ornl.elision.gui" class="extype" href="gui/package.html">gui</a> contains the Elision GUI, Eva.</li><li><a name="ornl.elision.parse" class="extype" href="parse/package.html">parse</a> contains the Elision parser(s).</li><li><a name="ornl.elision.profile" class="extype" href="profile/package.html">profile</a> contains the Elision profiler.</li><li><a name="ornl.elision.repl" class="extype" href="repl/package.html">repl</a> contains the Elision REPL(s) and related classes.</li><li><a name="ornl.elision.syntax" class="extype" href="syntax/package.html">syntax</a> contains the syntax highlighting system.</li><li><a name="ornl.elision.util" class="extype" href="util/package.html">util</a> contains common utilities used by the Elision system.</li></ul><p>Packages in Elision are organized into a use hierarchy.  In general, packages
+may use sub-packages, but not the reverse.  Packages may use sibling packages,
+provided this does not result in a cycle.</p><h4> Punch List </h4><p>This is the current punch list for Elision.  This list gets picked up by
+<a href="http://eclipse.org">Eclipse</a>.</p><ul><li>TODO Need package.scala files for all packages.  Stacy.</li><li>TODO Implicit corecions. Mark.</li><li>TODO Split compilable context into stages to avoid load problems.  Stacy</li><li>TODO Infix. DEFER.
+</li></ul></div></div>
     
 
       <div id="mbrsel">
@@ -105,18 +107,6 @@ its associated GUIs and applications.</p>
       </span>
       </h4>
       <p class="comment cmt">This is the entry point when running from the jar file.</p>
-    </li><li visbl="pub" name="ornl.elision.MakeContext" data-isabs="false">
-      <a id="MakeContext:MakeContext"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MakeContext$.html"><span class="name">MakeContext</span></a><span class="result"> extends App</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="ornl.elision.actors" data-isabs="false">
       <a id="actors:actors"></a>
       <h4 class="signature">
@@ -141,6 +131,18 @@ its associated GUIs and applications.</p>
       </span>
       </h4>
       <p class="comment cmt">This package provides support for command-line interfaces in Elision.</p>
+    </li><li visbl="pub" name="ornl.elision.context" data-isabs="false">
+      <a id="context:context"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="context/package.html"><span class="name">context</span></a>
+      </span>
+      </h4>
+      
     </li><li visbl="pub" name="ornl.elision.core" data-isabs="false">
       <a id="core:core"></a>
       <h4 class="signature">

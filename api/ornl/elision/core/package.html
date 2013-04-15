@@ -29,9 +29,7 @@
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The core classes and definitions that make up the Elision runtime.</p><h4> Design Goals </h4><ul><li>Every atom that can be programmatically created can be written using
-   the toParseString, and the result can be parsed by AtomParser.</li><li>Every atom that can be programmatically created has a toString method
-   that generates valid Scala code to reproduce the atom.</li><li>Avoid global data and singletons.</li><li>Simple API.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The core classes and definitions that make up the Elision runtime.</p><p>The purpose of this package is to define all basic atoms.</p><h4> Design Goals </h4><ul><li>Avoid global data and singletons.</li><li>Simple API.
 </li></ul></div></div>
     
 
@@ -63,30 +61,6 @@
       </span>
       </h4>
       <p class="comment cmt">An absorber.</p>
-    </li><li visbl="pub" name="ornl.elision.core.Action" data-isabs="true">
-      <a id="Action:Action"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Action.html"><span class="name">Action</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.core.AddRule" data-isabs="false">
-      <a id="AddRule:AddRule"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="AddRule.html"><span class="name">AddRule</span></a><span class="params">(<span name="rule">rule: RewriteRule</span>)</span><span class="result"> extends Action with Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="ornl.elision.core.AlgProp" data-isabs="false">
       <a id="AlgProp:AlgProp"></a>
       <h4 class="signature">
@@ -209,18 +183,6 @@ list.</p>
       </span>
       </h4>
       <p class="comment cmt">The root of all atoms manipulated by the rewriter.</p>
-    </li><li visbl="pub" name="ornl.elision.core.BindablePatternException" data-isabs="false">
-      <a id="BindablePatternException:BindablePatternException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="BindablePatternException.html"><span class="name">BindablePatternException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate an attempt to add a rule whose pattern is bindable (i.</p>
     </li><li visbl="pub" name="ornl.elision.core.Bindings" data-isabs="false">
       <a id="Bindings:Bindings"></a>
       <h4 class="signature">
@@ -306,67 +268,6 @@ as the result of a successful match.</p>
       </span>
       </h4>
       <p class="comment cmt">The commutative property</p>
-    </li><li visbl="pub" name="ornl.elision.core.Context" data-isabs="false">
-      <a id="Context:Context"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Context.html"><span class="name">Context</span></a><span class="result"> extends Fickle with Mutable with Cache</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A context provides access to operator libraries and rules, along with
-the global set of bindings in force at any time.</p>
-    </li><li visbl="pub" name="ornl.elision.core.DeclareRS" data-isabs="false">
-      <a id="DeclareRS:DeclareRS"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="DeclareRS.html"><span class="name">DeclareRS</span></a><span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.core.DisableRS" data-isabs="false">
-      <a id="DisableRS:DisableRS"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="DisableRS.html"><span class="name">DisableRS</span></a><span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.core.EnableRS" data-isabs="false">
-      <a id="EnableRS:EnableRS"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="EnableRS.html"><span class="name">EnableRS</span></a><span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
-      </span>
-      </h4>
-      
-    </li><li visbl="pub" name="ornl.elision.core.Executor" data-isabs="true">
-      <a id="Executor:Executor"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends PropertyManager</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An executor is a class that can convert a string into a sequence of atoms.</p>
     </li><li visbl="pub" name="ornl.elision.core.Fail" data-isabs="false">
       <a id="Fail:Fail"></a>
       <h4 class="signature">
@@ -429,18 +330,6 @@ anyone trying to get some work done.</p>
       </h4>
       <p class="comment cmt">A little class to use to pass data back and forth from the subordinate
 interpreter.</p>
-    </li><li visbl="pub" name="ornl.elision.core.HandlerClass" data-isabs="true">
-      <a id="HandlerClass:HandlerClass"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="HandlerClass.html"><span class="name">HandlerClass</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Trait for all handlers.</p>
     </li><li visbl="pub" name="ornl.elision.core.IEEE754" data-isabs="false">
       <a id="IEEE754:IEEE754"></a>
       <h4 class="signature">
@@ -478,18 +367,6 @@ point standard.</p>
       </span>
       </h4>
       <p class="comment cmt">An identity.</p>
-    </li><li visbl="pub" name="ornl.elision.core.IdentityRuleException" data-isabs="false">
-      <a id="IdentityRuleException:IdentityRuleException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="IdentityRuleException.html"><span class="name">IdentityRuleException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate an attempt to add an identity rule.</p>
     </li><li visbl="pub" name="ornl.elision.core.IllegalPropertiesSpecification" data-isabs="false">
       <a id="IllegalPropertiesSpecification:IllegalPropertiesSpecification"></a>
       <h4 class="signature">
@@ -562,19 +439,6 @@ point standard.</p>
       </span>
       </h4>
       <p class="comment cmt">Represent a literal.</p>
-    </li><li visbl="pub" name="ornl.elision.core.LiteralPatternException" data-isabs="false">
-      <a id="LiteralPatternException:LiteralPatternException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="LiteralPatternException.html"><span class="name">LiteralPatternException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate an attempt to add a rule whose pattern is a literal, when such
-are not allowed.</p>
     </li><li visbl="pub" name="ornl.elision.core.Many" data-isabs="false">
       <a id="Many:Many"></a>
       <h4 class="signature">
@@ -660,18 +524,6 @@ rule.</p>
       </span>
       </h4>
       <p class="comment cmt">Define a metavariable.</p>
-    </li><li visbl="pub" name="ornl.elision.core.MissingSettingException" data-isabs="false">
-      <a id="MissingSettingException:MissingSettingException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="MissingSettingException.html"><span class="name">MissingSettingException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A requested setting is not present.</p>
     </li><li visbl="pub" name="ornl.elision.core.Mutable" data-isabs="true">
       <a id="Mutable:Mutable"></a>
       <h4 class="signature">
@@ -697,18 +549,6 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       <p class="comment cmt">Provide a very simple implementation of <code>RootType</code>.</p>
-    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler" data-isabs="false">
-      <a id="NativeCompiler:NativeCompiler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="NativeCompiler.html"><span class="name">NativeCompiler</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Provide for the compilation and caching of native operators.</p>
     </li><li visbl="pub" name="ornl.elision.core.NativeHandlerException" data-isabs="false">
       <a id="NativeHandlerException:NativeHandlerException"></a>
       <h4 class="signature">
@@ -721,30 +561,6 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       <p class="comment cmt">The native handler could not be parsed.</p>
-    </li><li visbl="pub" name="ornl.elision.core.NoSuchRulesetException" data-isabs="false">
-      <a id="NoSuchRulesetException:NoSuchRulesetException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="NoSuchRulesetException.html"><span class="name">NoSuchRulesetException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate an attempt to use an undeclared ruleset.</p>
-    </li><li visbl="pub" name="ornl.elision.core.NopAction" data-isabs="false">
-      <a id="NopAction:NopAction"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a href="NopAction.html"><span class="name">NopAction</span></a><span class="params">()</span><span class="result"> extends Action with Product with Serializable</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="ornl.elision.core.OpApply" data-isabs="false">
       <a id="OpApply:OpApply"></a>
       <h4 class="signature">
@@ -769,42 +585,6 @@ anyone trying to parallelize something in the library.</p>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate an operator.</p>
-    </li><li visbl="pub" name="ornl.elision.core.OperatorDefinitionException" data-isabs="false">
-      <a id="OperatorDefinitionException:OperatorDefinitionException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="OperatorDefinitionException.html"><span class="name">OperatorDefinitionException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate an attempt to improperly define an operator.</p>
-    </li><li visbl="pub" name="ornl.elision.core.OperatorLibrary" data-isabs="false">
-      <a id="OperatorLibrary:OperatorLibrary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="OperatorLibrary.html"><span class="name">OperatorLibrary</span></a><span class="result"> extends Fickle with Mutable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An operator library holds information about the known operators.</p>
-    </li><li visbl="pub" name="ornl.elision.core.OperatorRedefinitionException" data-isabs="false">
-      <a id="OperatorRedefinitionException:OperatorRedefinitionException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="OperatorRedefinitionException.html"><span class="name">OperatorRedefinitionException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Indicate an attempt to re-define an already-known operator.</p>
     </li><li visbl="pub" name="ornl.elision.core.OperatorRef" data-isabs="false">
       <a id="OperatorRef:OperatorRef"></a>
       <h4 class="signature">
@@ -854,18 +634,6 @@ anyone trying to parallelize something in the library.</p>
       </h4>
       <p class="comment cmt">A <i>rewriter</i> is an atom that can be applied to some other atom to generate
 a potentially new atom.</p>
-    </li><li visbl="pub" name="ornl.elision.core.RuleLibrary" data-isabs="false">
-      <a id="RuleLibrary:RuleLibrary"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="RuleLibrary.html"><span class="name">RuleLibrary</span></a><span class="result"> extends Fickle with Mutable</span>
-      </span>
-      </h4>
-      <p class="comment cmt">Encapsulate a rule library.</p>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef" data-isabs="true">
       <a id="RulesetRef:RulesetRef"></a>
       <h4 class="signature">
@@ -986,18 +754,6 @@ a potentially new atom.</p>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a typed symbolic operator.</p>
-    </li><li visbl="pub" name="ornl.elision.core.UndefinedOperatorException" data-isabs="false">
-      <a id="UndefinedOperatorException:UndefinedOperatorException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="UndefinedOperatorException.html"><span class="name">UndefinedOperatorException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">A requested operator was not found, and could not be created.</p>
     </li><li visbl="pub" name="ornl.elision.core.Variable" data-isabs="false">
       <a id="Variable:Variable"></a>
       <h4 class="signature">
@@ -1438,18 +1194,6 @@ a potentially new atom.</p>
       </h4>
       <p class="comment cmt">The companion object maintains a registry of the named root types that have
 been created.</p>
-    </li><li visbl="pub" name="ornl.elision.core.NativeCompiler" data-isabs="false">
-      <a id="NativeCompiler:NativeCompiler"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="NativeCompiler$.html"><span class="name">NativeCompiler</span></a><span class="result"> extends AnyRef</span>
-      </span>
-      </h4>
-      
     </li><li visbl="pub" name="ornl.elision.core.NoProps" data-isabs="false">
       <a id="NoProps:NoProps"></a>
       <h4 class="signature">
@@ -1770,7 +1514,7 @@ Try that with Java!
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">knownExecutor</span><span class="result">: <a name="ornl.elision.core.Executor" class="extype" href="Executor.html">Executor</a></span>
+        <span class="name">knownExecutor</span><span class="result">: <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Maintain an executor to use.</p><div class="fullcomment"><div class="comment cmt"><p>Maintain an executor to use.  The provided default executor always

@@ -152,14 +152,14 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#absorber" data-isabs="false">
-      <a id="absorber(BA):AST[AlgProp] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Absorber }"></a>
+      <a id="absorber(BA):AST[AlgProp] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Absorber }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">absorber</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Absorber }</span>
+        <span class="name">absorber</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Absorber }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make an absorber property AST.</p><div class="fullcomment"><div class="comment cmt"><p>Make an absorber property AST.
@@ -218,14 +218,14 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#associative" data-isabs="false">
-      <a id="associative(BA):AST[AlgProp] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Associative }"></a>
+      <a id="associative(BA):AST[AlgProp] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Associative }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">associative</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Associative }</span>
+        <span class="name">associative</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Associative }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make an associative property AST.</p><div class="fullcomment"><div class="comment cmt"><p>Make an associative property AST.
@@ -260,14 +260,14 @@
 </p></div><dl class="paramcmts block"><dt class="param">pairs</dt><dd class="cmt"><p>A list of pairs consisting of name (string) and value AST.</p></dd><dt>returns</dt><dd class="cmt"><p>The new bindings AST.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#bitstring" data-isabs="false">
-      <a id="bitstring(Option[Boolean],(Int, String),(Int, String),Option[BA]):AST[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.BitStringLiteral }"></a>
+      <a id="bitstring(Option[Boolean],(Int, String),(Int, String),Option[BA]):AST[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.BitStringLiteral }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">bitstring</span><span class="params">(<span name="oflag">oflag: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="bits">bits: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="len">len: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="otyp">otyp: <span name="scala.Option" class="extype">Option</span>[BA]</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.BitStringLiteral }</span>
+        <span class="name">bitstring</span><span class="params">(<span name="oflag">oflag: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="bits">bits: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="len">len: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="otyp">otyp: <span name="scala.Option" class="extype">Option</span>[BA]</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.BitStringLiteral }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make an AST for a bit string.</p><div class="fullcomment"><div class="comment cmt"><p>Make an AST for a bit string.
@@ -289,14 +289,14 @@
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#commutative" data-isabs="false">
-      <a id="commutative(BA):AST[AlgProp] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Commutative }"></a>
+      <a id="commutative(BA):AST[AlgProp] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Commutative }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">commutative</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Commutative }</span>
+        <span class="name">commutative</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Commutative }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a commutative property AST.</p><div class="fullcomment"><div class="comment cmt"><p>Make a commutative property AST.
@@ -366,28 +366,28 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#idempotent" data-isabs="false">
-      <a id="idempotent(BA):AST[AlgProp] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Idempotent }"></a>
+      <a id="idempotent(BA):AST[AlgProp] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Idempotent }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">idempotent</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Idempotent }</span>
+        <span class="name">idempotent</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Idempotent }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make an idempotent property AST.</p><div class="fullcomment"><div class="comment cmt"><p>Make an idempotent property AST.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>AST for the idempotent condition.</p></dd><dt>returns</dt><dd class="cmt"><p>The new AST.
 </p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#identity" data-isabs="false">
-      <a id="identity(BA):AST[AlgProp] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Identity }"></a>
+      <a id="identity(BA):AST[AlgProp] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Identity }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">identity</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Identity }</span>
+        <span class="name">identity</span><span class="params">(<span name="atom">atom: BA</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[<a name="ornl.elision.core.AlgProp" class="extype" href="../core/AlgProp.html">AlgProp</a>] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Identity }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make an identity property AST.</p><div class="fullcomment"><div class="comment cmt"><p>Make an identity property AST.
@@ -496,14 +496,14 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.AST#number" data-isabs="false">
-      <a id="number(Option[Boolean],(Int, String),Option[(Int, String)],Option[(Boolean, Int, String)],Option[BA]):AST[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Literal[_ &gt;: BigInt with (BigInt, Int, Int) &lt;: Serializable with ScalaObject] with Product with Serializable }"></a>
+      <a id="number(Option[Boolean],(Int, String),Option[(Int, String)],Option[(Boolean, Int, String)],Option[BA]):AST[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Literal[_ &gt;: BigInt with (BigInt, Int, Int) &lt;: Serializable with ScalaObject] with Product with Serializable }"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">number</span><span class="params">(<span name="oflag">oflag: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="whole">whole: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="frac">frac: <span name="scala.Option" class="extype">Option</span>[(<span name="scala.Int" class="extype">Int</span>, String)]</span>, <span name="exp">exp: <span name="scala.Option" class="extype">Option</span>[(<span name="scala.Boolean" class="extype">Boolean</span>, <span name="scala.Int" class="extype">Int</span>, String)]</span>, <span name="otyp">otyp: <span name="scala.Option" class="extype">Option</span>[BA]</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.core.Context): ornl.elision.core.Literal[_ &gt;: BigInt with (BigInt, Int, Int) &lt;: Serializable with ScalaObject] with Product with Serializable }</span>
+        <span class="name">number</span><span class="params">(<span name="oflag">oflag: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Boolean" class="extype">Boolean</span>]</span>, <span name="whole">whole: (<span name="scala.Int" class="extype">Int</span>, String)</span>, <span name="frac">frac: <span name="scala.Option" class="extype">Option</span>[(<span name="scala.Int" class="extype">Int</span>, String)]</span>, <span name="exp">exp: <span name="scala.Option" class="extype">Option</span>[(<span name="scala.Boolean" class="extype">Boolean</span>, <span name="scala.Int" class="extype">Int</span>, String)]</span>, <span name="otyp">otyp: <span name="scala.Option" class="extype">Option</span>[BA]</span>)</span><span class="result">: <a name="ornl.elision.parse.AST" class="extype" href="AST.html">AST</a>[ornl.elision.core.Literal[_]] { def interpret(context: ornl.elision.context.Context): ornl.elision.core.Literal[_ &gt;: BigInt with (BigInt, Int, Int) &lt;: Serializable with ScalaObject] with Product with Serializable }</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make an AST for a number.</p><div class="fullcomment"><div class="comment cmt"><p>Make an AST for a number.

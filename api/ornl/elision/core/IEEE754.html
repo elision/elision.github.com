@@ -30,8 +30,11 @@
       </h4>
       
       <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide data and methods for representing values from the IEEE 754 floating
-point standard.
-</p></div><div class="toggleContainer block">
+point standard.</p><p>This does not yet provide accessors for certain values.</p><ul><li>Signaling NaN is indicated with all ones in the exponent and the msb
+   of the fraction set to one.</li><li>Quiet NaN is indicated with all ones in the exponent and the msb of
+   the fraction set to zero, when the fraction is not itself zero.</li><li>Infinity (positive and negative, depending on the sign bit) is indicated
+   with the exponent set to all ones and a zero fraction.
+</li></ul></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div><div class="toggleContainer block">
