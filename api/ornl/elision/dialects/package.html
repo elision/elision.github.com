@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.generators</title>
+          <title>ornl.elision.dialects</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -16,7 +16,7 @@
       <div id="definition">
         <img src="../../../lib/package_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a></p>
-        <h1>generators</h1>
+        <h1>dialects</h1>
       </div>
 
       <h4 class="signature" id="signature">
@@ -25,7 +25,7 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <span class="name">generators</span>
+        <span class="name">dialects</span>
       </span>
       </h4>
       
@@ -46,13 +46,40 @@
         <div id="allMembers">
         
 
-        
+        <div class="types members" id="types">
+              <h3>Type Members</h3>
+              <ol><li visbl="pub" name="ornl.elision.dialects.ElisionDialect" data-isabs="false">
+      <a id="ElisionDialect:ElisionDialect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ElisionDialect.html"><span class="name">ElisionDialect</span></a><span class="result"> extends Dialect</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide the Elision dialect.</p>
+    </li><li visbl="pub" name="ornl.elision.dialects.ScalaDialect" data-isabs="false">
+      <a id="ScalaDialect:ScalaDialect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ScalaDialect.html"><span class="name">ScalaDialect</span></a><span class="result"> extends Dialect</span>
+      </span>
+      </h4>
+      <p class="comment cmt">Provide the Scala dialect.</p>
+    </li></ol>
+            </div>
 
         
 
         <div class="values members" id="values">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.generators.ElisionGenerator" data-isabs="false">
+              <ol><li visbl="pub" name="ornl.elision.dialects.ElisionGenerator" data-isabs="false">
       <a id="ElisionGenerator:ElisionGenerator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -60,11 +87,11 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ElisionGenerator$.html"><span class="name">ElisionGenerator</span></a><span class="result"> extends Generator</span>
+        <a href="ElisionGenerator$.html"><span class="name">ElisionGenerator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Generate the Elision code to create an atom.</p>
-    </li><li visbl="pub" name="ornl.elision.generators.ScalaGenerator" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.dialects.ScalaGenerator" data-isabs="false">
       <a id="ScalaGenerator:ScalaGenerator"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -72,7 +99,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a href="ScalaGenerator$.html"><span class="name">ScalaGenerator</span></a><span class="result"> extends Generator</span>
+        <a href="ScalaGenerator$.html"><span class="name">ScalaGenerator</span></a><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Generate the Scala code to create an atom.</p>

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.Generator</title>
+          <title>ornl.elision.dialects.ScalaDialect</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -12,29 +12,28 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <a title="Go to companion" href="Generator.html"><img src="../../../lib/object_to_class_big.png" /></a>
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
-        <h1><a title="Go to companion" href="Generator.html">Generator</a></h1>
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.dialects" class="extype" href="package.html">dialects</a></p>
+        <h1>ScalaDialect</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Generator</span><span class="result"> extends AnyRef</span>
+        <span class="name">ScalaDialect</span><span class="result"> extends <a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Generate text, in some form, from an Elision atom.  To use this, specify a
-known output format, the atom to write, and (optionally) the appendable to
-get the output.</p><p>You can register additional output formats via the <code>register</code> method.
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide the Scala dialect.  Atoms can be serlialized, but not parsed just
+yet.  Parsing requires the Scala parser, so no round-trip just yet.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a>, <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -48,7 +47,7 @@ get the output.</p><p>You can register additional output formats via the <code>r
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.Generator" class="in"><span>Generator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.dialects.ScalaDialect" class="in"><span>ScalaDialect</span></li><li name="ornl.elision.core.Dialect" class="in"><span>Dialect</span></li><li name="ornl.elision.core.Fickle" class="in"><span>Fickle</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -58,7 +57,22 @@ get the output.</p><p>You can register additional output formats via the <code>r
 
       <div id="template">
         <div id="allMembers">
-        
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.dialects.ScalaDialect#this" data-isabs="false">
+      <a id="this:ScalaDialect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ScalaDialect</span><span class="params">()</span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -126,41 +140,6 @@ get the output.</p><p>You can register additional output formats via the <code>r
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Generator#apply" data-isabs="false">
-      <a id="apply(String,BasicAtom,Appendable,Int):Appendable"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="tag">tag: String</span>, <span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span> = <span class="symbol"><span class="name"><a href="../../../java/lang/package.html">new StringBuffer()</a></span></span></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Generate output from an atom using the specified generator.</p><div class="fullcomment"><div class="comment cmt"><p>Generate output from an atom using the specified generator.
-</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag.</p></dd><dt class="param">atom</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">buf</dt><dd class="cmt"><p>The buffer to get the result.  If not provided, one is
-               created.</p></dd><dt class="param">limit</dt><dd class="cmt"><p>The nesting limit of this atom.  If the limit is zero, then
-               an ellipsis is printed instead of the atom.  Otherwise
-               the limit is decreased for each parenthesized and bracketed
-               pair, until zero is reached.  If the limit is negative,
-               then there is effectively no limit.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable for chaining.</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">java.util.NoSuchElementException<p>
-         The tag is now known.
-</p></span></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Generator#apply" data-isabs="false">
-      <a id="apply(String):Generator"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="tag">tag: String</span>)</span><span class="result">: <a name="ornl.elision.core.Generator" class="extype" href="Generator.html">Generator</a></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Obtain the generator for the given tag, if there is one.</p><div class="fullcomment"><div class="comment cmt"><p>Obtain the generator for the given tag, if there is one.
-</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag.</p></dd><dt>returns</dt><dd class="cmt"><p>The specified generator, if known.</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">java.util.NoSuchElementException<p>
-         The tag is now known.
-</p></span></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -173,6 +152,36 @@ get the output.</p><p>You can register additional output formats via the <code>r
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.dialects.ScalaDialect#canParse" data-isabs="false">
+      <a id="canParse:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canParse</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Can data in this dialect be parsed to create atom(s)?  If this is true,
+override the <code>parse</code> method, and override this to be <code>true</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Can data in this dialect be parsed to create atom(s)?  If this is true,
+override the <code>parse</code> method, and override this to be <code>true</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.dialects.ScalaDialect" class="extype" href="">ScalaDialect</a> → <a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.dialects.ScalaDialect#canSerialize" data-isabs="false">
+      <a id="canSerialize:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canSerialize</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Can data in this dialect be generated from an atom?  If this is true,
+override the <code>serialize</code> method, and override this to be <code>true</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Can data in this dialect be generated from an atom?  If this is true,
+override the <code>serialize</code> method, and override this to be <code>true</code>.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.dialects.ScalaDialect" class="extype" href="">ScalaDialect</a> → <a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a></dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -299,21 +308,37 @@ get the output.</p><p>You can register additional output formats via the <code>r
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.core.Generator#register" data-isabs="false">
-      <a id="register(String,Generator):Unit"></a>
+    </li><li visbl="pub" name="ornl.elision.core.Dialect#parse" data-isabs="false">
+      <a id="parse(String,Source):Result"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">register</span><span class="params">(<span name="tag">tag: String</span>, <span name="gen">gen: <a name="ornl.elision.core.Generator" class="extype" href="Generator.html">Generator</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+        <span class="name">parse</span><span class="params">(<span name="name">name: String</span>, <span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>)</span><span class="result">: <a name="ornl.elision.core.Dialect.Result" class="extype" href="../core/Dialect$$Result.html">Result</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Register a generator to handle a given tag.</p><div class="fullcomment"><div class="comment cmt"><p>Register a generator to handle a given tag.  Note that you can replace
-the generator for a tag with this method.
-</p></div><dl class="paramcmts block"><dt class="param">tag</dt><dd class="cmt"><p>The tag.</p></dd><dt class="param">gen</dt><dd class="cmt"><p>The generator.
-</p></dd></dl></div>
+      <p class="shortcomment cmt">Parse from the named, provided source, and generate a result.</p><div class="fullcomment"><div class="comment cmt"><p>Parse from the named, provided source, and generate a result.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the source, for location information.</p></dd><dt class="param">source</dt><dd class="cmt"><p>The data source.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.dialects.ScalaDialect#serialize" data-isabs="false">
+      <a id="serialize(Appendable,BasicAtom,Int):Appendable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serialize</span><span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Serialize the given atom in this dialect to the given appendable.</p><div class="fullcomment"><div class="comment cmt"><p>Serialize the given atom in this dialect to the given appendable.  If
+the dialect does not support serialization (see <code>canSerialize</code>) then
+nothing is done.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable.</p></dd><dt class="param">atom</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">limit</dt><dd class="cmt"><p>A descent limit for the generator, if relevant to the
+                 dialect.  The value -1 (the default) disables this.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
+</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.dialects.ScalaDialect" class="extype" href="">ScalaDialect</a> → <a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -390,7 +415,11 @@ the generator for a tag with this method.
         </div>
 
         <div id="inheritedMembers">
-        <div name="scala.AnyRef" class="parent">
+        <div name="ornl.elision.core.Dialect" class="parent">
+              <h3>Inherited from <a name="ornl.elision.core.Dialect" class="extype" href="../core/Dialect.html">Dialect</a></h3>
+            </div><div name="ornl.elision.core.Fickle" class="parent">
+              <h3>Inherited from <a name="ornl.elision.core.Fickle" class="extype" href="../core/Fickle.html">Fickle</a></h3>
+            </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

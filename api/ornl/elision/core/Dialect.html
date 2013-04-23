@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.context.Executor.ParseSuccess</title>
+          <title>ornl.elision.core.Dialect</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -14,26 +14,29 @@
         </head>
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../../../lib/class_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.context" class="extype" href="package.html">context</a>.<a name="ornl.elision.context.Executor" class="extype" href="Executor.html">Executor</a></p>
-        <h1>ParseSuccess</h1>
+        <a title="Go to companion" href="Dialect$.html"><img src="../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
+        <h1><a title="Go to companion" href="Dialect$.html">Dialect</a></h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ParseSuccess</span><span class="params">(<span name="nodes">nodes: List[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result"> extends <a name="ornl.elision.context.Executor.ParseResult" class="extype" href="Executor$ParseResult.html">ParseResult</a> with <span name="scala.Product" class="extype">Product</span> with <span name="scala.Serializable" class="extype">Serializable</span></span>
+        <span class="name">Dialect</span><span class="result"> extends <a name="ornl.elision.core.Fickle" class="extype" href="Fickle.html">Fickle</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The parse was successful.
-</p></div><dl class="paramcmts block"><dt class="param">nodes</dt><dd class="cmt"><p>The atoms parsed.
-</p></dd></dl><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A dialect specifies the conversion of an atom to and from another form.</p><p>To use this extend it and implement the desired methods.  Override the
+fields to specify what sort of data transfer is possible.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span name="scala.Serializable" class="extype">Serializable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, <span name="scala.Product" class="extype">Product</span>, <span name="scala.Equals" class="extype">Equals</span>, <a name="ornl.elision.context.Executor.ParseResult" class="extype" href="Executor$ParseResult.html">ParseResult</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.core.Fickle" class="extype" href="Fickle.html">Fickle</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+        </div><div class="toggleContainer block">
+          <span class="toggle">Known Subclasses</span>
+          <div class="subClasses hiddenContent"><a name="ornl.elision.dialects.ElisionDialect" class="extype" href="../dialects/ElisionDialect.html">ElisionDialect</a>, <a name="ornl.elision.dialects.ScalaDialect" class="extype" href="../dialects/ScalaDialect.html">ScalaDialect</a></div>
         </div></div>
     
 
@@ -47,7 +50,7 @@
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.context.Executor.ParseSuccess" class="in"><span>ParseSuccess</span></li><li name="scala.Serializable" class="in"><span>Serializable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.Product" class="in"><span>Product</span></li><li name="scala.Equals" class="in"><span>Equals</span></li><li name="ornl.elision.context.Executor.ParseResult" class="in"><span>ParseResult</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Dialect" class="in"><span>Dialect</span></li><li name="ornl.elision.core.Fickle" class="in"><span>Fickle</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -59,19 +62,18 @@
         <div id="allMembers">
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
-              <ol><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#this" data-isabs="false">
-      <a id="this:ParseSuccess"></a>
+              <ol><li visbl="pub" name="ornl.elision.core.Dialect#this" data-isabs="false">
+      <a id="this:Dialect"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ParseSuccess</span><span class="params">(<span name="nodes">nodes: List[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>)</span>
+        <span class="name">Dialect</span><span class="params">()</span>
       </span>
       </h4>
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">nodes</dt><dd class="cmt"><p>The atoms parsed.
-</p></dd></dl></div>
+      
     </li></ol>
             </div>
 
@@ -153,18 +155,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#canEqual" data-isabs="false">
-      <a id="canEqual(Any):Boolean"></a>
+    </li><li visbl="pub" name="ornl.elision.core.Dialect#canParse" data-isabs="false">
+      <a id="canParse:Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">canEqual</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+        <span class="name">canParse</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → Equals</dd></dl></div>
+      <p class="shortcomment cmt">Can data in this dialect be parsed to create atom(s)?  If this is true,
+override the <code>parse</code> method, and override this to be <code>true</code>.</p>
+    </li><li visbl="pub" name="ornl.elision.core.Dialect#canSerialize" data-isabs="false">
+      <a id="canSerialize:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canSerialize</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Can data in this dialect be generated from an atom?  If this is true,
+override the <code>serialize</code> method, and override this to be <code>true</code>.</p>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -192,7 +208,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#equals" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -203,7 +219,7 @@
         <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → Equals → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -231,7 +247,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#hashCode" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -242,7 +258,7 @@
         <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -267,18 +283,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#nodes" data-isabs="false">
-      <a id="nodes:List[BasicAtom]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">nodes</span><span class="result">: List[<a name="ornl.elision.core.BasicAtom" class="extype" href="../core/BasicAtom.html">BasicAtom</a>]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">The atoms parsed.</p>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
@@ -303,54 +307,37 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#productArity" data-isabs="false">
-      <a id="productArity:Int"></a>
+    </li><li visbl="pub" name="ornl.elision.core.Dialect#parse" data-isabs="false">
+      <a id="parse(String,Source):Result"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productArity</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+        <span class="name">parse</span><span class="params">(<span name="name">name: String</span>, <span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>)</span><span class="result">: <a name="ornl.elision.core.Dialect.Result" class="extype" href="Dialect$$Result.html">Result</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#productElement" data-isabs="false">
-      <a id="productElement(Int):Any"></a>
+      <p class="shortcomment cmt">Parse from the named, provided source, and generate a result.</p><div class="fullcomment"><div class="comment cmt"><p>Parse from the named, provided source, and generate a result.
+</p></div><dl class="paramcmts block"><dt class="param">name</dt><dd class="cmt"><p>Name of the source, for location information.</p></dd><dt class="param">source</dt><dd class="cmt"><p>The data source.</p></dd><dt>returns</dt><dd class="cmt"><p>The result of parsing.
+</p></dd></dl></div>
+    </li><li visbl="pub" name="ornl.elision.core.Dialect#serialize" data-isabs="false">
+      <a id="serialize(Appendable,BasicAtom,Int):Appendable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">productElement</span><span class="params">(<span name="arg0">arg0: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Any" class="extype">Any</span></span>
+        <span class="name">serialize</span><span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → Product</dd></dl></div>
-    </li><li visbl="pub" name="scala.Product#productIterator" data-isabs="false">
-      <a id="productIterator:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productIterator</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#productPrefix" data-isabs="false">
-      <a id="productPrefix:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">productPrefix</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → Product</dd></dl></div>
+      <p class="shortcomment cmt">Serialize the given atom in this dialect to the given appendable.</p><div class="fullcomment"><div class="comment cmt"><p>Serialize the given atom in this dialect to the given appendable.  If
+the dialect does not support serialization (see <code>canSerialize</code>) then
+nothing is done.
+</p></div><dl class="paramcmts block"><dt class="param">app</dt><dd class="cmt"><p>The appendable.</p></dd><dt class="param">atom</dt><dd class="cmt"><p>The atom.</p></dd><dt class="param">limit</dt><dd class="cmt"><p>A descent limit for the generator, if relevant to the
+                 dialect.  The value -1 (the default) disables this.</p></dd><dt>returns</dt><dd class="cmt"><p>The appendable.
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -363,7 +350,7 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.Executor.ParseSuccess#toString" data-isabs="false">
+    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -371,10 +358,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: String</span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.context.Executor.ParseSuccess" class="extype" href="">ParseSuccess</a> → AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -423,38 +410,12 @@
     </li></ol>
             </div>
 
-        <div class="values members" id="values">
-              <h3>Deprecated Value Members</h3>
-              <ol><li visbl="pub" name="scala.Product#productElements" data-isabs="false">
-      <a id="productElements:Iterator[Any]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 2.8.0) use productIterator instead">productElements</span><span class="result">: Iterator[<span name="scala.Any" class="extype">Any</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 2.8.0)</i> use productIterator instead</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
-        <div name="scala.Serializable" class="parent">
-              <h3>Inherited from <span name="scala.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="java.io.Serializable" class="parent">
-              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
-            </div><div name="scala.Product" class="parent">
-              <h3>Inherited from <span name="scala.Product" class="extype">Product</span></h3>
-            </div><div name="scala.Equals" class="parent">
-              <h3>Inherited from <span name="scala.Equals" class="extype">Equals</span></h3>
-            </div><div name="ornl.elision.context.Executor.ParseResult" class="parent">
-              <h3>Inherited from <a name="ornl.elision.context.Executor.ParseResult" class="extype" href="Executor$ParseResult.html">ParseResult</a></h3>
+        <div name="ornl.elision.core.Fickle" class="parent">
+              <h3>Inherited from <a name="ornl.elision.core.Fickle" class="extype" href="Fickle.html">Fickle</a></h3>
             </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">

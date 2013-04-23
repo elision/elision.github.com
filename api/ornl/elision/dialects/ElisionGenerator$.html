@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.generators.ElisionGenerator</title>
+          <title>ornl.elision.dialects.ElisionGenerator</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -15,7 +15,7 @@
         <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
       <div id="definition">
         <img src="../../../lib/object_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.generators" class="extype" href="package.html">generators</a></p>
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.dialects" class="extype" href="package.html">dialects</a></p>
         <h1>ElisionGenerator</h1>
       </div>
 
@@ -25,7 +25,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">ElisionGenerator</span><span class="result"> extends <a name="ornl.elision.core.Generator" class="extype" href="../core/Generator.html">Generator</a></span>
+        <span class="name">ElisionGenerator</span><span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -34,7 +34,7 @@ optional appendable to get the result.</p><p>The result is assumed to be in an e
 context contents have been declared.
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.core.Generator" class="extype" href="../core/Generator.html">Generator</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -48,7 +48,7 @@ context contents have been declared.
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.generators.ElisionGenerator" class="in"><span>ElisionGenerator</span></li><li name="ornl.elision.core.Generator" class="in"><span>Generator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.dialects.ElisionGenerator" class="in"><span>ElisionGenerator</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -126,7 +126,7 @@ context contents have been declared.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.generators.ElisionGenerator#apply" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.dialects.ElisionGenerator#apply" data-isabs="false">
       <a id="apply(BasicAtom,Appendable,Int):Appendable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -145,7 +145,7 @@ root types are handled directly and simply.
                the limit is decreased for each parenthesized and bracketed
                pair, until zero is reached.  If the limit is negative,
                then there is effectively no limit.</p></dd><dt>returns</dt><dd class="cmt"><p>The result.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.generators.ElisionGenerator" class="extype" href="">ElisionGenerator</a> → <a name="ornl.elision.core.Generator" class="extype" href="../core/Generator.html">Generator</a></dd></dl></div>
+</p></dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -360,9 +360,7 @@ root types are handled directly and simply.
         </div>
 
         <div id="inheritedMembers">
-        <div name="ornl.elision.core.Generator" class="parent">
-              <h3>Inherited from <a name="ornl.elision.core.Generator" class="extype" href="../core/Generator.html">Generator</a></h3>
-            </div><div name="scala.AnyRef" class="parent">
+        <div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.util.Version</title>
+          <title>ornl.elision.core.Dialect.NoSuchDialect</title>
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
@@ -12,75 +12,27 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
       <div id="definition">
-        <img src="../../../lib/object_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.util" class="extype" href="package.html">util</a></p>
-        <h1>Version</h1>
+        <img src="../../../lib/class_big.png" />
+        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a>.<a name="ornl.elision.core.Dialect" class="extype" href="Dialect$.html">Dialect</a></p>
+        <h1>NoSuchDialect</h1>
       </div>
 
       <h4 class="signature" id="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Version</span><span class="result"> extends AnyRef</span>
+        <span class="name">NoSuchDialect</span><span class="result"> extends <a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide information about the current version of Elision.</p><h4> Configuration </h4><p>This information is obtained from the <code>configuration.xml</code> file
-expected to be in the root of the current class path (thus in
-the jar file).  It has the following format.</p><pre>
-&lt;configuration
-  name = <span class="lit">"name of program"</span>
-  maintainer = <span class="lit">"name and email of maintainer"</span>
-  web = <span class="lit">"web address of program"</span>&gt;
-  &lt;version
-    major = <span class="lit">"major version number"</span>
-    minor = <span class="lit">"minor version number"</span>
-    build = <span class="lit">"build date / time identifier"</span>/&gt;
-  &lt;main name=<span class="lit">"command name"</span> <span class="kw">class</span>=<span class="lit">"fully.qualified.class.name"</span>
-    description=<span class="lit">"human-readable description"</span>/&gt;
-  &lt;dialect name=<span class="lit">"dialect name"</span> <span class="kw">class</span>=<span class="lit">"fully.qualified.class.name"</span>/&gt;
-  &lt;option name=<span class="lit">"option name"</span> <span class="kw">class</span>=<span class="lit">"fully.qualified.class.name"</span>
-    description=<span class="lit">"human-readable description"</span> value=<span class="lit">"value"</span>/&gt;
-&lt;/configuration&gt;
-</pre><h4> Use </h4><p>This object loads its data at construction time.  This is typically when
-you first reference a field in this object.</p><p>The <code>loaded</code> field reveals if the file was successfully loaded.  If not, the
-other fields contain default (and useless) information.  Missing fields
-result in a value of the empty string for that field.  Extra fields not
-specified above are ignored, but may be used in the future.  That is, the
-absence of a tag is not license to use that tag; keep custom tags in a
-separate, declared XML namespace, please.</p><p>Both the configuration and its DTD (<code>elision_configuration.dtd</code>) are
-expected to be found in the root of the class path.</p><p>It is permissible for significant functionality to depend on the ability to
-read this file.</p><h4> DTD </h4><p>The following is the DTD for the configuration file.</p><pre>
-&lt;!ELEMENT configuration (version,(main|dialect|option)*,ANY*)&gt;
-&lt;!ATTLIST configuration name CDATA #REQUIRED&gt;
-&lt;!ATTLIST configuration maintainer CDATA #REQUIRED&gt;
-&lt;!ATTLIST configuration web CDATA #REQUIRED&gt;
-&lt;!ELEMENT version (ANY*)&gt;
-&lt;!ATTLIST version major CDATA #REQUIRED&gt;
-&lt;!ATTLIST version minor CDATA #REQUIRED&gt;
-&lt;!ATTLIST version build CDATA #REQUIRED&gt;
-&lt;!ATTLIST version trivial CDATA <span class="lit">"0"</span>&gt;
-&lt;!ATTLIST version status (alpha|beta|rc|<span class="kw">final</span>) <span class="lit">"alpha"</span>&gt;
-&lt;!ELEMENT main (ANY*)&gt;
-&lt;!ATTLIST main name CDATA #REQUIRED&gt;
-&lt;!ATTLIST main <span class="kw">class</span> CDATA #REQUIRED&gt;
-&lt;!ATTLIST main description CDATA #REQUIRED&gt;
-&lt;!ATTLIST main gui (<span class="kw">true</span>|<span class="kw">false</span>) #REQUIRED&gt;
-&lt;!ELEMENT dialect (ANY*)&gt;
-&lt;!ATTLIST dialect name CDATA #REQUIRED&gt;
-&lt;!ATTLIST dialect <span class="kw">class</span> CDATA #REQUIRED&gt;
-&lt;!ELEMENT option (ANY*)&gt;
-&lt;!ATTLIST option name CDATA #REQUIRED&gt;
-&lt;!ATTLIST option <span class="kw">class</span> CDATA #REQUIRED&gt;
-&lt;!ATTLIST option description CDATA #REQUIRED&gt;
-&lt;!ATTLIST option value CDATA #REQUIRED&gt;
-</pre></div><div class="toggleContainer block">
+      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>The named dialect was not found in the registry.
+</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent">AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a>, <span name="java.lang.Exception" class="extype">Exception</span>, <span name="java.lang.Throwable" class="extype">Throwable</span>, <span name="java.io.Serializable" class="extype">Serializable</span>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
     
 
@@ -94,7 +46,7 @@ read this file.</p><h4> DTD </h4><p>The following is the DTD for the configurati
               <span class="filtertype">Inherited</span>
               <ol><li class="hideall out"><span>Hide All</span></li>
               <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.util.Version" class="in"><span>Version</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              <ol id="linearization"><li name="ornl.elision.core.Dialect.NoSuchDialect" class="in"><span>NoSuchDialect</span></li><li name="ornl.elision.util.ElisionException" class="in"><span>ElisionException</span></li><li name="java.lang.Exception" class="in"><span>Exception</span></li><li name="java.lang.Throwable" class="in"><span>Throwable</span></li><li name="java.io.Serializable" class="in"><span>Serializable</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
             </div>
         <div id="visbl">
             <span class="filtertype">Visibility</span>
@@ -104,60 +56,24 @@ read this file.</p><h4> DTD </h4><p>The following is the DTD for the configurati
 
       <div id="template">
         <div id="allMembers">
-        
-
-        <div class="types members" id="types">
-              <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.util.Version#CEntry" data-isabs="false">
-      <a id="CEntry:(HasMain, String, Boolean)"></a>
+        <div class="members" id="constructors">
+              <h3>Instance Constructors</h3>
+              <ol><li visbl="pub" name="ornl.elision.core.Dialect.NoSuchDialect#this" data-isabs="false">
+      <a id="this:NoSuchDialect"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">type</span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">CEntry</span><span class="result"> = (HasMain, String, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+        <span class="name">NoSuchDialect</span><span class="params">(<span name="loc">loc: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>, <span name="msg">msg: String</span>)</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A type for an entry in the command catalog.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version#HasMain" data-isabs="false">
-      <a id="HasMain:HasMain"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">HasMain</span><span class="result"> = java.lang.Class[_ &lt;: AnyRef{def main(args: String*): Unit}]</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">A type for classes that have a main method.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version.MainException" data-isabs="false">
-      <a id="MainException:MainException"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="Version$$MainException.html"><span class="name">MainException</span></a><span class="result"> extends ElisionException</span>
-      </span>
-      </h4>
-      <p class="comment cmt">An error occurred processing a main.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version#OEntry" data-isabs="false">
-      <a id="OEntry:(Class[_], String, String)"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">OEntry</span><span class="result"> = (Class[_], String, String)</span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">A type for an entry in the options catalog.</p>
+      
     </li></ol>
             </div>
+
+        
 
         
 
@@ -223,6 +139,18 @@ read this file.</p><h4> DTD </h4><p>The following is the DTD for the configurati
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#addSuppressed" data-isabs="false">
+      <a id="addSuppressed(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addSuppressed</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
@@ -235,18 +163,6 @@ read this file.</p><h4> DTD </h4><p>The following is the DTD for the configurati
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#build" data-isabs="false">
-      <a id="build:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">build</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Twelve digit build identifier.</p><div class="fullcomment"><div class="comment cmt"><p>Twelve digit build identifier.  Date and time.</p></div></div>
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
@@ -286,6 +202,18 @@ read this file.</p><h4> DTD </h4><p>The following is the DTD for the configurati
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#fillInStackTrace" data-isabs="false">
+      <a id="fillInStackTrace():Throwable"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fillInStackTrace</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
@@ -301,22 +229,18 @@ read this file.</p><h4> DTD </h4><p>The following is the DTD for the configurati
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#get" data-isabs="false">
-      <a id="get(String):(HasMain, String, Boolean)"></a>
+    </li><li visbl="pub" name="java.lang.Throwable#getCause" data-isabs="false">
+      <a id="getCause():Throwable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">get</span><span class="params">(<span name="command">command: String</span>)</span><span class="result">: (HasMain, String, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+        <span class="name">getCause</span><span class="params">()</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Get a main class based on the command, or an unambiguous prefix.</p><div class="fullcomment"><div class="comment cmt"><p>Get a main class based on the command, or an unambiguous prefix.  The
-exception is the empty string.  If we are passed the empty string, then
-return the default command.
-</p></div><dl class="paramcmts block"><dt class="param">command</dt><dd class="cmt"><p>The command prefix.  It is not case-sensitive.</p></dd><dt>returns</dt><dd class="cmt"><p>The requested class and command description, as a pair.
-</p></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
@@ -329,21 +253,54 @@ return the default command.
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#getDialects" data-isabs="false">
-      <a id="getDialects():Map[Symbol, AnyRef]"></a>
+    </li><li visbl="pub" name="java.lang.Throwable#getLocalizedMessage" data-isabs="false">
+      <a id="getLocalizedMessage():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getDialects</span><span class="params">()</span><span class="result">: Map[<span name="scala.Symbol" class="extype">Symbol</span>, AnyRef]</span>
+        <span class="name">getLocalizedMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Return the loaded dialects.</p><div class="fullcomment"><div class="comment cmt"><p>Return the loaded dialects.  This is a map from symbol to a class, but
-the class has not been verified to be a dialect (yet).
-</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>The known dialects.
-</p></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getMessage" data-isabs="false">
+      <a id="getMessage():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getMessage</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getStackTrace" data-isabs="false">
+      <a id="getStackTrace():Array[StackTraceElement]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#getSuppressed" data-isabs="false">
+      <a id="getSuppressed():Array[Throwable]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getSuppressed</span><span class="params">()</span><span class="result">: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.Throwable" class="extype">Throwable</span>]</span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
@@ -356,32 +313,18 @@ the class has not been verified to be a dialect (yet).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#help" data-isabs="false">
-      <a id="help(Appendable,Int):Appendable"></a>
+    </li><li visbl="pub" name="java.lang.Throwable#initCause" data-isabs="false">
+      <a id="initCause(Throwable):Throwable"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">help</span><span class="params">(<span name="buf">buf: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">80</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+        <span class="name">initCause</span><span class="params">(<span name="arg0">arg0: <span name="java.lang.Throwable" class="extype">Throwable</span></span>)</span><span class="result">: <span name="java.lang.Throwable" class="extype">Throwable</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Create a help string with the given width.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version#invoke" data-isabs="false">
-      <a id="invoke(String,Array[String]):Unit"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">invoke</span><span class="params">(<span name="command">command: String</span>, <span name="args">args: <span name="scala.Array" class="extype">Array</span>[String]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Invoke the given command, passing the provided command line arguments.</p><div class="fullcomment"><div class="comment cmt"><p>Invoke the given command, passing the provided command line arguments.
-</p></div><dl class="paramcmts block"><dt class="param">command</dt><dd class="cmt"><p>The requested command prefix.  It is not case sensitive.</p></dd><dt class="param">args</dt><dd class="cmt"><p>The command line arguments.
-</p></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
@@ -394,66 +337,6 @@ the class has not been verified to be a dialect (yet).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#loaded" data-isabs="false">
-      <a id="loaded:Boolean"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loaded</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">If true then data was loaded.</p><div class="fullcomment"><div class="comment cmt"><p>If true then data was loaded.  If false, it was not.</p></div></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#maintainer" data-isabs="false">
-      <a id="maintainer:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">maintainer</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Name and email of the maintainer.</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version#major" data-isabs="false">
-      <a id="major:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">major</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Major version number (integer string).</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version#minor" data-isabs="false">
-      <a id="minor:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">minor</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Minor version number (integer string).</p>
-    </li><li visbl="pub" name="ornl.elision.util.Version#name" data-isabs="false">
-      <a id="name:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">name</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Name of the program.</p>
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
@@ -490,6 +373,54 @@ the class has not been verified to be a dialect (yet).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
+      <a id="printStackTrace(PrintWriter):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintWriter" class="extype">PrintWriter</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
+      <a id="printStackTrace(PrintStream):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">printStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="java.io.PrintStream" class="extype">PrintStream</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#printStackTrace" data-isabs="false">
+      <a id="printStackTrace():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">printStackTrace</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
+    </li><li visbl="pub" name="java.lang.Throwable#setStackTrace" data-isabs="false">
+      <a id="setStackTrace(Array[StackTraceElement]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setStackTrace</span><span class="params">(<span name="arg0">arg0: <span name="scala.Array" class="extype">Array</span>[<span name="java.lang.StackTraceElement" class="extype">StackTraceElement</span>]</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Throwable</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
@@ -502,7 +433,7 @@ the class has not been verified to be a dialect (yet).
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+    </li><li visbl="pub" name="ornl.elision.util.ElisionException#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -513,7 +444,7 @@ the class has not been verified to be a dialect (yet).
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a> → Throwable → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
@@ -559,18 +490,6 @@ the class has not been verified to be a dialect (yet).
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.util.Version#web" data-isabs="false">
-      <a id="web:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">web</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
-      </span>
-      </h4>
-      <p class="shortcomment cmt">Web address for the program.</p>
     </li></ol>
             </div>
 
@@ -578,7 +497,15 @@ the class has not been verified to be a dialect (yet).
         </div>
 
         <div id="inheritedMembers">
-        <div name="scala.AnyRef" class="parent">
+        <div name="ornl.elision.util.ElisionException" class="parent">
+              <h3>Inherited from <a name="ornl.elision.util.ElisionException" class="extype" href="../util/ElisionException.html">ElisionException</a></h3>
+            </div><div name="java.lang.Exception" class="parent">
+              <h3>Inherited from <span name="java.lang.Exception" class="extype">Exception</span></h3>
+            </div><div name="java.lang.Throwable" class="parent">
+              <h3>Inherited from <span name="java.lang.Throwable" class="extype">Throwable</span></h3>
+            </div><div name="java.io.Serializable" class="parent">
+              <h3>Inherited from <span name="java.io.Serializable" class="extype">Serializable</span></h3>
+            </div><div name="scala.AnyRef" class="parent">
               <h3>Inherited from AnyRef</h3>
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
