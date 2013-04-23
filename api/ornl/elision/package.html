@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../lib/package_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../package.html">ornl</a></p>
@@ -20,40 +20,39 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <span class="name">elision</span>
+        
+        
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Elision is a term rewriter.</p><p>This is the root package of the Elision system, and it is responsible for
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Elision is a term rewriter.</p><p>This is the root package of the Elision system, and it is responsible for
 startup and command line processing.</p><p>Starting the Elision system is the job of ornl.elision.Main.</p><p>This package uses <a name="ornl.elision.cli" class="extype" href="cli/package.html">cli</a> and <a name="ornl.elision.util" class="extype" href="util/package.html">util</a>, but should
 not use any other package.  No other package in Elision may use this package.</p><h4> Packages </h4><p>There are several sub-packages.</p><ul><li><a name="ornl.elision.actors" class="extype" href="actors/package.html">actors</a> contains actors used for internal communication.</li><li><a name="ornl.elision.cli" class="extype" href="cli/package.html">cli</a> contains classes for interpreting the CLI.</li><li><a name="ornl.elision.core" class="extype" href="core/package.html">core</a> is the core package that contains the primary classes.</li><li>ornl.elision.generators provides generators to convert atoms to strings.</li><li><a name="ornl.elision.gui" class="extype" href="gui/package.html">gui</a> contains the Elision GUI, Eva.</li><li><a name="ornl.elision.parse" class="extype" href="parse/package.html">parse</a> contains the Elision parser(s).</li><li><a name="ornl.elision.profile" class="extype" href="profile/package.html">profile</a> contains the Elision profiler.</li><li><a name="ornl.elision.repl" class="extype" href="repl/package.html">repl</a> contains the Elision REPL(s) and related classes.</li><li><a name="ornl.elision.syntax" class="extype" href="syntax/package.html">syntax</a> contains the syntax highlighting system.</li><li><a name="ornl.elision.util" class="extype" href="util/package.html">util</a> contains common utilities used by the Elision system.</li></ul><p>Packages in Elision are organized into a use hierarchy.  In general, packages
 may use sub-packages, but not the reverse.  Packages may use sibling packages,
 provided this does not result in a cycle.</p><h4> Punch List </h4><p>This is the current punch list for Elision.  This list gets picked up by
 <a href="http://eclipse.org">Eclipse</a>.</p><ul><li>TODO Need package.scala files for all packages.  Stacy.</li><li>TODO Implicit corecions. Mark.</li><li>TODO Split compilable context into stages to avoid load problems.  Stacy</li><li>TODO Infix. DEFER.
 </li></ul></div></div>
-    
-
-      <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
         
-        
-        <div id="visbl">
-            <span class="filtertype">Visibility</span>
-            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-          </div>
-      </div>
 
       <div id="template">
-        <div id="allMembers">
-        
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
 
         
 
+        
+        
         
 
         <div class="values members" id="values">
@@ -61,36 +60,33 @@ provided this does not result in a cycle.</p><h4> Punch List </h4><p>This is the
               <ol><li visbl="pub" name="ornl.elision.About" data-isabs="false">
       <a id="About:About"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="About$.html"><span class="name">About</span></a><span class="result"> extends App</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="About$.html"><span class="name">About</span></a>
+        
+        <span class="result"> extends App</span>
       </span>
       </h4>
       <p class="comment cmt">Print some simple &quot;about&quot; text.</p>
     </li><li visbl="pub" name="ornl.elision.Help" data-isabs="false">
       <a id="Help:Help"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Help$.html"><span class="name">Help</span></a><span class="result"> extends App</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Help$.html"><span class="name">Help</span></a>
+        
+        <span class="result"> extends App</span>
       </span>
       </h4>
       <p class="comment cmt">Print some help on the commands supported by Elision.</p>
     </li><li visbl="pub" name="ornl.elision.HelpText" data-isabs="false">
       <a id="HelpText:HelpText"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="HelpText$.html"><span class="name">HelpText</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="HelpText$.html"><span class="name">HelpText</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide reusable text for any About commands/dialogues in Elision or
@@ -98,144 +94,132 @@ its associated GUIs and applications.</p>
     </li><li visbl="pub" name="ornl.elision.Main" data-isabs="false">
       <a id="Main:Main"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Main$.html"><span class="name">Main</span></a><span class="result"> extends App</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="Main$.html"><span class="name">Main</span></a>
+        
+        <span class="result"> extends App</span>
       </span>
       </h4>
       <p class="comment cmt">This is the entry point when running from the jar file.</p>
     </li><li visbl="pub" name="ornl.elision.actors" data-isabs="false">
       <a id="actors:actors"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="actors/package.html"><span class="name">actors</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.cli" data-isabs="false">
       <a id="cli:cli"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="cli/package.html"><span class="name">cli</span></a>
+        
+        
       </span>
       </h4>
       <p class="comment cmt">This package provides support for command-line interfaces in Elision.</p>
     </li><li visbl="pub" name="ornl.elision.context" data-isabs="false">
       <a id="context:context"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="context/package.html"><span class="name">context</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core" data-isabs="false">
       <a id="core:core"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="core/package.html"><span class="name">core</span></a>
+        
+        
       </span>
       </h4>
       <p class="comment cmt">The core classes and definitions that make up the Elision runtime.</p>
     </li><li visbl="pub" name="ornl.elision.dialects" data-isabs="false">
       <a id="dialects:dialects"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="dialects/package.html"><span class="name">dialects</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.gui" data-isabs="false">
       <a id="gui:gui"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="gui/package.html"><span class="name">gui</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.parse" data-isabs="false">
       <a id="parse:parse"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="parse/package.html"><span class="name">parse</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.profile" data-isabs="false">
       <a id="profile:profile"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="profile/package.html"><span class="name">profile</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.repl" data-isabs="false">
       <a id="repl:repl"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="repl/package.html"><span class="name">repl</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.syntax" data-isabs="false">
       <a id="syntax:syntax"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="syntax/package.html"><span class="name">syntax</span></a>
+        
+        
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.util" data-isabs="false">
       <a id="util:util"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <a href="util/package.html"><span class="name">util</span></a>
+        
+        
       </span>
       </h4>
       <p class="comment cmt">This is the utility package for Elision.</p>
@@ -243,18 +227,12 @@ its associated GUIs and applications.</p>
             </div>
 
         
-        </div>
 
-        <div id="inheritedMembers">
         
-        </div>
 
       </div>
-
+      
       <div id="tooltip"></div>
-
-      <div id="footer">  </div>
-
-
+      
     </body>
       </html>

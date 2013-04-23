@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+        <body class="type">
       <div id="definition">
         <a title="Go to companion" href="Processor$.html"><img src="../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.parse" class="extype" href="package.html">parse</a></p>
@@ -20,16 +20,15 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Processor</span><span class="result"> extends <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a> with <a name="ornl.elision.parse.TraceableParse" class="extype" href="TraceableParse.html">TraceableParse</a> with <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a> with <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></span>
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <span class="name">Processor</span>
+        
+        <span class="result"> extends <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a> with <a name="ornl.elision.parse.TraceableParse" class="extype" href="TraceableParse.html">TraceableParse</a> with <a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a> with <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A processor is responsible for reading and handling atoms.</p><p>The processor instance maintains a ornl.elision.core.Context instance
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A processor is responsible for reading and handling atoms.</p><p>The processor instance maintains a ornl.elision.core.Context instance
 that is available via the <code>context</code> field.  An existing context can be
 provided when the processor is created.  Otherwise a new context is created
 and used.</p><p>The processor instance also maintains its own ornl.elision.core.AtomParser
@@ -42,39 +41,38 @@ via the <code>trace</code> field.
           <span class="toggle">Known Subclasses</span>
           <div class="subClasses hiddenContent"><a name="ornl.elision.repl.ERepl" class="extype" href="../repl/ERepl.html">ERepl</a></div>
         </div></div>
-    
-
-      <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-        <div id="order">
-              <span class="filtertype">Ordering</span>
-              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
-            </div>
-        <div id="ancestors">
-              <span class="filtertype">Inherited</span>
-              <ol><li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.util.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.util.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.parse.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.context.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-            </div>
-        <div id="visbl">
-            <span class="filtertype">Visibility</span>
-            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-          </div>
-      </div>
+        
 
       <div id="template">
-        <div id="allMembers">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.parse.Processor" class="in"><span>Processor</span></li><li name="ornl.elision.util.HasHistory" class="in"><span>HasHistory</span></li><li name="ornl.elision.util.Timeable" class="in"><span>Timeable</span></li><li name="ornl.elision.parse.TraceableParse" class="in"><span>TraceableParse</span></li><li name="ornl.elision.context.Executor" class="in"><span>Executor</span></li><li name="ornl.elision.util.PropertyManager" class="in"><span>PropertyManager</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
               <ol><li visbl="pub" name="ornl.elision.parse.Processor#this" data-isabs="false">
       <a id="this:Processor"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Processor</span><span class="params">(<span name="settings">settings: Map[String, String]</span>, <span name="context">context: <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a> = <span class="symbol">new ornl.elision.context.Context()</span></span>)</span>
+      <span class="kind">new</span>
+      <span class="symbol"> 
+        <span class="name">Processor</span>
+        
+        <span class="params">(<span name="settings">settings: Map[String, String]</span>, <span name="context">context: <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a></span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">settings</dt><dd class="cmt"><p>The settings from the command line parser.</p></dd><dt class="param">context</dt><dd class="cmt"><p>The context to use; if none is provided, use an empty one.
@@ -83,7 +81,7 @@ via the <code>trace</code> field.
             </div>
 
         
-
+        
         
 
         <div class="values members" id="values">
@@ -91,108 +89,99 @@ via the <code>trace</code> field.
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
       <a id="##():Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#_prop2close" data-isabs="false">
       <a id="_prop2close:OpenHashMap[String, (PropertyManager) ⇒ Unit]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_prop2close</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, (<a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>]</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">_prop2close</span>
+        
+        <span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, (<a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#_prop2desc" data-isabs="false">
       <a id="_prop2desc:OpenHashMap[String, String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_prop2desc</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, String]</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">_prop2desc</span>
+        
+        <span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, String]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#_prop2val" data-isabs="false">
       <a id="_prop2val:OpenHashMap[String, Any]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">_prop2val</span><span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, <span name="scala.Any" class="extype">Any</span>]</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">_prop2val</span>
+        
+        <span class="result">: <span name="scala.collection.mutable.OpenHashMap" class="extype">OpenHashMap</span>[String, <span name="scala.Any" class="extype">Any</span>]</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#addHistoryLine" data-isabs="false">
       <a id="addHistoryLine(String):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addHistoryLine</span><span class="params">(<span name="line">line: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">addHistoryLine</span>
+        
+        <span class="params">(<span name="line">line: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Add a line to the history, if one is being maintained.</p><div class="fullcomment"><div class="comment cmt"><p>Add a line to the history, if one is being maintained.  If the processor
@@ -205,24 +194,22 @@ nothing.
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#banner" data-isabs="false">
       <a id="banner(Boolean):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">banner</span><span class="params">(<span name="history">history: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">banner</span>
+        
+        <span class="params">(<span name="history">history: <span name="scala.Boolean" class="extype">Boolean</span> = <span class="symbol">true</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Display the banner, version, and build information on the current
@@ -234,24 +221,22 @@ record session information in the history file, if enabled.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#checkpoints" data-isabs="false">
       <a id="checkpoints:ArrayBuffer[(Date, Context)]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">checkpoints</span><span class="result">: <span name="scala.collection.mutable.ArrayBuffer" class="extype">ArrayBuffer</span>[(<span name="java.util.Date" class="extype">Date</span>, <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a>)]</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">checkpoints</span>
+        
+        <span class="result">: <span name="scala.collection.mutable.ArrayBuffer" class="extype">ArrayBuffer</span>[(<span name="java.util.Date" class="extype">Date</span>, <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">The list of context checkpoints</p>
     </li><li visbl="pub" name="ornl.elision.context.Executor#clazzes" data-isabs="false">
       <a id="clazzes:Set[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with java.lang.Boolean &lt;: java.lang.Object]]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">clazzes</span><span class="result">: <span name="scala.collection.immutable.Set" class="extype">Set</span>[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with java.lang.Boolean &lt;: java.lang.Object]]</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">clazzes</span>
+        
+        <span class="result">: <span name="scala.collection.immutable.Set" class="extype">Set</span>[java.lang.Class[_ &gt;: ornl.elision.core.BasicAtom with java.lang.String with scala.math.BigInt with java.lang.Integer with java.lang.Boolean &lt;: java.lang.Object]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">This property manager supports BigInts, Strings, and any BasicAtom.</p><div class="fullcomment"><div class="comment cmt"><p>This property manager supports BigInts, Strings, and any BasicAtom.
@@ -259,12 +244,11 @@ record session information in the history file, if enabled.
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -274,24 +258,22 @@ record session information in the history file, if enabled.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#console" data-isabs="false">
       <a id="console:Console"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">console</span><span class="result">: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">console</span>
+        
+        <span class="result">: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Specify the console.</p><div class="fullcomment"><div class="comment cmt"><p>Specify the console.  We don't know the number of lines.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="">Processor</a> → <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#context" data-isabs="false">
       <a id="context:Context"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">context</span><span class="result">: <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a></span>
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">context</span>
+        
+        <span class="result">: <a name="ornl.elision.context.Context" class="extype" href="../context/Context.html">Context</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The context to use; if none is provided, use an empty one.</p><div class="fullcomment"><div class="comment cmt"><p>The context to use; if none is provided, use an empty one.
@@ -299,12 +281,11 @@ record session information in the history file, if enabled.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#coredump" data-isabs="false">
       <a id="coredump(String,Option[Throwable]):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">coredump</span><span class="params">(<span name="msg">msg: String</span>, <span name="th">th: <span name="scala.Option" class="extype">Option</span>[Throwable] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">coredump</span>
+        
+        <span class="params">(<span name="msg">msg: String</span>, <span name="th">th: <span name="scala.Option" class="extype">Option</span>[Throwable] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Save the current context in response to an exception or other
@@ -315,12 +296,11 @@ unrecoverable error.
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#declareProperty" data-isabs="false">
       <a id="declareProperty[TYPE](String,String,TYPE,(PropertyManager) ⇒ Unit):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">declareProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>, <span name="description">description: String</span>, <span name="default">default: TYPE</span>, <span name="onchange">onchange: (<a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">declareProperty</span>
+        <span class="tparams">[<span name="TYPE">TYPE</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="description">description: String</span>, <span name="default">default: TYPE</span>, <span name="onchange">onchange: (<a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a>) ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Declare a property.</p><div class="fullcomment"><div class="comment cmt"><p>Declare a property.
@@ -333,48 +313,44 @@ unrecoverable error.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#displayCheckPts" data-isabs="false">
       <a id="displayCheckPts:Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">displayCheckPts</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">displayCheckPts</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Displays the list of saved checkpoints.</p>
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#execute" data-isabs="false">
       <a id="execute(String,String):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">execute</span>
+        
+        <span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Execute the provided text.</p><div class="fullcomment"><div class="comment cmt"><p>Execute the provided text.  The text must form a complete sequence of
@@ -392,12 +368,11 @@ occurs while handling the first.
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -407,24 +382,22 @@ occurs while handling the first.
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#getCumulativeTimeMillis" data-isabs="false">
       <a id="getCumulativeTimeMillis:Long"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getCumulativeTimeMillis</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getCumulativeTimeMillis</span>
+        
+        <span class="result">: <span name="scala.Long" class="extype">Long</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the total elapsed time across all measured intervals.</p><div class="fullcomment"><div class="comment cmt"><p>Get the total elapsed time across all measured intervals.  This is updated
@@ -433,12 +406,11 @@ at each <code>stopTimer</code> event and is reported in milliseconds.
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#getHistoryEntry" data-isabs="false">
       <a id="getHistoryEntry(Int):Option[String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getHistoryEntry</span><span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getHistoryEntry</span>
+        
+        <span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get a history entry by its index.</p><div class="fullcomment"><div class="comment cmt"><p>Get a history entry by its index.
@@ -447,12 +419,11 @@ at each <code>stopTimer</code> event and is reported in milliseconds.
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#getHistoryFilename" data-isabs="false">
       <a id="getHistoryFilename:String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getHistoryFilename</span><span class="result">: String</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getHistoryFilename</span>
+        
+        <span class="result">: String</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the file that holds the persistent history.</p><div class="fullcomment"><div class="comment cmt"><p>Get the file that holds the persistent history.  By default this returns
@@ -462,12 +433,11 @@ a history file.
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#getHistoryIterator" data-isabs="false">
       <a id="getHistoryIterator:Iterator[String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getHistoryIterator</span><span class="result">: Iterator[String]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getHistoryIterator</span>
+        
+        <span class="result">: Iterator[String]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get an iterator over the history.</p><div class="fullcomment"><div class="comment cmt"><p>Get an iterator over the history.  By default this returns the empty
@@ -477,12 +447,11 @@ processor supports history.
     </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTime" data-isabs="false">
       <a id="getLastTime:(Long, Long, Long)"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLastTime</span><span class="result">: (<span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>)</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getLastTime</span>
+        
+        <span class="result">: (<span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>, <span name="scala.Long" class="extype">Long</span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the most recent duration.</p><div class="fullcomment"><div class="comment cmt"><p>Get the most recent duration.  This is set by <code>stopTimer</code> and is reported
@@ -491,12 +460,11 @@ as a triple of minutes, seconds, and milliseconds.
     </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTimeMillis" data-isabs="false">
       <a id="getLastTimeMillis:Long"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLastTimeMillis</span><span class="result">: <span name="scala.Long" class="extype">Long</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getLastTimeMillis</span>
+        
+        <span class="result">: <span name="scala.Long" class="extype">Long</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the most recent duration.</p><div class="fullcomment"><div class="comment cmt"><p>Get the most recent duration.  This is set by <code>stopTimer</code> and is reported
@@ -505,12 +473,11 @@ in milliseconds.
     </li><li visbl="pub" name="ornl.elision.util.Timeable#getLastTimeString" data-isabs="false">
       <a id="getLastTimeString:String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getLastTimeString</span><span class="result">: String</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getLastTimeString</span>
+        
+        <span class="result">: String</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the most recent duration.</p><div class="fullcomment"><div class="comment cmt"><p>Get the most recent duration.  This is set by <code>stopTimer</code> and is reported
@@ -522,12 +489,11 @@ Where <code>MMMM</code> is the elapsed minutes, <code>SS</code> is the elapsed s
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#getNextHistoryEntry" data-isabs="false">
       <a id="getNextHistoryEntry:Option[String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getNextHistoryEntry</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getNextHistoryEntry</span>
+        
+        <span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Moves the history to the next entry and returns that entry.</p><div class="fullcomment"><div class="comment cmt"><p>Moves the history to the next entry and returns that entry.
@@ -536,12 +502,11 @@ The default implementation returns None.
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#getPreviousHistoryEntry" data-isabs="false">
       <a id="getPreviousHistoryEntry:Option[String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPreviousHistoryEntry</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getPreviousHistoryEntry</span>
+        
+        <span class="result">: <span name="scala.Option" class="extype">Option</span>[String]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Moves the history to the previous entry and returns that entry.</p><div class="fullcomment"><div class="comment cmt"><p>Moves the history to the previous entry and returns that entry.
@@ -550,12 +515,11 @@ The default implementation returns None.
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getProperties" data-isabs="false">
       <a id="getProperties:List[(String, String, Any)]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getProperties</span><span class="result">: <span name="scala.collection.immutable.List" class="extype">List</span>[(String, String, <span name="scala.Any" class="extype">Any</span>)]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getProperties</span>
+        
+        <span class="result">: <span name="scala.collection.immutable.List" class="extype">List</span>[(String, String, <span name="scala.Any" class="extype">Any</span>)]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get all declared properties.</p><div class="fullcomment"><div class="comment cmt"><p>Get all declared properties.
@@ -565,12 +529,11 @@ The default implementation returns None.
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getProperty" data-isabs="false">
       <a id="getProperty[TYPE](String)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mTYPE">mTYPE: <span name="scala.reflect.Manifest" class="extype">Manifest</span>[TYPE]</span>)</span><span class="result">: TYPE</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getProperty</span>
+        <span class="tparams">[<span name="TYPE">TYPE</span>]</span>
+        <span class="params">(<span name="name">name: String</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mTYPE">mTYPE: <span name="scala.reflect.Manifest" class="extype">Manifest</span>[TYPE]</span>)</span><span class="result">: TYPE</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the value of a property.</p><div class="fullcomment"><div class="comment cmt"><p>Get the value of a property.  Properties are intended to be used to
@@ -584,12 +547,11 @@ is correctly typed.
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#getPropertyNames" data-isabs="false">
       <a id="getPropertyNames:List[String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getPropertyNames</span><span class="result">: <span name="scala.collection.immutable.List" class="extype">List</span>[String]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getPropertyNames</span>
+        
+        <span class="result">: <span name="scala.collection.immutable.List" class="extype">List</span>[String]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get all public property names, sorted in alphabetical order.</p><div class="fullcomment"><div class="comment cmt"><p>Get all public property names, sorted in alphabetical order.
@@ -598,12 +560,11 @@ is correctly typed.
     </li><li visbl="pub" name="ornl.elision.context.Executor#getSetting" data-isabs="false">
       <a id="getSetting(String):String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getSetting</span><span class="params">(<span name="name">name: String</span>)</span><span class="result">: String</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getSetting</span>
+        
+        <span class="params">(<span name="name">name: String</span>)</span><span class="result">: String</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the value of a setting, which must be defined.</p><div class="fullcomment"><div class="comment cmt"><p>Get the value of a setting, which must be defined.  If the setting
@@ -611,48 +572,44 @@ is correctly typed.
     </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#loadCheckPt" data-isabs="false">
       <a id="loadCheckPt(Int):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loadCheckPt</span><span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">loadCheckPt</span>
+        
+        <span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Loads a context checkpoint.</p>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#loadCoredump" data-isabs="false">
       <a id="loadCoredump(String):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loadCoredump</span><span class="params">(<span name="corePath">corePath: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">loadCoredump</span>
+        
+        <span class="params">(<span name="corePath">corePath: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Reloads a core dump created with fail().</p><div class="fullcomment"><div class="comment cmt"><p>Reloads a core dump created with fail().
@@ -661,48 +618,44 @@ is correctly typed.
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.context.Executor#parse" data-isabs="false">
       <a id="parse(String,String):Result"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">parse</span><span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <a name="ornl.elision.core.Dialect.Result" class="extype" href="../core/Dialect$$Result.html">Result</a></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">parse</span>
+        
+        <span class="params">(<span name="name">name: String</span>, <span name="text">text: String</span>)</span><span class="result">: <a name="ornl.elision.core.Dialect.Result" class="extype" href="../core/Dialect$$Result.html">Result</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Parse the given string and return a sequence of basic atoms.</p><div class="fullcomment"><div class="comment cmt"><p>Parse the given string and return a sequence of basic atoms.  The
@@ -714,42 +667,35 @@ will have been executed by the time this method returns.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#read" data-isabs="false">
       <a id="read(Source,String):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>, <span name="filename">filename: String = <span class="symbol">&quot;(console)&quot;</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">read</span>
+        
+        <span class="params">(<span name="source">source: <span name="scala.io.Source" class="extype">Source</span></span>, <span name="filename">filename: String = <span class="symbol">&quot;(console)&quot;</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Read the content of the provided reader.</p><div class="fullcomment"><div class="comment cmt"><p>Read the content of the provided reader.
-</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The reader providing input.</p></dd><dt class="param">filename</dt><dd class="cmt"><p>The file name, if relevant.</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">java.io.IOException<p>
-					An error occurred trying to read.
-</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>The reader providing input.</p></dd><dt class="param">filename</dt><dd class="cmt"><p>The file name, if relevant.</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#read" data-isabs="false">
       <a id="read(File):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">read</span>
+        
+        <span class="params">(<span name="file">file: <span name="java.io.File" class="extype">File</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Read the content of the provided file.</p><div class="fullcomment"><div class="comment cmt"><p>Read the content of the provided file.
-</p></div><dl class="paramcmts block"><dt class="param">file</dt><dd class="cmt"><p>The file to read.</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt">java.io.IOException<p>
-					The file cannot be found or cannot be read.
-</p></span></dd></dl></div>
+</p></div><dl class="paramcmts block"><dt class="param">file</dt><dd class="cmt"><p>The file to read.</p></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#read" data-isabs="false">
       <a id="read(String,Boolean):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">read</span><span class="params">(<span name="filename">filename: String</span>, <span name="quiet">quiet: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">read</span>
+        
+        <span class="params">(<span name="filename">filename: String</span>, <span name="quiet">quiet: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Read the content of the provided file.</p><div class="fullcomment"><div class="comment cmt"><p>Read the content of the provided file.  This method uses a
@@ -761,12 +707,11 @@ file.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#register" data-isabs="false">
       <a id="register(Handler*):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">register</span><span class="params">(<span name="handlers">handlers: <a name="ornl.elision.parse.Processor.Handler" class="extype" href="Processor$$Handler.html">Handler</a>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">register</span>
+        
+        <span class="params">(<span name="handlers">handlers: <a name="ornl.elision.parse.Processor.Handler" class="extype" href="Processor$$Handler.html">Handler</a>*</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Register a handler.</p><div class="fullcomment"><div class="comment cmt"><p>Register a handler.  This handler is placed at the end of the queue, so
@@ -776,12 +721,11 @@ it is invoked after any other currently registered handlers.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#registerAtFront" data-isabs="false">
       <a id="registerAtFront(Handler):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">registerAtFront</span><span class="params">(<span name="handler">handler: <a name="ornl.elision.parse.Processor.Handler" class="extype" href="Processor$$Handler.html">Handler</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">registerAtFront</span>
+        
+        <span class="params">(<span name="handler">handler: <a name="ornl.elision.parse.Processor.Handler" class="extype" href="Processor$$Handler.html">Handler</a></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Register a handler.</p><div class="fullcomment"><div class="comment cmt"><p>Register a handler.  This handler will be placed at the front of the
@@ -792,12 +736,11 @@ handlers.
     </li><li visbl="pub" name="ornl.elision.util.HasHistory#replaceHistoryLine" data-isabs="false">
       <a id="replaceHistoryLine(Int,String):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replaceHistoryLine</span><span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>, <span name="line">line: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">replaceHistoryLine</span>
+        
+        <span class="params">(<span name="index">index: <span name="scala.Int" class="extype">Int</span></span>, <span name="line">line: String</span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Replace an existing line in the history.</p><div class="fullcomment"><div class="comment cmt"><p>Replace an existing line in the history.  If the line does not exist,
@@ -808,12 +751,11 @@ implementation does nothing.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#reportElapsed" data-isabs="false">
       <a id="reportElapsed:Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">reportElapsed</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">reportElapsed</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The report method.</p><div class="fullcomment"><div class="comment cmt"><p>The report method.  Implement this to generate a report.  Nothing
@@ -823,24 +765,22 @@ data.  This is not intended for multithreaded use.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#saveCheckPt" data-isabs="false">
       <a id="saveCheckPt:Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">saveCheckPt</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">saveCheckPt</span>
+        
+        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Saves a context checkpoint.</p>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#setProperty" data-isabs="false">
       <a id="setProperty[TYPE](String,TYPE)(Manifest[TYPE]):TYPE"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">setProperty</span><span class="tparams">[<span name="TYPE">TYPE</span>]</span><span class="params">(<span name="name">name: String</span>, <span name="value">value: TYPE</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mTYPE">mTYPE: <span name="scala.reflect.Manifest" class="extype">Manifest</span>[TYPE]</span>)</span><span class="result">: TYPE</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">setProperty</span>
+        <span class="tparams">[<span name="TYPE">TYPE</span>]</span>
+        <span class="params">(<span name="name">name: String</span>, <span name="value">value: TYPE</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="mTYPE">mTYPE: <span name="scala.reflect.Manifest" class="extype">Manifest</span>[TYPE]</span>)</span><span class="result">: TYPE</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Set the value of a property.</p><div class="fullcomment"><div class="comment cmt"><p>Set the value of a property.  See the documentation of <code>getProperty</code> for
@@ -850,24 +790,22 @@ information about the use of properties.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#settings" data-isabs="false">
       <a id="settings:Map[String, String]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">settings</span><span class="result">: Map[String, String]</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">settings</span>
+        
+        <span class="result">: Map[String, String]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">The settings from the command line parser.</p><div class="fullcomment"><div class="comment cmt"><p>The settings from the command line parser.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.parse.Processor" class="extype" href="">Processor</a> → <a name="ornl.elision.context.Executor" class="extype" href="../context/Executor.html">Executor</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#showElapsed" data-isabs="false">
       <a id="showElapsed:Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">showElapsed</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">showElapsed</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If timing is enabled, generate a report on the most recent elapsed
@@ -877,48 +815,44 @@ interval measured by <code>startTimer</code>..<code>stopTimer</code>.
     </li><li visbl="pub" name="ornl.elision.util.Timeable#startTimer" data-isabs="false">
       <a id="startTimer:Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">startTimer</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">startTimer</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Start the timer.</p><div class="fullcomment"><div class="comment cmt"><p>Start the timer.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#stopTimer" data-isabs="false">
       <a id="stopTimer:Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">stopTimer</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">stopTimer</span>
+        
+        <span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Stop the timer.</p><div class="fullcomment"><div class="comment cmt"><p>Stop the timer.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a></dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#time" data-isabs="false">
       <a id="time[RV](⇒ RV):RV"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">time</span><span class="tparams">[<span name="RV">RV</span>]</span><span class="params">(<span name="closure">closure: ⇒ RV</span>)</span><span class="result">: RV</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">time</span>
+        <span class="tparams">[<span name="RV">RV</span>]</span>
+        <span class="params">(<span name="closure">closure: ⇒ RV</span>)</span><span class="result">: RV</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Start the timer for the duration of the given closure's evaluation, and
@@ -929,12 +863,11 @@ then stop it.  If timing is not enabled, this still executes the closure.
     </li><li visbl="pub" name="ornl.elision.util.Timeable#time" data-isabs="false">
       <a id="time(⇒ Unit):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">time</span><span class="params">(<span name="closure">closure: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">time</span>
+        
+        <span class="params">(<span name="closure">closure: ⇒ <span name="scala.Unit" class="extype">Unit</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Start the timer for the duration of the given closure's evaluation, and
@@ -945,24 +878,22 @@ then stop it.  If timing is not enabled, this still executes the closure.
     </li><li visbl="pub" name="ornl.elision.util.Timeable#timing" data-isabs="false">
       <a id="timing:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">timing</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">timing</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Determine whether timing is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Determine whether timing is enabled.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.Timeable" class="extype" href="../util/Timeable.html">Timeable</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.Timeable#timing_=" data-isabs="false">
       <a id="timing_=(Boolean):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: timing_$eq">timing_=</span><span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">timing_=</span>
+        
+        <span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Set whether timing is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Set whether timing is enabled.  This is different from starting and
@@ -973,24 +904,22 @@ and reporting are all ignored.
     </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.parse.Processor#trace" data-isabs="false">
       <a id="trace:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">trace</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">trace</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Determine whether tracing is enabled.</p><div class="fullcomment"><div class="comment cmt"><p>Determine whether tracing is enabled.
@@ -998,12 +927,11 @@ and reporting are all ignored.
     </li><li visbl="pub" name="ornl.elision.parse.Processor#trace_=" data-isabs="false">
       <a id="trace_=(Boolean):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: trace_$eq">trace_=</span><span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">trace_=</span>
+        
+        <span class="params">(<span name="enable">enable: <span name="scala.Boolean" class="extype">Boolean</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Specify whether to trace the parser.</p><div class="fullcomment"><div class="comment cmt"><p>Specify whether to trace the parser.
@@ -1012,57 +940,53 @@ and reporting are all ignored.
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#writeProperties" data-isabs="false">
       <a id="writeProperties(Console,Int):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">writeProperties</span><span class="params">(<span name="console">console: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">80</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">writeProperties</span>
+        
+        <span class="params">(<span name="console">console: <a name="ornl.elision.util.Console" class="extype" href="../util/Console.html">Console</a></span>, <span name="width">width: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">80</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Write properties to a console.</p><div class="fullcomment"><div class="comment cmt"><p>Write properties to a console.
@@ -1071,12 +995,11 @@ and reporting are all ignored.
     </li><li visbl="pub" name="ornl.elision.util.PropertyManager#writeProperty" data-isabs="false">
       <a id="writeProperty(Any):String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">writeProperty</span><span class="params">(<span name="value">value: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">writeProperty</span>
+        
+        <span class="params">(<span name="value">value: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Write a single property.</p><div class="fullcomment"><div class="comment cmt"><p>Write a single property.  This is used by <code>writeProperties</code> to write the
@@ -1084,8 +1007,8 @@ value of each property.  If you have a property that requires special
 handling or representation, override this.  Use <code>super.writeProperty</code> for
 values you do not wish to handle.</p><p>Alternately you can just override this method in the derived class for
 the values you want to catch.</p><p>For example:</p><pre>
-<span class="kw">def</span> writeProperty(value: <span class="std">Int</span>) = <span class="lit">"[+value+"</span>]<span class="lit">"
-</span></pre><p>This will write <code>Int</code> values with square brackets, and will defer to the
+def writeProperty(value: Int) = &quot;[+value+&quot;]&quot;
+</pre><p>This will write <code>Int</code> values with square brackets, and will defer to the
 base class for all other values.</p><p>By default this method uses the <code>toString</code> method for the value.
 </p></div><dl class="paramcmts block"><dt class="param">value</dt><dd class="cmt"><p>The value to write.</p></dd><dt>returns</dt><dd class="cmt"><p>The string value to write.
 </p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.util.PropertyManager" class="extype" href="../util/PropertyManager.html">PropertyManager</a></dd></dl></div>
@@ -1093,9 +1016,7 @@ base class for all other values.</p><p>By default this method uses the <code>toS
             </div>
 
         
-        </div>
 
-        <div id="inheritedMembers">
         <div name="ornl.elision.util.HasHistory" class="parent">
               <h3>Inherited from <a name="ornl.elision.util.HasHistory" class="extype" href="../util/HasHistory.html">HasHistory</a></h3>
             </div><div name="ornl.elision.util.Timeable" class="parent">
@@ -1111,14 +1032,10 @@ base class for all other values.</p><p>By default this method uses the <code>toS
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
             </div>
-        </div>
 
       </div>
-
+      
       <div id="tooltip"></div>
-
-      <div id="footer">  </div>
-
-
+      
     </body>
       </html>

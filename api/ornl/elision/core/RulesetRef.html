@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="type">
+        <body class="type">
       <div id="definition">
         <a title="Go to companion" href="RulesetRef$.html"><img src="../../../lib/class_to_object_big.png" /></a>
         <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="package.html">core</a></p>
@@ -20,59 +20,57 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <span class="name">RulesetRef</span><span class="result"> extends <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> with <a name="ornl.elision.core.Rewriter" class="extype" href="Rewriter.html">Rewriter</a></span>
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <span class="name">RulesetRef</span>
+        
+        <span class="result"> extends <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> with <a name="ornl.elision.core.Rewriter" class="extype" href="Rewriter.html">Rewriter</a></span>
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A ruleset reference.</p><h4> Purpose </h4><p>A ruleset reference provides a way to refer to all rules in a particular
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>A ruleset reference.</p><h4> Purpose </h4><p>A ruleset reference provides a way to refer to all rules in a particular
 ruleset as a single atom.</p><h4> Structure and Syntax </h4><p>A ruleset reference is a strategy - that is, a rewriter.  When placed on
 the left side of an applicative equals rules from the ruleset are tried
 until all are exhausted and none apply, or a single rule is applied.  That
 is, at most one rule is applied.</p><p>Syntactically ruleset references are symbols of type <code>RSREF</code>.</p><h4> Type </h4><p>All ruleset references have type <code>RSREF</code>.</p><h4> Equality and Matching </h4><p>Ruleset references are equal iff they are the same symbol, and also match
 iff they are the same symbol.  Since all ruleset refernces have the same
 type, they are matched by name alone.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a name="ornl.elision.core.Rewriter" class="extype" href="Rewriter.html">Rewriter</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.util.HasOtherHash" class="extype" href="../util/HasOtherHash.html">HasOtherHash</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
         </div></div>
-    
-
-      <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-        <div id="order">
-              <span class="filtertype">Ordering</span>
-              <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
-            </div>
-        <div id="ancestors">
-              <span class="filtertype">Inherited</span>
-              <ol><li class="hideall out"><span>Hide All</span></li>
-              <li class="showall in"><span>Show all</span></li></ol>
-              <ol id="linearization"><li name="ornl.elision.core.RulesetRef" class="in"><span>RulesetRef</span></li><li name="ornl.elision.core.Rewriter" class="in"><span>Rewriter</span></li><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="ornl.elision.util.HasOtherHash" class="in"><span>HasOtherHash</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-            </div>
-        <div id="visbl">
-            <span class="filtertype">Visibility</span>
-            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-          </div>
-      </div>
+        
 
       <div id="template">
-        <div id="allMembers">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          <div id="order">
+                <span class="filtertype">Ordering</span>
+                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
+              </div>
+          <div id="ancestors">
+                <span class="filtertype">Inherited</span>
+                <ol><li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show all</span></li></ol>
+                <ol id="linearization"><li name="ornl.elision.core.RulesetRef" class="in"><span>RulesetRef</span></li><li name="ornl.elision.core.Rewriter" class="in"><span>Rewriter</span></li><li name="ornl.elision.core.BasicAtom" class="in"><span>BasicAtom</span></li><li name="ornl.elision.util.HasOtherHash" class="in"><span>HasOtherHash</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
+              </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
         <div class="members" id="constructors">
               <h3>Instance Constructors</h3>
               <ol><li visbl="pub" name="ornl.elision.core.RulesetRef#this" data-isabs="false">
       <a id="this:RulesetRef"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">RulesetRef</span><span class="params">()</span>
+      <span class="kind">new</span>
+      <span class="symbol"> 
+        <span class="name">RulesetRef</span>
+        
+        <span class="params">()</span>
       </span>
       </h4>
       
@@ -80,18 +78,17 @@ type, they are matched by name alone.
             </div>
 
         
-
+        
         <div class="values members" id="values">
               <h3>Abstract Value Members</h3>
               <ol><li visbl="pub" name="ornl.elision.core.Rewriter#doRewrite" data-isabs="true">
       <a id="doRewrite(BasicAtom,Option[Any]):(BasicAtom, Boolean)"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">doRewrite</span><span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="hint">hint: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">doRewrite</span>
+        
+        <span class="params">(<span name="atom">atom: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="hint">hint: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Apply this rewriter to the given atom, yielding a potentially new atom.</p><div class="fullcomment"><div class="comment cmt"><p>Apply this rewriter to the given atom, yielding a potentially new atom.
@@ -103,35 +100,33 @@ applicative dot.  This method will get invoked when that happens, with
 the right-hand side passed as the atom.
 </p></div><dl class="paramcmts block"><dt class="param">atom</dt><dd class="cmt"><p>The atom to rewrite.</p></dd><dt class="param">hint</dt><dd class="cmt"><p>An optional hint to pass along during matching.</p></dd><dt>returns</dt><dd class="cmt"><p>A pair consisting of a potentially new atom and a flag indicating
 					success or failure.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.Rewriter" class="extype" href="Rewriter.html">Rewriter</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.Rewriter" class="extype" href="Rewriter.html">Rewriter</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#name" data-isabs="true">
       <a id="name:String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">name</span><span class="result">: String</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">name</span>
+        
+        <span class="result">: String</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">The name of the referenced ruleset.</p>
+      <p class="shortcomment cmt">The name of the referenced ruleset.</p><div class="fullcomment"><div class="comment cmt"><p>The name of the referenced ruleset.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#tryMatchWithoutTypes" data-isabs="true">
       <a id="tryMatchWithoutTypes(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tryMatchWithoutTypes</span><span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">tryMatchWithoutTypes</span>
+        
+        <span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Try to match this atom, as a pattern, against the given subject.</p><div class="fullcomment"><div class="comment cmt"><p>Try to match this atom, as a pattern, against the given subject.  Do not
 do type matching for this atom, but use BasicAtom.tryMatch for any
 children, so their types are correctly matched.
 </p></div><dl class="paramcmts block"><dt class="param">subject</dt><dd class="cmt"><p>The subject atom to match.</p></dd><dt class="param">binds</dt><dd class="cmt"><p>Any bindings that must be observed.</p></dd><dt class="param">hints</dt><dd class="cmt"><p>Optional hints.</p></dd><dt>returns</dt><dd class="cmt"><p>The matching outcome.
-</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
+</p></dd></dl><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd><dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -140,84 +135,77 @@ children, so their types are correctly matched.
               <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $bang$eq">!=</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">!=</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
       <a id="##():Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $hash$hash">##</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">##</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name" title="gt4s: $eq$eq">==</span><span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">==</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: T0</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">asInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#cleanRulesets" data-isabs="false">
       <a id="cleanRulesets:Option[BitSet]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cleanRulesets</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>]</span>
+      <span class="kind">var</span>
+      <span class="symbol"> 
+        <span class="name">cleanRulesets</span>
+        
+        <span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.BitSet" class="extype">BitSet</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">The rulesets with respect to which this atom is clean.</p><div class="fullcomment"><div class="comment cmt"><p>The rulesets with respect to which this atom is clean. If this is
@@ -227,12 +215,11 @@ rulesets. If None, the atom has never been rewritten.
     </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: AnyRef</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">clone</span>
+        
+        <span class="params">()</span><span class="result">: AnyRef</span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -242,36 +229,33 @@ rulesets. If None, the atom has never been rewritten.
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#constantPool" data-isabs="false">
       <a id="constantPool:None.type"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">constantPool</span><span class="result">: None.type</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">constantPool</span>
+        
+        <span class="result">: None.type</span>
       </span>
       </h4>
       
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#deBruijnIndex" data-isabs="false">
       <a id="deBruijnIndex:Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">deBruijnIndex</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">deBruijnIndex</span>
+        
+        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The De Bruijn index.</p><div class="fullcomment"><div class="comment cmt"><p>The De Bruijn index.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#depth" data-isabs="false">
       <a id="depth:Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">depth</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">depth</span>
+        
+        <span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">The depth of the atom.</p><div class="fullcomment"><div class="comment cmt"><p>The depth of the atom.  An atom's depth is equal to the maximum depth
@@ -280,36 +264,33 @@ of its children, plus one.  An atom with no children has depth zero.
     </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">eq</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#equals" data-isabs="false">
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="other">other: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">equals</span>
+        
+        <span class="params">(<span name="other">other: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#evenMeta" data-isabs="false">
       <a id="evenMeta:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">evenMeta</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">evenMeta</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Whether this atom should be applied, even on meta-terms.</p><div class="fullcomment"><div class="comment cmt"><p>Whether this atom should be applied, even on meta-terms.  Do not mess
@@ -322,12 +303,11 @@ appropriate.
     </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
       <a id="finalize():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">finalize</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -337,24 +317,22 @@ appropriate.
     </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
       <a id="getClass():java.lang.Class[_]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getClass</span>
+        
+        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#getOperators" data-isabs="false">
       <a id="getOperators(HashSet[String]):Option[HashSet[BasicAtom]]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getOperators</span><span class="params">(<span name="opNames">opNames: <span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[String]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getOperators</span>
+        
+        <span class="params">(<span name="opNames">opNames: <span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[String]</span>)</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get all the named operators referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the named operators referenced in an atom. Override this if the
@@ -365,12 +343,11 @@ any.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#getVariables" data-isabs="false">
       <a id="getVariables():Option[HashSet[BasicAtom]]"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getVariables</span><span class="params">()</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">getVariables</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Option" class="extype">Option</span>[<span name="scala.collection.mutable.HashSet" class="extype">HashSet</span>[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get all the variables referenced in an atom.</p><div class="fullcomment"><div class="comment cmt"><p>Get all the variables referenced in an atom. Override this if the
@@ -383,24 +360,22 @@ any.
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#hashCode" data-isabs="false">
       <a id="hashCode():Int"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">hashCode</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → AnyRef → Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isBindable" data-isabs="false">
       <a id="isBindable:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isBindable</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">isBindable</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If true then this atom can be bound.</p><div class="fullcomment"><div class="comment cmt"><p>If true then this atom can be bound.  Only variables should be bound, so
@@ -409,24 +384,22 @@ override this for variables; it is <code>false</code> by default.
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#isConstant" data-isabs="false">
       <a id="isConstant:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isConstant</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">isConstant</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If true then this atom denotes a constant (it contains no variables).</p><div class="fullcomment"><div class="comment cmt"><p>If true then this atom denotes a constant (it contains no variables).</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isDeBruijnIndex" data-isabs="false">
       <a id="isDeBruijnIndex:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isDeBruijnIndex</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">isDeBruijnIndex</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Iff true, this is a De Bruijn index.</p><div class="fullcomment"><div class="comment cmt"><p>Iff true, this is a De Bruijn index.  A De Bruijn index is a special kind
@@ -438,12 +411,11 @@ is used to protect De Bruijn indices against further rewriting.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isFalse" data-isabs="false">
       <a id="isFalse:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isFalse</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">isFalse</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If true, this atom represents false.</p><div class="fullcomment"><div class="comment cmt"><p>If true, this atom represents false.  Override this for an atom that
@@ -452,36 +424,33 @@ represents false.
     </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">isInstanceOf</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#isTerm" data-isabs="false">
       <a id="isTerm:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isTerm</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">isTerm</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If true then this atom denotes a term.</p><div class="fullcomment"><div class="comment cmt"><p>If true then this atom denotes a term.  If false, a metaterm.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#isTrue" data-isabs="false">
       <a id="isTrue:Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">isTrue</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">isTrue</span>
+        
+        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">If true, this atom represents true.</p><div class="fullcomment"><div class="comment cmt"><p>If true, this atom represents true.  Override this for an atom that
@@ -490,24 +459,22 @@ represents true.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#loc" data-isabs="false">
       <a id="loc:Loc"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">loc</span><span class="result">: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">loc</span>
+        
+        <span class="result">: <a name="ornl.elision.util.Loc" class="extype" href="../util/Loc.html">Loc</a></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="prt" name="ornl.elision.core.BasicAtom#matchTypes" data-isabs="false">
       <a id="matchTypes(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">matchTypes</span><span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">matchTypes</span>
+        
+        <span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>]</span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Recursively match the types.</p><div class="fullcomment"><div class="comment cmt"><p>Recursively match the types.  This is unbounded recursion; it is expected
@@ -519,60 +486,55 @@ of type matching strategies may be done.
     </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">ne</span>
+        
+        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
       <a id="notify():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">notify</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">notifyAll</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#otherHashCode" data-isabs="false">
       <a id="otherHashCode:BigInt"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">otherHashCode</span><span class="result">: <span name="scala.math.BigInt" class="extype">BigInt</span></span>
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">otherHashCode</span>
+        
+        <span class="result">: <span name="scala.math.BigInt" class="extype">BigInt</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a> → <a name="ornl.elision.util.HasOtherHash" class="extype" href="../util/HasOtherHash.html">HasOtherHash</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#replace" data-isabs="false">
       <a id="replace(Map[BasicAtom, BasicAtom]):(BasicAtom, Boolean)"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replace</span><span class="params">(<span name="map">map: Map[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">replace</span>
+        
+        <span class="params">(<span name="map">map: Map[<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>]</span>)</span><span class="result">: (<a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Systematically replace one basic atom with another basic atom.</p><div class="fullcomment"><div class="comment cmt"><p>Systematically replace one basic atom with another basic atom.</p><p>Note that you can use this to search for a subterm.  The idea is to map
@@ -584,12 +546,11 @@ flag on return.
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#rewrite" data-isabs="false">
       <a id="rewrite(Bindings):(RulesetRef, Boolean)"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rewrite</span><span class="params">(<span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>)</span><span class="result">: (<a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">rewrite</span>
+        
+        <span class="params">(<span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a></span>)</span><span class="result">: (<a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a>, <span name="scala.Boolean" class="extype">Boolean</span>)</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Ruleset references cannot be rewritten.</p><div class="fullcomment"><div class="comment cmt"><p>Ruleset references cannot be rewritten.</p></div><dl class="paramcmts block"><dt class="param">binds</dt><dd class="cmt"><p>The bindings.
@@ -598,12 +559,11 @@ flag on return.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#spouse" data-isabs="false">
       <a id="spouse:AnyRef"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">spouse</span><span class="result">: AnyRef</span>
+      <span class="kind">lazy val</span>
+      <span class="symbol"> 
+        <span class="name">spouse</span>
+        
+        <span class="result">: AnyRef</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Construct and cache the spouse of this object.</p><div class="fullcomment"><div class="comment cmt"><p>Construct and cache the spouse of this object.
@@ -611,36 +571,33 @@ flag on return.
     </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
       <a id="synchronized[T0](⇒ T0):T0"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">synchronized</span>
+        <span class="tparams">[<span name="T0">T0</span>]</span>
+        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.RulesetRef#theType" data-isabs="false">
       <a id="theType:ornl.elision.core.RSREF.type"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">theType</span><span class="result">: ornl.elision.core.RSREF.type</span>
+      <span class="kind">val</span>
+      <span class="symbol"> 
+        <span class="name">theType</span>
+        
+        <span class="result">: ornl.elision.core.RSREF.type</span>
       </span>
       </h4>
       <p class="shortcomment cmt">The type for the atom.</p><div class="fullcomment"><div class="comment cmt"><p>The type for the atom.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.core.RulesetRef" class="extype" href="">RulesetRef</a> → <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></dd></dl></div>
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
       <a id="toParseString(Int):String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toParseString</span><span class="params">(<span name="limit">limit: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toParseString</span>
+        
+        <span class="params">(<span name="limit">limit: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.
@@ -651,12 +608,11 @@ flag on return.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
       <a id="toParseString(Appendable,Int):Appendable"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toParseString</span><span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toParseString</span>
+        
+        <span class="params">(<span name="app">app: <span name="java.lang.Appendable" class="extype">Appendable</span></span>, <span name="limit">limit: <span name="scala.Int" class="extype">Int</span> = <span class="symbol">1</span></span>)</span><span class="result">: <span name="java.lang.Appendable" class="extype">Appendable</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The string is immediately
@@ -668,12 +624,11 @@ written (&quot;streamed&quot;) to the given appendable.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toParseString" data-isabs="false">
       <a id="toParseString:String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toParseString</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toParseString</span>
+        
+        <span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Generate a parseable string from this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Generate a parseable string from this atom.  The returned string should
@@ -684,12 +639,11 @@ be able to parse it and return an atom equal to this one.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#toString" data-isabs="false">
       <a id="toString():String"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">toString</span>
+        
+        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Make a string that can be used to re-generate this atom.</p><div class="fullcomment"><div class="comment cmt"><p>Make a string that can be used to re-generate this atom.
@@ -698,12 +652,11 @@ be able to parse it and return an atom equal to this one.
     </li><li visbl="pub" name="ornl.elision.core.BasicAtom#tryMatch" data-isabs="false">
       <a id="tryMatch(BasicAtom,Bindings,Option[Any]):Outcome"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tryMatch</span><span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a> = <span class="symbol"><span class="name"><a href="Bindings$.html">Bindings()</a></span></span></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">tryMatch</span>
+        
+        <span class="params">(<span name="subject">subject: <a name="ornl.elision.core.BasicAtom" class="extype" href="BasicAtom.html">BasicAtom</a></span>, <span name="binds">binds: <a name="ornl.elision.core.Bindings" class="extype" href="Bindings.html">Bindings</a> = <span class="symbol"><span class="name"><a href="Bindings$.html">Bindings()</a></span></span></span>, <span name="hints">hints: <span name="scala.Option" class="extype">Option</span>[<span name="scala.Any" class="extype">Any</span>] = <span class="symbol"><span class="name"><a href="../../../scala/package.html">None</a></span></span></span>)</span><span class="result">: <a name="ornl.elision.core.Outcome" class="extype" href="Outcome.html">Outcome</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Attempt to match this atom, as a pattern, against the subject atom,
@@ -715,45 +668,42 @@ any matching.
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait():Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="kind">def</span>
+      <span class="symbol"> 
+        <span class="name">wait</span>
+        
+        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -761,9 +711,7 @@ any matching.
             </div>
 
         
-        </div>
 
-        <div id="inheritedMembers">
         <div name="ornl.elision.core.Rewriter" class="parent">
               <h3>Inherited from <a name="ornl.elision.core.Rewriter" class="extype" href="Rewriter.html">Rewriter</a></h3>
             </div><div name="ornl.elision.core.BasicAtom" class="parent">
@@ -775,14 +723,10 @@ any matching.
             </div><div name="scala.Any" class="parent">
               <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
             </div>
-        </div>
 
       </div>
-
+      
       <div id="tooltip"></div>
-
-      <div id="footer">  </div>
-
-
+      
     </body>
       </html>

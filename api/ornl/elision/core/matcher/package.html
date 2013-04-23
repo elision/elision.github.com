@@ -12,7 +12,7 @@
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
     
         </head>
-        <body onload="sh_highlightDocument('../lib/', '.min.js');" class="value">
+        <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
         <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="../package.html">core</a></p>
@@ -20,35 +20,34 @@
       </div>
 
       <h4 class="signature" id="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
+      <span class="kind">package</span>
+      <span class="symbol"> 
         <span class="name">matcher</span>
+        
+        
       </span>
       </h4>
       
-      <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide implementations of specific forms of matching.</p><p>There are several basic matching algorithms.</p><ul><li>ornl.elision.core.matching.SequenceMatcher handles non-associative,
+          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide implementations of specific forms of matching.</p><p>There are several basic matching algorithms.</p><ul><li>ornl.elision.core.matching.SequenceMatcher handles non-associative,
    non-commutative matching.</li><li>ornl.elision.core.matching.CMatcher handles commutative,
    non-associative matching.</li><li>ornl.elision.core.matching.AMatcher handles associative,
    non-commutative matching.</li><li>ornl.elision.core.matching.ACMatcher handles associative, commutative
    matching.</li></ul><p>There are also supporting classes that handle parts of the matching process.
 </p></div></div>
-    
-
-      <div id="mbrsel">
-        <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
         
-        
-        <div id="visbl">
-            <span class="filtertype">Visibility</span>
-            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-          </div>
-      </div>
 
       <div id="template">
-        <div id="allMembers">
+
+        <div id="mbrsel">
+          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
+          
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+
         
 
         <div class="types members" id="types">
@@ -56,31 +55,29 @@
               <ol><li visbl="pub" name="ornl.elision.core.matcher.GroupingIterator" data-isabs="false">
       <a id="GroupingIterator:GroupingIterator"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="GroupingIterator.html"><span class="name">GroupingIterator</span></a><span class="result"> extends Iterator[OmitSeq[BasicAtom]]</span>
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="GroupingIterator.html"><span class="name">GroupingIterator</span></a>
+        
+        <span class="result"> extends Iterator[OmitSeq[BasicAtom]]</span>
       </span>
       </h4>
       <p class="comment cmt">Iterate over all associative groupings of items.</p>
     </li><li visbl="pub" name="ornl.elision.core.matcher.UnbindableMatcher" data-isabs="false">
       <a id="UnbindableMatcher:UnbindableMatcher"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="UnbindableMatcher.html"><span class="name">UnbindableMatcher</span></a><span class="result"> extends MatchIterator</span>
+      <span class="kind">class</span>
+      <span class="symbol"> 
+        <a href="UnbindableMatcher.html"><span class="name">UnbindableMatcher</span></a>
+        
+        <span class="result"> extends MatchIterator</span>
       </span>
       </h4>
       <p class="comment cmt">Match unbindable atoms in a sequence of patterns to the unbindable atoms
 in a sequence of subjects.</p>
     </li></ol>
             </div>
-
+        
         
 
         <div class="values members" id="values">
@@ -88,24 +85,22 @@ in a sequence of subjects.</p>
               <ol><li visbl="pub" name="ornl.elision.core.matcher.ACMatcher" data-isabs="false">
       <a id="ACMatcher:ACMatcher"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="ACMatcher$.html"><span class="name">ACMatcher</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="ACMatcher$.html"><span class="name">ACMatcher</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences whose elements can be re-ordered or re-grouped.</p>
     </li><li visbl="pub" name="ornl.elision.core.matcher.AMatcher" data-isabs="false">
       <a id="AMatcher:AMatcher"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="AMatcher$.html"><span class="name">AMatcher</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="AMatcher$.html"><span class="name">AMatcher</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences, where the elements of the second sequence can be
@@ -113,36 +108,33 @@ grouped, but not re-ordered.</p>
     </li><li visbl="pub" name="ornl.elision.core.matcher.CMatcher" data-isabs="false">
       <a id="CMatcher:CMatcher"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="CMatcher$.html"><span class="name">CMatcher</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="CMatcher$.html"><span class="name">CMatcher</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences whose elements can be re-ordered.</p>
     </li><li visbl="pub" name="ornl.elision.core.matcher.MatchHelper" data-isabs="false">
       <a id="MatchHelper:MatchHelper"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MatchHelper$.html"><span class="name">MatchHelper</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="MatchHelper$.html"><span class="name">MatchHelper</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide some support methods for matching.</p>
     </li><li visbl="pub" name="ornl.elision.core.matcher.SequenceMatcher" data-isabs="false">
       <a id="SequenceMatcher:SequenceMatcher"></a>
       <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SequenceMatcher$.html"><span class="name">SequenceMatcher</span></a><span class="result"> extends AnyRef</span>
+      <span class="kind">object</span>
+      <span class="symbol"> 
+        <a href="SequenceMatcher$.html"><span class="name">SequenceMatcher</span></a>
+        
+        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences of atoms.</p>
@@ -150,18 +142,12 @@ grouped, but not re-ordered.</p>
             </div>
 
         
-        </div>
 
-        <div id="inheritedMembers">
         
-        </div>
 
       </div>
-
+      
       <div id="tooltip"></div>
-
-      <div id="footer">  </div>
-
-
+      
     </body>
       </html>
