@@ -71,14 +71,14 @@ http://www.strangegizmo.com/products/sg-cdb/
 
 Prerequisites
 =============
-Elision requires Scala 2.9 or later to build.  Be careful with later versions
+Elision requires Scala 2.10.1 or later to build.  Be careful with later versions
 of Scala, as things do tend to change.  Java 6 or later is also a prerequisite,
 as is Apache Ant.
 
-1.) Install the Java 6 (or later) SDK.  Visit http://java.oracle.com/ to
+1.) Install the Java 7 (or later) SDK.  Visit http://java.oracle.com/ to
     download the correct version for your platform.
 
-2.) Install Scala 2.9.1 (or later).  Visit http://www.scala-lang.org/ to
+2.) Install Scala 2.10.1 (or later).  Visit http://www.scala-lang.org/ to
     download the Scala distribution.
 
 3.) Set the environment variable SCALA_HOME to point to the root folder
