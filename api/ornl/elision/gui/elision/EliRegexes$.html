@@ -2,628 +2,756 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.gui.elision.EliRegexes</title>
+          <title>EliRegexes - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.gui.elision.EliRegexes</title>
+          <meta name="description" content="EliRegexes - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.gui.elision.EliRegexes" />
+          <meta name="keywords" content="EliRegexes Elision API Version 0.5.0 Build 201305032050 ornl.elision.gui.elision.EliRegexes" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'ornl.elision.gui.elision.EliRegexes$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
         <body class="value">
       <div id="definition">
         <img src="../../../../lib/object_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a>.<a name="ornl.elision.gui.elision" class="extype" href="package.html">elision</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="ornl">ornl</a>.<a href="../../package.html" class="extype" name="ornl.elision">elision</a>.<a href="../package.html" class="extype" name="ornl.elision.gui">gui</a>.<a href="package.html" class="extype" name="ornl.elision.gui.elision">elision</a></p>
         <h1>EliRegexes</h1>
       </div>
 
-      <h4 class="signature" id="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <span class="name">EliRegexes</span>
-        
-        <span class="result"> extends <a name="ornl.elision.syntax.SyntaxRegexes" class="extype" href="../../syntax/SyntaxRegexes.html">SyntaxRegexes</a></span>
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">EliRegexes</span><span class="result"> extends <a href="../../syntax/SyntaxRegexes.html" class="extype" name="ornl.elision.syntax.SyntaxRegexes">SyntaxRegexes</a></span>
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provides regexes and some other useful data for performing Elision syntax highlighting in Eva.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides regexes and some other useful data for performing Elision syntax highlighting in Eva.</p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a name="ornl.elision.syntax.SyntaxRegexes" class="extype" href="../../syntax/SyntaxRegexes.html">SyntaxRegexes</a>, AnyRef, <span name="scala.Any" class="extype">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="../../syntax/SyntaxRegexes.html" class="extype" name="ornl.elision.syntax.SyntaxRegexes">SyntaxRegexes</a>, <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
-      <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          <div id="order">
-                <span class="filtertype">Ordering</span>
-                <ol><li class="alpha in"><span>Alphabetic</span></li><li class="inherit out"><span>By inheritance</span></li></ol>
-              </div>
-          <div id="ancestors">
-                <span class="filtertype">Inherited</span>
-                <ol><li class="hideall out"><span>Hide All</span></li>
-                <li class="showall in"><span>Show all</span></li></ol>
-                <ol id="linearization"><li name="ornl.elision.gui.elision.EliRegexes" class="in"><span>EliRegexes</span></li><li name="ornl.elision.syntax.SyntaxRegexes" class="in"><span>SyntaxRegexes</span></li><li name="scala.AnyRef" class="in"><span>AnyRef</span></li><li name="scala.Any" class="in"><span>Any</span></li></ol>
-              </div>
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
             </div>
-        </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="ornl.elision.gui.elision.EliRegexes"><span>EliRegexes</span></li><li class="in" name="ornl.elision.syntax.SyntaxRegexes"><span>SyntaxRegexes</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
 
         
 
         
-        
-        
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="scala.AnyRef#!=" data-isabs="false">
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:AnyRef):Boolean"></a>
       <a id="!=(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#!=" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
       <a id="!=(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">!=</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef###" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
       <a id="##():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">##</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#==" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:AnyRef):Boolean"></a>
       <a id="==(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#==" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.Any#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
       <a id="==(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">==</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#algProps" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#algProps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="algProps:scala.util.matching.Regex"></a>
       <a id="algProps:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">algProps</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">algProps</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="scala.Any#asInstanceOf" data-isabs="false">
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">asInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#boolConstants" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#boolConstants" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="boolConstants:scala.util.matching.Regex"></a>
       <a id="boolConstants:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">boolConstants</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boolConstants</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#brackets" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#brackets" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="brackets:scala.util.matching.Regex"></a>
       <a id="brackets:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">brackets</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">brackets</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="prt" name="scala.AnyRef#clone" data-isabs="false">
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">clone</span>
-        
-        <span class="params">()</span><span class="result">: AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#colorMap" data-isabs="false">
-      <a id="colorMap:Map[Regex, String]"></a>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#colorMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="colorMap:scala.collection.immutable.Map[scala.util.matching.Regex,String]"></a>
+      <a id="colorMap:Map[Regex,String]"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">colorMap</span>
-        
-        <span class="result">: <span name="scala.collection.immutable.Map" class="extype">Map</span>[<span name="scala.util.matching.Regex" class="extype">Regex</span>, String]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">colorMap</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.util.matching.Regex">Regex</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A map between regexes and their appropriate web colors used for HTML formatting.</p><div class="fullcomment"><div class="comment cmt"><p>A map between regexes and their appropriate web colors used for HTML formatting.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.elision.EliRegexes" class="extype" href="">EliRegexes</a> → <a name="ornl.elision.syntax.SyntaxRegexes" class="extype" href="../../syntax/SyntaxRegexes.html">SyntaxRegexes</a></dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#eq" data-isabs="false">
+      <p class="shortcomment cmt">A map between regexes and their appropriate web colors used for HTML formatting.</p><div class="fullcomment"><div class="comment cmt"><p>A map between regexes and their appropriate web colors used for HTML formatting.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="ornl.elision.gui.elision.EliRegexes">EliRegexes</a> → <a href="../../syntax/SyntaxRegexes.html" class="extype" name="ornl.elision.syntax.SyntaxRegexes">SyntaxRegexes</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">eq</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#equals" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
       <a id="equals(Any):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">equals</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Any" class="extype">Any</span></span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="prt" name="scala.AnyRef#finalize" data-isabs="false">
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
       <a id="finalize():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">finalize</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a name="java.lang" class="extype" href="../../../../java/lang/package.html">lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#getClass" data-isabs="false">
-      <a id="getClass():java.lang.Class[_]"></a>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">getClass</span>
-        
-        <span class="params">()</span><span class="result">: java.lang.Class[_]</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#hashCode" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
       <a id="hashCode():Int"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">hashCode</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Int" class="extype">Int</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="scala.Any#isInstanceOf" data-isabs="false">
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
       <a id="isInstanceOf[T0]:Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">isInstanceOf</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#keywords" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#keywords" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="keywords:scala.util.matching.Regex"></a>
       <a id="keywords:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">keywords</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">keywords</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#lambdaBackTick" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#lambdaBackTick" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="lambdaBackTick:scala.util.matching.Regex"></a>
       <a id="lambdaBackTick:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">lambdaBackTick</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lambdaBackTick</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#lambdaNormal" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#lambdaNormal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="lambdaNormal:scala.util.matching.Regex"></a>
       <a id="lambdaNormal:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">lambdaNormal</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lambdaNormal</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#multilineComment" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#multilineComment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="multilineComment:scala.util.matching.Regex"></a>
       <a id="multilineComment:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">multilineComment</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multilineComment</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="scala.AnyRef#ne" data-isabs="false">
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">ne</span>
-        
-        <span class="params">(<span name="arg0">arg0: AnyRef</span>)</span><span class="result">: <span name="scala.Boolean" class="extype">Boolean</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#notify" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notify</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#notifyAll" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
       <a id="notifyAll():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">notifyAll</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#numBin" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#numBin" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numBin:scala.util.matching.Regex"></a>
       <a id="numBin:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">numBin</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numBin</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#numDec" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#numDec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numDec:scala.util.matching.Regex"></a>
       <a id="numDec:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">numDec</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numDec</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#numHex" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#numHex" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numHex:scala.util.matching.Regex"></a>
       <a id="numHex:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">numHex</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numHex</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#numOct" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#numOct" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="numOct:scala.util.matching.Regex"></a>
       <a id="numOct:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">numOct</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">numOct</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#opDefShortcut" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#opDefShortcut" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="opDefShortcut:scala.util.matching.Regex"></a>
       <a id="opDefShortcut:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">opDefShortcut</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opDefShortcut</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#rList" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#rList" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rList:List[scala.util.matching.Regex]"></a>
       <a id="rList:List[Regex]"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">rList</span>
-        
-        <span class="result">: <span name="scala.collection.immutable.List" class="extype">List</span>[<span name="scala.util.matching.Regex" class="extype">Regex</span>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rList</span><span class="result">: <span class="extype" name="scala.collection.immutable.List">List</span>[<span class="extype" name="scala.util.matching.Regex">Regex</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A list of the regexes in the correct precedence that they should be applied.</p><div class="fullcomment"><div class="comment cmt"><p>A list of the regexes in the correct precedence that they should be applied.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.elision.EliRegexes" class="extype" href="">EliRegexes</a> → <a name="ornl.elision.syntax.SyntaxRegexes" class="extype" href="../../syntax/SyntaxRegexes.html">SyntaxRegexes</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#recursableMap" data-isabs="false">
-      <a id="recursableMap:Map[Regex, Int]"></a>
+      <p class="shortcomment cmt">A list of the regexes in the correct precedence that they should be applied.</p><div class="fullcomment"><div class="comment cmt"><p>A list of the regexes in the correct precedence that they should be applied.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="ornl.elision.gui.elision.EliRegexes">EliRegexes</a> → <a href="../../syntax/SyntaxRegexes.html" class="extype" name="ornl.elision.syntax.SyntaxRegexes">SyntaxRegexes</a></dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#recursableMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="recursableMap:scala.collection.immutable.Map[scala.util.matching.Regex,Int]"></a>
+      <a id="recursableMap:Map[Regex,Int]"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">recursableMap</span>
-        
-        <span class="result">: <span name="scala.collection.immutable.Map" class="extype">Map</span>[<span name="scala.util.matching.Regex" class="extype">Regex</span>, <span name="scala.Int" class="extype">Int</span>]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">recursableMap</span><span class="result">: <span class="extype" name="scala.collection.immutable.Map">Map</span>[<span class="extype" name="scala.util.matching.Regex">Regex</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">A map indicating what regexes need recursive parsing.</p><div class="fullcomment"><div class="comment cmt"><p>A map indicating what regexes need recursive parsing. -1 indicates that the regex does not need recursive parsing. Any other integer indicates the regex group in which recursive parsing will be performed.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a name="ornl.elision.gui.elision.EliRegexes" class="extype" href="">EliRegexes</a> → <a name="ornl.elision.syntax.SyntaxRegexes" class="extype" href="../../syntax/SyntaxRegexes.html">SyntaxRegexes</a></dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#sequence" data-isabs="false">
+      <p class="shortcomment cmt">A map indicating what regexes need recursive parsing.</p><div class="fullcomment"><div class="comment cmt"><p>A map indicating what regexes need recursive parsing. -1 indicates that the regex does not need recursive parsing. Any other integer indicates the regex group in which recursive parsing will be performed.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="ornl.elision.gui.elision.EliRegexes">EliRegexes</a> → <a href="../../syntax/SyntaxRegexes.html" class="extype" name="ornl.elision.syntax.SyntaxRegexes">SyntaxRegexes</a></dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#sequence" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sequence:scala.util.matching.Regex"></a>
       <a id="sequence:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">sequence</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sequence</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#singlelineComment" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#singlelineComment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="singlelineComment:scala.util.matching.Regex"></a>
       <a id="singlelineComment:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">singlelineComment</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">singlelineComment</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#specialForm" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#specialForm" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="specialForm:scala.util.matching.Regex"></a>
       <a id="specialForm:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">specialForm</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">specialForm</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#stringLit" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#stringLit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stringLit:scala.util.matching.Regex"></a>
       <a id="stringLit:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">stringLit</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stringLit</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#symbolBackTicks" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#symbolBackTicks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="symbolBackTicks:scala.util.matching.Regex"></a>
       <a id="symbolBackTicks:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">symbolBackTicks</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symbolBackTicks</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#symbolNormal" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#symbolNormal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="symbolNormal:scala.util.matching.Regex"></a>
       <a id="symbolNormal:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">symbolNormal</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symbolNormal</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="scala.AnyRef#synchronized" data-isabs="false">
-      <a id="synchronized[T0](⇒ T0):T0"></a>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">synchronized</span>
-        <span class="tparams">[<span name="T0">T0</span>]</span>
-        <span class="params">(<span name="arg0">arg0: ⇒ T0</span>)</span><span class="result">: T0</span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#termSFBackTick" data-isabs="false">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="ornl.elision.gui.elision.EliRegexes#termSFBackTick" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="termSFBackTick:scala.util.matching.Regex"></a>
       <a id="termSFBackTick:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">termSFBackTick</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">termSFBackTick</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#termSFNormal" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#termSFNormal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="termSFNormal:scala.util.matching.Regex"></a>
       <a id="termSFNormal:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">termSFNormal</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">termSFNormal</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="scala.AnyRef#toString" data-isabs="false">
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
       <a id="toString():String"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">toString</span>
-        
-        <span class="params">()</span><span class="result">: <span name="java.lang.String" class="extype">String</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#typeBackTick" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#typeBackTick" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="typeBackTick:scala.util.matching.Regex"></a>
       <a id="typeBackTick:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">typeBackTick</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeBackTick</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#typeNormal" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#typeNormal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="typeNormal:scala.util.matching.Regex"></a>
       <a id="typeNormal:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">typeNormal</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeNormal</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#typeRoot" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#typeRoot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="typeRoot:scala.util.matching.Regex"></a>
       <a id="typeRoot:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">typeRoot</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">typeRoot</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#varBackTick" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#varBackTick" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="varBackTick:scala.util.matching.Regex"></a>
       <a id="varBackTick:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">varBackTick</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">varBackTick</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#varNormal" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#varNormal" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="varNormal:scala.util.matching.Regex"></a>
       <a id="varNormal:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">varNormal</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">varNormal</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.elision.EliRegexes#verbatim" data-isabs="false">
+    </li><li name="ornl.elision.gui.elision.EliRegexes#verbatim" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="verbatim:scala.util.matching.Regex"></a>
       <a id="verbatim:Regex"></a>
       <h4 class="signature">
-      <span class="kind">val</span>
-      <span class="symbol"> 
-        <span class="name">verbatim</span>
-        
-        <span class="result">: <span name="scala.util.matching.Regex" class="extype">Regex</span></span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">verbatim</span><span class="result">: <span class="extype" name="scala.util.matching.Regex">Regex</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">()</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
       <a id="wait(Long,Int):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>, <span name="arg1">arg1: <span name="scala.Int" class="extype">Int</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li visbl="pub" name="scala.AnyRef#wait" data-isabs="false">
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
       <a id="wait(Long):Unit"></a>
       <h4 class="signature">
-      <span class="kind">def</span>
-      <span class="symbol"> 
-        <span class="name">wait</span>
-        
-        <span class="params">(<span name="arg0">arg0: <span name="scala.Long" class="extype">Long</span></span>)</span><span class="result">: <span name="scala.Unit" class="extype">Unit</span></span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>final </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
@@ -632,17 +760,33 @@
 
         
 
-        <div name="ornl.elision.syntax.SyntaxRegexes" class="parent">
-              <h3>Inherited from <a name="ornl.elision.syntax.SyntaxRegexes" class="extype" href="../../syntax/SyntaxRegexes.html">SyntaxRegexes</a></h3>
-            </div><div name="scala.AnyRef" class="parent">
-              <h3>Inherited from AnyRef</h3>
-            </div><div name="scala.Any" class="parent">
-              <h3>Inherited from <span name="scala.Any" class="extype">Any</span></h3>
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="ornl.elision.syntax.SyntaxRegexes">
+              <h3>Inherited from <a href="../../syntax/SyntaxRegexes.html" class="extype" name="ornl.elision.syntax.SyntaxRegexes">SyntaxRegexes</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
             </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

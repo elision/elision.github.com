@@ -2,288 +2,346 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.context</title>
+          <title>context - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.context</title>
+          <meta name="description" content="context - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.context" />
+          <meta name="keywords" content="context Elision API Version 0.5.0 Build 201305032050 ornl.elision.context" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'ornl.elision.context.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
         <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="ornl">ornl</a>.<a href="../package.html" class="extype" name="ornl.elision">elision</a></p>
         <h1>context</h1>
       </div>
 
-      <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">context</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"></div>
+          <div id="comment" class="fullcommenttop"></div>
         
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.context.Action" data-isabs="true">
+              <ol><li name="ornl.elision.context.Action" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ActionextendsAnyRef"></a>
       <a id="Action:Action"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Action.html"><span class="name">Action</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
       </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>abstract </dd></dl></div>
-    </li><li visbl="pub" name="ornl.elision.context.AddRule" data-isabs="false">
-      <a id="AddRule:AddRule"></a>
-      <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="AddRule.html"><span class="name">AddRule</span></a>
-        
-        <span class="params">(<span name="rule">rule: RewriteRule</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="symbol">
+        <a href="Action.html"><span class="name">Action</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.context.BindablePatternException" data-isabs="false">
+    </li><li name="ornl.elision.context.AddRule" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AddRuleextendsActionwithProductwithSerializable"></a>
+      <a id="AddRule:AddRule"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AddRule.html"><span class="name">AddRule</span></a><span class="params">(<span name="rule">rule: <a href="../core/RewriteRule.html" class="extype" name="ornl.elision.core.RewriteRule">RewriteRule</a></span>)</span><span class="result"> extends <a href="Action.html" class="extype" name="ornl.elision.context.Action">Action</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="ornl.elision.context.BindablePatternException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BindablePatternExceptionextendsElisionException"></a>
       <a id="BindablePatternException:BindablePatternException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="BindablePatternException.html"><span class="name">BindablePatternException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BindablePatternException.html"><span class="name">BindablePatternException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to add a rule whose pattern is bindable (i.</p>
-    </li><li visbl="pub" name="ornl.elision.context.Context" data-isabs="false">
+    </li><li name="ornl.elision.context.Context" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextextendsFicklewithMutablewithCache"></a>
       <a id="Context:Context"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Context.html"><span class="name">Context</span></a>
-        
-        <span class="result"> extends Fickle with Mutable with Cache</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Context.html"><span class="name">Context</span></a><span class="result"> extends <a href="../core/Fickle.html" class="extype" name="ornl.elision.core.Fickle">Fickle</a> with <span class="extype" name="scala.Mutable">Mutable</span> with <a href="../util/Cache.html" class="extype" name="ornl.elision.util.Cache">Cache</a></span>
       </span>
       </h4>
       <p class="comment cmt">A context provides access to operator libraries and rules, along with
 the global set of bindings in force at any time.</p>
-    </li><li visbl="pub" name="ornl.elision.context.DeclareRS" data-isabs="false">
+    </li><li name="ornl.elision.context.DeclareRS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeclareRSextendsActionwithProductwithSerializable"></a>
       <a id="DeclareRS:DeclareRS"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="DeclareRS.html"><span class="name">DeclareRS</span></a>
-        
-        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeclareRS.html"><span class="name">DeclareRS</span></a><span class="params">(<span name="ruleSet">ruleSet: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Action.html" class="extype" name="ornl.elision.context.Action">Action</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.context.DisableRS" data-isabs="false">
+    </li><li name="ornl.elision.context.DisableRS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DisableRSextendsActionwithProductwithSerializable"></a>
       <a id="DisableRS:DisableRS"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="DisableRS.html"><span class="name">DisableRS</span></a>
-        
-        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DisableRS.html"><span class="name">DisableRS</span></a><span class="params">(<span name="ruleSet">ruleSet: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Action.html" class="extype" name="ornl.elision.context.Action">Action</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.context.EnableRS" data-isabs="false">
+    </li><li name="ornl.elision.context.EnableRS" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EnableRSextendsActionwithProductwithSerializable"></a>
       <a id="EnableRS:EnableRS"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="EnableRS.html"><span class="name">EnableRS</span></a>
-        
-        <span class="params">(<span name="ruleSet">ruleSet: String</span>)</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="EnableRS.html"><span class="name">EnableRS</span></a><span class="params">(<span name="ruleSet">ruleSet: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Action.html" class="extype" name="ornl.elision.context.Action">Action</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.context.Executor" data-isabs="true">
+    </li><li name="ornl.elision.context.Executor" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ExecutorextendsPropertyManager"></a>
       <a id="Executor:Executor"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="Executor.html"><span class="name">Executor</span></a>
-        
-        <span class="result"> extends PropertyManager</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Executor.html"><span class="name">Executor</span></a><span class="result"> extends <a href="../util/PropertyManager.html" class="extype" name="ornl.elision.util.PropertyManager">PropertyManager</a></span>
       </span>
       </h4>
       <p class="comment cmt">An executor is a class that can convert a string into a sequence of atoms.</p>
-    </li><li visbl="pub" name="ornl.elision.context.HandlerClass" data-isabs="true">
+    </li><li name="ornl.elision.context.HandlerClass" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HandlerClassextendsAnyRef"></a>
       <a id="HandlerClass:HandlerClass"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="HandlerClass.html"><span class="name">HandlerClass</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="HandlerClass.html"><span class="name">HandlerClass</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">Trait for all handlers.</p>
-    </li><li visbl="pub" name="ornl.elision.context.IdentityRuleException" data-isabs="false">
+    </li><li name="ornl.elision.context.IdentityRuleException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IdentityRuleExceptionextendsElisionException"></a>
       <a id="IdentityRuleException:IdentityRuleException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="IdentityRuleException.html"><span class="name">IdentityRuleException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IdentityRuleException.html"><span class="name">IdentityRuleException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to add an identity rule.</p>
-    </li><li visbl="pub" name="ornl.elision.context.LiteralPatternException" data-isabs="false">
+    </li><li name="ornl.elision.context.LiteralPatternException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LiteralPatternExceptionextendsElisionException"></a>
       <a id="LiteralPatternException:LiteralPatternException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="LiteralPatternException.html"><span class="name">LiteralPatternException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LiteralPatternException.html"><span class="name">LiteralPatternException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to add a rule whose pattern is a literal, when such
 are not allowed.</p>
-    </li><li visbl="pub" name="ornl.elision.context.MissingSettingException" data-isabs="false">
+    </li><li name="ornl.elision.context.MissingSettingException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MissingSettingExceptionextendsElisionException"></a>
       <a id="MissingSettingException:MissingSettingException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="MissingSettingException.html"><span class="name">MissingSettingException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="MissingSettingException.html"><span class="name">MissingSettingException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">A requested setting is not present.</p>
-    </li><li visbl="pub" name="ornl.elision.context.NativeCompiler" data-isabs="false">
+    </li><li name="ornl.elision.context.NativeCompiler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NativeCompilerextendsAnyRef"></a>
       <a id="NativeCompiler:NativeCompiler"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NativeCompiler.html"><span class="name">NativeCompiler</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NativeCompiler.html"><span class="name">NativeCompiler</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">Provide for the compilation and caching of native operators.</p>
-    </li><li visbl="pub" name="ornl.elision.context.NoSuchRulesetException" data-isabs="false">
+    </li><li name="ornl.elision.context.NoSuchRulesetException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoSuchRulesetExceptionextendsElisionException"></a>
       <a id="NoSuchRulesetException:NoSuchRulesetException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NoSuchRulesetException.html"><span class="name">NoSuchRulesetException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NoSuchRulesetException.html"><span class="name">NoSuchRulesetException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to use an undeclared ruleset.</p>
-    </li><li visbl="pub" name="ornl.elision.context.NopAction" data-isabs="false">
+    </li><li name="ornl.elision.context.NopAction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NopActionextendsActionwithProductwithSerializable"></a>
       <a id="NopAction:NopAction"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="NopAction.html"><span class="name">NopAction</span></a>
-        
-        <span class="params">()</span><span class="result"> extends Action with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="NopAction.html"><span class="name">NopAction</span></a><span class="params">()</span><span class="result"> extends <a href="Action.html" class="extype" name="ornl.elision.context.Action">Action</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.context.OperatorDefinitionException" data-isabs="false">
+    </li><li name="ornl.elision.context.OperatorDefinitionException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OperatorDefinitionExceptionextendsElisionException"></a>
       <a id="OperatorDefinitionException:OperatorDefinitionException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorDefinitionException.html"><span class="name">OperatorDefinitionException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorDefinitionException.html"><span class="name">OperatorDefinitionException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to improperly define an operator.</p>
-    </li><li visbl="pub" name="ornl.elision.context.OperatorLibrary" data-isabs="false">
+    </li><li name="ornl.elision.context.OperatorLibrary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OperatorLibraryextendsFicklewithMutable"></a>
       <a id="OperatorLibrary:OperatorLibrary"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorLibrary.html"><span class="name">OperatorLibrary</span></a>
-        
-        <span class="result"> extends Fickle with Mutable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorLibrary.html"><span class="name">OperatorLibrary</span></a><span class="result"> extends <a href="../core/Fickle.html" class="extype" name="ornl.elision.core.Fickle">Fickle</a> with <a href="../core/Mutable.html" class="extype" name="ornl.elision.core.Mutable">Mutable</a></span>
       </span>
       </h4>
       <p class="comment cmt">An operator library holds information about the known operators.</p>
-    </li><li visbl="pub" name="ornl.elision.context.OperatorRedefinitionException" data-isabs="false">
+    </li><li name="ornl.elision.context.OperatorRedefinitionException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="OperatorRedefinitionExceptionextendsElisionException"></a>
       <a id="OperatorRedefinitionException:OperatorRedefinitionException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="OperatorRedefinitionException.html"><span class="name">OperatorRedefinitionException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OperatorRedefinitionException.html"><span class="name">OperatorRedefinitionException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate an attempt to re-define an already-known operator.</p>
-    </li><li visbl="pub" name="ornl.elision.context.RuleLibrary" data-isabs="false">
+    </li><li name="ornl.elision.context.RuleLibrary" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RuleLibraryextendsFicklewithMutable"></a>
       <a id="RuleLibrary:RuleLibrary"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="RuleLibrary.html"><span class="name">RuleLibrary</span></a>
-        
-        <span class="result"> extends Fickle with Mutable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RuleLibrary.html"><span class="name">RuleLibrary</span></a><span class="result"> extends <a href="../core/Fickle.html" class="extype" name="ornl.elision.core.Fickle">Fickle</a> with <a href="../core/Mutable.html" class="extype" name="ornl.elision.core.Mutable">Mutable</a></span>
       </span>
       </h4>
       <p class="comment cmt">Encapsulate a rule library.</p>
-    </li><li visbl="pub" name="ornl.elision.context.UndefinedOperatorException" data-isabs="false">
+    </li><li name="ornl.elision.context.UndefinedOperatorException" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UndefinedOperatorExceptionextendsElisionException"></a>
       <a id="UndefinedOperatorException:UndefinedOperatorException"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="UndefinedOperatorException.html"><span class="name">UndefinedOperatorException</span></a>
-        
-        <span class="result"> extends ElisionException</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UndefinedOperatorException.html"><span class="name">UndefinedOperatorException</span></a><span class="result"> extends <a href="../util/ElisionException.html" class="extype" name="ornl.elision.util.ElisionException">ElisionException</a></span>
       </span>
       </h4>
       <p class="comment cmt">A requested operator was not found, and could not be created.</p>
     </li></ol>
             </div>
-        
+
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.context.NativeCompiler" data-isabs="false">
+              <ol><li name="ornl.elision.context.NativeCompiler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NativeCompiler"></a>
       <a id="NativeCompiler:NativeCompiler"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="NativeCompiler$.html"><span class="name">NativeCompiler</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
@@ -293,10 +351,26 @@ are not allowed.</p>
         
 
         
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

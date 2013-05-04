@@ -2,145 +2,177 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.gui.trees</title>
+          <title>trees - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.gui.trees</title>
+          <meta name="description" content="trees - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.gui.trees" />
+          <meta name="keywords" content="trees Elision API Version 0.5.0 Build 201305032050 ornl.elision.gui.trees" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'ornl.elision.gui.trees.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
         <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.gui" class="extype" href="../package.html">gui</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="ornl">ornl</a>.<a href="../../package.html" class="extype" name="ornl.elision">elision</a>.<a href="../package.html" class="extype" name="ornl.elision.gui">gui</a></p>
         <h1>trees</h1>
       </div>
 
-      <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">trees</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"></div>
+          <div id="comment" class="fullcommenttop"></div>
         
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.trees.NodeClickedEvent" data-isabs="false">
+              <ol><li name="ornl.elision.gui.trees.NodeClickedEvent" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeClickedEventextendsEvent"></a>
       <a id="NodeClickedEvent:NodeClickedEvent"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NodeClickedEvent.html"><span class="name">NodeClickedEvent</span></a>
-        
-        <span class="result"> extends Event</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeClickedEvent.html"><span class="name">NodeClickedEvent</span></a><span class="result"> extends <span class="extype" name="scala.swing.event.Event">Event</span></span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.gui.trees.NodeSprite" data-isabs="false">
+    </li><li name="ornl.elision.gui.trees.NodeSprite" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NodeSpriteextendsSprite"></a>
       <a id="NodeSprite:NodeSprite"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="NodeSprite.html"><span class="name">NodeSprite</span></a>
-        
-        <span class="result"> extends Sprite</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NodeSprite.html"><span class="name">NodeSprite</span></a><span class="result"> extends <span class="extype" name="sage2D.sprites.Sprite">Sprite</span></span>
       </span>
       </h4>
       <p class="comment cmt">A sprite used to represent a rewritten term node in a TreeSprite.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeSprite" data-isabs="false">
+    </li><li name="ornl.elision.gui.trees.TreeSprite" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeSpriteextendsSprite"></a>
       <a id="TreeSprite:TreeSprite"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="TreeSprite.html"><span class="name">TreeSprite</span></a>
-        
-        <span class="result"> extends Sprite</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeSprite.html"><span class="name">TreeSprite</span></a><span class="result"> extends <span class="extype" name="sage2D.sprites.Sprite">Sprite</span></span>
       </span>
       </h4>
       <p class="comment cmt">Contrary to what the name suggests, this class is not some sort of mystical nature spirit.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisLevel" data-isabs="false">
+    </li><li name="ornl.elision.gui.trees.TreeVisLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeVisLevelextendsLevelwithHasCamera"></a>
       <a id="TreeVisLevel:TreeVisLevel"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="TreeVisLevel.html"><span class="name">TreeVisLevel</span></a>
-        
-        <span class="result"> extends Level with HasCamera</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeVisLevel.html"><span class="name">TreeVisLevel</span></a><span class="result"> extends <span class="extype" name="sage2D.Level">Level</span> with <span class="extype" name="sage2D.HasCamera">HasCamera</span></span>
       </span>
       </h4>
       <p class="comment cmt">This level shall display a tree structure showing the rewriting hierarchy
 of the last atom string passed to the REPL as input.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisThread" data-isabs="false">
+    </li><li name="ornl.elision.gui.trees.TreeVisThread" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeVisThreadextendsThread"></a>
       <a id="TreeVisThread:TreeVisThread"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="TreeVisThread.html"><span class="name">TreeVisThread</span></a>
-        
-        <span class="result"> extends Thread</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TreeVisThread.html"><span class="name">TreeVisThread</span></a><span class="result"> extends <span class="extype" name="java.lang.Thread">Thread</span></span>
       </span>
       </h4>
       <p class="comment cmt">A worker thread for running the Tree Visualization interaction logic and
 rendering, so that the EDT doesn't get tied up during large tree renderings.</p>
     </li></ol>
             </div>
-        
+
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.gui.trees.DefaultTreeSprite" data-isabs="false">
+              <ol><li name="ornl.elision.gui.trees.DefaultTreeSprite" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DefaultTreeSprite"></a>
       <a id="DefaultTreeSprite:DefaultTreeSprite"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
-        <a href="DefaultTreeSprite$.html"><span class="name">DefaultTreeSprite</span></a>
-        
-        <span class="result"> extends TreeSprite</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DefaultTreeSprite$.html"><span class="name">DefaultTreeSprite</span></a><span class="result"> extends <a href="TreeSprite.html" class="extype" name="ornl.elision.gui.trees.TreeSprite">TreeSprite</a></span>
       </span>
       </h4>
       <p class="comment cmt">Eva's welcome message tree for Elision mode.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeFileIO" data-isabs="false">
+    </li><li name="ornl.elision.gui.trees.TreeFileIO" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeFileIO"></a>
       <a id="TreeFileIO:TreeFileIO"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="TreeFileIO$.html"><span class="name">TreeFileIO</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">This singleton provides utilities for saving TreeSprites as XML and JSON.</p>
-    </li><li visbl="pub" name="ornl.elision.gui.trees.TreeVisLevel" data-isabs="false">
+    </li><li name="ornl.elision.gui.trees.TreeVisLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreeVisLevel"></a>
       <a id="TreeVisLevel:TreeVisLevel"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="TreeVisLevel$.html"><span class="name">TreeVisLevel</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt"></p>
@@ -150,10 +182,26 @@ rendering, so that the EDT doesn't get tied up during large tree renderings.</p>
         
 
         
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

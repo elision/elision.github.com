@@ -2,177 +2,215 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.parse</title>
+          <title>parse - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.parse</title>
+          <meta name="description" content="parse - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.parse" />
+          <meta name="keywords" content="parse Elision API Version 0.5.0 Build 201305032050 ornl.elision.parse" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'ornl.elision.parse.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
         <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="ornl">ornl</a>.<a href="../package.html" class="extype" name="ornl.elision">elision</a></p>
         <h1>parse</h1>
       </div>
 
-      <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">parse</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"></div>
+          <div id="comment" class="fullcommenttop"></div>
         
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.parse.AST" data-isabs="true">
-      <a id="AST:AST[TYPE]"></a>
+              <ol><li name="ornl.elision.parse.AST" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AST[+TYPE&lt;:ornl.elision.core.BasicAtom]extendsAnyRef"></a>
+      <a id="AST[+TYPE&lt;:BasicAtom]:AST[TYPE]"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="AST.html"><span class="name">AST</span></a>
-        <span class="tparams">[<span name="TYPE">+TYPE &lt;: BasicAtom</span>]</span>
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AST.html"><span class="name">AST</span></a><span class="tparams">[<span name="TYPE">+TYPE &lt;: <a href="../core/BasicAtom.html" class="extype" name="ornl.elision.core.BasicAtom">BasicAtom</a></span>]</span><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">Base class for abstract syntax tree nodes.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.AbstractParser" data-isabs="true">
+    </li><li name="ornl.elision.parse.AbstractParser" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AbstractParserextendsAnyRef"></a>
       <a id="AbstractParser:AbstractParser"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="AbstractParser.html"><span class="name">AbstractParser</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AbstractParser.html"><span class="name">AbstractParser</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">This serves to unify the various parsers currently in Elision.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.ElisionParser" data-isabs="false">
+    </li><li name="ornl.elision.parse.ElisionParser" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ElisionParserextendsParserwithAbstractParser"></a>
       <a id="ElisionParser:ElisionParser"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="ElisionParser.html"><span class="name">ElisionParser</span></a>
-        
-        <span class="result"> extends Parser with AbstractParser</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ElisionParser.html"><span class="name">ElisionParser</span></a><span class="result"> extends <span class="extype" name="org.parboiled.scala.Parser">Parser</span> with <a href="AbstractParser.html" class="extype" name="ornl.elision.parse.AbstractParser">AbstractParser</a></span>
       </span>
       </h4>
       <p class="comment cmt">Implement a parser for Elision atoms.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.Failure" data-isabs="false">
+    </li><li name="ornl.elision.parse.Failure" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FailureextendsPresultwithProductwithSerializable"></a>
       <a id="Failure:Failure"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Failure.html"><span class="name">Failure</span></a>
-        
-        <span class="params">(<span name="err">err: String</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Failure.html"><span class="name">Failure</span></a><span class="params">(<span name="err">err: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Presult.html" class="extype" name="ornl.elision.parse.Presult">Presult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">The parse failed.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.Presult" data-isabs="true">
+    </li><li name="ornl.elision.parse.Presult" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PresultextendsAnyRef"></a>
       <a id="Presult:Presult"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Presult.html"><span class="name">Presult</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Presult.html"><span class="name">Presult</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">A parse result.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.Processor" data-isabs="false">
+    </li><li name="ornl.elision.parse.Processor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProcessorextendsExecutorwithTraceableParsewithTimeablewithHasHistory"></a>
       <a id="Processor:Processor"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="Processor.html"><span class="name">Processor</span></a>
-        
-        <span class="result"> extends Executor with TraceableParse with Timeable with HasHistory</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Processor.html"><span class="name">Processor</span></a><span class="result"> extends <a href="../context/Executor.html" class="extype" name="ornl.elision.context.Executor">Executor</a> with <a href="TraceableParse.html" class="extype" name="ornl.elision.parse.TraceableParse">TraceableParse</a> with <a href="../util/Timeable.html" class="extype" name="ornl.elision.util.Timeable">Timeable</a> with <a href="../util/HasHistory.html" class="extype" name="ornl.elision.util.HasHistory">HasHistory</a></span>
       </span>
       </h4>
       <p class="comment cmt">A processor is responsible for reading and handling atoms.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.Success" data-isabs="false">
+    </li><li name="ornl.elision.parse.Success" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SuccessextendsPresultwithProductwithSerializable"></a>
       <a id="Success:Success"></a>
       <h4 class="signature">
-      <span class="kind">case class</span>
-      <span class="symbol"> 
-        <a href="Success.html"><span class="name">Success</span></a>
-        
-        <span class="params">(<span name="nodes">nodes: List[BA]</span>)</span><span class="result"> extends Presult with Product with Serializable</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Success.html"><span class="name">Success</span></a><span class="params">(<span name="nodes">nodes: <a href="../../../scala/package.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="AST$.html#BA=ornl.elision.parse.AST[ornl.elision.core.BasicAtom]" class="extmbr" name="ornl.elision.parse.AST.BA">BA</a>]</span>)</span><span class="result"> extends <a href="Presult.html" class="extype" name="ornl.elision.parse.Presult">Presult</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">The parse was successful.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.TraceableParse" data-isabs="true">
+    </li><li name="ornl.elision.parse.TraceableParse" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TraceableParseextendsAnyRef"></a>
       <a id="TraceableParse:TraceableParse"></a>
       <h4 class="signature">
-      <span class="kind">trait</span>
-      <span class="symbol"> 
-        <a href="TraceableParse.html"><span class="name">TraceableParse</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="TraceableParse.html"><span class="name">TraceableParse</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">Indicate that it is possible to enable and disable tracing of parsing at
 runtime.</p>
     </li></ol>
             </div>
-        
+
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.parse.AST" data-isabs="false">
+              <ol><li name="ornl.elision.parse.AST" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AST"></a>
       <a id="AST:AST"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="AST$.html"><span class="name">AST</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Create abstract syntax tree nodes.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.Processor" data-isabs="false">
+    </li><li name="ornl.elision.parse.Processor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Processor"></a>
       <a id="Processor:Processor"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="Processor$.html"><span class="name">Processor</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Supporting methods and classes for the <code>Processor</code> class.</p>
-    </li><li visbl="pub" name="ornl.elision.parse.ProcessorControl" data-isabs="false">
+    </li><li name="ornl.elision.parse.ProcessorControl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ProcessorControl"></a>
       <a id="ProcessorControl:ProcessorControl"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="ProcessorControl$.html"><span class="name">ProcessorControl</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Manage the default parser kind to use.</p>
@@ -182,10 +220,26 @@ runtime.</p>
         
 
         
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

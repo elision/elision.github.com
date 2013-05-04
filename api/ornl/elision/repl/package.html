@@ -2,110 +2,136 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.repl</title>
+          <title>repl - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.repl</title>
+          <meta name="description" content="repl - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.repl" />
+          <meta name="keywords" content="repl Elision API Version 0.5.0 Build 201305032050 ornl.elision.repl" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../lib/template.css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'ornl.elision.repl.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
         <body class="value">
       <div id="definition">
         <img src="../../../lib/package_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../package.html">elision</a></p>
+        <p id="owner"><a href="../../package.html" class="extype" name="ornl">ornl</a>.<a href="../package.html" class="extype" name="ornl.elision">elision</a></p>
         <h1>repl</h1>
       </div>
 
-      <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">repl</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"></div>
+          <div id="comment" class="fullcommenttop"></div>
         
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.repl.ERepl" data-isabs="false">
+              <ol><li name="ornl.elision.repl.ERepl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EReplextendsProcessor"></a>
       <a id="ERepl:ERepl"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="ERepl.html"><span class="name">ERepl</span></a>
-        
-        <span class="result"> extends Processor</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ERepl.html"><span class="name">ERepl</span></a><span class="result"> extends <a href="../parse/Processor.html" class="extype" name="ornl.elision.parse.Processor">Processor</a></span>
       </span>
       </h4>
       <p class="comment cmt">Provide a REPL to experiment with the new term rewriter.</p>
-    </li><li visbl="pub" name="ornl.elision.repl.LineState" data-isabs="false">
+    </li><li name="ornl.elision.repl.LineState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LineStateextendsAnyRef"></a>
       <a id="LineState:LineState"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="LineState.html"><span class="name">LineState</span></a>
-        
-        <span class="result"> extends AnyRef</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LineState.html"><span class="name">LineState</span></a><span class="result"> extends <a href="../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
       <p class="comment cmt">Determine the state of the current provided line.</p>
     </li></ol>
             </div>
-        
+
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.repl.ConsoleStringFormatter" data-isabs="false">
+              <ol><li name="ornl.elision.repl.ConsoleStringFormatter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConsoleStringFormatter"></a>
       <a id="ConsoleStringFormatter:ConsoleStringFormatter"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="ConsoleStringFormatter$.html"><span class="name">ConsoleStringFormatter</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       
-    </li><li visbl="pub" name="ornl.elision.repl.ContextGenerator" data-isabs="false">
+    </li><li name="ornl.elision.repl.ContextGenerator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextGenerator"></a>
       <a id="ContextGenerator:ContextGenerator"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="ContextGenerator$.html"><span class="name">ContextGenerator</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Generate compilable Scala source files for a context.</p>
-    </li><li visbl="pub" name="ornl.elision.repl.ReplMain" data-isabs="false">
+    </li><li name="ornl.elision.repl.ReplMain" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplMain"></a>
       <a id="ReplMain:ReplMain"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="ReplMain$.html"><span class="name">ReplMain</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Implement an interface to run the REPL from the prompt.</p>
@@ -115,10 +141,26 @@
         
 
         
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>

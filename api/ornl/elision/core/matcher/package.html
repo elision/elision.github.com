@@ -2,139 +2,192 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ornl.elision.core.matcher</title>
+          <title>matcher - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.core.matcher</title>
+          <meta name="description" content="matcher - Elision API Version 0.5.0 Build 201305032050 - ornl.elision.core.matcher" />
+          <meta name="keywords" content="matcher Elision API Version 0.5.0 Build 201305032050 ornl.elision.core.matcher" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link type="text/css" media="screen" rel="stylesheet" href="../../../../lib/template.css" />
-      <script type="text/javascript" src="../../../../lib/jquery.js"></script>
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
       <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../../../lib/template.js"></script>
       <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'ornl.elision.core.matcher.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
         <body class="value">
       <div id="definition">
         <img src="../../../../lib/package_big.png" />
-        <p id="owner"><a name="ornl" class="extype" href="../../../package.html">ornl</a>.<a name="ornl.elision" class="extype" href="../../package.html">elision</a>.<a name="ornl.elision.core" class="extype" href="../package.html">core</a></p>
+        <p id="owner"><a href="../../../package.html" class="extype" name="ornl">ornl</a>.<a href="../../package.html" class="extype" name="ornl.elision">elision</a>.<a href="../package.html" class="extype" name="ornl.elision.core">core</a></p>
         <h1>matcher</h1>
       </div>
 
-      <h4 class="signature" id="signature">
-      <span class="kind">package</span>
-      <span class="symbol"> 
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
         <span class="name">matcher</span>
-        
-        
       </span>
       </h4>
       
-          <div class="fullcommenttop" id="comment"><div class="comment cmt"><p>Provide implementations of specific forms of matching.</p><p>There are several basic matching algorithms.</p><ul><li>ornl.elision.core.matching.SequenceMatcher handles non-associative,
-   non-commutative matching.</li><li>ornl.elision.core.matching.CMatcher handles commutative,
-   non-associative matching.</li><li>ornl.elision.core.matching.AMatcher handles associative,
-   non-commutative matching.</li><li>ornl.elision.core.matching.ACMatcher handles associative, commutative
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provide implementations of specific forms of matching.</p><p>There are several basic matching algorithms.</p><ul><li><span class="extype" name="ornl.elision.core.matching.SequenceMatcher">ornl.elision.core.matching.SequenceMatcher</span> handles non-associative,
+   non-commutative matching.</li><li><span class="extype" name="ornl.elision.core.matching.CMatcher">ornl.elision.core.matching.CMatcher</span> handles commutative,
+   non-associative matching.</li><li><span class="extype" name="ornl.elision.core.matching.AMatcher">ornl.elision.core.matching.AMatcher</span> handles associative,
+   non-commutative matching.</li><li><span class="extype" name="ornl.elision.core.matching.ACMatcher">ornl.elision.core.matching.ACMatcher</span> handles associative, commutative
    matching.</li></ul><p>There are also supporting classes that handle parts of the matching process.
-</p></div></div>
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
         
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="ornl.elision.core.matcher"><span>matcher</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
 
       <div id="template">
-
-        <div id="mbrsel">
-          <div id="textfilter"><span class="pre"></span><span class="input"><input accesskey="/" type="text" /></span><span class="post"></span></div>
-          
-          
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
-
+        <div id="allMembers">
         
 
-        <div class="types members" id="types">
+        <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.core.matcher.GroupingIterator" data-isabs="false">
+              <ol><li name="ornl.elision.core.matcher.GroupingIterator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GroupingIteratorextendsIterator[ornl.elision.util.OmitSeq[ornl.elision.core.BasicAtom]]"></a>
       <a id="GroupingIterator:GroupingIterator"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="GroupingIterator.html"><span class="name">GroupingIterator</span></a>
-        
-        <span class="result"> extends Iterator[OmitSeq[BasicAtom]]</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GroupingIterator.html"><span class="name">GroupingIterator</span></a><span class="result"> extends <a href="../../../../scala/package.html#Iterator[+A]=Iterator[A]" class="extmbr" name="scala.Iterator">Iterator</a>[<a href="../../util/OmitSeq.html" class="extype" name="ornl.elision.util.OmitSeq">OmitSeq</a>[<a href="../BasicAtom.html" class="extype" name="ornl.elision.core.BasicAtom">BasicAtom</a>]]</span>
       </span>
       </h4>
       <p class="comment cmt">Iterate over all associative groupings of items.</p>
-    </li><li visbl="pub" name="ornl.elision.core.matcher.UnbindableMatcher" data-isabs="false">
+    </li><li name="ornl.elision.core.matcher.UnbindableMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UnbindableMatcherextendsMatchIterator"></a>
       <a id="UnbindableMatcher:UnbindableMatcher"></a>
       <h4 class="signature">
-      <span class="kind">class</span>
-      <span class="symbol"> 
-        <a href="UnbindableMatcher.html"><span class="name">UnbindableMatcher</span></a>
-        
-        <span class="result"> extends MatchIterator</span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UnbindableMatcher.html"><span class="name">UnbindableMatcher</span></a><span class="result"> extends <a href="../MatchIterator.html" class="extype" name="ornl.elision.core.MatchIterator">MatchIterator</a></span>
       </span>
       </h4>
       <p class="comment cmt">Match unbindable atoms in a sequence of patterns to the unbindable atoms
 in a sequence of subjects.</p>
     </li></ol>
             </div>
-        
+
         
 
-        <div class="values members" id="values">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol><li visbl="pub" name="ornl.elision.core.matcher.ACMatcher" data-isabs="false">
+              <ol><li name="ornl.elision.core.matcher.ACMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ACMatcher"></a>
       <a id="ACMatcher:ACMatcher"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="ACMatcher$.html"><span class="name">ACMatcher</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences whose elements can be re-ordered or re-grouped.</p>
-    </li><li visbl="pub" name="ornl.elision.core.matcher.AMatcher" data-isabs="false">
+    </li><li name="ornl.elision.core.matcher.AMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AMatcher"></a>
       <a id="AMatcher:AMatcher"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="AMatcher$.html"><span class="name">AMatcher</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences, where the elements of the second sequence can be
 grouped, but not re-ordered.</p>
-    </li><li visbl="pub" name="ornl.elision.core.matcher.CMatcher" data-isabs="false">
+    </li><li name="ornl.elision.core.matcher.CMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CMatcher"></a>
       <a id="CMatcher:CMatcher"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="CMatcher$.html"><span class="name">CMatcher</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences whose elements can be re-ordered.</p>
-    </li><li visbl="pub" name="ornl.elision.core.matcher.MatchHelper" data-isabs="false">
+    </li><li name="ornl.elision.core.matcher.MatchHelper" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatchHelper"></a>
       <a id="MatchHelper:MatchHelper"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="MatchHelper$.html"><span class="name">MatchHelper</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Provide some support methods for matching.</p>
-    </li><li visbl="pub" name="ornl.elision.core.matcher.SequenceMatcher" data-isabs="false">
+    </li><li name="ornl.elision.core.matcher.SequenceMatcher" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SequenceMatcher"></a>
       <a id="SequenceMatcher:SequenceMatcher"></a>
       <h4 class="signature">
-      <span class="kind">object</span>
-      <span class="symbol"> 
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
         <a href="SequenceMatcher$.html"><span class="name">SequenceMatcher</span></a>
-        
-        <span class="result"> extends AnyRef</span>
       </span>
       </h4>
       <p class="comment cmt">Match two sequences of atoms.</p>
@@ -144,10 +197,30 @@ grouped, but not re-ordered.</p>
         
 
         
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="../../../../scala/package.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
 
       </div>
-      
+
       <div id="tooltip"></div>
-      
+
+      <div id="footer">  </div>
+
+
     </body>
       </html>
