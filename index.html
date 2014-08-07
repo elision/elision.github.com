@@ -1,94 +1,84 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><head>
+<!DOCTYPE html>
+<html>
+<title>Elision</title>
 
+<xmp theme="simplex" style="display:none;">
+# Elision
 
+Welcome to the home page for the Elision (\i-'li-zh&#601;n\ <a href="http://www.merriam-webster.com/audio.php?file=elisio01&a
+mp;word=elision&amp;text=%5Ci-%3Cspan%20class%3D%22unicode%22%3E%CB%88%3C%2Fspan%3Eli-zh%C9%99n%5C#">&#128266;</a>) rewriter.
 
-  
-    <style type="text/css">
-    body {
-      background:none repeat scroll 0 0 #FFFFFF;
-      color: #000000;
-      font-family: "Optima", "Verdana", "Arial", "Helvetica", "sans-serif";
-      font-size: 12pt;
-      margin-left: 7%;
-      margin-right: 7%;
-    }
-    h1, h2, h3, h4 {
-      margin: 0;
-    }
-  </style>
-<script>
-  function ShowHideContent(elem,contentId){
-    var con = document.getElementById(contentId);
-    var isHidden = ( con.style.display == "none" );
-    this.innerHTML = (isHidden)?"Hide Content":"Show Content";
-    con.style.display = (isHidden)?"block":"none";
-    con=null;
-  }
-</script>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><title>Elision</title>
-    
-    <meta content="SJP" name="author">
-    <meta content="Home page for the Elision rewriter." name="description"></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" alink="#ee0000" link="#0000ee" vlink="#551a8b">
-    <h1><span style="font-family: sans-serif;">Elision</span></h1>
-    <hr style="width: 100%; height: 2px;">
-    <p>Welcome to the home page for the Elision (\i-<span class="unicode">ˈ</span>li-zhən\ <a href="http://www.merriam-webster.com/audio.php?file=elisio01&amp;word=elision&amp;text=%5Ci-%3Cspan%20class%3D%22unicode%22%3E%CB%88%3C%2Fspan%3Eli-zh%C9%99n%5C#"><img style="border: 0px solid ; width: 24px; height: 19px;" alt="listen" title="listen" src="speaker.png"></a>) rewriter.</p>
-    <p><b>Updates to this page have been suspended, but work goes on! Click the link for the github site below to see what's happening. Updates will resume in a few days...</b></p>
-    <p>Elision is a term rewriting library and REPL.&nbsp; It is <span style="font-style: italic;">under
-        construction</span>, so set your expectations accordingly.</p>
-    <p>The rewriter's initial feature set is <span style="font-weight: bold;">stable</span>,
-but the code itself is still undergoing testing.&nbsp; The
-documentation is incomplete, but what's there should be accurate.&nbsp;
-If you find problems, either with the rewriter or with the
-documentation, please check the <a href="https://github.com/elision/elision/issues?state=open" target="_blank">issue</a> tracker and possibly file a new issue.<span style="font-style: italic;"></span></p>
-    <p>More information is available from the links below.</p>
-    <table border="0" cellpadding="0" cellspacing="2">
-    <tbody><tr><td colspan="2"><b>Current Build (Updates every four hours when there are changes):</b></td></tr>
-    <tr><td><b>get:</b></td>
-        <td>[ <a href="elision.tgz">Distribution</a>
-            | <a href="elision.jar">Runnable Jar (Scala)</a>
-            | <a href="elision-all.jar">Runnable Jar (Java)</a>
-            | <a target="_blank" href="https://github.com/elision">Elision on github</a>
-            ]<br style="font-weight: bold;"></td></tr>
-    <tr><td><b>read:</b></td>
-        <td>[ <a href="README.txt">README</a>
-            | <a href="https://github.com/elision/elision/wiki">Wiki</a>
-            | <a href="elision.pdf">Documentation (PDF)</a>
-            | <a href="api/index.html">Scala API (Scaladoc)</a>
-            ]<br style="font-weight: bold;"></td></tr>
-    <tr><td><b>stats:</b></td>
-        <td>[ <a href="stats.html">Statistics</a>
-            | <a href="build.html">Last Build Output</a>
-            ]<br style="font-weight: bold;"></td></tr>
-    <tr><td><b>collaborate:</b></td>
-        <td>[ <a href="https://groups.google.com/forum/#!forum/elision-dev">elision-dev on Google Groups</a>
-            ]<br style="font-weight: bold;"></td></tr>
-    </tbody></table>
-    <p>To run Elision you must have Java (1.7 or later) installed.&nbsp; To build Elision you must have <a target="_blank" href="http://scala-lang.org">Scala</a> and <a target="_blank" href="http://ant.apache.org">Apache
-        Ant</a> installed.</p>
-<p>Elision is built and tested on Linux and Mac OS X using Java 1.7 and Scala 2.10.1.<br>
-</p>
+**Updates to this page have been suspended, but work goes on! Click the link for the github site below to see what's happenin
+g. Updates will resume in a few days...**
 
-    <p>To use the runnable jar (for Scala), execute it with the scala command:<br>
-      <span style="font-family: monospace;">scala elision.jar</span></p>
-    <p>To use the runnable jar (for Java), execute it with the java command:<br>
+## About
 
-      <span style="font-family: monospace;">java -jar elision-all.jar</span></p>
-<p>Thanks to <a target="_blank" href="http://www.headwaysoftware.com">Headway Software</a> for providing
-        licenses for structure101.</p>
+Elision is a term rewriting library and REPL.  It is *under construction*, so set your expectations accordingly.
 
-    <hr style="width: 100%; height: 2px;">
-<span onclick="ShowHideContent(this,'github');"><p><b>Most Recent Commits on GitHub</b> (Click to show/hide.)</a></span>
-<div id="github" style="display:none">
-<p>Latest Commits on GitHub elision/elision.  (Takes a few seconds to load...)</p>
-<script src='http://gitlive.com/githublive.min.js'></script>
-<script>var GithubPush = {num_old:5,nodes:['elision/elision']}</script>
-<div id='commits'></div>
-</div>
-    <hr style="width: 100%; height: 2px;">
-    <p><small>Elision is Copyright © 2013 by UT-Battelle, LLC,
-        all rights reserved.&nbsp; Elision is distributed
-        under the terms of the <a target="_blank" href="README.txt">BSD
-          "two clause" license</a>.&nbsp; Last updated: 08 May 2013 at 12:29:31. </small></p>
-  
-</body></html>
+The rewriter's initial feature set is stable, but the code itself is still undergoing testing.  The documentation is incomple
+te and needs to be updated.  If you find problems, either with the rewriter or with the documentation, please check the [issu
+e tracker][issues] and possibly file a new issue.
+
+## Information
+
+<table>
+	<tr>
+		<td>get:</td>
+		<td>[Source Distribution][distribution] | Runnable Jar: [Scala][scala-jar] | Runnable Jar: [Java][java-jar] |
+ [Github Page][elision-github]</td>
+	</tr>
+	<tr>
+		<td>read:</td>
+		<td>[Read Me!][readme] | [Wiki][wiki] | [API][api] | [License][license]</td>
+	</tr>
+	<tr>
+		<td>stats:</td>
+		<td>[Statistics][stats] | [Last Build Output][build]</td>
+	</tr>
+	<tr>
+		<td>collaborate:</td>
+		<td>[elision-dev] on Google Groups</td>
+	</tr>
+</table>
+
+## Running and Building
+
+To run Elision you must have Java (1.7 or later) installed.  To build Elision you must have [Scala][scala] and [Apache Ant][a
+nt] installed.
+
+Elision is built and tested on Linux and Mac OS X using Java 1.7 and Scala 2.10.1. To use the runnable jar (for Scala), execu
+te it with the scala command:<br/>
+`scala elision.jar`
+
+To use the runnable jar (for Java), execute it with the java command:<br/>
+`java -jar elision-all.jar`
+
+## Acknowledgments
+
+  - Thanks to [Headway Software][headway] for providing licenses for structure101.
+  - Elision contains [JLine][jline], a library for reading from a prompt.
+  - This page was created using [Markdown][markdown] and [Strapdown][strapdown].
+
+[issues]:         https://github.com/elision/elision/issues?state=open
+[distribution]:   http://elision.github.io/elision.tgz
+[scala-jar]:      http://elision.github.io/elision.jar
+[java-jar]:       http://elision.github.io/elision-all.jar
+[wiki]:           https://github.com/elision/elision/wiki
+[api]:            http://elision.github.io/api/index.html
+[stats]:          http://elision.github.io/stats.html
+[build]:          http://elision.github.io/build.html
+[elision-github]: https://github.com/elision
+[elision-dev]:    https://groups.google.com/forum/#!forum/elision-dev
+[scala]:          http://scala-lang.org/
+[ant]:            http://ant.apache.org/
+[headway]:        http://www.headwaysoftware.com/
+[jline]:          http://jline.sourceforge.net
+[readme]:         https://github.com/elision/elision/blob/master/Elision/README.txt
+[license]:        https://github.com/elision/elision/blob/master/Elision/LICENSE.txt
+[markdown]:       http://daringfireball.net/projects/markdown/
+[strapdown]:      http://www.strapdownjs.com/
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
